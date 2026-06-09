@@ -1,0 +1,89 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const postsDirectory = path.join(process.cwd(), "content/posts");
+
+export interface PostMeta {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  category: string;
+  tags: string[];
+  coverImage: string;
+  readTime: string;
+  affiliate?: boolean;
+}
+
+export interface Post extends PostMeta {
+  content: string;
+}
+
+export function getAllPosts(): PostMeta[] {
+  if (!fs.existsSync(postsDirectory)) return [];
+
+  const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
+
+  const posts = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.(mdx|md)$/, "");
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+
+    return {
+      slug,
+      title: data.title ?? "",
+      date: data.date ?? "",
+      excerpt: data.excerpt ?? "",
+      category: data.category ?? "General",
+      tags: data.tags ?? [],
+      coverImage: data.coverImage ?? "/images/default-cover.jpg",
+      readTime: data.readTime ?? "5 min read",
+      affiliate: data.affiliate ?? false,
+    } as PostMeta;
+  });
+
+  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export function getPostBySlug(slug: string): Post | null {
+  try {
+    const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
+    const mdPath = path.join(postsDirectory, `${slug}.md`);
+    const fullPath = fs.existsSync(mdxPath) ? mdxPath : mdPath;
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    return {
+      slug,
+      title: data.title ?? "",
+      date: data.date ?? "",
+      excerpt: data.excerpt ?? "",
+      category: data.category ?? "General",
+      tags: data.tags ?? [],
+      coverImage: data.coverImage ?? "/images/default-cover.jpg",
+      readTime: data.readTime ?? "5 min read",
+      affiliate: data.affiliate ?? false,
+      content,
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function getPostsByCategory(category: string): PostMeta[] {
+  return getAllPosts().filter(
+    (p) => p.category.toLowerCase() === category.toLowerCase()
+  );
+}
+
+export function getAllCategories(): string[] {
+  const posts = getAllPosts();
+  const cats = posts.map((p) => p.category);
+  return [...new Set(cats)];
+}
+
+export function getFeaturedPosts(count = 3): PostMeta[] {
+  return getAllPosts().slice(0, count);
+}
