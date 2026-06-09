@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import CategoryBadge from "@/components/CategoryBadge";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -51,7 +52,7 @@ export default async function PostPage({ params }: Props) {
           padding: "3rem 1.5rem 2.5rem",
         }}
       >
-        <div style={{ maxWidth: "740px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           {/* Breadcrumb */}
           <nav
             style={{
@@ -133,9 +134,12 @@ export default async function PostPage({ params }: Props) {
       </div>
 
       {/* Article body */}
-      <div style={{ maxWidth: "740px", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
+      <div style={{ maxWidth: "780px", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
         <article className="prose-blog">
-          <MDXRemote source={post.content} />
+          <MDXRemote
+            source={post.content}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          />
         </article>
 
         {/* Tags */}
