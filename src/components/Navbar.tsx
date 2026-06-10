@@ -40,28 +40,15 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+        <Link href="/" style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center" }}>
           <Image
-            src="/aivault.jpeg"
+            src="/aivault-logo.svg"
             alt="AI Vault"
-            width={32}
-            height={32}
-            style={{ borderRadius: "6px", display: "block" }}
+            width={148}
+            height={46}
+            style={{ display: "block" }}
             priority
           />
-          <span
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 800,
-              background: "linear-gradient(135deg, #a855f7, #22d3ee)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            AI Vault
-          </span>
         </Link>
 
         {/* Desktop links */}

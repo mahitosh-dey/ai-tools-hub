@@ -28,27 +28,14 @@ export default function Footer() {
       >
         {/* Brand column */}
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+          <div style={{ marginBottom: "0.75rem" }}>
             <Image
-              src="/aivault.jpeg"
+              src="/aivault-logo.svg"
               alt="AI Vault"
-              width={28}
-              height={28}
-              style={{ borderRadius: "5px", display: "block" }}
+              width={128}
+              height={40}
+              style={{ display: "block" }}
             />
-            <span
-              style={{
-                fontSize: "1.2rem",
-                fontWeight: 800,
-                background: "linear-gradient(135deg, #a855f7, #22d3ee)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              AI Vault
-            </span>
           </div>
           <p
             style={{
