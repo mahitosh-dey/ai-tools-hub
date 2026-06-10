@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import CategoryBadge from "@/components/CategoryBadge";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import RelatedPosts from "@/components/RelatedPosts";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -15,18 +16,31 @@ export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
+const baseUrl = "https://www.aivaultblog.com";
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const url = `${baseUrl}/blog/${slug}`;
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: url },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      url,
+      siteName: "AI Vault",
+      images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`${baseUrl}/og-default.png`],
     },
   };
 }
@@ -42,8 +56,38 @@ export default async function PostPage({ params }: Props) {
     day: "numeric",
   });
 
+  const relatedPosts = getAllPosts()
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: "Mahtosh Dey",
+      url: `${baseUrl}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AI Vault",
+      url: baseUrl,
+      logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/blog/${slug}` },
+    image: `${baseUrl}/og-default.png`,
+  };
+
   return (
     <div style={{ minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Article header — full width with subtle gradient */}
       <div
         style={{
@@ -115,15 +159,13 @@ export default async function PostPage({ params }: Props) {
               color: "#475569",
             }}
           >
-            <span
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.35rem",
-              }}
-            >
+            <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
+              <span>✍️</span>
+              <span style={{ color: "#94a3b8", fontWeight: 500 }}>{post.author}</span>
+            </span>
+            <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
               <span>📅</span>
-              <time>{formattedDate}</time>
+              <time dateTime={post.date}>{formattedDate}</time>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
               <span>⏱</span>
@@ -174,8 +216,16 @@ export default async function PostPage({ params }: Props) {
           </div>
         )}
 
+        {/* Related posts */}
+        <RelatedPosts posts={relatedPosts} />
+
+        {/* Newsletter */}
+        <div style={{ marginTop: "3rem" }}>
+          <NewsletterSignup />
+        </div>
+
         {/* Back link */}
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ marginTop: "1.5rem" }}>
           <Link
             href="/blog"
             style={{
@@ -191,11 +241,6 @@ export default async function PostPage({ params }: Props) {
           >
             ← Back to all posts
           </Link>
-        </div>
-
-        {/* Newsletter */}
-        <div style={{ marginTop: "3rem" }}>
-          <NewsletterSignup />
         </div>
       </div>
     </div>

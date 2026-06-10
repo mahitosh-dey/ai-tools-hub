@@ -13,6 +13,7 @@ export interface PostMeta {
   tags: string[];
   coverImage: string;
   readTime: string;
+  author: string;
   affiliate?: boolean;
 }
 
@@ -40,6 +41,7 @@ export function getAllPosts(): PostMeta[] {
       tags: data.tags ?? [],
       coverImage: data.coverImage ?? "/images/default-cover.jpg",
       readTime: data.readTime ?? "5 min read",
+      author: data.author ?? "Mahtosh Dey",
       affiliate: data.affiliate ?? false,
     } as PostMeta;
   });
@@ -64,6 +66,7 @@ export function getPostBySlug(slug: string): Post | null {
       tags: data.tags ?? [],
       coverImage: data.coverImage ?? "/images/default-cover.jpg",
       readTime: data.readTime ?? "5 min read",
+      author: data.author ?? "Mahtosh Dey",
       affiliate: data.affiliate ?? false,
       content,
     };

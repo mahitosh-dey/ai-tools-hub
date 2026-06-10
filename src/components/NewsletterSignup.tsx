@@ -106,7 +106,7 @@ export default function NewsletterSignup() {
         </form>
       )}
       <p style={{ color: "#475569", fontSize: "0.75rem", marginTop: "0.75rem" }}>
-        Join 1,000+ readers. Free forever.
+        Free forever. Unsubscribe any time.
       </p>
     </section>
   );
