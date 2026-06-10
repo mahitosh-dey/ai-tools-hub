@@ -18,6 +18,7 @@ export interface PostMeta {
   affiliate?: boolean;
   rating?: number;
   featured?: boolean;
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 export interface Post extends PostMeta {
@@ -51,6 +52,7 @@ export function getAllPosts(): PostMeta[] {
       rating: data.rating ?? undefined,
       updatedAt: data.updatedAt ?? undefined,
       featured: data.featured ?? false,
+      faqs: data.faqs ?? undefined,
     } as PostMeta;
   });
 
@@ -81,6 +83,7 @@ export function getPostBySlug(slug: string): Post | null {
       affiliate: data.affiliate ?? false,
       rating: data.rating ?? undefined,
       updatedAt: data.updatedAt ?? undefined,
+      faqs: data.faqs ?? undefined,
       content,
     };
   } catch {

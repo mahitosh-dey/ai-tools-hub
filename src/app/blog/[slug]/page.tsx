@@ -104,6 +104,16 @@ export default async function PostPage({ params }: Props) {
     ],
   };
 
+  const faqJsonLd = post.faqs && post.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  } : null;
+
   const reviewJsonLd = post.rating ? {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -134,6 +144,12 @@ export default async function PostPage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+        />
+      )}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
       {/* Article header — full width with subtle gradient */}
@@ -279,6 +295,72 @@ export default async function PostPage({ params }: Props) {
 
         {/* Tags */}
         <TagList tags={post.tags} />
+
+        {/* FAQ section */}
+        {post.faqs && post.faqs.length > 0 && (
+          <section style={{ marginTop: "3rem", marginBottom: "2rem" }}>
+            <h2
+              style={{
+                fontSize: "1.4rem",
+                fontWeight: 700,
+                color: "#f1f5f9",
+                marginBottom: "1.25rem",
+                paddingBottom: "0.75rem",
+                borderBottom: "1px solid #252538",
+              }}
+            >
+              Frequently Asked Questions
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+              {post.faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  style={{
+                    borderBottom: "1px solid #1e1e2e",
+                    padding: "0",
+                  }}
+                >
+                  <summary
+                    style={{
+                      padding: "1rem 0",
+                      fontSize: "1rem",
+                      fontWeight: 600,
+                      color: "#e2e8f0",
+                      cursor: "pointer",
+                      listStyle: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span>{faq.q}</span>
+                    <span
+                      style={{
+                        color: "#a855f7",
+                        fontSize: "1.2rem",
+                        flexShrink: 0,
+                        fontWeight: 400,
+                      }}
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p
+                    style={{
+                      margin: "0 0 1rem 0",
+                      fontSize: "0.95rem",
+                      color: "#94a3b8",
+                      lineHeight: 1.75,
+                    }}
+                  >
+                    {faq.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Author bio */}
         <AuthorBio />
