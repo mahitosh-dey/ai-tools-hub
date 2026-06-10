@@ -26,10 +26,10 @@ Last updated: 2026-06-10
 
 ## 🟡 MEDIUM PRIORITY — UX & Trust
 
-- [ ] **11. Add images to posts** — All posts are pure text. No cover image, no screenshots. Add cover images + tool screenshots to every post.
-- [ ] **12. Add Table of Contents on long posts** — Posts are 1,500–2,000 words. A ToC improves UX and increases chance of Google featured snippet jump links.
+- [x] **11. Add images to posts** — PostCoverImage component added. Category-based gradient covers on all posts. Swap to real image anytime via `coverImage:` in frontmatter.
+- [x] **12. Add Table of Contents on long posts** — ToC auto-generates from H2/H3 headings. Active heading highlights as you scroll. Collapsible on mobile. rehype-slug added for anchor IDs.
 - [x] **13. Remove `"use client"` from Footer.tsx** — Footer has hover handlers so must stay as client component. Low priority — acceptable trade-off.
-- [ ] **14. Fix future-dated posts showing now** — midjourney-vs-dalle3 (2026-06-29) and how-to-make-money (2026-08-14) are visible today with future dates. Looks broken. Hide until publish date or re-date.
+- [x] **14. Fix future-dated posts showing now** — Date filter added to getAllPosts(). Posts only appear on/after their scheduled date.
 - [ ] **15. Add search functionality** — No way to search posts. Needed once 10+ posts are live.
 
 ---

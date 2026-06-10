@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { extractToc } from "@/lib/toc";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 import Link from "next/link";
 import CategoryBadge from "@/components/CategoryBadge";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import RelatedPosts from "@/components/RelatedPosts";
 import TagList from "@/components/TagList";
+import TableOfContents from "@/components/TableOfContents";
+import PostCoverImage from "@/components/PostCoverImage";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -60,6 +64,8 @@ export default async function PostPage({ params }: Props) {
   const relatedPosts = getAllPosts()
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
+
+  const toc = extractToc(post.content);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -176,12 +182,26 @@ export default async function PostPage({ params }: Props) {
         </div>
       </div>
 
+      {/* Cover image */}
+      <PostCoverImage
+        coverImage={post.coverImage}
+        category={post.category}
+        title={post.title}
+      />
+
       {/* Article body */}
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
+        <TableOfContents items={toc} />
+
         <article className="prose-blog">
           <MDXRemote
             source={post.content}
-            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [rehypeSlug],
+              },
+            }}
           />
         </article>
 
