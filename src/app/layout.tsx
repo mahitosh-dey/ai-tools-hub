@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-default.png"],
   },
+  other: {
+    "impact-site-verification": "df6f5b88-794d-40ae-baf4-4c79a9864a56",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <head>
-        <meta name="impact-site-verification" value="df6f5b88-794d-40ae-baf4-4c79a9864a56" />
-      </head>
       <body>
         <Navbar />
         <main style={{ minHeight: "calc(100vh - 64px)" }}>{children}</main>
