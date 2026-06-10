@@ -28,7 +28,7 @@
 
 ### Comparisons
 
-- Claude vs ChatGPT: Which AI Is Better in 2026?
+- Claude vs ChatGPT: Which AI Is Better in 2026? — done
 - ChatGPT vs Google Gemini: Full Comparison
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
 - Jasper vs Copy.ai vs ChatGPT: Best AI Writer?
