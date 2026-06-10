@@ -6,7 +6,7 @@ Last updated: 2026-06-10
 
 ## 🔴 CRITICAL
 
-- [ ] **1. Connect newsletter to real email provider** — NewsletterSignup.tsx fakes success. Every subscriber is lost. Connect Mailchimp, ConvertKit, or Resend.
+- [x] **1. Connect newsletter to real email provider** — Connected to MailerLite. API route at /api/subscribe. Key stored in Vercel env vars.
 - [x] **2. Remove fake "Join 1,000+ readers"** — Replaced with "Free forever. Unsubscribe any time."
 - [x] **3. Add JSON-LD structured data (Article schema)** — Added to blog/[slug]/page.tsx with author, publisher, dates.
 - [x] **4. Add OG image** — Added `images:` to openGraph in layout.tsx and post metadata. Needs `/public/og-default.png` image file.

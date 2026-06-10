@@ -90,3 +90,15 @@ export function getAllCategories(): string[] {
 export function getFeaturedPosts(count = 3): PostMeta[] {
   return getAllPosts().slice(0, count);
 }
+
+export function getPostsByTag(tag: string): PostMeta[] {
+  return getAllPosts().filter((p) =>
+    p.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
+  );
+}
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const tags = posts.flatMap((p) => p.tags);
+  return [...new Set(tags)].sort();
+}

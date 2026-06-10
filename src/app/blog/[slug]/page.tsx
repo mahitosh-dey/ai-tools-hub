@@ -7,6 +7,7 @@ import Link from "next/link";
 import CategoryBadge from "@/components/CategoryBadge";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import RelatedPosts from "@/components/RelatedPosts";
+import TagList from "@/components/TagList";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -185,36 +186,7 @@ export default async function PostPage({ params }: Props) {
         </article>
 
         {/* Tags */}
-        {post.tags.length > 0 && (
-          <div
-            style={{
-              marginTop: "3rem",
-              paddingTop: "1.5rem",
-              borderTop: "1px solid #252538",
-              display: "flex",
-              gap: "0.5rem",
-              flexWrap: "wrap",
-              alignItems: "center",
-            }}
-          >
-            <span style={{ color: "#475569", fontSize: "0.82rem" }}>Tags:</span>
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                style={{
-                  background: "#13131e",
-                  border: "1px solid #252538",
-                  color: "#64748b",
-                  padding: "0.2rem 0.65rem",
-                  borderRadius: "6px",
-                  fontSize: "0.78rem",
-                }}
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
+        <TagList tags={post.tags} />
 
         {/* Related posts */}
         <RelatedPosts posts={relatedPosts} />
