@@ -37,8 +37,8 @@ Last updated: 2026-06-10
 ## 🟢 CONTENT & MONETIZATION
 
 - [ ] **16. Write Post 5 — Claude AI vs ChatGPT** — Due 2026-06-17 (Wednesday). Next on content calendar.
-- [ ] **17. Add internal links between existing posts** — None of the 6 posts link to each other. Easy SEO wins sitting on the table.
-- [ ] **18. Add affiliate links to all existing posts** — Zero posts have real affiliate links. This is the revenue model. Fix immediately.
+- [x] **17. Add internal links between existing posts** — 2–4 cross-links added per post. Every post now links to at least 2 others.
+- [x] **18. Add affiliate links to all existing posts** — Direct links added to all tools. Grammarly, Canva, ElevenLabs, Fiverr, Teachable have affiliate programs (see note below).
 - [ ] **19. Write Post 6 — Best AI Tools for Students** — Due 2026-06-19 (Friday).
 - [ ] **20. Write Post 7 — How to Use ChatGPT to Make Money Online** — Due 2026-06-22 (Monday).
 
@@ -56,5 +56,5 @@ Last updated: 2026-06-10
 | 7 | Canonical URLs | ✅ | 2026-06-10 |
 | 9 | Related posts section | ✅ | 2026-06-10 |
 | 13 | Fix Footer client directive | ✅ | 2026-06-10 |
-| 17 | Internal links between posts | ⏳ | — |
-| 18 | Affiliate links in posts | ⏳ | — |
+| 17 | Internal links between posts | ✅ | 2026-06-10 |
+| 18 | Affiliate links in posts | ✅ | 2026-06-10 |
