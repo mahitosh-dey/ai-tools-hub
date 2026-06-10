@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AuthorBio() {
@@ -16,13 +15,24 @@ export default function AuthorBio() {
       }}
     >
       <div style={{ flexShrink: 0 }}>
-        <Image
-          src="/aivault.jpeg"
-          alt="Mahtosh Dey"
-          width={64}
-          height={64}
-          style={{ borderRadius: "50%", border: "2px solid #252538", display: "block" }}
-        />
+        <div
+          style={{
+            width: "64px",
+            height: "64px",
+            borderRadius: "50%",
+            background: "linear-gradient(135deg, #6c63ff, #3ecfcf)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "1.6rem",
+            fontWeight: 800,
+            color: "#fff",
+            border: "2px solid rgba(108,99,255,0.3)",
+            boxShadow: "0 0 16px rgba(108,99,255,0.2)",
+          }}
+        >
+          M
+        </div>
       </div>
 
       <div style={{ flex: 1 }}>
