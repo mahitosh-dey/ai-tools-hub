@@ -214,8 +214,25 @@ export default async function PostPage({ params }: Props) {
               color: "#475569",
             }}
           >
-            <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
-              <span>✍️</span>
+            <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span
+                style={{
+                  width: "26px",
+                  height: "26px",
+                  borderRadius: "50%",
+                  background: "linear-gradient(135deg, #6c63ff, #3ecfcf)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                  color: "#fff",
+                  flexShrink: 0,
+                  letterSpacing: 0,
+                }}
+              >
+                {post.author.charAt(0).toUpperCase()}
+              </span>
               <span style={{ color: "#94a3b8", fontWeight: 500 }}>{post.author}</span>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
