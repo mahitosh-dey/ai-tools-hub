@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -39,7 +40,15 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
+        <Link href="/" style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <Image
+            src="/aivault.jpeg"
+            alt="AI Vault"
+            width={32}
+            height={32}
+            style={{ borderRadius: "6px", display: "block" }}
+            priority
+          />
           <span
             style={{
               fontSize: "1.25rem",

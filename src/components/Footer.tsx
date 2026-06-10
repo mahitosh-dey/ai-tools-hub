@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -27,21 +28,28 @@ export default function Footer() {
       >
         {/* Brand column */}
         <div>
-          <span
-            style={{
-              fontSize: "1.2rem",
-              fontWeight: 800,
-              background: "linear-gradient(135deg, #a855f7, #22d3ee)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              display: "block",
-              marginBottom: "0.75rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            AI Vault
-          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+            <Image
+              src="/aivault.jpeg"
+              alt="AI Vault"
+              width={28}
+              height={28}
+              style={{ borderRadius: "5px", display: "block" }}
+            />
+            <span
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: 800,
+                background: "linear-gradient(135deg, #a855f7, #22d3ee)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              AI Vault
+            </span>
+          </div>
           <p
             style={{
               color: "#475569",
