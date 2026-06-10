@@ -17,6 +17,7 @@ export interface PostMeta {
   author: string;
   affiliate?: boolean;
   rating?: number;
+  featured?: boolean;
 }
 
 export interface Post extends PostMeta {
@@ -49,6 +50,7 @@ export function getAllPosts(): PostMeta[] {
       affiliate: data.affiliate ?? false,
       rating: data.rating ?? undefined,
       updatedAt: data.updatedAt ?? undefined,
+      featured: data.featured ?? false,
     } as PostMeta;
   });
 

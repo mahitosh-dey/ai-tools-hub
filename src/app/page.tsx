@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const allPosts = getAllPosts();
-  const featuredPost = allPosts[0] ?? null;
-  const recentPosts = allPosts.slice(1, 7);
+  const featuredPost = allPosts.find((p) => p.featured) ?? allPosts[0] ?? null;
+  const recentPosts = allPosts.filter((p) => p.slug !== featuredPost?.slug).slice(0, 6);
 
   const categoryCounts = ["reviews", "tutorials", "comparisons", "tools"].reduce<Record<string, number>>(
     (acc, cat) => {
