@@ -28,6 +28,8 @@ export function getAllPosts(): PostMeta[] {
 
   const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
 
+  const todayStr = new Date().toISOString().split("T")[0];
+
   const posts = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.(mdx|md)$/, "");
     const fullPath = path.join(postsDirectory, fileName);
@@ -37,7 +39,7 @@ export function getAllPosts(): PostMeta[] {
     return {
       slug,
       title: data.title ?? "",
-      date: data.date ?? "",
+      date: data.date ?? todayStr,
       excerpt: data.excerpt ?? "",
       category: data.category ?? "General",
       tags: data.tags ?? [],
@@ -63,10 +65,11 @@ export function getPostBySlug(slug: string): Post | null {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
 
+    const todayStr = new Date().toISOString().split("T")[0];
     return {
       slug,
       title: data.title ?? "",
-      date: data.date ?? "",
+      date: data.date ?? todayStr,
       excerpt: data.excerpt ?? "",
       category: data.category ?? "General",
       tags: data.tags ?? [],
