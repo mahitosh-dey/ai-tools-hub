@@ -62,10 +62,13 @@ export default function PostCoverImage({ coverImage, category, title }: Props) {
           width: "100%",
           maxWidth: "780px",
           margin: "0 auto",
-          borderRadius: "0 0 16px 16px",
+          borderRadius: "0 0 20px 20px",
           overflow: "hidden",
-          height: "340px",
+          height: "300px",
           position: "relative",
+          borderLeft: "1px solid rgba(255,255,255,0.06)",
+          borderRight: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
         }}
       >
         <Image
@@ -75,6 +78,44 @@ export default function PostCoverImage({ coverImage, category, title }: Props) {
           style={{ objectFit: "cover" }}
           priority
         />
+        {/* Dark overlay so title is always readable */}
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)",
+        }} />
+        {/* Accent top border */}
+        <div style={{
+          position: "absolute", top: 0, left: 0, right: 0,
+          height: "3px",
+          background: `linear-gradient(90deg, transparent 0%, ${config.accent} 30%, ${config.accent} 70%, transparent 100%)`,
+        }} />
+        {/* Title overlay */}
+        <div style={{
+          position: "absolute", zIndex: 1, bottom: 0, left: 0, right: 0,
+          padding: "1.5rem 2.5rem 2rem",
+          display: "flex", flexDirection: "column", gap: "0.6rem",
+        }}>
+          <span style={{
+            fontSize: "0.72rem", fontWeight: 700,
+            textTransform: "uppercase", letterSpacing: "0.12em",
+            color: config.accent,
+            background: `${config.accentSoft}`,
+            border: `1px solid ${config.accent}40`,
+            borderRadius: "6px", padding: "0.3rem 0.75rem",
+            width: "fit-content",
+          }}>
+            {category}
+          </span>
+          <h2 style={{
+            fontSize: "clamp(1.15rem, 2.8vw, 1.6rem)",
+            fontWeight: 800, color: "#f1f5f9",
+            lineHeight: 1.3, letterSpacing: "-0.02em",
+            margin: 0, maxWidth: "580px",
+            textShadow: "0 2px 12px rgba(0,0,0,0.8)",
+          }}>
+            {title}
+          </h2>
+        </div>
       </div>
     );
   }
