@@ -4,16 +4,29 @@ import { useState } from "react";
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    setStatus("loading" as "idle");
 
-    // TODO: Replace with your email provider (Mailchimp, ConvertKit, etc.)
-    // For now, simulate success
-    setStatus("success");
-    setEmail("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -57,6 +70,19 @@ export default function NewsletterSignup() {
         >
           🎉 You&apos;re in! Check your inbox to confirm.
         </div>
+      ) : status === "error" ? (
+        <div
+          style={{
+            background: "rgba(239,68,68,0.1)",
+            border: "1px solid rgba(239,68,68,0.3)",
+            borderRadius: "8px",
+            padding: "1rem",
+            color: "#f87171",
+            fontWeight: 600,
+          }}
+        >
+          Something went wrong. Please try again.
+        </div>
       ) : (
         <form
           onSubmit={handleSubmit}
@@ -89,6 +115,7 @@ export default function NewsletterSignup() {
           />
           <button
             type="submit"
+            disabled={status === "loading"}
             style={{
               background: "linear-gradient(135deg, #a855f7, #22d3ee)",
               color: "#fff",
@@ -97,11 +124,12 @@ export default function NewsletterSignup() {
               padding: "0.7rem 1.5rem",
               fontWeight: 700,
               fontSize: "0.9rem",
-              cursor: "pointer",
+              cursor: status === "loading" ? "not-allowed" : "pointer",
               whiteSpace: "nowrap",
+              opacity: status === "loading" ? 0.7 : 1,
             }}
           >
-            Subscribe Free
+            {status === "loading" ? "Subscribing..." : "Subscribe Free"}
           </button>
         </form>
       )}
