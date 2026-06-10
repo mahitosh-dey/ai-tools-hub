@@ -18,9 +18,9 @@ Last updated: 2026-06-10
 - [x] **5. Add real author identity to posts and metadata** — Added `author` field to PostMeta (defaults to "Mahtosh Dey"). Displayed in post header with JSON-LD.
 - [x] **6. Rewrite About page** — Full rewrite with author name, story, what the site covers, affiliate transparency.
 - [x] **7. Add canonical URL to post metadata** — Added `alternates: { canonical }` to generateMetadata() in blog/[slug]/page.tsx.
-- [ ] **8. Update post titles with "2025" in them** — Titles say "2025" but published in 2026. Hurts CTR in search. Update to "2026" or remove year.
+- [x] **8. Update post titles with "2025" in them** — All 4 posts updated to 2026. chatgpt-review-2025.mdx renamed to chatgpt-plus-review.mdx.
 - [x] **9. Add related posts section** — Built RelatedPosts component. Shows up to 3 posts from same category after article body.
-- [ ] **10. Make tags clickable** — Tags on posts are dead `<span>` elements. Link to `/tag/[tag]` pages or remove them entirely.
+- [x] **10. Make tags clickable** — Built TagList component + /tag/[tag] pages. 24 tag pages statically generated.
 
 ---
 

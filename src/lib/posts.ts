@@ -46,7 +46,12 @@ export function getAllPosts(): PostMeta[] {
     } as PostMeta;
   });
 
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  const today = new Date();
+  today.setHours(23, 59, 59, 999);
+
+  return posts
+    .filter((p) => p.date && new Date(p.date) <= today)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string): Post | null {
