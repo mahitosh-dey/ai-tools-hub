@@ -50,11 +50,8 @@ export function getAllPosts(): PostMeta[] {
     } as PostMeta;
   });
 
-  const today = new Date();
-  today.setHours(23, 59, 59, 999);
-
   return posts
-    .filter((p) => p.date && new Date(p.date) <= today)
+    .filter((p) => p.date)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
