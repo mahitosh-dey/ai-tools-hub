@@ -1,15 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts, getAllCategories } from "@/lib/posts";
+import { getAllPosts } from "@/lib/posts";
 import BlogCard from "@/components/BlogCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FeaturedPost from "@/components/FeaturedPost";
 import CategoryLinks from "@/components/CategoryLinks";
 
+const baseUrl = "https://www.aivaultblog.com";
+
+export const metadata: Metadata = {
+  alternates: { canonical: baseUrl },
+};
+
 export default function HomePage() {
   const allPosts = getAllPosts();
   const featuredPost = allPosts[0] ?? null;
   const recentPosts = allPosts.slice(1, 7);
-  const categories = getAllCategories();
+
+  const categoryCounts = ["reviews", "tutorials", "comparisons", "tools"].reduce<Record<string, number>>(
+    (acc, cat) => {
+      acc[cat] = allPosts.filter((p) => p.category.toLowerCase() === cat).length;
+      return acc;
+    },
+    {}
+  );
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
@@ -155,20 +169,18 @@ export default function HomePage() {
       )}
 
       {/* Categories */}
-      {categories.length > 0 && (
-        <section
-          style={{
-            paddingBottom: "3rem",
-            borderTop: "1px solid #252538",
-            paddingTop: "2.5rem",
-          }}
-        >
-          <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1rem" }}>
-            Browse by Category
-          </h2>
-          <CategoryLinks categories={categories} />
-        </section>
-      )}
+      <section
+        style={{
+          paddingBottom: "3rem",
+          borderTop: "1px solid #252538",
+          paddingTop: "2.5rem",
+        }}
+      >
+        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1rem" }}>
+          Browse by Category
+        </h2>
+        <CategoryLinks counts={categoryCounts} />
+      </section>
 
       {/* Newsletter */}
       <section style={{ paddingBottom: "2rem" }}>

@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   description:
     "Honest reviews, tutorials, and comparisons of the best AI tools. Stay ahead with weekly insights on ChatGPT, Midjourney, Jasper, and more.",
   metadataBase: new URL(baseUrl),
-  alternates: { canonical: baseUrl },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -34,10 +33,28 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "AI Vault",
+  url: baseUrl,
+  description: "Honest reviews, tutorials, and comparisons of the best AI tools.",
+  publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${baseUrl}/blog?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <Navbar />
         <main style={{ minHeight: "calc(100vh - 64px)" }}>{children}</main>
         <Footer />

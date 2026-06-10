@@ -12,6 +12,9 @@ import RelatedPosts from "@/components/RelatedPosts";
 import TagList from "@/components/TagList";
 import TableOfContents from "@/components/TableOfContents";
 import PostCoverImage from "@/components/PostCoverImage";
+import StarRating from "@/components/StarRating";
+import ProsConsList from "@/components/ProsConsList";
+import AuthorBio from "@/components/AuthorBio";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -67,13 +70,15 @@ export default async function PostPage({ params }: Props) {
 
   const toc = extractToc(post.content);
 
-  const jsonLd = {
+  const postUrl = `${baseUrl}/blog/${slug}`;
+
+  const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt ?? post.date,
     author: {
       "@type": "Person",
       name: "Mahtosh Dey",
@@ -85,16 +90,52 @@ export default async function PostPage({ params }: Props) {
       url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/blog/${slug}` },
-    image: `${baseUrl}/og-default.png`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    image: post.coverImage?.startsWith("/") ? `${baseUrl}${post.coverImage}` : `${baseUrl}/og-default.png`,
   };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+    ],
+  };
+
+  const reviewJsonLd = post.rating ? {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "SoftwareApplication",
+      name: post.title.replace(/review.*$/i, "").trim(),
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: post.rating,
+      bestRating: 5,
+    },
+    author: { "@type": "Person", name: "Mahtosh Dey" },
+    publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
+  } : null;
 
   return (
     <div style={{ minHeight: "100vh" }}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {reviewJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+        />
+      )}
       {/* Article header — full width with subtle gradient */}
       <div
         style={{
@@ -155,6 +196,13 @@ export default async function PostPage({ params }: Props) {
             {post.excerpt}
           </p>
 
+          {/* Star rating for review posts */}
+          {post.rating && (
+            <div style={{ marginBottom: "1.25rem" }}>
+              <StarRating rating={post.rating} />
+            </div>
+          )}
+
           {/* Meta row */}
           <div
             style={{
@@ -174,6 +222,12 @@ export default async function PostPage({ params }: Props) {
               <span>📅</span>
               <time dateTime={post.date}>{formattedDate}</time>
             </span>
+            {post.updatedAt && (
+              <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
+                <span>🔄</span>
+                <span>Updated {new Date(post.updatedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
+              </span>
+            )}
             <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
               <span>⏱</span>
               <span>{post.readTime}</span>
@@ -196,6 +250,7 @@ export default async function PostPage({ params }: Props) {
         <article className="prose-blog">
           <MDXRemote
             source={post.content}
+            components={{ StarRating, ProsConsList }}
             options={{
               mdxOptions: {
                 remarkPlugins: [remarkGfm],
@@ -207,6 +262,9 @@ export default async function PostPage({ params }: Props) {
 
         {/* Tags */}
         <TagList tags={post.tags} />
+
+        {/* Author bio */}
+        <AuthorBio />
 
         {/* Related posts */}
         <RelatedPosts posts={relatedPosts} />

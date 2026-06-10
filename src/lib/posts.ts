@@ -8,6 +8,7 @@ export interface PostMeta {
   slug: string;
   title: string;
   date: string;
+  updatedAt?: string;
   excerpt: string;
   category: string;
   tags: string[];
@@ -15,6 +16,7 @@ export interface PostMeta {
   readTime: string;
   author: string;
   affiliate?: boolean;
+  rating?: number;
 }
 
 export interface Post extends PostMeta {
@@ -43,6 +45,8 @@ export function getAllPosts(): PostMeta[] {
       readTime: data.readTime ?? "5 min read",
       author: data.author ?? "Mahtosh Dey",
       affiliate: data.affiliate ?? false,
+      rating: data.rating ?? undefined,
+      updatedAt: data.updatedAt ?? undefined,
     } as PostMeta;
   });
 
@@ -73,6 +77,8 @@ export function getPostBySlug(slug: string): Post | null {
       readTime: data.readTime ?? "5 min read",
       author: data.author ?? "Mahtosh Dey",
       affiliate: data.affiliate ?? false,
+      rating: data.rating ?? undefined,
+      updatedAt: data.updatedAt ?? undefined,
       content,
     };
   } catch {
@@ -100,6 +106,12 @@ export function getPostsByTag(tag: string): PostMeta[] {
   return getAllPosts().filter((p) =>
     p.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
   );
+}
+
+export function getCategoryCount(category: string): number {
+  return getAllPosts().filter(
+    (p) => p.category.toLowerCase() === category.toLowerCase()
+  ).length;
 }
 
 export function getAllTags(): string[] {

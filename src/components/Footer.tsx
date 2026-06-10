@@ -63,7 +63,7 @@ export default function Footer() {
             real assessments to help you work smarter.
           </p>
           <a
-            href="mailto:mahidey420@gmail.com"
+            href="mailto:hello@aivaultblog.com"
             style={{
               color: "#64748b",
               fontSize: "0.82rem",
@@ -73,7 +73,7 @@ export default function Footer() {
               gap: "0.35rem",
             }}
           >
-            <span>✉️</span> mahidey420@gmail.com
+            <span>✉️</span> hello@aivaultblog.com
           </a>
         </div>
 

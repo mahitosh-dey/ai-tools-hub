@@ -9,7 +9,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Opens default mail client with pre-filled content
-    const mailto = `mailto:mahidey420@gmail.com?subject=${encodeURIComponent(form.subject || "Contact from AI Vault")}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    const mailto = `mailto:hello@aivaultblog.com?subject=${encodeURIComponent(form.subject || "Contact from AI Vault")}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
     window.location.href = mailto;
     setStatus("success");
   };
@@ -34,8 +34,8 @@ export default function ContactPage() {
       <p style={{ color: "#94a3b8", marginBottom: "2.5rem", lineHeight: 1.7 }}>
         Have a question, a review request, or a collaboration idea? We read every message.
         You can also reach us directly at{" "}
-        <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-          mahidey420@gmail.com
+        <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+          hello@aivaultblog.com
         </a>.
       </p>
 
@@ -84,8 +84,8 @@ export default function ContactPage() {
           <h3 style={{ color: "#34d399", marginBottom: "0.5rem" }}>Your mail app should have opened</h3>
           <p style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
             If it didn&apos;t, email us directly at{" "}
-            <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-              mahidey420@gmail.com
+            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+              hello@aivaultblog.com
             </a>
           </p>
         </div>
