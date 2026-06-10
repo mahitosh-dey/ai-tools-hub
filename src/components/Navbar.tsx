@@ -40,15 +40,39 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center" }}>
-          <Image
-            src="/aivault-logo.svg"
-            alt="AI Vault"
-            width={148}
-            height={46}
-            style={{ display: "block" }}
-            priority
-          />
+        <Link
+          href="/"
+          style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center" }}
+        >
+          <div
+            style={{
+              padding: "0.3rem 0.6rem",
+              borderRadius: "10px",
+              background: "rgba(108,99,255,0.06)",
+              border: "1px solid rgba(108,99,255,0.15)",
+              display: "flex",
+              alignItems: "center",
+              transition: "background 0.2s, border-color 0.2s",
+              boxShadow: "0 0 20px rgba(108,99,255,0.08)",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLDivElement).style.background = "rgba(108,99,255,0.12)";
+              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(108,99,255,0.28)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLDivElement).style.background = "rgba(108,99,255,0.06)";
+              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(108,99,255,0.15)";
+            }}
+          >
+            <Image
+              src="/aivault-logo.svg"
+              alt="AI Vault"
+              width={156}
+              height={49}
+              style={{ display: "block" }}
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop links */}

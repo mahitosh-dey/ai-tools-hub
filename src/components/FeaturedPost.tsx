@@ -1,16 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { PostMeta } from "@/lib/posts";
+import CategoryBadge from "./CategoryBadge";
 
-const emojiMap: Record<string, string> = {
-  reviews: "⭐",
-  tutorials: "📖",
-  comparisons: "⚖️",
-  tools: "🛠️",
+const categoryStyle: Record<string, { gradient: string; emoji: string }> = {
+  reviews:     { gradient: "linear-gradient(135deg,#1e0f40,#2d1b69)", emoji: "⭐" },
+  tutorials:   { gradient: "linear-gradient(135deg,#0a1628,#0f3460)", emoji: "📖" },
+  comparisons: { gradient: "linear-gradient(135deg,#0d1f0d,#1a3d1a)", emoji: "⚖️" },
+  tools:       { gradient: "linear-gradient(135deg,#1a0505,#3d1515)", emoji: "🛠️" },
+  news:        { gradient: "linear-gradient(135deg,#1a1a0d,#2e2e10)", emoji: "📰" },
 };
+const defaultStyle = { gradient: "linear-gradient(135deg,#13131e,#1c1c2e)", emoji: "🤖" };
 
 export default function FeaturedPost({ post }: { post: PostMeta }) {
+  const hasRealImage = post.coverImage && !post.coverImage.includes("default-cover");
+  const style = categoryStyle[post.category.toLowerCase()] ?? defaultStyle;
+
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
       <div
@@ -18,11 +25,9 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
           background: "#13131e",
           border: "1px solid #252538",
           borderRadius: "14px",
-          padding: "2rem",
+          overflow: "hidden",
           display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: "2rem",
-          alignItems: "center",
+          gridTemplateColumns: "1fr 280px",
           transition: "border-color 0.2s",
           cursor: "pointer",
         }}
@@ -30,22 +35,10 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
         onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.borderColor = "#252538")}
         className="featured-inner"
       >
-        <div>
+        {/* Text content */}
+        <div style={{ padding: "2rem" }}>
           <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.85rem", flexWrap: "wrap" }}>
-            <span
-              style={{
-                background: "rgba(168,85,247,0.15)",
-                color: "#c084fc",
-                padding: "0.2rem 0.65rem",
-                borderRadius: "20px",
-                fontSize: "0.72rem",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
-              }}
-            >
-              {post.category}
-            </span>
+            <CategoryBadge category={post.category} asLink={false} />
             <span style={{ color: "#475569", fontSize: "0.78rem" }}>{post.readTime}</span>
             <span style={{ color: "#475569", fontSize: "0.78rem" }}>
               {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
@@ -65,24 +58,66 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
             {post.title}
           </h3>
 
-          <p style={{ color: "#64748b", fontSize: "0.925rem", lineHeight: 1.7, marginBottom: "1.25rem", maxWidth: "600px" }}>
+          <p style={{ color: "#64748b", fontSize: "0.925rem", lineHeight: 1.7, marginBottom: "1.5rem" }}>
             {post.excerpt}
           </p>
 
-          <span style={{ color: "#a855f7", fontWeight: 600, fontSize: "0.875rem" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+              color: "#a855f7",
+              fontWeight: 600,
+              fontSize: "0.875rem",
+            }}
+          >
             Read full article →
           </span>
         </div>
 
-        <div style={{ fontSize: "4.5rem", opacity: 0.6, flexShrink: 0 }} className="featured-emoji">
-          {emojiMap[post.category.toLowerCase()] ?? "🤖"}
+        {/* Cover image */}
+        <div style={{ position: "relative", minHeight: "220px" }} className="featured-image">
+          {hasRealImage ? (
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="280px"
+            />
+          ) : (
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                background: style.gradient,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "4rem",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundImage:
+                    "linear-gradient(rgba(168,85,247,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(168,85,247,0.07) 1px, transparent 1px)",
+                  backgroundSize: "28px 28px",
+                }}
+              />
+              <span style={{ position: "relative", zIndex: 1, opacity: 0.8 }}>{style.emoji}</span>
+            </div>
+          )}
         </div>
       </div>
 
       <style>{`
         @media (max-width: 640px) {
           .featured-inner { grid-template-columns: 1fr !important; }
-          .featured-emoji { display: none !important; }
+          .featured-image { min-height: 180px !important; }
         }
       `}</style>
     </Link>
