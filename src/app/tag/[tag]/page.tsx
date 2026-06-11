@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllTags, getPostsByTag } from "@/lib/posts";
 import BlogCard from "@/components/BlogCard";
+import Pagination from "@/components/Pagination";
 import Link from "next/link";
+
+const POSTS_PER_PAGE = 6;
 
 interface Props {
   params: Promise<{ tag: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -20,11 +24,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function TagPage({ params }: Props) {
+export default async function TagPage({ params, searchParams }: Props) {
   const { tag } = await params;
-  const posts = getPostsByTag(tag);
+  const { page = "1" } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page, 10) || 1);
 
-  if (posts.length === 0) notFound();
+  const allPosts = getPostsByTag(tag);
+  if (allPosts.length === 0) notFound();
+
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  const safePage = Math.min(currentPage, Math.max(totalPages, 1));
+  const paginated = allPosts.slice(
+    (safePage - 1) * POSTS_PER_PAGE,
+    safePage * POSTS_PER_PAGE
+  );
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem" }}>
@@ -52,7 +65,8 @@ export default async function TagPage({ params }: Props) {
             #{tag}
           </span>
           <span style={{ color: "#475569", fontSize: "0.85rem" }}>
-            {posts.length} {posts.length === 1 ? "post" : "posts"}
+            {allPosts.length} {allPosts.length === 1 ? "post" : "posts"}
+            {totalPages > 1 && ` — page ${safePage} of ${totalPages}`}
           </span>
         </div>
         <h1
@@ -76,10 +90,16 @@ export default async function TagPage({ params }: Props) {
           gap: "1.25rem",
         }}
       >
-        {posts.map((post) => (
+        {paginated.map((post) => (
           <BlogCard key={post.slug} post={post} />
         ))}
       </div>
+
+      <Pagination
+        currentPage={safePage}
+        totalPages={totalPages}
+        basePath={`/tag/${tag}`}
+      />
     </div>
   );
 }

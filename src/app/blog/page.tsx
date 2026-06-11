@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts, getAllCategories } from "@/lib/posts";
 import BlogCard from "@/components/BlogCard";
+import Pagination from "@/components/Pagination";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -8,26 +9,66 @@ export const metadata: Metadata = {
   description: "Browse all AI tool reviews, tutorials, and comparisons.",
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+const POSTS_PER_PAGE = 6;
+
+interface Props {
+  searchParams: Promise<{ q?: string; page?: string }>;
+}
+
+function filterPosts(posts: ReturnType<typeof getAllPosts>, query: string) {
+  const q = query.toLowerCase().trim();
+  if (!q) return posts;
+  return posts.filter(
+    (p) =>
+      p.title.toLowerCase().includes(q) ||
+      p.excerpt.toLowerCase().includes(q) ||
+      p.category.toLowerCase().includes(q) ||
+      p.tags.some((t) => t.toLowerCase().includes(q))
+  );
+}
+
+export default async function BlogPage({ searchParams }: Props) {
+  const { q = "", page = "1" } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page, 10) || 1);
+
+  const allPosts = getAllPosts();
   const categories = getAllCategories();
+  const filtered = filterPosts(allPosts, q);
+  const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+  const safePage = Math.min(currentPage, Math.max(totalPages, 1));
+  const paginated = filtered.slice(
+    (safePage - 1) * POSTS_PER_PAGE,
+    safePage * POSTS_PER_PAGE
+  );
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1.5rem" }}>
-      <div style={{ marginBottom: "2.5rem" }}>
+
+      {/* Header */}
+      <div style={{ marginBottom: "2rem" }}>
         <h1
           style={{
             fontSize: "2.2rem",
             fontWeight: 800,
             color: "#e2e8f0",
-            marginBottom: "0.5rem",
+            marginBottom: "0.4rem",
           }}
         >
-          All Posts
+          {q ? `Search results` : "All Posts"}
         </h1>
-        <p style={{ color: "#64748b" }}>
-          {posts.length} article{posts.length !== 1 ? "s" : ""} — AI tool reviews, tutorials & comparisons
+        <p style={{ color: "#64748b", fontSize: "0.9rem" }}>
+          {q
+            ? `${filtered.length} result${filtered.length !== 1 ? "s" : ""} for "${q}"`
+            : `${allPosts.length} article${allPosts.length !== 1 ? "s" : ""} — reviews, tutorials & comparisons`}
         </p>
+        {q && (
+          <Link
+            href="/blog"
+            style={{ color: "#a855f7", fontSize: "0.85rem", textDecoration: "none", display: "inline-block", marginTop: "0.4rem" }}
+          >
+            ← Clear search
+          </Link>
+        )}
       </div>
 
       {/* Category filter */}
@@ -43,12 +84,13 @@ export default function BlogPage() {
           <Link
             href="/blog"
             style={{
-              background: "rgba(168,85,247,0.15)",
-              color: "#c084fc",
+              background: !q ? "rgba(168,85,247,0.15)" : "#12121a",
+              color: !q ? "#c084fc" : "#94a3b8",
+              border: `1px solid ${!q ? "rgba(168,85,247,0.4)" : "#2a2a3d"}`,
               padding: "0.3rem 0.9rem",
               borderRadius: "20px",
               fontSize: "0.8rem",
-              fontWeight: 600,
+              fontWeight: !q ? 600 : 400,
               textDecoration: "none",
             }}
           >
@@ -74,7 +116,8 @@ export default function BlogPage() {
         </div>
       )}
 
-      {posts.length > 0 ? (
+      {/* Grid */}
+      {paginated.length > 0 ? (
         <div
           style={{
             display: "grid",
@@ -82,7 +125,7 @@ export default function BlogPage() {
             gap: "1.5rem",
           }}
         >
-          {posts.map((post) => (
+          {paginated.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>
@@ -94,13 +137,43 @@ export default function BlogPage() {
             borderRadius: "12px",
             padding: "4rem",
             textAlign: "center",
-            color: "#475569",
           }}
         >
-          <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>📝</div>
-          <h3 style={{ color: "#94a3b8", marginBottom: "0.5rem" }}>No posts yet</h3>
-          <p>Create your first post in <code>content/posts/your-post.mdx</code></p>
+          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🔍</div>
+          <h3 style={{ color: "#94a3b8", marginBottom: "0.5rem" }}>
+            No posts found{q ? ` for "${q}"` : ""}
+          </h3>
+          {q && (
+            <Link
+              href="/blog"
+              style={{ color: "#a855f7", textDecoration: "none", fontSize: "0.9rem" }}
+            >
+              ← Clear search and show all posts
+            </Link>
+          )}
         </div>
+      )}
+
+      {/* Pagination */}
+      <Pagination
+        currentPage={safePage}
+        totalPages={totalPages}
+        basePath="/blog"
+        query={q || undefined}
+      />
+
+      {/* Page info */}
+      {totalPages > 1 && (
+        <p
+          style={{
+            textAlign: "center",
+            color: "#475569",
+            fontSize: "0.8rem",
+            marginTop: "1rem",
+          }}
+        >
+          Page {safePage} of {totalPages}
+        </p>
       )}
     </div>
   );

@@ -17,7 +17,7 @@
 
 ### Reviews
 
-- Claude AI Review 2026: The Best ChatGPT Alternative?
+- Claude AI Review 2026: The Best ChatGPT Alternative? — done (draft)
 - Grammarly Review 2026: Is It Worth It for Writers?
 - Jasper AI Review: Best AI Writing Tool for Bloggers?
 - Perplexity AI Review: The AI Search Engine That Changes Everything
@@ -29,7 +29,7 @@
 ### Comparisons
 
 - Claude vs ChatGPT: Which AI Is Better in 2026? — done
-- ChatGPT vs Google Gemini: Full Comparison
+- ChatGPT vs Google Gemini: Full Comparison — done (draft)
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
 - Jasper vs Copy.ai vs ChatGPT: Best AI Writer?
 - Grammarly vs ProWritingAid: Which Grammar Tool Wins?
@@ -37,8 +37,8 @@
 
 ### Tutorials
 
-- How to Use ChatGPT to Make Money Online (Step-by-Step)
-- Best AI Tools for Students in 2026 (Free + Paid)
+- How to Use ChatGPT to Make Money Online (Step-by-Step) - done
+- Best AI Tools for Students in 2026 (Free + Paid) — done
 - How to Use Midjourney for Complete Beginners
 - How to Build a Blog with AI (From Idea to Published)
 - How to Use Claude AI for Coding (No Experience Needed)
@@ -48,8 +48,8 @@
 
 ### Tools / Listicles
 
-- 10 Best AI Tools for Freelancers in 2026
-- Best Free AI Image Generators (No Sign-Up Required)
+- 10 Best AI Tools for Freelancers in 2026 — done (draft)
+- Best Free AI Image Generators (No Sign-Up Required) — done (draft)
 - 7 AI Tools That Replace Expensive Software
 - Best AI Tools for Social Media Content Creation
 - Top AI Coding Assistants for Beginners
@@ -59,8 +59,8 @@
 
 - GPT-5 vs Claude 4: What Changed?- done
 - The Rise of AI Agents: What You Need to Know — done
-- Is AI Replacing Freelancers? The Truth in 2026
+- Is AI Replacing Freelancers? The Truth in 2026 — done (draft)
 
 ### Common Prompt
 
-- "write post on "<Topic-Title>" with 100% correct information and sounds like human voice. Allways double cross check all data which you research for post. this content save a file with mention a cover image prompt."
+- "write post on "<Topic-Title>" with 100% correct information and FAQ and sounds like human voice. Allways double cross check all data which you research for post. this content save as a daft file with mention a cover image prompt."

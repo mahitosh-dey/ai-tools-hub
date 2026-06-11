@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { getPostsByCategory, getAllCategories } from "@/lib/posts";
 import BlogCard from "@/components/BlogCard";
+import Pagination from "@/components/Pagination";
 import Link from "next/link";
+
+const POSTS_PER_PAGE = 6;
 
 interface Props {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -20,10 +24,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function CategoryPage({ params }: Props) {
+export default async function CategoryPage({ params, searchParams }: Props) {
   const { category } = await params;
-  const posts = getPostsByCategory(category);
+  const { page = "1" } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page, 10) || 1);
+
+  const allPosts = getPostsByCategory(category);
   const name = category.charAt(0).toUpperCase() + category.slice(1);
+
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  const safePage = Math.min(currentPage, Math.max(totalPages, 1));
+  const paginated = allPosts.slice(
+    (safePage - 1) * POSTS_PER_PAGE,
+    safePage * POSTS_PER_PAGE
+  );
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1.5rem" }}>
@@ -40,11 +54,12 @@ export default async function CategoryPage({ params }: Props) {
           {name}
         </h1>
         <p style={{ color: "#64748b" }}>
-          {posts.length} post{posts.length !== 1 ? "s" : ""} in this category
+          {allPosts.length} post{allPosts.length !== 1 ? "s" : ""} in this category
+          {totalPages > 1 && ` — page ${safePage} of ${totalPages}`}
         </p>
       </div>
 
-      {posts.length > 0 ? (
+      {paginated.length > 0 ? (
         <div
           style={{
             display: "grid",
@@ -52,7 +67,7 @@ export default async function CategoryPage({ params }: Props) {
             gap: "1.5rem",
           }}
         >
-          {posts.map((post) => (
+          {paginated.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>
@@ -73,6 +88,12 @@ export default async function CategoryPage({ params }: Props) {
           </Link>
         </div>
       )}
+
+      <Pagination
+        currentPage={safePage}
+        totalPages={totalPages}
+        basePath={`/category/${category}`}
+      />
     </div>
   );
 }

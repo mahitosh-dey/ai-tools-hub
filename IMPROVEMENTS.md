@@ -1,6 +1,6 @@
 # AI Vault — Site Improvement Checklist
 
-Last updated: 2026-06-10
+Last updated: 2026-06-11
 
 ---
 
@@ -30,17 +30,17 @@ Last updated: 2026-06-10
 - [x] **12. Add Table of Contents on long posts** — ToC auto-generates from H2/H3 headings. Active heading highlights as you scroll. Collapsible on mobile. rehype-slug added for anchor IDs.
 - [x] **13. Remove `"use client"` from Footer.tsx** — Footer has hover handlers so must stay as client component. Low priority — acceptable trade-off.
 - [x] **14. Fix future-dated posts showing now** — Date filter added to getAllPosts(). Posts only appear on/after their scheduled date.
-- [ ] **15. Add search functionality** — No way to search posts. Needed once 10+ posts are live.
+- [x] **15. Add search + pagination** — SearchBar (client, debounced, URL-based), Pagination component, 6 posts/page. Both live on /blog.
 
 ---
 
 ## 🟢 CONTENT & MONETIZATION
 
-- [ ] **16. Write Post 5 — Claude AI vs ChatGPT** — Due 2026-06-17 (Wednesday). Next on content calendar.
+- [x] **16. Write Post 5 — Claude AI vs ChatGPT** — Done. File: claude-vs-chatgpt.mdx
 - [x] **17. Add internal links between existing posts** — 2–4 cross-links added per post. Every post now links to at least 2 others.
 - [x] **18. Add affiliate links to all existing posts** — Direct links added to all tools. Grammarly, Canva, ElevenLabs, Fiverr, Teachable have affiliate programs (see note below).
-- [ ] **19. Write Post 6 — Best AI Tools for Students** — Due 2026-06-19 (Friday).
-- [ ] **20. Write Post 7 — How to Use ChatGPT to Make Money Online** — Due 2026-06-22 (Monday).
+- [x] **19. Write Post 6 — Best AI Tools for Students** — Done. File: best-ai-tools-for-students.mdx
+- [ ] **20. Write Post 7 — How to Use ChatGPT to Make Money Online** — Draft done. File: drafts/how-to-use-chatgpt-to-make-money-online.mdx. Publish by 2026-06-22.
 
 ---
 
@@ -58,3 +58,5 @@ Last updated: 2026-06-10
 | 13 | Fix Footer client directive | ✅ | 2026-06-10 |
 | 17 | Internal links between posts | ✅ | 2026-06-10 |
 | 18 | Affiliate links in posts | ✅ | 2026-06-10 |
+| 16 | Write Claude vs ChatGPT post | ✅ | 2026-06-10 |
+| 19 | Write Best AI Tools for Students post | ✅ | 2026-06-11 |
