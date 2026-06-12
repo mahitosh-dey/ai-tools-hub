@@ -27,9 +27,9 @@
 
 ### Reviews
 
-- Grammarly Review 2026: Is It Worth It for Writers?
+- Grammarly Review 2026: Is It Worth It for Writers? — done (draft)
 - Jasper AI Review: Best AI Writing Tool for Bloggers?
-- Perplexity AI Review: The AI Search Engine That Changes Everything
+- Perplexity AI Review: The AI Search Engine That Changes Everything — done (draft)
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - ElevenLabs Review: Best AI Voice Generator in 2026?
@@ -44,7 +44,7 @@
 
 ### Tutorials
 
-- How to Use Midjourney for Complete Beginners
+- How to Use Midjourney for Complete Beginners — done (draft)
 - How to Build a Blog with AI (From Idea to Published)
 - How to Use Claude AI for Coding (No Experience Needed)
 - How to Use AI Tools to Write YouTube Scripts Faster
@@ -53,11 +53,11 @@
 
 ### Tools / Listicles
 
-- 7 AI Tools That Replace Expensive Software
+- 7 AI Tools That Replace Expensive Software — done (draft)
 - Best AI Tools for Social Media Content Creation
 - Top AI Coding Assistants for Beginners
-- Best AI Tools for Productivity in 2026
+- Best AI Tools for Productivity in 2026 — done (draft)
 
 ### Common Prompt
 
-- "write post on "<Topic-Title>" with 100% correct information and FAQ and sounds like human voice. Allways double cross check all data which you research for post. this content save as a daft file with mention a cover image prompt."
+- "write post on "<Topic-Name>" with 100% correct information and FAQ and sounds like human voice. Allways double cross check all data which you research for post. this content save as a daft file with mention a cover image prompt for gemini with match project theme."
