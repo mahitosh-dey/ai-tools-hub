@@ -1,15 +1,25 @@
 # AI Vault — Blog Topics
 
-## Published Posts (6)
+## Published Posts (16)
 
-| #   | Title                                                                        | Slug                            | Category    |
-| --- | ---------------------------------------------------------------------------- | ------------------------------- | ----------- |
-| 1   | What Is ChatGPT? A Complete Beginner's Guide (2026)                          | what-is-chatgpt-beginners-guide | Tutorials   |
-| 2   | 10 Best Free AI Tools You Can Use Right Now (No Credit Card)                 | best-free-ai-tools              | Tools       |
-| 3   | How to Write a Blog Post 10x Faster Using AI (Step-by-Step)                  | write-blog-post-faster-with-ai  | Tutorials   |
-| 4   | ChatGPT Plus Review 2026: Is It Still Worth $20 a Month?                     | chatgpt-plus-review             | Reviews     |
-| 5   | Midjourney vs DALL-E 3: Which AI Image Generator Is Actually Better in 2026? | midjourney-vs-dalle3            | Comparisons |
-| 6   | 7 Real Ways to Make Money with AI Tools in 2026 (With Actual Numbers)        | how-to-make-money-with-ai-tools | Tools       |
+| #   | Title                                                                        | Slug                                    | Category    | Date       |
+| --- | ---------------------------------------------------------------------------- | --------------------------------------- | ----------- | ---------- |
+| 1   | What Is ChatGPT? A Complete Beginner's Guide (2026)                          | what-is-chatgpt-beginners-guide         | Tutorials   | 2026-06-10 |
+| 2   | 10 Best Free AI Tools You Can Use Right Now (No Credit Card)                 | best-free-ai-tools                      | Tools       | 2026-06-10 |
+| 3   | How to Write a Blog Post 10x Faster Using AI (Step-by-Step)                  | write-blog-post-faster-with-ai          | Tutorials   | 2026-06-10 |
+| 4   | ChatGPT Plus Review 2026: Is It Still Worth $20 a Month?                     | chatgpt-plus-review                     | Reviews     | 2026-06-10 |
+| 5   | Midjourney vs DALL-E 3: Which AI Image Generator Is Actually Better in 2026? | midjourney-vs-dalle3                    | Comparisons | 2026-06-10 |
+| 6   | 7 Real Ways to Make Money with AI Tools in 2026 (With Actual Numbers)        | how-to-make-money-with-ai-tools         | Tutorials   | 2026-06-10 |
+| 7   | Claude vs ChatGPT: Which AI Is Actually Better in 2026?                      | claude-vs-chatgpt                       | Comparisons | 2026-06-10 |
+| 8   | GPT-5 vs Claude 4: What Actually Changed (And Which One Wins in 2026)        | gpt5-vs-claude4                         | Comparisons | 2026-06-10 |
+| 9   | The Rise of AI Agents: What You Need to Know                                 | rise-of-ai-agents                       | News        | 2026-06-10 |
+| 10  | 15 Best AI Tools for Students in 2026 (Free + Paid)                          | best-ai-tools-for-students              | Tools       | 2026-06-11 |
+| 11  | 10 Best AI Tools for Freelancers in 2026 (Free + Paid)                       | best-ai-tools-for-freelancers           | Tools       | 2026-06-11 |
+| 12  | Best Free AI Image Generators in 2026 (No Sign-Up Required)                  | best-free-ai-image-generators           | Tools       | 2026-06-11 |
+| 13  | ChatGPT vs Google Gemini: Full Comparison (2026)                             | chatgpt-vs-google-gemini                | Comparisons | 2026-06-11 |
+| 14  | Claude AI Review 2026: The Best ChatGPT Alternative?                         | claude-ai-review                        | Reviews     | 2026-06-11 |
+| 15  | How to Use ChatGPT to Make Money Online (Step-by-Step)                       | how-to-use-chatgpt-to-make-money-online | Tutorials   | 2026-06-11 |
+| 16  | Is AI Replacing Freelancers? The Truth in 2026                               | is-ai-replacing-freelancers             | News        | 2026-06-11 |
 
 ---
 
@@ -17,7 +27,6 @@
 
 ### Reviews
 
-- Claude AI Review 2026: The Best ChatGPT Alternative? — done (draft)
 - Grammarly Review 2026: Is It Worth It for Writers?
 - Jasper AI Review: Best AI Writing Tool for Bloggers?
 - Perplexity AI Review: The AI Search Engine That Changes Everything
@@ -28,8 +37,6 @@
 
 ### Comparisons
 
-- Claude vs ChatGPT: Which AI Is Better in 2026? — done
-- ChatGPT vs Google Gemini: Full Comparison — done (draft)
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
 - Jasper vs Copy.ai vs ChatGPT: Best AI Writer?
 - Grammarly vs ProWritingAid: Which Grammar Tool Wins?
@@ -37,8 +44,6 @@
 
 ### Tutorials
 
-- How to Use ChatGPT to Make Money Online (Step-by-Step) - done
-- Best AI Tools for Students in 2026 (Free + Paid) — done
 - How to Use Midjourney for Complete Beginners
 - How to Build a Blog with AI (From Idea to Published)
 - How to Use Claude AI for Coding (No Experience Needed)
@@ -48,18 +53,10 @@
 
 ### Tools / Listicles
 
-- 10 Best AI Tools for Freelancers in 2026 — done (draft)
-- Best Free AI Image Generators (No Sign-Up Required) — done (draft)
 - 7 AI Tools That Replace Expensive Software
 - Best AI Tools for Social Media Content Creation
 - Top AI Coding Assistants for Beginners
 - Best AI Tools for Productivity in 2026
-
-### News / Trends
-
-- GPT-5 vs Claude 4: What Changed?- done
-- The Rise of AI Agents: What You Need to Know — done
-- Is AI Replacing Freelancers? The Truth in 2026 — done (draft)
 
 ### Common Prompt
 
