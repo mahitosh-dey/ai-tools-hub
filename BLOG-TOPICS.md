@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (16)
+## Published Posts (21)
 
 | #   | Title                                                                        | Slug                                    | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | --------------------------------------- | ----------- | ---------- |
@@ -20,6 +20,11 @@
 | 14  | Claude AI Review 2026: The Best ChatGPT Alternative?                         | claude-ai-review                        | Reviews     | 2026-06-11 |
 | 15  | How to Use ChatGPT to Make Money Online (Step-by-Step)                       | how-to-use-chatgpt-to-make-money-online | Tutorials   | 2026-06-11 |
 | 16  | Is AI Replacing Freelancers? The Truth in 2026                               | is-ai-replacing-freelancers             | News        | 2026-06-11 |
+| 17  | Grammarly Review 2026: Is It Worth It for Writers?                           | grammarly-review-2026                   | Reviews     | 2026-06-12 |
+| 18  | Perplexity AI Review: The AI Search Engine That Changes Everything           | perplexity-ai-review                    | Reviews     | 2026-06-12 |
+| 19  | Best AI Tools for Productivity in 2026 (Actually Useful, Not Just Hyped)     | best-ai-tools-for-productivity-2026     | Tools       | 2026-06-12 |
+| 20  | How to Use Midjourney for Complete Beginners (2026 Guide)                    | how-to-use-midjourney-beginners         | Tutorials   | 2026-06-12 |
+| 21  | 7 AI Tools That Replace Expensive Software (Save Hundreds Per Year)          | 7-ai-tools-that-replace-expensive-software | Tools    | 2026-06-12 |
 
 ---
 
@@ -27,9 +32,7 @@
 
 ### Reviews
 
-- Grammarly Review 2026: Is It Worth It for Writers? — done (draft)
 - Jasper AI Review: Best AI Writing Tool for Bloggers?
-- Perplexity AI Review: The AI Search Engine That Changes Everything — done (draft)
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - ElevenLabs Review: Best AI Voice Generator in 2026?
@@ -44,7 +47,7 @@
 
 ### Tutorials
 
-- How to Use Midjourney for Complete Beginners — done (draft)
+- How to Use Midjourney for Complete Beginners
 - How to Build a Blog with AI (From Idea to Published)
 - How to Use Claude AI for Coding (No Experience Needed)
 - How to Use AI Tools to Write YouTube Scripts Faster
@@ -53,10 +56,8 @@
 
 ### Tools / Listicles
 
-- 7 AI Tools That Replace Expensive Software — done (draft)
 - Best AI Tools for Social Media Content Creation
 - Top AI Coding Assistants for Beginners
-- Best AI Tools for Productivity in 2026 — done (draft)
 
 ### Common Prompt
 
