@@ -124,7 +124,8 @@ export default async function PostPage({ params }: Props) {
     reviewRating: {
       "@type": "Rating",
       ratingValue: post.rating,
-      bestRating: 5,
+      worstRating: 1,
+      bestRating: 10,
     },
     author: { "@type": "Person", name: "Mahtosh Dey" },
     publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
