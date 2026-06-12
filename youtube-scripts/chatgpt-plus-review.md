@@ -20,42 +20,92 @@ BLOG POST
 ---
 
 # PART 1 — SHORT (60 sec)
-## "Is ChatGPT Plus actually worth $20?"
+## CapCut AI Version — No Screen Recording Needed
 
 **Purpose:** Hook new viewers. Drive them to the long video for the full answer.
-**CTA:** Watch the long video / visit the blog.
-**Record:** Vertical (9:16), phone camera or screen record.
+**CTA:** Watch the long video — link in bio.
+**Record:** Voiceover only. CapCut handles visuals automatically.
+**Format:** Vertical 9:16. Short punchy sentences. One idea per line.
 
 ---
 
-*[Open mid-sentence — no intro, no channel name, straight into the hook]*
-
-> "I've been paying $20 a month for ChatGPT Plus for over a year.
->
-> Here's what nobody tells you.
->
-> The free tier and the paid tier both have GPT-5. So what are you actually paying for?
->
-> Three things that change everything:
->
-> One — Memory. ChatGPT remembers your preferences, your work, your style across every conversation. Tell it once. It never forgets.
->
-> Two — Image generation. DALL-E 3, built right into the chat. No extra tool, no extra cost.
->
-> Three — The o1 thinking model. It reasons through hard problems step by step before answering. I've had it catch errors that the standard model missed completely.
->
-> Is it worth $20? Honest answer — it depends on one thing.
->
-> I did a full 8-minute breakdown on my channel covering exactly who should pay and who should stick with free. Link in bio.
->
-> Go watch that before you decide."
+### HOW TO USE IN CAPCUT
+1. Open CapCut → New Project → AI Video (or "Script to Video")
+2. Paste the VOICEOVER SCRIPT below
+3. Upload your recorded voiceover audio
+4. CapCut auto-assigns stock clips to each line
+5. Swap any clips you don't like
+6. Add auto-captions (Captions tab → Auto Captions)
+7. Export vertical MP4
 
 ---
 
-**On-screen text cues:**
-- "GPT-5 on FREE too 👀" — at the GPT-5 mention
-- "Memory = game changer" — at the memory section
-- "Watch the full review 👇" — at the CTA
+### VOICEOVER SCRIPT
+*Read this out loud. One breath per line. Speak fast but clear.*
+
+---
+
+> ChatGPT has a free version.
+>
+> So why are millions of people paying $20 a month?
+>
+> Three reasons.
+>
+> Number one — Memory.
+>
+> ChatGPT Plus remembers you.
+>
+> Your job. Your writing style. Your preferences.
+>
+> Every single conversation.
+>
+> You tell it once. It never forgets.
+>
+> Number two — Image generation.
+>
+> Type what you want. Get a professional image.
+>
+> No extra tool. No extra cost.
+>
+> Number three — The o1 model.
+>
+> It doesn't just answer. It thinks first.
+>
+> Step by step. Before it replies.
+>
+> The result? Noticeably better answers on hard tasks.
+>
+> Is $20 worth it?
+>
+> I made a full honest review — every feature, every downside.
+>
+> Link in bio. Watch it before you decide.
+
+---
+
+### ON-SCREEN TEXT CUES
+*(Type these as text overlays in CapCut — bold, centered)*
+
+| Moment in voiceover | Text overlay |
+|---|---|
+| "Three reasons" | **3 REASONS** |
+| "Memory" | **💾 MEMORY** |
+| "You tell it once. It never forgets." | **Remembers you forever** |
+| "Image generation" | **🎨 IMAGE GENERATION** |
+| "The o1 model" | **🧠 o1 THINKING MODEL** |
+| "Link in bio" | **👇 FULL REVIEW — LINK IN BIO** |
+
+---
+
+### STOCK CLIP SUGGESTIONS
+*(CapCut will auto-pick — swap any that don't fit)*
+
+| Line | Swap clip to... |
+|---|---|
+| Memory section | person typing on laptop |
+| Image generation | AI art / colorful digital art |
+| o1 model | person thinking / brain animation |
+| CTA | phone screen / subscribe animation |
 
 ---
 
