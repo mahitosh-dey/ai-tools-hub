@@ -114,12 +114,20 @@ export default async function PostPage({ params }: Props) {
     })),
   } : null;
 
+  const reviewedName = post.title.replace(/review.*$/i, "").replace(/:\s*.*$/, "").trim();
   const reviewJsonLd = post.rating ? {
     "@context": "https://schema.org",
     "@type": "Review",
+    name: post.title,
+    url: postUrl,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.updatedAt ?? post.date,
     itemReviewed: {
       "@type": "SoftwareApplication",
-      name: post.title.replace(/review.*$/i, "").trim(),
+      name: reviewedName,
+      applicationCategory: "Artificial Intelligence",
+      description: post.excerpt,
     },
     reviewRating: {
       "@type": "Rating",
@@ -127,7 +135,11 @@ export default async function PostPage({ params }: Props) {
       worstRating: 1,
       bestRating: 10,
     },
-    author: { "@type": "Person", name: "Mahtosh Dey" },
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: `${baseUrl}/about`,
+    },
     publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
   } : null;
 
