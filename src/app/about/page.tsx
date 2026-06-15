@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "AI Vault is written by Mahtosh Dey — an independent writer and AI tools researcher helping people cut through the hype and find tools that actually work.",
+  alternates: { canonical: "https://www.aivaultblog.com/about" },
 };
 
 export default function AboutPage() {

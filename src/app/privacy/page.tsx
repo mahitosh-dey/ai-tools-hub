@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for AI Vault — how we collect, use, and protect your data.",
+  alternates: { canonical: "https://www.aivaultblog.com/privacy" },
 };
 
 export default function PrivacyPage() {

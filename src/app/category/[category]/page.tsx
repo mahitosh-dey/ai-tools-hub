@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${name} — AI Tools`,
     description: `Browse all ${name} articles about AI tools.`,
+    alternates: { canonical: `https://www.aivaultblog.com/category/${category}` },
   };
 }
 

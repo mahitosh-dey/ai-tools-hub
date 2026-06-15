@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description: "AI Vault's affiliate disclosure — how we earn commissions and how it affects our reviews.",
+  alternates: { canonical: "https://www.aivaultblog.com/disclosure" },
 };
 
 export default function DisclosurePage() {

@@ -1,11 +1,12 @@
 import { MetadataRoute } from "next";
-import { getAllPosts, getAllCategories } from "@/lib/posts";
+import { getAllPosts, getAllCategories, getAllTags } from "@/lib/posts";
 
 const baseUrl = "https://www.aivaultblog.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const categories = getAllCategories();
+  const tags = getAllTags();
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -21,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const tagEntries: MetadataRoute.Sitemap = tags.map((tag) => ({
+    url: `${baseUrl}/tag/${tag}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.4,
+  }));
+
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "daily", priority: 1.0 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
@@ -30,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/disclosure`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     ...categoryEntries,
+    ...tagEntries,
     ...postEntries,
   ];
 }

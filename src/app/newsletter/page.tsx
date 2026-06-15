@@ -4,6 +4,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 export const metadata: Metadata = {
   title: "Newsletter",
   description: "Subscribe to AI Vault newsletter for weekly AI tool reviews and tutorials.",
+  alternates: { canonical: "https://www.aivaultblog.com/newsletter" },
 };
 
 export default function NewsletterPage() {
