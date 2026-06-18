@@ -28,15 +28,19 @@ export default function Footer() {
       >
         {/* Brand column */}
         <div>
-          <div style={{ marginBottom: "0.75rem" }}>
+          <div style={{ display: "flex", alignItems: "center", marginBottom: "0.75rem" }}>
             <Image
               src="/ailogo.png"
               alt="AI Vault"
-              width={56}
-              height={56}
+              width={48}
+              height={48}
               style={{ display: "block" }}
               unoptimized
             />
+            <span style={{ marginLeft: "-0.2rem", lineHeight: 1, fontFamily: "var(--font-orbitron)" }}>
+              <span style={{ color: "#ffffff", fontWeight: 800, fontSize: "0.95rem", letterSpacing: "0.02em" }}>Vault</span>
+              <span style={{ color: "#22d3ee", fontWeight: 700, fontSize: "0.95rem", letterSpacing: "0.02em" }}>Blog</span>
+            </span>
           </div>
           <p
             style={{
