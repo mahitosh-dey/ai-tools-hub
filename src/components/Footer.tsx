@@ -30,11 +30,11 @@ export default function Footer() {
         <div>
           <div style={{ marginBottom: "0.75rem" }}>
             <Image
-              src="/aivault-logo.svg"
+              src="/logo.png"
               alt="AI Vault"
-              width={128}
-              height={40}
-              style={{ display: "block" }}
+              width={56}
+              height={56}
+              style={{ display: "block", borderRadius: "8px" }}
             />
           </div>
           <p

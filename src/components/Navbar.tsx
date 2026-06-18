@@ -88,11 +88,11 @@ export default function Navbar() {
             }}
           >
             <Image
-              src="/aivault-logo.svg"
+              src="/logo.png"
               alt="AI Vault"
-              width={156}
-              height={49}
-              style={{ display: "block" }}
+              width={44}
+              height={44}
+              style={{ display: "block", borderRadius: "6px" }}
               priority
             />
           </div>
