@@ -67,35 +67,19 @@ export default function Navbar() {
           href="/"
           style={{ textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center" }}
         >
-          <div
-            style={{
-              padding: "0.3rem 0.6rem",
-              borderRadius: "10px",
-              background: "rgba(108,99,255,0.06)",
-              border: "1px solid rgba(108,99,255,0.15)",
-              display: "flex",
-              alignItems: "center",
-              transition: "background 0.2s, border-color 0.2s",
-              boxShadow: "0 0 20px rgba(108,99,255,0.08)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.background = "rgba(108,99,255,0.12)";
-              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(108,99,255,0.28)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.background = "rgba(108,99,255,0.06)";
-              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(108,99,255,0.15)";
-            }}
-          >
-            <Image
-              src="/logo.png"
-              alt="AI Vault"
-              width={44}
-              height={44}
-              style={{ display: "block", borderRadius: "6px" }}
-              priority
-            />
-          </div>
+          <Image
+            src="/ailogo.png"
+            alt="AI Vault"
+            width={48}
+            height={48}
+            style={{ display: "block" }}
+            priority
+            unoptimized
+          />
+          <span style={{ marginLeft: "-0.2rem", lineHeight: 1, fontFamily: "var(--font-orbitron)" }}>
+            <span style={{ color: "#ffffff", fontWeight: 800, fontSize: "0.95rem", letterSpacing: "0.02em" }}>Vault</span>
+            <span style={{ color: "#22d3ee", fontWeight: 700, fontSize: "0.95rem", letterSpacing: "0.02em" }}>Blog</span>
+          </span>
         </Link>
 
         {/* Desktop right side */}

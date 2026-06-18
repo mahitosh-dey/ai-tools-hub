@@ -30,11 +30,12 @@ export default function Footer() {
         <div>
           <div style={{ marginBottom: "0.75rem" }}>
             <Image
-              src="/logo.png"
+              src="/ailogo.png"
               alt="AI Vault"
               width={56}
               height={56}
-              style={{ display: "block", borderRadius: "8px" }}
+              style={{ display: "block" }}
+              unoptimized
             />
           </div>
           <p
