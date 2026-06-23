@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `#${tag}`,
     description: `All posts tagged with #${tag} on AI Vault.`,
     alternates: { canonical: `https://www.aivaultblog.com/tag/${tag}` },
+    openGraph: { url: `https://www.aivaultblog.com/tag/${tag}` },
   };
 }
 

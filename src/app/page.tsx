@@ -10,6 +10,7 @@ const baseUrl = "https://www.aivaultblog.com";
 
 export const metadata: Metadata = {
   alternates: { canonical: baseUrl },
+  openGraph: { url: baseUrl },
 };
 
 export default function HomePage() {

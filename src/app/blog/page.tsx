@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "All Posts",
   description: "Browse all AI tool reviews, tutorials, and comparisons.",
   alternates: { canonical: "https://www.aivaultblog.com/blog" },
+  openGraph: { url: "https://www.aivaultblog.com/blog" },
 };
 
 const POSTS_PER_PAGE = 6;

@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${name} — AI Tools`,
     description: `Browse all ${name} articles about AI tools.`,
     alternates: { canonical: `https://www.aivaultblog.com/category/${category}` },
+    openGraph: { url: `https://www.aivaultblog.com/category/${category}` },
   };
 }
 
