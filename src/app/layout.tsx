@@ -60,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
           }}
         />
+        <script async src="https://analytics.ahrefs.com/analytics.js" data-key="2Nu3zKYM1lwXV0F1WUQ2ww" />
       </head>
       <body suppressHydrationWarning>
         <script
