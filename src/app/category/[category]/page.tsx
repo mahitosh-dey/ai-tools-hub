@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
 import { getPostsByCategory, getAllCategories } from "@/lib/posts";
-import BlogCard from "@/components/BlogCard";
-import Pagination from "@/components/Pagination";
+import PostsGrid from "@/components/PostsGrid";
 import Link from "next/link";
-
-export const revalidate = 86400;
-
-const POSTS_PER_PAGE = 6;
 
 interface Props {
   params: Promise<{ category: string }>;
-  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -36,20 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function CategoryPage({ params, searchParams }: Props) {
+export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
-  const { page = "1" } = await searchParams;
-  const currentPage = Math.max(1, parseInt(page, 10) || 1);
-
   const allPosts = getPostsByCategory(category);
   const name = category.charAt(0).toUpperCase() + category.slice(1);
-
-  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
-  const safePage = Math.min(currentPage, Math.max(totalPages, 1));
-  const paginated = allPosts.slice(
-    (safePage - 1) * POSTS_PER_PAGE,
-    safePage * POSTS_PER_PAGE
-  );
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1.5rem" }}>
@@ -67,44 +51,14 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         </h1>
         <p style={{ color: "#64748b" }}>
           {allPosts.length} post{allPosts.length !== 1 ? "s" : ""} in this category
-          {totalPages > 1 && ` — page ${safePage} of ${totalPages}`}
         </p>
       </div>
 
-      {paginated.length > 0 ? (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gap: "1.5rem",
-          }}
-        >
-          {paginated.map((post) => (
-            <BlogCard key={post.slug} post={post} />
-          ))}
-        </div>
-      ) : (
-        <div
-          style={{
-            background: "#12121a",
-            border: "1px dashed #2a2a3d",
-            borderRadius: "12px",
-            padding: "4rem",
-            textAlign: "center",
-            color: "#475569",
-          }}
-        >
-          <p>No posts in &ldquo;{name}&rdquo; yet.</p>
-          <Link href="/blog" style={{ color: "#a855f7", textDecoration: "none" }}>
-            ← Browse all posts
-          </Link>
-        </div>
-      )}
-
-      <Pagination
-        currentPage={safePage}
-        totalPages={totalPages}
+      <PostsGrid
+        posts={allPosts}
         basePath={`/category/${category}`}
+        emptyLabel={`No posts in "${name}" yet.`}
+        emptyHref="/blog"
       />
     </div>
   );
