@@ -5,7 +5,15 @@ export const metadata: Metadata = {
   title: "Newsletter",
   description: "Subscribe to AI Vault newsletter for weekly AI tool reviews and tutorials.",
   alternates: { canonical: "https://www.aivaultblog.com/newsletter" },
-  openGraph: { url: "https://www.aivaultblog.com/newsletter" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: "https://www.aivaultblog.com/newsletter",
+    title: "Newsletter | AI Vault",
+    description: "Subscribe to AI Vault newsletter for weekly AI tool reviews and tutorials.",
+    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 export default function NewsletterPage() {

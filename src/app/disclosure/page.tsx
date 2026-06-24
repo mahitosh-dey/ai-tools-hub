@@ -4,7 +4,15 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description: "AI Vault's affiliate disclosure — how we earn commissions and how it affects our reviews.",
   alternates: { canonical: "https://www.aivaultblog.com/disclosure" },
-  openGraph: { url: "https://www.aivaultblog.com/disclosure" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: "https://www.aivaultblog.com/disclosure",
+    title: "Affiliate Disclosure | AI Vault",
+    description: "AI Vault's affiliate disclosure — how we earn commissions and how it affects our reviews.",
+    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 export default function DisclosurePage() {

@@ -4,7 +4,15 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for AI Vault — how we collect, use, and protect your data.",
   alternates: { canonical: "https://www.aivaultblog.com/privacy" },
-  openGraph: { url: "https://www.aivaultblog.com/privacy" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: "https://www.aivaultblog.com/privacy",
+    title: "Privacy Policy | AI Vault",
+    description: "Privacy Policy for AI Vault — how we collect, use, and protect your data.",
+    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 export default function PrivacyPage() {

@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: "All Posts",
   description: "Browse all AI tool reviews, tutorials, and comparisons.",
   alternates: { canonical: "https://www.aivaultblog.com/blog" },
-  openGraph: { url: "https://www.aivaultblog.com/blog" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: "https://www.aivaultblog.com/blog",
+    title: "All Posts | AI Vault",
+    description: "Browse all AI tool reviews, tutorials, and comparisons.",
+    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 const POSTS_PER_PAGE = 6;

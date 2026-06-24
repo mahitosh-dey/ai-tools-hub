@@ -6,7 +6,15 @@ export const metadata: Metadata = {
   description:
     "AI Vault is written by Mahtosh Dey — an independent writer and AI tools researcher helping people cut through the hype and find tools that actually work.",
   alternates: { canonical: "https://www.aivaultblog.com/about" },
-  openGraph: { url: "https://www.aivaultblog.com/about" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: "https://www.aivaultblog.com/about",
+    title: "About | AI Vault",
+    description: "AI Vault is written by Mahtosh Dey — an independent writer and AI tools researcher helping people cut through the hype and find tools that actually work.",
+    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 export default function AboutPage() {
