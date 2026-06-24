@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
-  description: "AI Vault's affiliate disclosure — how we earn commissions and how it affects our reviews.",
+  description: "AI Vault's affiliate disclosure. We earn commissions on some links at no cost to you. This never affects how we rate or review AI tools.",
   alternates: { canonical: "https://www.aivaultblog.com/disclosure" },
   openGraph: {
     type: "website",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: "AI Vault",
     url: "https://www.aivaultblog.com/disclosure",
     title: "Affiliate Disclosure | AI Vault",
-    description: "AI Vault's affiliate disclosure — how we earn commissions and how it affects our reviews.",
+    description: "AI Vault's affiliate disclosure. We earn commissions on some links at no cost to you. This never affects how we rate or review AI tools.",
     images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
