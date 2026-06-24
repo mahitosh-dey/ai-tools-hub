@@ -10,7 +10,15 @@ const baseUrl = "https://www.aivaultblog.com";
 
 export const metadata: Metadata = {
   alternates: { canonical: baseUrl },
-  openGraph: { url: baseUrl },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "AI Vault",
+    url: baseUrl,
+    title: "AI Vault — Reviews, Tutorials & Comparisons",
+    description: "Honest reviews, tutorials, and comparisons of the best AI tools. Stay ahead with weekly insights on ChatGPT, Midjourney, Jasper, and more.",
+    images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" }],
+  },
 };
 
 export default function HomePage() {
