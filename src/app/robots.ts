@@ -8,8 +8,11 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: "/calendar/",
       },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
+      },
     ],
     sitemap: "https://www.aivaultblog.com/sitemap.xml",
-    host: "https://www.aivaultblog.com",
   };
 }
