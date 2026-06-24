@@ -4,6 +4,8 @@ import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 import Link from "next/link";
 
+export const revalidate = 86400;
+
 const POSTS_PER_PAGE = 6;
 
 interface Props {

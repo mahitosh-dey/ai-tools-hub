@@ -4,6 +4,8 @@ import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 import Link from "next/link";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "All Posts",
   description: "Browse all AI tool reviews, tutorials, and comparisons.",
