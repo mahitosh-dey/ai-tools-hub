@@ -3,7 +3,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
   title: "Newsletter",
-  description: "Subscribe to AI Vault newsletter for weekly AI tool reviews and tutorials.",
+  description: "Subscribe to the AI Vault newsletter for weekly AI tool reviews, tutorials, and honest comparisons. Free. No spam.",
   alternates: { canonical: "https://www.aivaultblog.com/newsletter" },
   openGraph: {
     type: "website",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "AI Vault",
     url: "https://www.aivaultblog.com/newsletter",
     title: "Newsletter | AI Vault",
-    description: "Subscribe to AI Vault newsletter for weekly AI tool reviews and tutorials.",
+    description: "Subscribe to the AI Vault newsletter for weekly AI tool reviews, tutorials, and honest comparisons. Free. No spam.",
     images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };

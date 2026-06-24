@@ -8,7 +8,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "All Posts",
-  description: "Browse all AI tool reviews, tutorials, and comparisons.",
+  description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
   alternates: { canonical: "https://www.aivaultblog.com/blog" },
   openGraph: {
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "AI Vault",
     url: "https://www.aivaultblog.com/blog",
     title: "All Posts | AI Vault",
-    description: "Browse all AI tool reviews, tutorials, and comparisons.",
+    description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
     images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };

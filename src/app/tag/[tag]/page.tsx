@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tag } = await params;
   return {
     title: `#${tag}`,
-    description: `All posts tagged with #${tag} on AI Vault.`,
+    description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools — updated regularly.`,
     alternates: { canonical: `https://www.aivaultblog.com/tag/${tag}` },
     openGraph: {
       type: "website",
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "AI Vault",
       url: `https://www.aivaultblog.com/tag/${tag}`,
       title: `#${tag} | AI Vault`,
-      description: `All posts tagged with #${tag} on AI Vault.`,
+      description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools — updated regularly.`,
       images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
     },
   };
