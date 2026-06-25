@@ -3,29 +3,31 @@ import { getAllPosts, getAllCategories, getAllTags } from "@/lib/posts";
 
 const baseUrl = "https://www.aivaultblog.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const revalidate = 3600;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();
   const categories = getAllCategories();
   const tags = getAllTags();
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly",
+    lastModified: new Date(post.updatedAt ?? post.date),
+    changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = categories.map((cat) => ({
     url: `${baseUrl}/category/${cat.toLowerCase()}`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
 
   const tagEntries: MetadataRoute.Sitemap = tags.map((tag) => ({
     url: `${baseUrl}/tag/${tag}`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.4,
   }));
 

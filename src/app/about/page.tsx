@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "AI Vault is written by Mahtosh Dey — an independent writer and AI tools researcher helping people cut through the hype and find tools that actually work.",
+    "AI Vault is written by Mahitosh Dey, a developer who has been testing AI tools since 2022. Honest reviews and tutorials — no hype, no paid placements.",
   alternates: { canonical: "https://www.aivaultblog.com/about" },
   openGraph: {
     type: "website",
@@ -12,14 +14,30 @@ export const metadata: Metadata = {
     siteName: "AI Vault",
     url: "https://www.aivaultblog.com/about",
     title: "About | AI Vault",
-    description: "AI Vault is written by Mahtosh Dey — an independent writer and AI tools researcher helping people cut through the hype and find tools that actually work.",
+    description: "AI Vault is written by Mahitosh Dey, a developer who has been testing AI tools since 2022. Honest reviews and tutorials — no hype, no paid placements.",
     images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mahitosh Dey",
+  url: "https://www.aivaultblog.com/about",
+  sameAs: ["https://www.linkedin.com/in/mahitosh-dey-b70575147/"],
+  jobTitle: "Founder, AI Vault",
+  description: "Developer and founder of AI Vault. Testing and reviewing AI tools since 2022.",
+};
+
 export default function AboutPage() {
+  const postCount = getAllPosts().length;
+
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "4rem 1.5rem" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
 
       <h1
         style={{
@@ -50,40 +68,35 @@ export default function AboutPage() {
           flexWrap: "wrap",
         }}
       >
-        {/* Avatar placeholder */}
-        <div
+        <Image
+          src="/images/mahitosh-dey.jpeg"
+          alt="Mahitosh Dey"
+          width={80}
+          height={80}
           style={{
-            width: "80px",
-            height: "80px",
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #a855f7, #22d3ee)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "2rem",
             flexShrink: 0,
+            border: "2px solid rgba(168,85,247,0.3)",
+            objectFit: "cover",
           }}
-        >
-          M
-        </div>
+        />
 
         <div style={{ flex: 1, minWidth: "220px" }}>
           <h2 style={{ color: "#f1f5f9", fontWeight: 700, fontSize: "1.25rem", marginBottom: "0.25rem" }}>
-            Mahtosh Dey
+            Mahitosh Dey
           </h2>
           <p style={{ color: "#a855f7", fontSize: "0.85rem", fontWeight: 500, marginBottom: "1rem" }}>
             Founder, AI Vault
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: "1rem" }}>
-            I started AI Vault because I got tired of reading AI tool reviews that were either pure hype
-            or clearly written by someone who had never actually used the product. Every week I test
-            tools, compare them against real tasks, and write honestly about what I find — including
-            the parts that don&apos;t work.
+            I&apos;m a developer, been writing code professionally since 2019. I started using AI tools
+            in my own projects in 2022, mostly to see what could actually speed up real work. Some did.
+            A lot didn&apos;t. I built AI Vault to document what I found, not what the marketing pages say.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem" }}>
-            I&apos;ve been using AI tools in my own work since 2022. I&apos;m not a developer or an AI
-            researcher — I&apos;m someone who needs these tools to actually be useful. That&apos;s the
-            perspective I write from.
+            I&apos;ve published {postCount}+ reviews and tutorials here, covering tools I&apos;ve personally tested.
+            I pay for Claude Code myself. For other tools I use free trials where available. Nothing on
+            this site is written from a press release or a vendor briefing.
           </p>
         </div>
       </div>
@@ -102,14 +115,13 @@ export default function AboutPage() {
           What AI Vault covers
         </h3>
         <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
-          Every post on this site is about one thing: helping you figure out which AI tools are
-          worth your time and money, and how to use them well. That means honest reviews with real
-          use cases, comparisons that don&apos;t sit on the fence, and tutorials that show the actual
-          workflow rather than the marketing demo.
+          Each post is about one question: is this tool actually worth using? That means testing it
+          against real tasks, not demo prompts. Reviews include what works, what breaks, and whether
+          the price makes sense. Tutorials show the actual workflow, step by step.
         </p>
         <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem" }}>
-          Categories covered: AI chatbots, writing tools, image generators, voice tools, video AI,
-          productivity apps, and SEO tools.
+          Topics covered: AI chatbots, coding tools, writing assistants, image generators,
+          productivity apps, and tool comparisons.
         </p>
       </div>
 
@@ -124,9 +136,9 @@ export default function AboutPage() {
       >
         {[
           { icon: "✅", title: "Independent", text: "No brand sponsorships or paid placements" },
-          { icon: "🔍", title: "Hands-on tested", text: "Every tool reviewed is one I've actually used" },
-          { icon: "💰", title: "Affiliate disclosure", text: "Some links earn a commission — always disclosed" },
-          { icon: "📬", title: "Weekly newsletter", text: "New reviews and tutorials every week" },
+          { icon: "🔍", title: "Hands-on tested", text: "Every tool reviewed is one I have personally used" },
+          { icon: "💰", title: "Affiliate disclosure", text: "Some links earn a commission, always disclosed upfront" },
+          { icon: "📬", title: "Newsletter", text: "Subscribe to get notified when new reviews go out" },
         ].map((item) => (
           <div
             key={item.title}
@@ -160,10 +172,9 @@ export default function AboutPage() {
         }}
       >
         <strong style={{ color: "#c084fc" }}>Affiliate transparency:</strong> AI Vault uses affiliate
-        links. When you click a link and purchase a product, I earn a small commission at no extra
-        cost to you. I only recommend tools I&apos;ve genuinely used and believe are worth it.
-        Affiliate relationships never influence my ratings or conclusions — if something isn&apos;t
-        worth buying, I say so.
+        links. When you click a link and make a purchase, I earn a small commission at no extra cost
+        to you. I only recommend tools I have personally used. If a tool is not worth the price, I
+        say so in the review. The commission does not change that.
       </div>
 
       {/* CTA */}
@@ -198,7 +209,30 @@ export default function AboutPage() {
           Subscribe free
         </Link>
         <a
-          href="mailto:mahidey420@gmail.com"
+          href="https://www.linkedin.com/in/mahitosh-dey-b70575147/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: "transparent",
+            color: "#64748b",
+            padding: "0.7rem 1.5rem",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.9rem",
+            border: "1px solid #2a2a3d",
+            display: "flex",
+            alignItems: "center",
+            gap: "0.4rem",
+          }}
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          href="mailto:hello@aivaultblog.com"
           style={{
             background: "transparent",
             color: "#64748b",

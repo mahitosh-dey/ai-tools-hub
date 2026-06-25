@@ -43,6 +43,16 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
             <span style={{ color: "#475569", fontSize: "0.78rem" }}>
               {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
             </span>
+            <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
+              <Image
+                src="/images/mahitosh-dey.jpeg"
+                alt="Mahitosh Dey"
+                width={18}
+                height={18}
+                style={{ borderRadius: "50%", objectFit: "cover" }}
+              />
+              <span style={{ color: "#475569", fontSize: "0.78rem" }}>{post.author}</span>
+            </span>
           </div>
 
           <h3

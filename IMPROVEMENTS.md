@@ -15,7 +15,7 @@ Last updated: 2026-06-11
 
 ## 🟠 HIGH PRIORITY — SEO
 
-- [x] **5. Add real author identity to posts and metadata** — Added `author` field to PostMeta (defaults to "Mahtosh Dey"). Displayed in post header with JSON-LD.
+- [x] **5. Add real author identity to posts and metadata** — Added `author` field to PostMeta (defaults to "Mahitosh Dey"). Displayed in post header with JSON-LD.
 - [x] **6. Rewrite About page** — Full rewrite with author name, story, what the site covers, affiliate transparency.
 - [x] **7. Add canonical URL to post metadata** — Added `alternates: { canonical }` to generateMetadata() in blog/[slug]/page.tsx.
 - [x] **8. Update post titles with "2025" in them** — All 4 posts updated to 2026. chatgpt-review-2025.mdx renamed to chatgpt-plus-review.mdx.

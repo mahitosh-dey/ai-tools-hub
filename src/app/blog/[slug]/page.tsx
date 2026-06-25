@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
+import Image from "next/image";
 import CategoryBadge from "@/components/CategoryBadge";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -73,26 +74,31 @@ export default async function PostPage({ params }: Props) {
 
   const postUrl = `${baseUrl}/blog/${slug}`;
 
+  const postImage = post.coverImage?.startsWith("/")
+    ? `${baseUrl}${post.coverImage}`
+    : `${baseUrl}/og-default.png`;
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
+    url: postUrl,
     datePublished: post.date,
     dateModified: post.updatedAt ?? post.date,
     author: {
       "@type": "Person",
-      name: "Mahtosh Dey",
+      name: "Mahitosh Dey",
       url: `${baseUrl}/about`,
     },
     publisher: {
       "@type": "Organization",
       name: "AI Vault",
       url: baseUrl,
-      logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` },
+      logo: { "@type": "ImageObject", url: `${baseUrl}/ailogo.png` },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
-    image: post.coverImage?.startsWith("/") ? `${baseUrl}${post.coverImage}` : `${baseUrl}/og-default.png`,
+    image: { "@type": "ImageObject", url: postImage },
   };
 
   const breadcrumbJsonLd = {
@@ -245,25 +251,14 @@ export default async function PostPage({ params }: Props) {
             }}
           >
             <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg, #6c63ff, #3ecfcf)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "0.7rem",
-                  fontWeight: 700,
-                  color: "#fff",
-                  flexShrink: 0,
-                  letterSpacing: 0,
-                }}
-              >
-                {post.author.charAt(0).toUpperCase()}
-              </span>
-              <span style={{ color: "#94a3b8", fontWeight: 500 }}>{post.author}</span>
+              <Image
+                src="/images/mahitosh-dey.jpeg"
+                alt={post.author}
+                width={26}
+                height={26}
+                style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+              />
+              <Link href="/about" style={{ color: "#94a3b8", fontWeight: 500, textDecoration: "none" }}>{post.author}</Link>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
               <span>📅</span>
@@ -293,6 +288,38 @@ export default async function PostPage({ params }: Props) {
       {/* Article body */}
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
         <TableOfContents items={toc} />
+
+        {/* Editorial transparency note */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.75rem",
+            background: "rgba(168,85,247,0.05)",
+            border: "1px solid rgba(168,85,247,0.18)",
+            borderRadius: "10px",
+            padding: "0.7rem 1rem",
+            marginBottom: "2rem",
+          }}
+        >
+          <Image
+            src="/images/mahitosh-dey.jpeg"
+            alt="Mahitosh Dey"
+            width={32}
+            height={32}
+            style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+          />
+          <p style={{ margin: 0, fontSize: "0.78rem", color: "#64748b", lineHeight: 1.6 }}>
+            By{" "}
+            <Link href="/about" style={{ color: "#a855f7", textDecoration: "none", fontWeight: 600 }}>
+              Mahitosh Dey
+            </Link>
+            {" "}· Independent opinion · No sponsored content ·{" "}
+            <Link href="/disclosure" style={{ color: "#64748b", textDecoration: "underline" }}>
+              Affiliate disclosure
+            </Link>
+          </p>
+        </div>
 
         <article className="prose-blog">
           <MDXRemote

@@ -50,7 +50,11 @@ const websiteJsonLd = {
   url: baseUrl,
   description:
     "Honest reviews, tutorials, and comparisons of the best AI tools.",
-  publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
+  publisher: {
+    "@type": "Person",
+    name: "Mahitosh Dey",
+    url: `${baseUrl}/about`,
+  },
   potentialAction: {
     "@type": "SearchAction",
     target: {

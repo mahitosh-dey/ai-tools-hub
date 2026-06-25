@@ -33,8 +33,8 @@ export default function PrivacyPage() {
             intelligence tools. The website is available at{" "}
             <strong style={{ color: "#e2e8f0" }}>www.aivaultblog.com</strong>. If you have
             any questions about this Privacy Policy, you can contact us at{" "}
-            <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-              mahidey420@gmail.com
+            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+              hello@aivaultblog.com
             </a>.
           </p>
         </Section>
@@ -168,8 +168,8 @@ export default function PrivacyPage() {
           </ul>
           <p style={{ marginTop: "1rem" }}>
             To exercise any of these rights, contact us at{" "}
-            <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-              mahidey420@gmail.com
+            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+              hello@aivaultblog.com
             </a>. We will respond within 30 days.
           </p>
         </Section>
@@ -207,8 +207,8 @@ export default function PrivacyPage() {
             <p style={{ margin: 0 }}>
               <strong style={{ color: "#e2e8f0" }}>AI Vault</strong><br />
               Email:{" "}
-              <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-                mahidey420@gmail.com
+              <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+                hello@aivaultblog.com
               </a><br />
               Website: www.aivaultblog.com
             </p>

@@ -6,26 +6,33 @@ import Link from "next/link";
 
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: "All Posts",
-  description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
-  alternates: { canonical: "https://www.aivaultblog.com/blog" },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "AI Vault",
-    url: "https://www.aivaultblog.com/blog",
-    title: "All Posts | AI Vault",
-    description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
-    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
-  },
-};
-
-const POSTS_PER_PAGE = 6;
+const baseUrl = "https://www.aivaultblog.com";
 
 interface Props {
   searchParams: Promise<{ q?: string; page?: string }>;
 }
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const { page } = await searchParams;
+  const pageNum = parseInt(page ?? "1", 10) || 1;
+  const canonical = pageNum > 1 ? `${baseUrl}/blog?page=${pageNum}` : `${baseUrl}/blog`;
+  return {
+    title: "All Posts",
+    description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
+    alternates: { canonical },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      siteName: "AI Vault",
+      url: canonical,
+      title: "All Posts | AI Vault",
+      description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
+      images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" }],
+    },
+  };
+}
+
+const POSTS_PER_PAGE = 6;
 
 function filterPosts(posts: ReturnType<typeof getAllPosts>, query: string) {
   const q = query.toLowerCase().trim();

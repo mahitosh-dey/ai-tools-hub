@@ -139,8 +139,8 @@ export default function DisclosurePage() {
             <p style={{ margin: 0 }}>
               <strong style={{ color: "#e2e8f0" }}>AI Vault</strong><br />
               Email:{" "}
-              <a href="mailto:mahidey420@gmail.com" style={{ color: "#a855f7" }}>
-                mahidey420@gmail.com
+              <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+                hello@aivaultblog.com
               </a>
             </p>
           </div>

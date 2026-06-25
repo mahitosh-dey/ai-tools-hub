@@ -117,7 +117,23 @@ export default function BlogCard({ post, featured = false }: Props) {
             display: "flex", justifyContent: "space-between", alignItems: "center",
             paddingTop: "0.65rem", borderTop: "1px solid #1c1c2e",
           }}>
-            <time style={{ color: "#475569", fontSize: "0.75rem" }}>{formatDate(post.date)}</time>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
+              <time style={{ color: "#475569", fontSize: "0.75rem" }}>{formatDate(post.date)}</time>
+              <a
+                href="/about"
+                onClick={(e) => e.stopPropagation()}
+                style={{ display: "flex", alignItems: "center", gap: "0.35rem", textDecoration: "none" }}
+              >
+                <Image
+                  src="/images/mahitosh-dey.jpeg"
+                  alt="Mahitosh Dey"
+                  width={16}
+                  height={16}
+                  style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+                />
+                <span style={{ color: "#64748b", fontSize: "0.72rem" }}>Mahitosh Dey</span>
+              </a>
+            </div>
             <span style={{ color: "#a855f7", fontSize: "0.8rem", fontWeight: 600 }}>Read →</span>
           </div>
         </div>
