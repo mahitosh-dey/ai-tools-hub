@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -79,28 +80,28 @@ export default function RootLayout({
     >
       <head>
         <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        />
-        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
+            __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
           }}
-        />
-        <script
-          async
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="2Nu3zKYM1IwXV0F1WUQ2ww"
         />
       </head>
       <body suppressHydrationWarning>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
         <Navbar />
         <main style={{ minHeight: "calc(100vh - 64px)" }}>{children}</main>
         <Footer />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="2Nu3zKYM1IwXV0F1WUQ2ww"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

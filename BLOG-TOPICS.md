@@ -61,4 +61,4 @@
 
 ### Common Prompt
 
-- "write post on "<Topic-Name>" with 100% correct information and FAQ and sounds like human voice. Allways double cross check all data which you research for post. this content save as a daft file with mention a cover image prompt for gemini with match project theme."
+- "write post on "<Topic-Name>" with 100% correct information and FAQ and sounds like human voice and follow /humanizar rules. Allways double cross check all data which you research for post. this content save as a daft file with mention a cover image prompt for gemini with match project theme."

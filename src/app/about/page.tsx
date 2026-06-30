@@ -33,11 +33,14 @@ export default function AboutPage() {
   const postCount = getAllPosts().length;
 
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto", padding: "4rem 1.5rem" }}>
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
       />
+      <div style={{ maxWidth: "800px", margin: "0 auto", padding: "4rem 1.5rem" }}>
 
       <h1
         style={{
@@ -248,5 +251,6 @@ export default function AboutPage() {
         </a>
       </div>
     </div>
+    </>
   );
 }

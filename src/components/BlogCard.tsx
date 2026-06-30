@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import type { PostMeta } from "@/lib/posts";
 import CategoryBadge from "./CategoryBadge";
 
@@ -26,6 +27,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function BlogCard({ post, featured = false }: Props) {
+  const router = useRouter();
   const hasRealImage = post.coverImage && !post.coverImage.includes("default-cover");
   const style = categoryStyle[post.category.toLowerCase()] ?? defaultStyle;
   const thumbH = featured ? 180 : 140;
@@ -119,10 +121,9 @@ export default function BlogCard({ post, featured = false }: Props) {
           }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
               <time style={{ color: "#475569", fontSize: "0.75rem" }}>{formatDate(post.date)}</time>
-              <a
-                href="/about"
-                onClick={(e) => e.stopPropagation()}
-                style={{ display: "flex", alignItems: "center", gap: "0.35rem", textDecoration: "none" }}
+              <button
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); router.push("/about"); }}
+                style={{ display: "flex", alignItems: "center", gap: "0.35rem", background: "none", border: "none", padding: 0, cursor: "pointer" }}
               >
                 <Image
                   src="/images/mahitosh-dey.jpeg"
@@ -132,7 +133,7 @@ export default function BlogCard({ post, featured = false }: Props) {
                   style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
                 />
                 <span style={{ color: "#64748b", fontSize: "0.72rem" }}>Mahitosh Dey</span>
-              </a>
+              </button>
             </div>
             <span style={{ color: "#a855f7", fontSize: "0.8rem", fontWeight: 600 }}>Read →</span>
           </div>

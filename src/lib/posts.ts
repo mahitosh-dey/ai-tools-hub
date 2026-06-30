@@ -60,7 +60,11 @@ export function getAllPosts(): PostMeta[] {
 
   return posts
     .filter((p) => p.date)
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .sort((a, b) => {
+      if (a.date > b.date) return -1;
+      if (a.date < b.date) return 1;
+      return a.slug.localeCompare(b.slug);
+    });
 }
 
 export function getPostBySlug(slug: string): Post | null {

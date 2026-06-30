@@ -151,27 +151,36 @@ export default async function PostPage({ params }: Props) {
   } : null;
 
   return (
-    <div style={{ minHeight: "100vh" }}>
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
+        }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+        }}
       />
       {reviewJsonLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(reviewJsonLd).replace(/</g, "\\u003c"),
+          }}
         />
       )}
       {faqJsonLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+          }}
         />
       )}
+      <div style={{ minHeight: "100vh" }}>
       {/* Article header — full width with subtle gradient */}
       <div
         style={{
@@ -434,5 +443,6 @@ export default async function PostPage({ params }: Props) {
         </div>
       </div>
     </div>
+    </>
   );
 }

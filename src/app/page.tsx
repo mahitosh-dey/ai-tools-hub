@@ -5,6 +5,7 @@ import BlogCard from "@/components/BlogCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FeaturedPost from "@/components/FeaturedPost";
 import CategoryLinks from "@/components/CategoryLinks";
+import HeroIllustration from "@/components/HeroIllustration";
 
 const baseUrl = "https://www.aivaultblog.com";
 
@@ -39,7 +40,8 @@ export default function HomePage() {
 
       {/* Hero */}
       <section style={{ padding: "4rem 0 3rem", borderBottom: "1px solid #252538" }}>
-        <div style={{ maxWidth: "680px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
+        <div>
           <div
             style={{
               display: "inline-flex",
@@ -127,6 +129,13 @@ export default function HomePage() {
               Free Newsletter
             </Link>
           </div>
+        </div>
+
+        {/* Right column: illustration — hidden on small screens */}
+        <div className="hidden lg:flex" style={{ justifyContent: "center", alignItems: "center" }}>
+          <HeroIllustration />
+        </div>
+
         </div>
       </section>
 
