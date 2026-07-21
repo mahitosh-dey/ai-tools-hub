@@ -20,7 +20,7 @@ const baseUrl = "https://www.aivaultblog.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Vault — Reviews, Tutorials & Comparisons",
+    default: "AI Vault: Reviews, Tutorials & Comparisons",
     template: "%s | AI Vault",
   },
   description:
@@ -47,15 +47,13 @@ export const metadata: Metadata = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${baseUrl}#website`,
   name: "AI Vault",
   url: baseUrl,
   description:
     "Honest reviews, tutorials, and comparisons of the best AI tools.",
-  publisher: {
-    "@type": "Person",
-    name: "Mahitosh Dey",
-    url: `${baseUrl}/about`,
-  },
+  inLanguage: "en",
+  publisher: { "@id": `${baseUrl}#organization` },
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -64,6 +62,38 @@ const websiteJsonLd = {
     },
     "query-input": "required name=search_term_string",
   },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${baseUrl}#organization`,
+  name: "AI Vault",
+  url: baseUrl,
+  logo: {
+    "@type": "ImageObject",
+    url: `${baseUrl}/ailogo.png`,
+    width: 512,
+    height: 512,
+  },
+  description:
+    "Independent publication covering AI tool reviews, tutorials, and comparisons.",
+  founder: {
+    "@type": "Person",
+    "@id": `${baseUrl}/about#mahitosh-dey`,
+    name: "Mahitosh Dey",
+    url: `${baseUrl}/about`,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "hello@aivaultblog.com",
+    url: `${baseUrl}/contact`,
+    availableLanguage: ["English"],
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/mahitosh-dey-b70575147/",
+  ],
 };
 
 const GA_ID = "G-BTWT37158Z";
@@ -83,6 +113,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
           }}
         />
       </head>

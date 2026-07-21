@@ -3,30 +3,76 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
 
+const baseUrl = "https://www.aivaultblog.com";
+
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Mahitosh Dey & AI Vault | Independent AI Tool Reviews",
   description:
-    "AI Vault is written by Mahitosh Dey, a developer who has been testing AI tools since 2022. Honest reviews and tutorials — no hype, no paid placements.",
-  alternates: { canonical: "https://www.aivaultblog.com/about" },
+    "AI Vault is written by Mahitosh Dey, a developer testing AI tools since 2022. Independent, hands-on reviews and tutorials. No hype, no paid placements.",
+  alternates: { canonical: `${baseUrl}/about` },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "AI Vault",
-    url: "https://www.aivaultblog.com/about",
-    title: "About | AI Vault",
-    description: "AI Vault is written by Mahitosh Dey, a developer who has been testing AI tools since 2022. Honest reviews and tutorials — no hype, no paid placements.",
-    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
+    url: `${baseUrl}/about`,
+    title: "About Mahitosh Dey & AI Vault",
+    description:
+      "AI Vault is written by Mahitosh Dey, a developer testing AI tools since 2022. Independent, hands-on reviews and tutorials.",
+    images: [
+      { url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" },
+    ],
   },
 };
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${baseUrl}/about#mahitosh-dey`,
   name: "Mahitosh Dey",
-  url: "https://www.aivaultblog.com/about",
-  sameAs: ["https://www.linkedin.com/in/mahitosh-dey-b70575147/"],
+  url: `${baseUrl}/about`,
+  image: `${baseUrl}/images/mahitosh-dey.jpeg`,
   jobTitle: "Founder, AI Vault",
-  description: "Developer and founder of AI Vault. Testing and reviewing AI tools since 2022.",
+  description:
+    "Developer and founder of AI Vault. Independent reviewer of AI tools since 2022.",
+  email: "hello@aivaultblog.com",
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Large Language Models",
+    "AI writing tools",
+    "AI image generation",
+    "AI coding assistants",
+    "Prompt engineering",
+    "Software development",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/mahitosh-dey-b70575147/",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    "@id": `${baseUrl}#organization`,
+    name: "AI Vault",
+    url: baseUrl,
+  },
+};
+
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${baseUrl}/about`,
+  url: `${baseUrl}/about`,
+  name: "About AI Vault",
+  description:
+    "About AI Vault and Mahitosh Dey, the developer behind the reviews and tutorials.",
+  isPartOf: { "@type": "WebSite", "@id": `${baseUrl}#website`, name: "AI Vault", url: baseUrl },
+  mainEntity: { "@id": `${baseUrl}/about#mahitosh-dey` },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${baseUrl}#organization`,
+    name: "AI Vault",
+    url: baseUrl,
+    logo: { "@type": "ImageObject", url: `${baseUrl}/ailogo.png` },
+  },
+  dateModified: "2026-07-21",
 };
 
 export default function AboutPage() {
@@ -38,6 +84,12 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageJsonLd).replace(/</g, "\\u003c"),
         }}
       />
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "4rem 1.5rem" }}>
@@ -73,7 +125,7 @@ export default function AboutPage() {
       >
         <Image
           src="/images/mahitosh-dey.jpeg"
-          alt="Mahitosh Dey"
+          alt="Mahitosh Dey, founder of AI Vault"
           width={80}
           height={80}
           style={{
@@ -89,7 +141,7 @@ export default function AboutPage() {
             Mahitosh Dey
           </h2>
           <p style={{ color: "#a855f7", fontSize: "0.85rem", fontWeight: 500, marginBottom: "1rem" }}>
-            Founder, AI Vault
+            Founder & sole author, AI Vault
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: "1rem" }}>
             I&apos;m a developer, been writing code professionally since 2019. I started using AI tools
@@ -97,7 +149,7 @@ export default function AboutPage() {
             A lot didn&apos;t. I built AI Vault to document what I found, not what the marketing pages say.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem" }}>
-            I&apos;ve published {postCount}+ reviews and tutorials here, covering tools I&apos;ve personally tested.
+            I&apos;ve published {postCount} reviews and tutorials here, covering tools I&apos;ve personally tested.
             I pay for Claude Code myself. For other tools I use free trials where available. Nothing on
             this site is written from a press release or a vendor briefing.
           </p>
@@ -125,6 +177,69 @@ export default function AboutPage() {
         <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem" }}>
           Topics covered: AI chatbots, coding tools, writing assistants, image generators,
           productivity apps, and tool comparisons.
+        </p>
+      </div>
+
+      {/* How I test: editorial methodology */}
+      <div
+        style={{
+          background: "#12121a",
+          border: "1px solid #2a2a3d",
+          borderRadius: "12px",
+          padding: "1.75rem 2rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <h3 style={{ color: "#e2e8f0", fontWeight: 700, fontSize: "1.05rem", marginBottom: "1rem" }}>
+          How I test and review AI tools
+        </h3>
+        <ol style={{ color: "#94a3b8", lineHeight: 1.9, fontSize: "0.95rem", paddingLeft: "1.25rem", margin: 0 }}>
+          <li style={{ marginBottom: "0.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>Real usage first.</strong> I use the tool on my own projects for at least two weeks before writing a review.
+          </li>
+          <li style={{ marginBottom: "0.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>Same prompts across tools.</strong> For comparisons, I run identical inputs through every option so results are directly comparable.
+          </li>
+          <li style={{ marginBottom: "0.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>Pricing verified at source.</strong> Every price is checked against the vendor&apos;s pricing page on the day of publication.
+          </li>
+          <li style={{ marginBottom: "0.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>Honest scoring.</strong> Ratings reflect what I actually observed, not what would please a vendor. Weak features get called out even in favourite tools.
+          </li>
+          <li>
+            <strong style={{ color: "#e2e8f0" }}>Updated regularly.</strong> Popular posts are refreshed every 3 to 6 months so the pricing, features, and verdicts stay current.
+          </li>
+        </ol>
+      </div>
+
+      {/* Editorial standards & corrections */}
+      <div
+        style={{
+          background: "#12121a",
+          border: "1px solid #2a2a3d",
+          borderRadius: "12px",
+          padding: "1.75rem 2rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <h3 style={{ color: "#e2e8f0", fontWeight: 700, fontSize: "1.05rem", marginBottom: "1rem" }}>
+          Editorial standards and corrections
+        </h3>
+        <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
+          Every post lists its published date and the last-updated date at the top. If a tool changes
+          significantly, the post is updated and the change is reflected in the dates.
+        </p>
+        <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
+          Found an error, an outdated price, or a factual mistake? Email{" "}
+          <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+            hello@aivaultblog.com
+          </a>{" "}
+          or use the <Link href="/contact" style={{ color: "#a855f7" }}>contact page</Link>. Corrections are made within 48 hours.
+        </p>
+        <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "0.95rem" }}>
+          AI Vault does not accept paid content, sponsored posts, or vendor-approved reviews. Affiliate
+          commissions never influence the verdict. See the{" "}
+          <Link href="/disclosure" style={{ color: "#a855f7" }}>full affiliate disclosure</Link> for details.
         </p>
       </div>
 
@@ -178,6 +293,36 @@ export default function AboutPage() {
         links. When you click a link and make a purchase, I earn a small commission at no extra cost
         to you. I only recommend tools I have personally used. If a tool is not worth the price, I
         say so in the review. The commission does not change that.
+      </div>
+
+      {/* Ownership & contact */}
+      <div
+        style={{
+          background: "#12121a",
+          border: "1px solid #2a2a3d",
+          borderRadius: "12px",
+          padding: "1.5rem 2rem",
+          marginBottom: "2.5rem",
+          fontSize: "0.875rem",
+          color: "#94a3b8",
+          lineHeight: 1.7,
+        }}
+      >
+        <h3 style={{ color: "#e2e8f0", fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.75rem" }}>
+          Ownership and contact
+        </h3>
+        <p style={{ marginBottom: "0.5rem" }}>
+          <strong style={{ color: "#e2e8f0" }}>Owner:</strong> Mahitosh Dey (independent operator).
+        </p>
+        <p style={{ marginBottom: "0.5rem" }}>
+          <strong style={{ color: "#e2e8f0" }}>Email:</strong>{" "}
+          <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
+            hello@aivaultblog.com
+          </a>
+        </p>
+        <p>
+          <strong style={{ color: "#e2e8f0" }}>Response time:</strong> within 48 hours on business days.
+        </p>
       </div>
 
       {/* CTA */}

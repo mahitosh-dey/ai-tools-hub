@@ -28,14 +28,19 @@ export default function ContactForm() {
   return (
     <div style={{ maxWidth: "680px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#e2e8f0", marginBottom: "0.5rem" }}>
-        Contact Us
+        Contact Mahitosh
       </h1>
-      <p style={{ color: "#94a3b8", marginBottom: "2.5rem", lineHeight: 1.7 }}>
-        Have a question, a review request, or a collaboration idea? We read every message.
-        You can also reach us directly at{" "}
+      <p style={{ color: "#94a3b8", marginBottom: "1.5rem", lineHeight: 1.7 }}>
+        I&apos;m Mahitosh Dey, the founder and sole author of AI Vault. Every message here comes to me
+        directly. Whether it&apos;s a review request, a correction, or a collaboration idea, I read all of
+        them. You can also reach me directly at{" "}
         <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
           hello@aivaultblog.com
         </a>.
+      </p>
+      <p style={{ color: "#64748b", marginBottom: "2.5rem", lineHeight: 1.7, fontSize: "0.9rem" }}>
+        Typical response time: within 24 to 48 hours on business days. If you flagged a factual error
+        in a post, I aim to update within 48 hours.
       </p>
 
       <div
@@ -81,7 +86,7 @@ export default function ContactForm() {
           <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>📬</div>
           <h3 style={{ color: "#34d399", marginBottom: "0.5rem" }}>Your mail app should have opened</h3>
           <p style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
-            If it didn&apos;t, email us directly at{" "}
+            If it didn&apos;t, email me directly at{" "}
             <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
               hello@aivaultblog.com
             </a>
@@ -171,7 +176,8 @@ export default function ContactForm() {
             Send Message →
           </button>
           <p style={{ color: "#475569", fontSize: "0.75rem", textAlign: "center" }}>
-            We typically respond within 24–48 hours.
+            I typically respond within 24 to 48 hours. Your details are used only to reply and
+            are never shared or added to a mailing list.
           </p>
         </form>
       )}
