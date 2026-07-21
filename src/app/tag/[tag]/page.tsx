@@ -8,23 +8,30 @@ interface Props {
   params: Promise<{ tag: string }>;
 }
 
+// Thin tag pages (<3 posts) get noindexed so Google does not treat them as
+// low-quality content. They are still reachable but excluded from search.
+const MIN_POSTS_FOR_INDEX = 3;
+
 export async function generateStaticParams() {
   return getAllTags().map((tag) => ({ tag }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tag } = await params;
+  const posts = getPostsByTag(tag);
+  const shouldIndex = posts.length >= MIN_POSTS_FOR_INDEX;
   return {
     title: `#${tag}`,
-    description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools — updated regularly.`,
+    description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools, updated regularly.`,
     alternates: { canonical: `https://www.aivaultblog.com/tag/${tag}` },
+    robots: shouldIndex ? undefined : { index: false, follow: true },
     openGraph: {
       type: "website",
       locale: "en_US",
       siteName: "AI Vault",
       url: `https://www.aivaultblog.com/tag/${tag}`,
       title: `#${tag} | AI Vault`,
-      description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools — updated regularly.`,
+      description: `Browse every AI Vault post tagged #${tag}. Honest reviews, tutorials, and comparisons of the best AI tools, updated regularly.`,
       images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
     },
   };

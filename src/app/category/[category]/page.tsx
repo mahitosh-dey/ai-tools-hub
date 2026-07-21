@@ -7,6 +7,8 @@ interface Props {
   params: Promise<{ category: string }>;
 }
 
+const MIN_POSTS_FOR_INDEX = 3;
+
 export async function generateStaticParams() {
   return getAllCategories().map((c) => ({ category: c.toLowerCase() }));
 }
@@ -14,16 +16,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const name = category.charAt(0).toUpperCase() + category.slice(1);
+  const posts = getPostsByCategory(category);
+  const shouldIndex = posts.length >= MIN_POSTS_FOR_INDEX;
   return {
-    title: `${name} — AI Tools`,
+    title: `${name}: AI Tools`,
     description: `Browse all ${name} articles on AI Vault. Honest reviews, tutorials, and tool comparisons to help you find what actually works.`,
     alternates: { canonical: `https://www.aivaultblog.com/category/${category}` },
+    robots: shouldIndex ? undefined : { index: false, follow: true },
     openGraph: {
       type: "website",
       locale: "en_US",
       siteName: "AI Vault",
       url: `https://www.aivaultblog.com/category/${category}`,
-      title: `${name} — AI Tools | AI Vault`,
+      title: `${name}: AI Tools | AI Vault`,
       description: `Browse all ${name} articles on AI Vault. Honest reviews, tutorials, and tool comparisons to help you find what actually works.`,
       images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
     },
