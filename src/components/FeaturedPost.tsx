@@ -45,7 +45,7 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
               <Image
-                src="/images/mahitosh-dey.jpeg"
+                src="/images/mahitosh-dey.webp"
                 alt="Mahitosh Dey"
                 width={18}
                 height={18}

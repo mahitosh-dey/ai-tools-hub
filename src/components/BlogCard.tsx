@@ -126,7 +126,7 @@ export default function BlogCard({ post, featured = false }: Props) {
                 style={{ display: "flex", alignItems: "center", gap: "0.35rem", background: "none", border: "none", padding: 0, cursor: "pointer" }}
               >
                 <Image
-                  src="/images/mahitosh-dey.jpeg"
+                  src="/images/mahitosh-dey.webp"
                   alt="Mahitosh Dey"
                   width={16}
                   height={16}

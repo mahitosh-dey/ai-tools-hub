@@ -16,7 +16,7 @@ Sign in with any Microsoft account (free).
 
 ### Post 1 — ChatGPT Beginner's Guide
 **File:** `chatgpt-guide-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/chatgpt-guide-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/chatgpt-guide-cover.webp"`
 ```
 Cinematic dark tech illustration, glowing chat interface 
 floating in dark space, soft purple and blue light rays, 
@@ -28,7 +28,7 @@ no text, 16:9 blog cover style
 
 ### Post 2 — Best Free AI Tools
 **File:** `best-free-ai-tools-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/best-free-ai-tools-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/best-free-ai-tools-cover.webp"`
 ```
 Dark futuristic flat lay, multiple glowing app icons 
 arranged in a grid on a dark surface, purple and cyan 
@@ -40,7 +40,7 @@ ambient light, technology aesthetic, no text,
 
 ### Post 3 — Write Blog Post Faster with AI
 **File:** `write-faster-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/write-faster-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/write-faster-cover.webp"`
 ```
 Dark atmospheric scene, glowing laptop screen with 
 AI writing interface, light trails suggesting speed, 
@@ -52,7 +52,7 @@ no text, 16:9 blog cover
 
 ### Post 4 — ChatGPT Plus Review
 **File:** `chatgpt-plus-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/chatgpt-plus-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/chatgpt-plus-cover.webp"`
 ```
 Dark premium tech product shot, glowing OpenAI logo 
 on dark glass surface, purple light reflection, 
@@ -64,7 +64,7 @@ no text, 16:9 blog cover
 
 ### Post 5 — Midjourney vs DALL-E 3
 **File:** `midjourney-dalle-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/midjourney-dalle-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/midjourney-dalle-cover.webp"`
 ```
 Split composition, two glowing AI art canvases side 
 by side on dark background, one purple toned one blue 
@@ -76,7 +76,7 @@ no text, 16:9 blog cover
 
 ### Post 6 — How to Make Money with AI Tools
 **File:** `make-money-cover.jpg`  
-**Frontmatter:** `coverImage: "/images/make-money-cover.jpg"`
+**Frontmatter:** `coverImage: "/images/make-money-cover.webp"`
 ```
 Dark cinematic scene, glowing digital coins and 
 upward graph on dark background, green and gold 
@@ -92,7 +92,7 @@ no text, 16:9 blog cover
 Go to bing.com/images/create, paste the prompt, download the image.
 
 **Step 2 — Save to project**  
-Put the file in: `/public/images/filename.jpg`  
+Put the file in: `/public/images/filename.webp`  
 Create the `images` folder inside `public` if it doesn't exist.
 
 **Step 3 — Add to post frontmatter**  
@@ -101,7 +101,7 @@ Open the `.mdx` file and add the `coverImage` line:
 ---
 title: "Your Post Title"
 date: "2026-06-10"
-coverImage: "/images/your-filename.jpg"
+coverImage: "/images/your-filename.webp"
 ---
 ```
 

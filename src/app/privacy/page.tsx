@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         Privacy Policy
       </h1>
       <p style={{ color: "#64748b", fontSize: "0.85rem", marginBottom: "3rem" }}>
-        Last updated: June 9, 2025
+        Last updated: July 21, 2026
       </p>
 
       <div style={{ color: "#cbd5e1", lineHeight: 1.8, fontSize: "1rem" }}>
@@ -44,24 +44,24 @@ export default function PrivacyPage() {
           <SubHeading>a) Data you provide directly</SubHeading>
           <ul style={{ paddingLeft: "1.5rem", marginBottom: "1rem" }}>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Email address</strong> — if you subscribe to our newsletter. We only
+              <strong>Email address</strong>: if you subscribe to our newsletter. We only
               collect this when you voluntarily submit the sign-up form.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Name (optional)</strong> — if you include it in a contact form submission.
+              <strong>Name (optional)</strong>: if you include it in a contact form submission.
             </li>
           </ul>
 
           <SubHeading>b) Data collected automatically</SubHeading>
           <ul style={{ paddingLeft: "1.5rem", marginBottom: "1rem" }}>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Analytics data</strong> — we use Google Analytics 4 (GA4) to understand
+              <strong>Analytics data</strong>: we use Google Analytics 4 (GA4) to understand
               how visitors use our website. This includes pages visited, time spent, approximate
               location (country/city level), device type, and traffic source. This data is
-              anonymised and aggregated — we cannot identify individual visitors from it.
+              anonymised and aggregated, we cannot identify individual visitors from it.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Server logs</strong> — our hosting provider, Vercel, may automatically
+              <strong>Server logs</strong>: our hosting provider, Vercel, may automatically
               log standard technical information such as your IP address, browser type, and
               the pages you request. These logs are used for security and performance monitoring.
             </li>
@@ -74,10 +74,12 @@ export default function PrivacyPage() {
             <li style={{ marginBottom: "0.4rem" }}>To understand which content is useful to our readers (via analytics)</li>
             <li style={{ marginBottom: "0.4rem" }}>To improve the performance and user experience of the website</li>
             <li style={{ marginBottom: "0.4rem" }}>To respond to enquiries sent via our contact form</li>
+            <li style={{ marginBottom: "0.4rem" }}>To serve advertising through third-party ad networks (see Section 5)</li>
           </ul>
           <p style={{ marginTop: "1rem" }}>
-            We do not sell your personal data to third parties. We do not use your data for
-            advertising targeting.
+            We do not sell your personal data to third parties. Some third-party services we use
+            (such as Google AdSense) may use your data to personalise ads. Details are in
+            Section 5.
           </p>
         </Section>
 
@@ -87,7 +89,7 @@ export default function PrivacyPage() {
           </p>
           <ul style={{ paddingLeft: "1.5rem" }}>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Google Analytics cookies</strong> — these help us measure website traffic
+              <strong>Google Analytics cookies</strong>: these help us measure website traffic
               and understand visitor behaviour. You can opt out of Google Analytics tracking
               by installing the{" "}
               <a
@@ -100,7 +102,29 @@ export default function PrivacyPage() {
               </a>.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Functional cookies</strong> — used by our hosting provider (Vercel) for
+              <strong>Advertising cookies</strong>: third-party ad networks including Google
+              AdSense use cookies to serve ads based on your visits to this and other websites.
+              You can manage or opt out of personalised advertising via{" "}
+              <a
+                href="https://adssettings.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#a855f7" }}
+              >
+                Google Ads Settings
+              </a>
+              {" "}or{" "}
+              <a
+                href="https://www.aboutads.info/choices"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#a855f7" }}
+              >
+                aboutads.info/choices
+              </a>.
+            </li>
+            <li style={{ marginBottom: "0.4rem" }}>
+              <strong>Functional cookies</strong>: used by our hosting provider (Vercel) for
               basic website functionality.
             </li>
           </ul>
@@ -114,16 +138,39 @@ export default function PrivacyPage() {
           <p>We use the following third-party services, each with their own privacy policies:</p>
           <ul style={{ paddingLeft: "1.5rem" }}>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Vercel</strong> — website hosting.{" "}
+              <strong>Vercel</strong>: website hosting.{" "}
               <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: "#a855f7" }}>
                 Vercel Privacy Policy
               </a>
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Google Analytics</strong> — website analytics.{" "}
+              <strong>Google Analytics</strong>: website analytics.{" "}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "#a855f7" }}>
                 Google Privacy Policy
               </a>
+            </li>
+            <li style={{ marginBottom: "0.4rem" }}>
+              <strong>Google AdSense and Google-certified third-party ad partners</strong>: display
+              advertising. As a third-party vendor, Google uses cookies to serve ads on this site.
+              Google&apos;s use of advertising cookies enables it and its partners to serve ads to
+              users based on their visits to this website and other sites on the Internet. Users
+              may opt out of personalised advertising by visiting{" "}
+              <a
+                href="https://adssettings.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#a855f7" }}
+              >
+                Google Ads Settings
+              </a>. Full information about how Google uses data is available in the{" "}
+              <a
+                href="https://policies.google.com/technologies/partner-sites"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#a855f7" }}
+              >
+                Google Partner Sites policy
+              </a>.
             </li>
           </ul>
           <p style={{ marginTop: "1rem" }}>
@@ -140,15 +187,15 @@ export default function PrivacyPage() {
         <Section title="6. Data Retention">
           <ul style={{ paddingLeft: "1.5rem" }}>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Newsletter subscriber data</strong> — retained until you unsubscribe. You
+              <strong>Newsletter subscriber data</strong>: retained until you unsubscribe. You
               can unsubscribe at any time using the link in any newsletter email.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Analytics data</strong> — retained for 14 months in Google Analytics, as
+              <strong>Analytics data</strong>: retained for 14 months in Google Analytics, as
               per Google&apos;s default settings.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Contact form data</strong> — retained only as long as needed to respond
+              <strong>Contact form data</strong>: retained only as long as needed to respond
               to your enquiry.
             </li>
           </ul>

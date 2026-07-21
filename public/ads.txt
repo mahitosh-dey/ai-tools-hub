@@ -1,0 +1,4 @@
+# AI Vault - ads.txt
+# Format: <domain>, <publisher_id>, <relationship>, <cert_authority_id>
+# After AdSense approval, replace pub-XXXXXXXXXXXXXXXX with your actual publisher ID.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

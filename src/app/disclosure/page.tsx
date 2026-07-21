@@ -39,7 +39,7 @@ export default function DisclosurePage() {
           <p style={{ margin: 0, fontSize: "1rem" }}>
             <strong style={{ color: "#c084fc" }}>Short version:</strong> Some links on this
             website are affiliate links. If you click one and make a purchase or sign up, we
-            may earn a commission — at no extra cost to you. This helps us keep the blog
+            may earn a commission at no extra cost to you. This helps us keep the blog
             running. We only recommend tools we genuinely believe are worth it.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function DisclosurePage() {
             This disclosure is made in accordance with the United States Federal Trade
             Commission (FTC) guidelines on endorsements and testimonials (16 CFR, Part 255).
             These guidelines require that we disclose any material connection between ourselves
-            and the companies whose products we recommend — including receiving compensation
+            and the companies whose products we recommend, including receiving compensation
             through affiliate programmes.
           </p>
           <p style={{ marginTop: "1rem" }}>

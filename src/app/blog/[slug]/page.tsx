@@ -81,24 +81,29 @@ export default async function PostPage({ params }: Props) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${postUrl}#article`,
     headline: post.title,
     description: post.excerpt,
     url: postUrl,
     datePublished: post.date,
     dateModified: post.updatedAt ?? post.date,
+    inLanguage: "en",
     author: {
       "@type": "Person",
+      "@id": `${baseUrl}/about#mahitosh-dey`,
       name: "Mahitosh Dey",
       url: `${baseUrl}/about`,
     },
-    publisher: {
-      "@type": "Organization",
-      name: "AI Vault",
-      url: baseUrl,
-      logo: { "@type": "ImageObject", url: `${baseUrl}/ailogo.png` },
-    },
+    publisher: { "@id": `${baseUrl}#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
-    image: { "@type": "ImageObject", url: postImage },
+    image: {
+      "@type": "ImageObject",
+      url: postImage,
+      width: 1200,
+      height: 630,
+    },
+    articleSection: post.category,
+    keywords: post.tags.join(", "),
   };
 
   const breadcrumbJsonLd = {
@@ -125,7 +130,8 @@ export default async function PostPage({ params }: Props) {
   const reviewJsonLd = post.rating ? {
     "@context": "https://schema.org",
     "@type": "Review",
-    name: post.title,
+    "@id": `${postUrl}#review`,
+    name: `${reviewedName} Review`,
     url: postUrl,
     description: post.excerpt,
     datePublished: post.date,
@@ -133,8 +139,23 @@ export default async function PostPage({ params }: Props) {
     itemReviewed: {
       "@type": "SoftwareApplication",
       name: reviewedName,
-      applicationCategory: "Artificial Intelligence",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      image: postImage,
       description: post.excerpt,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: post.rating,
+        bestRating: 10,
+        worstRating: 1,
+        ratingCount: 1,
+      },
     },
     reviewRating: {
       "@type": "Rating",
@@ -144,10 +165,11 @@ export default async function PostPage({ params }: Props) {
     },
     author: {
       "@type": "Person",
+      "@id": `${baseUrl}/about#mahitosh-dey`,
       name: post.author,
       url: `${baseUrl}/about`,
     },
-    publisher: { "@type": "Organization", name: "AI Vault", url: baseUrl },
+    publisher: { "@id": `${baseUrl}#organization` },
   } : null;
 
   return (
@@ -261,7 +283,7 @@ export default async function PostPage({ params }: Props) {
           >
             <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               <Image
-                src="/images/mahitosh-dey.jpeg"
+                src="/images/mahitosh-dey.webp"
                 alt={post.author}
                 width={26}
                 height={26}
@@ -312,7 +334,7 @@ export default async function PostPage({ params }: Props) {
           }}
         >
           <Image
-            src="/images/mahitosh-dey.jpeg"
+            src="/images/mahitosh-dey.webp"
             alt="Mahitosh Dey"
             width={32}
             height={32}

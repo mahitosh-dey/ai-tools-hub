@@ -19,7 +19,7 @@ export default function AuthorBio() {
     >
       <div style={{ flexShrink: 0 }}>
         <Image
-          src="/images/mahitosh-dey.jpeg"
+          src="/images/mahitosh-dey.webp"
           alt="Mahitosh Dey"
           width={64}
           height={64}

@@ -51,7 +51,7 @@ export default function Footer() {
               marginBottom: "1.25rem",
             }}
           >
-            Honest, in-depth reviews and tutorials for AI tools. No hype — just
+            Honest, in-depth reviews and tutorials for AI tools. No hype, just
             real assessments to help you work smarter.
           </p>
           <a
@@ -155,6 +155,7 @@ export default function Footer() {
           </h4>
           {[
             { label: "Privacy Policy", href: "/privacy" },
+            { label: "Terms of Service", href: "/terms" },
             { label: "Affiliate Disclosure", href: "/disclosure" },
           ].map((item) => (
             <FooterLink key={item.href} href={item.href} label={item.label} />

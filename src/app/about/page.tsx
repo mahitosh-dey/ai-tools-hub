@@ -30,7 +30,7 @@ const personJsonLd = {
   "@id": `${baseUrl}/about#mahitosh-dey`,
   name: "Mahitosh Dey",
   url: `${baseUrl}/about`,
-  image: `${baseUrl}/images/mahitosh-dey.jpeg`,
+  image: `${baseUrl}/images/mahitosh-dey.webp`,
   jobTitle: "Founder, AI Vault",
   description:
     "Developer and founder of AI Vault. Independent reviewer of AI tools since 2022.",
@@ -124,7 +124,7 @@ export default function AboutPage() {
         }}
       >
         <Image
-          src="/images/mahitosh-dey.jpeg"
+          src="/images/mahitosh-dey.webp"
           alt="Mahitosh Dey, founder of AI Vault"
           width={80}
           height={80}
