@@ -1,0 +1,303 @@
+---
+title: "How to Use Midjourney for Complete Beginners (2026 Guide)"
+seoTitle: "How to Use Midjourney: Complete Beginner's Guide (2026)"
+date: "2026-06-16"
+updatedAt: "2026-07-22"
+excerpt: "A no-fluff guide to Midjourney for absolute beginners, from creating your account to writing prompts that actually work. Skip the frustration and get real results on your first session."
+category: "Tutorials"
+tags:
+  [
+    "midjourney",
+    "ai-image",
+    "ai-art",
+    "tutorial",
+    "beginners",
+    "image-generation",
+    "how-to",
+    "prompt-writing",
+  ]
+coverImage: "/images/midjourney-beginners-2026-cover.webp"
+readTime: "15 min read"
+author: "Mahitosh Dey"
+status: "published"
+faqs:
+  - q: "Is Midjourney free in 2026?"
+    a: "No. Midjourney removed its free trial in mid-2023 and has not brought it back. You need a paid subscription to generate images. The cheapest plan is Basic at $10/month, which gives you roughly 200 Fast Mode image generations. There is no free tier as of 2026. If you want to try AI image generation without paying first, look at Bing Image Creator (free, uses DALL-E), Adobe Firefly (free tier available), or Google ImageFX (free) before committing."
+  - q: "Do I still need Discord to use Midjourney?"
+    a: "No. Midjourney has its own web interface at midjourney.com where you can generate, edit, and manage images entirely in your browser without Discord. Discord is still supported, and the Midjourney Discord server has an active community worth browsing for inspiration. For new users just getting started, the web interface is simpler and the recommended starting point."
+  - q: "What Midjourney plan should a beginner start with?"
+    a: "Start with Basic at $10/month. It gives you around 200 Fast Mode generations per month, which is more than enough to learn the tool, experiment with prompting, and figure out whether you will actually use it. Once you are hitting your limit regularly or want unlimited Relaxed Mode generations, upgrade to Standard at $30/month. Do not pay for more than you need while you are still learning."
+  - q: "How do I write prompts that get good results in Midjourney?"
+    a: "Good Midjourney prompts describe four things: (1) the subject, who or what is in the image, (2) the visual style, whether that is photography, illustration, oil painting, or 3D render, (3) the lighting and mood, like golden hour or moody cinematic, and (4) technical specifics such as composition, perspective, and aspect ratio. Vague prompts like 'a beautiful landscape' produce generic results. Specific prompts like 'aerial drone photograph of a Norwegian fjord in early morning mist, soft grey light, minimalist composition --ar 16:9' produce images that look intentional. Specificity is the whole skill."
+  - q: "What does --ar mean in Midjourney?"
+    a: "The --ar parameter sets the aspect ratio of your generated image. The default is 1:1 (square). Common ratios: --ar 16:9 for landscape and widescreen images (blog headers, YouTube thumbnails), --ar 9:16 for vertical images (Instagram Stories, TikTok), --ar 4:5 for Instagram feed posts, --ar 3:2 for standard photography. Always set the aspect ratio before generating. It is much faster than generating a square image and cropping it later."
+  - q: "Can Midjourney generate images of real people?"
+    a: "Midjourney has restrictions on generating images of real, named individuals, particularly in ways that could be misleading or harmful. You can describe physical characteristics to create fictional characters that resemble certain aesthetics. Generating realistic images of specific real people by name is restricted and will often be refused. This is a deliberate content policy choice by Midjourney, not a technical limitation."
+  - q: "What is Midjourney's image editing feature?"
+    a: "Midjourney's web interface includes an Editor tool that lets you modify generated images after creation. You can use inpainting (selecting and redrawing specific areas of an image), outpainting (extending the image beyond its original borders), and vary-region (changing specific parts while keeping the rest). These features let you fix issues in specific parts of an image without regenerating the whole thing from scratch."
+---
+
+Midjourney is the best AI image generator you can pay for right now. The images look designed rather than generated, and the aesthetic quality is what everyone else has been chasing for two years.
+
+The catch: Midjourney has a learning curve, and the curve is not the software. It is prompting. The tool does not produce great work on autopilot. It produces great work when you describe what you want in the right kind of detail. That is the skill this guide will help you build.
+
+The plan is simple. Set up your account, pick the right plan, run your first generation, and then learn the four things that make prompts actually work.
+
+---
+
+## What Midjourney is (and why it is different)
+
+Midjourney generates images from text descriptions called prompts. You type what you want, wait 30 to 60 seconds, and get four image variations to choose from.
+
+A few things set it apart from DALL-E, Stable Diffusion, and the rest:
+
+- The default aesthetic is polished. Images look intentional even when the prompt is not.
+- It handles abstract and stylistic prompts well, not just photorealism.
+- The model gets meaningful updates several times a year, and each one has been a real jump forward.
+
+The tradeoff is that Midjourney is paid only, and the prompting curve is steeper than tools that try to guess your style for you. For anyone serious about AI images, it is the tool everything else gets compared to.
+
+---
+
+## Step 1: Create your account
+
+### Web interface (recommended)
+
+1. Go to **midjourney.com** in your browser.
+2. Click **Sign In** in the top right.
+3. Sign in with Google or Discord. Either one works.
+4. Pick a plan. You cannot generate images without a subscription.
+
+Once you are in, you will see the Midjourney interface with a text bar at the bottom. That is where you type prompts.
+
+### Discord (optional)
+
+Midjourney started on Discord, and the server is still active. Join it if you want to browse what other users are creating with their prompts visible, participate in the community, or generate on mobile through the Discord app. Otherwise skip it. The web interface has everything a beginner needs, and it is cleaner to start with.
+
+---
+
+## Step 2: Choose a plan
+
+Midjourney pricing in 2026:
+
+| Plan     | Monthly Price | Annual Price | Fast GPU Time           | Relaxed Mode |
+| -------- | ------------- | ------------ | ----------------------- | ------------ |
+| Basic    | $10/month     | $8/month     | ~3.3 hours (~200 imgs)  | No           |
+| Standard | $30/month     | $24/month    | ~15 hours (~900 imgs)   | Unlimited    |
+| Pro      | $60/month     | $48/month    | ~30 hours (~1,800 imgs) | Unlimited    |
+| Mega     | $120/month    | $96/month    | ~60 hours (~3,600 imgs) | Unlimited    |
+
+For beginners, Basic is the right starting point. Roughly 200 images a month is more than enough to learn the tool and figure out whether you will actually use it. The 200-image estimate assumes standard generations; upscaling burns additional GPU minutes.
+
+The main reason to upgrade later is Relaxed Mode, which is available on Standard and above. Relaxed Mode is slow (5 to 10 minutes per generation instead of 30 to 60 seconds) but does not count against your Fast GPU time. Once you are experimenting heavily, Relaxed Mode lets you iterate without burning through your monthly allocation.
+
+---
+
+## Step 3: Your first generation
+
+Click the text bar at the bottom of the web interface and type a prompt. Keep it simple for your first attempt:
+
+```
+mountain lake at sunrise, reflection in still water, golden light, landscape photography
+```
+
+Press Enter. Midjourney generates four image variations in a 2x2 grid. Fast Mode takes 30 to 60 seconds.
+
+Once the four images appear, you have several options.
+
+**Upscale buttons (U1, U2, U3, U4).** Pick one of the four and generate a larger, higher-detail version. This is what you actually download. The grid preview is small and low-resolution, so always upscale the ones you like before judging them.
+
+**Variation buttons (V1, V2, V3, V4).** Generate four new variations of a specific image, keeping the composition and mood but changing details.
+
+**Redo button.** Generate four entirely new results from the same prompt. Different from variations; this is a fresh roll of the dice.
+
+Click U on the image you like best, wait 20 to 30 seconds, and download the full-resolution result.
+
+---
+
+## Step 4: How prompting actually works
+
+This is where most beginners either get it or keep getting mediocre results. The core principle:
+
+**Midjourney produces what you describe, not what you mean.**
+
+Vague description, generic result. Specific description, specific result. That is the whole game.
+
+### The four-part prompt structure
+
+Good prompts describe four things:
+
+**1. Subject.** What is in the image?
+
+- Weak: "a person"
+- Strong: "young woman with short dark hair, looking out a rain-covered window"
+
+**2. Style or medium.** What kind of image is it?
+
+- Photography, oil painting, digital illustration, 3D render, watercolour, concept art, anime, comic book, product photography, editorial fashion photography.
+
+**3. Lighting and mood.** What does it feel like?
+
+- Golden hour, overcast diffused light, neon glow, moody dramatic shadows, soft studio light, cinematic, dark and atmospheric, bright and airy.
+
+**4. Technical specifics.** Aspect ratio, camera type, compositional details.
+
+- Close-up portrait, wide angle, bird's eye view, shallow depth of field, 35mm film grain.
+
+### Weak vs. strong prompts
+
+| Weak prompt       | Strong prompt                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| "a city at night" | "aerial view of Tokyo at night, neon signs reflecting on wet streets, dramatic lighting, cinematic, --ar 16:9"                    |
+| "a cat"           | "portrait of a tabby cat sitting on a windowsill, soft morning light, shallow depth of field, candid photography style, --ar 4:5" |
+| "a coffee cup"    | "product photography of a black coffee cup on marble surface, minimalist composition, soft shadow, editorial style, --ar 1:1"     |
+
+The strong prompts describe a specific scene, in a specific style, with specific lighting. The weak ones give Midjourney nowhere to go.
+
+### Style keywords that work well
+
+**Photography styles:** editorial photography, documentary, street photography, fashion photography, commercial product photography, portrait photography, architectural photography, wildlife photography, 35mm film, medium format.
+
+**Art styles:** oil painting, watercolour illustration, pencil sketch, digital painting, concept art, anime/manga, pixel art, Art Deco, impressionist, surrealist, minimalist.
+
+**Rendering:** photorealistic, 3D render, octane render, clay render, low poly, cinematic render, hyperrealistic.
+
+**Mood and lighting:** cinematic lighting, golden hour, blue hour, moody, dramatic, ethereal, dark and atmospheric, warm and cozy, cold and stark, soft diffused light, neon-lit.
+
+---
+
+## Step 5: Essential parameters
+
+Parameters go at the end of your prompt after the description. They use double dashes (`--`).
+
+### Aspect ratio: `--ar`
+
+The most commonly used parameter. It sets image dimensions.
+
+```
+coastal village, aerial view, Mediterranean architecture --ar 16:9
+```
+
+| Ratio       | Use case                                             |
+| ----------- | ---------------------------------------------------- |
+| `--ar 1:1`  | Square (default), social media posts                 |
+| `--ar 16:9` | Blog headers, YouTube thumbnails, desktop wallpapers |
+| `--ar 9:16` | Instagram Stories, TikTok, phone wallpapers          |
+| `--ar 4:5`  | Instagram feed, portrait prints                      |
+| `--ar 3:2`  | Standard photography, prints                         |
+
+Set the aspect ratio before generating. Generating a square image and cropping to 16:9 later wastes detail and resolution.
+
+### Style: `--style raw`
+
+Reduces Midjourney's automatic "beautification" and gives you a more neutral interpretation of your prompt. Useful when the default output is too polished or too stylized for what you actually want.
+
+```
+weathered wooden barn in a field --style raw
+```
+
+### Chaos: `--chaos`
+
+A value from 0 to 100 that controls how varied the four initial results are. Low values (10 to 20) produce similar, focused results. High values (60 to 80) produce dramatically different variations. Good for exploration when you are not sure what direction to take.
+
+```
+abstract fluid art, vibrant colours --chaos 70
+```
+
+### No: `--no`
+
+Exclusion parameter. Tells Midjourney what to leave out.
+
+```
+forest path in autumn, misty morning --no people --no animals
+```
+
+### Weird: `--weird`
+
+A value from 0 to 3000 that pushes Midjourney toward unconventional aesthetics. Start at 250 to 500 if you want something unusual without losing coherence.
+
+```
+portrait, ethereal --weird 500
+```
+
+### Seed: `--seed`
+
+Using a specific seed number makes Midjourney more likely to reproduce a similar result. Useful when you have found something you like and want to generate close variations by tweaking the prompt.
+
+```
+neon cityscape --seed 12345
+```
+
+You find the seed of any image in the web interface by clicking on it and checking its properties.
+
+---
+
+## Step 6: Using the editor after generation
+
+Midjourney's built-in editor is one of the most underused features for beginners. It lets you modify images after they are generated without starting over from scratch.
+
+**Inpainting (Vary Region).** Select a specific area of an upscaled image and give it a new prompt. The selected area regenerates while the rest stays the same. Useful when one element is wrong (a weird facial expression, an object that does not belong) but the rest of the image is good.
+
+**Outpainting (Zoom Out and Pan).** Extend the image beyond its original edges. Zoom Out shows you what Midjourney would add around the current composition. Pan extends the image left, right, up, or down.
+
+To access these: upscale an image, then look for the editing options (Vary Region, Zoom Out, Pan buttons) below the image in the web interface.
+
+**A workflow that saves credits.** Upscale only the previews that have strong composition, not every one. Use Vary Region to fix small issues instead of regenerating the whole prompt, which almost always changes more than you wanted. Save Zoom Out for the end, once the core image is right. Extending a rough image just gives you more of a rough image.
+
+---
+
+## Step 7: Getting consistent results
+
+The most common beginner frustration: you get one great result, then cannot recreate it. A few habits fix this.
+
+**Save your prompts.** Keep a simple text file with the exact prompts (parameters included) that produced results you liked. The same prompt gives slightly different results each time, but starting from your best prompt is faster than rebuilding from memory.
+
+**Upscale before you decide.** The 2x2 preview shows small, low-resolution versions. The upscaled image can look significantly different, sometimes better, sometimes worse. Do not dismiss a result based on the preview alone.
+
+**Use Variation before Redo.** When one image is close but not quite right, hit V on that image instead of rerunning the whole prompt. Variations stay closer to the selected image's composition and feel. Redo starts over.
+
+**Try the same prompt twice.** If the first four results miss entirely, hit redo and try again with the same prompt. The randomness in AI generation means the second batch can be dramatically better with no changes.
+
+---
+
+## Common beginner mistakes to avoid
+
+A few things trip up almost everyone in the first month, and knowing about them ahead of time will save you credits.
+
+**Writing prompts like Google searches.** Beginners tend to type keyword lists ("beach sunset beautiful vacation") instead of describing a scene. Keyword lists produce generic, stock-photo-looking results. Describe a specific moment ("a couple walking along an empty beach at sunset, silhouetted against orange sky, wide shot, film photography") and you get something worth looking at.
+
+**Upscaling everything.** Every upscale burns Fast GPU time. Look at all four preview images first, pick the one or two that are genuinely promising, and only upscale those. If none of the four are close to what you want, adjust the prompt and rerun instead of upscaling a mediocre result.
+
+**Adding too many parameters at once.** Beginners often stack `--chaos 80 --weird 500 --style raw --ar 21:9` on their third prompt and then wonder why the results are unusable. Each parameter changes the output in ways that are hard to isolate when you use them together. Add one at a time and see what it does.
+
+**Copying prompts without understanding them.** It is fine to use community prompts as a starting point, but if you do not understand why each phrase is there, you cannot adapt the prompt to a different subject. Read successful prompts, then rewrite them in your own words for your own subject.
+
+**Fighting the model on real people and hands.** Midjourney has policy restrictions on real, named individuals, and it still struggles with hands in some situations. If your image needs a specific real person or a close-up of hands doing something intricate, use inpainting to fix that area, or accept it as a limitation rather than burning credits trying to force it.
+
+---
+
+## Practical things to use Midjourney for
+
+**Blog and article cover images.** Custom images instead of stock photos. Set `--ar 16:9` for standard blog headers. Original, on-brand, and consistent in style across a whole site.
+
+**Social media visuals.** `--ar 4:5` for Instagram feed posts, `--ar 9:16` for Stories. Reuse the same style keywords across a series for visual consistency.
+
+**YouTube thumbnails.** Generate compelling backgrounds, then add text and branding in Canva or Figma. `--ar 16:9`.
+
+**Product concept visualization.** If you are pitching a product that does not exist yet, Midjourney can render what it might look like. Useful for pitches, mockups, and early landing pages.
+
+**Book covers and creative projects.** Fiction covers, podcast artwork, course thumbnails, ebook designs.
+
+---
+
+## The one habit that separates mediocre from great results
+
+Study prompts that produced images you admire. Midjourney's web interface has a community feed where you can see what other users are generating, with the full prompt visible below each image. Read them.
+
+You will notice patterns fast: specific camera references, named art styles, particular lighting descriptors, unexpected subject combinations. Reading successful prompts is the fastest way to expand your own prompting vocabulary.
+
+Spend 20 minutes browsing the community feed before writing your next prompt. It teaches faster than any tutorial.
+
+---
+
+_If you want the longer walkthrough that covers `--sref` (style reference), `--cref` (character reference), and commercial use terms, read the companion guide: [How to Use Midjourney for Complete Beginners (Step-by-Step)](/blog/how-to-use-midjourney-beginners). For a head-to-head with DALL-E 3, see [Midjourney vs DALL-E 3: Which Is Actually Better](/blog/midjourney-vs-dalle3). If you are not ready to pay, [best free AI image generators](/blog/best-free-ai-image-generators) has solid alternatives that cost nothing._
