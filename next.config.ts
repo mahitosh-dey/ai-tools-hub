@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
         destination: "/blog/chatgpt-plus-review",
         permanent: true,
       },
+      // Duplicate Midjourney beginner guide, consolidated 2026-07-27 into the
+      // older/stronger post to stop the two cannibalising the same query.
+      {
+        source: "/blog/midjourney-complete-beginners-guide",
+        destination: "/blog/how-to-use-midjourney-beginners",
+        permanent: true,
+      },
     ];
   },
 };

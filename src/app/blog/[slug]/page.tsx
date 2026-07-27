@@ -383,44 +383,45 @@ export default async function PostPage({ params }: Props) {
             >
               Frequently Asked Questions
             </h2>
+            {/* Answers render expanded, never behind a toggle, so readers and
+                AI crawlers both get the text without an interaction. */}
             <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
               {post.faqs.map((faq, i) => (
-                <details
+                <div
                   key={i}
                   style={{
                     borderBottom: "1px solid #1e1e2e",
                     padding: "0",
                   }}
                 >
-                  <summary
+                  <h3
                     style={{
-                      padding: "1rem 0",
+                      padding: "1rem 0 0.5rem 0",
+                      margin: 0,
                       fontSize: "1rem",
                       fontWeight: 600,
                       color: "#e2e8f0",
-                      cursor: "pointer",
-                      listStyle: "none",
                       display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      gap: "1rem",
+                      alignItems: "baseline",
+                      gap: "0.6rem",
                     }}
                   >
-                    <span>{faq.q}</span>
                     <span
+                      aria-hidden="true"
                       style={{
                         color: "#a855f7",
-                        fontSize: "1.2rem",
                         flexShrink: 0,
-                        fontWeight: 400,
+                        fontWeight: 700,
                       }}
                     >
-                      +
+                      Q.
                     </span>
-                  </summary>
+                    <span>{faq.q}</span>
+                  </h3>
                   <p
                     style={{
-                      margin: "0 0 1rem 0",
+                      margin: "0 0 1.25rem 0",
+                      paddingLeft: "1.6rem",
                       fontSize: "0.95rem",
                       color: "#94a3b8",
                       lineHeight: 1.75,
@@ -428,7 +429,7 @@ export default async function PostPage({ params }: Props) {
                   >
                     {faq.a}
                   </p>
-                </details>
+                </div>
               ))}
             </div>
           </section>

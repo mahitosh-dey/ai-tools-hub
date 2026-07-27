@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (28)
+## Published Posts (30)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -26,12 +26,22 @@
 | 20  | How to Use Midjourney for Complete Beginners (2026 Guide)                    | how-to-use-midjourney-beginners            | Tutorials   | 2026-06-12 |
 | 21  | 7 AI Tools That Replace Expensive Software (Save Hundreds Per Year)          | 7-ai-tools-that-replace-expensive-software | Tools       | 2026-06-12 |
 | 22  | How to Build a Blog With AI in 2026: From Idea to Published                  | how-to-build-a-blog-with-ai                | Tutorials   | 2026-06-16 |
-| 23  | How to Use Midjourney for Complete Beginners (Full Step-by-Step)             | midjourney-complete-beginners-guide        | Tutorials   | 2026-06-16 |
-| 24  | Top AI Coding Assistants for Beginners in 2026 (Free + Paid)                 | top-ai-coding-assistants-for-beginners     | Tools       | 2026-06-16 |
-| 25  | Best AI Tools for Social Media Content Creation in 2026 (Tested Stack)       | best-ai-tools-for-social-media             | Tools       | 2026-06-18 |
-| 26  | How to Use Claude AI for Coding (No Experience Needed)                       | how-to-use-claude-ai-for-coding            | Tutorials   | 2026-06-24 |
-| 27  | ElevenLabs Review 2026: Is It Still the Best AI Voice Generator?             | elevenlabs-review-2026                     | Reviews     | 2026-06-30 |
-| 28  | How to Use ChatGPT for Freelancing on Fiverr and Upwork (2026 Honest Guide)  | how-to-use-chatgpt-for-freelancing         | Tutorials   | 2026-07-23 |
+| 23  | Top AI Coding Assistants for Beginners in 2026 (Free + Paid)                 | top-ai-coding-assistants-for-beginners     | Tools       | 2026-06-16 |
+| 24  | Best AI Tools for Social Media Content Creation in 2026 (Tested Stack)       | best-ai-tools-for-social-media             | Tools       | 2026-06-18 |
+| 25  | How to Use Claude AI for Coding (No Experience Needed)                       | how-to-use-claude-ai-for-coding            | Tutorials   | 2026-06-24 |
+| 26  | ElevenLabs Review 2026: Is It Still the Best AI Voice Generator?             | elevenlabs-review-2026                     | Reviews     | 2026-06-30 |
+| 27  | How to Use ChatGPT for Freelancing on Fiverr and Upwork (2026 Honest Guide)  | how-to-use-chatgpt-for-freelancing         | Tutorials   | 2026-07-23 |
+| 28  | Best AI Tools Under $20/Month in 2026 (Tested, With Free-Tier Traps)         | best-ai-tools-under-20-dollars-2026        | Guides      | 2026-07-24 |
+| 29  | Cursor AI Review 2026: Is the $20 AI IDE Still Worth It?                     | cursor-ai-review-2026                      | Reviews     | 2026-07-24 |
+| 30  | How to Use AI for YouTube Automation in 2026 (The Honest Playbook)           | how-to-use-ai-for-youtube-automation       | Tutorials   | 2026-07-24 |
+
+---
+
+## Retired Posts
+
+| Slug                                | Retired    | Reason                                                                                          |
+| ----------------------------------- | ---------- | ----------------------------------------------------------------------------------------------- |
+| midjourney-complete-beginners-guide | 2026-07-27 | Near-duplicate of `how-to-use-midjourney-beginners`. Unique sections merged into the keeper; 301 redirect added in `next.config.ts`. |
 
 ---
 

@@ -29,10 +29,14 @@ faqs:
     a: "Web interface, without question. The Discord workflow is fine once you know what you are doing, but it is a rougher onboarding: you have to learn Discord itself alongside Midjourney. The web interface at midjourney.com puts your generations in a clean grid, makes variations and upscales one click, and shows the community feed for inspiration. Discord is worth trying later if you want to see other prompts live."
   - q: "Which Midjourney aspect ratio should I use for Instagram, YouTube thumbnails, and blog covers?"
     a: "Instagram feed uses --ar 4:5. Instagram Stories and Reels use --ar 9:16. YouTube thumbnails use --ar 16:9. Blog cover images usually work best at --ar 16:9 or --ar 3:2. Set the aspect ratio in the prompt, not afterwards. Cropping a square down to widescreen loses composition intent Midjourney would have handled if told upfront."
-  - q: "Can I actually sell Midjourney images or use them for client work?"
-    a: "Paid subscribers on Basic and above get commercial use rights, so client work and product sales are allowed under Midjourney's terms. Copyright is the wrinkle: US courts have said pure AI-generated images cannot be copyrighted, so anyone can technically reuse the same output. For anything business-critical, check the platform's current terms and consult a lawyer if the stakes justify it."
+  - q: "Can I sell Midjourney images on Etsy, Redbubble, or use them for client work?"
+    a: "Paid subscribers on Basic and above get commercial use rights, so client work, Etsy shops, Redbubble, and print sales are allowed under Midjourney's terms. Copyright is the wrinkle: US courts have said pure AI-generated images cannot be copyrighted, so anyone can technically reuse the same output. Etsy and Redbubble have both shifted their AI-content policies several times, so read each platform's current terms before opening a shop. For anything business-critical, consult a lawyer if the stakes justify it."
   - q: "How do I get the same character across multiple Midjourney images?"
     a: "Use --cref with an image URL of the character. Combine with --cw (character weight, 0 to 100) to control how strictly the character is preserved. For style consistency across a set (same lighting, palette, mood), use --sref pointing at a reference image. These are the parameters pros use for illustrated books, brand mascots, and multi-image sets that need to feel like one story."
+  - q: "What is the biggest mistake beginners make with Midjourney that wastes credits?"
+    a: "Regenerating from scratch instead of using variations. When one image in the four-panel grid is close to what you want, click V1 through V4 to make variations of that specific image, or use Vary Region to fix a small area. Beginners tend to rewrite the whole prompt each time, burning credits chasing something they were close to on generation number one."
+  - q: "Does Midjourney work well for logos and text-based designs?"
+    a: "Not well. Text inside images is still Midjourney's weakest area. Letters garble, spacing goes wrong, and legibility varies. For anything text-heavy, use Ideogram (which handles typography much better) or generate the visual in Midjourney and add text in Canva or Photoshop. Logos with heavy typography almost always need a separate tool."
   - q: "What is the difference between Fast and Relaxed mode, and does it matter for beginners?"
     a: "Fast Mode uses your monthly credit budget and generates in 30 to 60 seconds. Relaxed Mode is unlimited on Standard plans and above but takes a few minutes per generation during peak hours. On Basic, only Fast Mode exists. If you upgrade to Standard, use Relaxed for exploration and volume, Fast for anything time-sensitive. For your first month on Basic, this distinction does not matter."
 ---
@@ -42,6 +46,18 @@ Most Midjourney tutorials show you polished examples of what the tool can produc
 The honest starting point: Midjourney does not read your mind. It reads your words. Getting good results requires learning how to describe what you want accurately, which is a skill, not a setting. Once you understand that, the learning curve flattens quickly.
 
 This guide will get you generating good images in your first session, rather than burning credits on results that miss the mark.
+
+## What Midjourney is (and why it is different)
+
+Midjourney generates images from text descriptions called prompts. You type what you want, wait 30 to 60 seconds, and get four image variations to choose from.
+
+A few things set it apart from DALL-E, Stable Diffusion, and the rest:
+
+- The default aesthetic is polished. Images look intentional even when the prompt is not.
+- It handles abstract and stylistic prompts well, not just photorealism.
+- The model gets meaningful updates several times a year, and each one has been a real jump forward.
+
+The tradeoff is that Midjourney is paid only, and the prompting curve is steeper than tools that try to guess your style for you. For anyone serious about AI images, it is the tool everything else gets compared to.
 
 ## Step 1: Get access to Midjourney
 
@@ -224,7 +240,37 @@ Attach a URL of a character and Midjourney will try to reproduce that character 
 same woman walking in a snowy forest --cref https://example.com/character-reference.jpg
 ```
 
-## Step 6: Getting consistent results
+### Weird: `--weird`
+
+A value from 0 to 3000 that pushes Midjourney toward unconventional aesthetics. Start at 250 to 500 if you want something unusual without losing coherence.
+
+```
+portrait, ethereal --weird 500
+```
+
+### Seed: `--seed`
+
+Using a specific seed number makes Midjourney more likely to reproduce a similar result. Useful when you have found something you like and want to generate close variations by tweaking the prompt.
+
+```
+neon cityscape --seed 12345
+```
+
+You find the seed of any image in the web interface by clicking on it and checking its properties.
+
+## Step 6: Using the editor after generation
+
+Midjourney's built-in editor is one of the most underused features for beginners. It lets you modify images after they are generated without starting over from scratch.
+
+**Inpainting (Vary Region).** Select a specific area of an upscaled image and give it a new prompt. The selected area regenerates while the rest stays the same. Useful when one element is wrong (a weird facial expression, an object that does not belong) but the rest of the image is good.
+
+**Outpainting (Zoom Out and Pan).** Extend the image beyond its original edges. Zoom Out shows you what Midjourney would add around the current composition. Pan extends the image left, right, up, or down.
+
+To access these: upscale an image, then look for the editing options (Vary Region, Zoom Out, Pan buttons) below the image in the web interface.
+
+**A workflow that saves credits.** Upscale only the previews that have strong composition, not every one. Use Vary Region to fix small issues instead of regenerating the whole prompt, which almost always changes more than you wanted. Save Zoom Out for the end, once the core image is right. Extending a rough image just gives you more of a rough image.
+
+## Step 7: Getting consistent results
 
 One of the most common beginner frustrations: you get a great result once, then cannot reproduce it. A few techniques help.
 
@@ -248,7 +294,7 @@ Every Midjourney generation has a seed number. If you add `--seed [number]` to a
 
 If you are making a batch of images for the same project like a blog series, an Etsy shop, or a book, use `--sref` with the same reference URL across every generation. Your batch will look coherent.
 
-## Step 7: Common mistakes to avoid
+## Step 8: Common mistakes to avoid
 
 Generating and immediately moving on. Midjourney gives you four results. Spend 10 seconds comparing them before upscaling. Small differences in composition, lighting, and style are visible in the preview.
 
@@ -278,7 +324,7 @@ Etsy and print-on-demand. Wall art, T-shirt designs, and greeting cards can be g
 
 Mood boards for design projects. Generate a batch of images with a consistent style reference and use them as inspiration for real design work.
 
-If you want a shorter guide focused specifically on the four-part prompt structure, credit-saving inpainting workflows, and the common beginner mistakes to avoid, read the companion piece: [Midjourney Complete Beginners Guide (2026)](/blog/midjourney-complete-beginners-guide). For a comparison of Midjourney vs DALL-E 3 across different use cases, see [this detailed comparison](/blog/midjourney-vs-dalle3). Or if you are not ready to pay yet, check out the [best free AI image generators](/blog/best-free-ai-image-generators). Several produce impressive results at zero cost.
+For a comparison of Midjourney vs DALL-E 3 across different use cases, see [this detailed comparison](/blog/midjourney-vs-dalle3). Or if you are not ready to pay yet, check out the [best free AI image generators](/blog/best-free-ai-image-generators). Several produce impressive results at zero cost.
 
 ## Midjourney pricing quick reference
 
