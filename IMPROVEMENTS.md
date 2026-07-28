@@ -40,7 +40,7 @@ Last updated: 2026-06-11
 - [x] **17. Add internal links between existing posts** — 2–4 cross-links added per post. Every post now links to at least 2 others.
 - [x] **18. Add affiliate links to all existing posts** — Direct links added to all tools. Grammarly, Canva, ElevenLabs, Fiverr, Teachable have affiliate programs (see note below).
 - [x] **19. Write Post 6 — Best AI Tools for Students** — Done. File: best-ai-tools-for-students.mdx
-- [ ] **20. Write Post 7 — How to Use ChatGPT to Make Money Online** — Draft done. File: drafts/how-to-use-chatgpt-to-make-money-online.mdx. Publish by 2026-06-22.
+- [x] **20. Write Post 7 — How to Use ChatGPT to Make Money Online** — Published. File: content/posts/how-to-use-chatgpt-to-make-money-online.mdx
 
 ---
 

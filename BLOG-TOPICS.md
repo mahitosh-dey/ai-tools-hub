@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (30)
+## Published Posts (31)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -34,6 +34,7 @@
 | 28  | Best AI Tools Under $20/Month in 2026 (Tested, With Free-Tier Traps)         | best-ai-tools-under-20-dollars-2026        | Guides      | 2026-07-24 |
 | 29  | Cursor AI Review 2026: Is the $20 AI IDE Still Worth It?                     | cursor-ai-review-2026                      | Reviews     | 2026-07-24 |
 | 30  | How to Use AI for YouTube Automation in 2026 (The Honest Playbook)           | how-to-use-ai-for-youtube-automation       | Tutorials   | 2026-07-24 |
+| 31  | Notion AI Review 2026: What $20/Month Actually Buys                          | notion-ai-review-2026                      | Reviews     | 2026-07-28 |
 
 ---
 

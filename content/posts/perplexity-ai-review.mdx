@@ -2,7 +2,7 @@
 title: "Perplexity AI Review 2026: The AI Search Engine That Actually Replaces Google for Research"
 seoTitle: "Perplexity AI Review 2026: Better Than Google?"
 date: "2026-06-12"
-updatedAt: "2026-07-23"
+updatedAt: "2026-07-28"
 excerpt: "Perplexity AI gives cited answers, not blue links. My 2026 review: what it does better than Google for research, where it still fails, and if Pro is worth $20."
 category: "Reviews"
 tags:
@@ -31,7 +31,13 @@ faqs:
   - q: "Can Perplexity's citations be trusted or does it still hallucinate?"
     a: "Citation grounding cuts hallucination significantly compared to a raw language model, but Perplexity still makes errors: misreading a source, combining two sources into a false synthesis, or citing a page that does not actually contain the claim. For anything that matters (medical, legal, financial, sourced articles), click each citation and verify. The cited-source workflow makes verification fast, but it does not eliminate the need."
   - q: "What model does Perplexity actually use when I ask a Pro question?"
-    a: "By default Perplexity picks a model for you. Pro users can override with a specific model: GPT-5, Claude, Grok, Perplexity's own Sonar variants, and a few others. The dropdown is at the top of the search bar. For research where you want maximum reasoning, Claude and GPT-5 both perform well. For fast simple queries, the default Sonar is usually enough."
+    a: "By default Perplexity picks a model for you. Pro users can override with a specific model from a dropdown at the top of the search bar, choosing between frontier models from OpenAI, Anthropic, and others alongside Perplexity's own Sonar variants. Advanced Deep Research currently runs on Claude Opus 4.5 for Pro and Max subscribers. The exact lineup rotates every few months as new models ship, so treat any specific version name in a review, including this one, as a snapshot rather than a permanent fact."
+  - q: "Does Perplexity charge credits, and do I need to worry about them?"
+    a: "For normal searching, no. Perplexity Ask and standard search do not consume credits at all, so the thing most people use Perplexity for stays uncapped on Pro. Credits only apply to the compute-heavy agentic features like Computer. Pro includes a one-time 4,000-credit bonus rather than a monthly allowance, so once it is gone those specific features stop until you upgrade. Max includes 10,000 credits per month plus a 35,000 one-time bonus, credits do not roll over, and Max accounts carry a default $200 monthly spending cap that you can raise up to $5,000 in settings."
+  - q: "Is Perplexity Max at $200/month worth it over Pro at $20?"
+    a: "For most people, no. Max is ten times the price of Pro with no middle tier, and the gap is mostly Background Assistants, heavier Labs usage, and the monthly credit allowance. If you are not scheduling autonomous tasks or running agentic workflows daily, you are paying $180 a month for headroom you will not touch. Pro already gives unlimited Pro searches, file uploads, model selection, and Spaces, which covers essentially all normal research work. Start on Pro and let a real ceiling push you to Max rather than buying the ceiling first."
+  - q: "Is Comet free, and do I need it to use Perplexity?"
+    a: "Comet is Perplexity's own web browser, not a plugin for Chrome, and it has been free since Perplexity dropped the paywall on March 18, 2026 across iOS, Android, Windows, and Mac. You do not need it. The website and mobile apps give you the same search. Comet adds a sidecar assistant that can read whatever page you are on and answer questions about it, which is genuinely useful for reading dense documentation or comparing product pages. Paid plans add stronger models and the Background Assistant on top."
   - q: "Is Perplexity Spaces useful for solo researchers or just teams?"
     a: "Useful for solo researchers too. Spaces let you attach reference files, set custom instructions, and constrain search context to a specific topic. For any research project that stretches over more than a week (a book, a report, a business analysis, a long article), a Space keeps everything grounded and stops the tool from re-explaining basics each session. Team collaboration is a bonus, not the main value."
   - q: "Which subscription pays back faster for a serious researcher: Perplexity Pro or ChatGPT Plus?"
@@ -52,16 +58,23 @@ It is not a chatbot trained on old data that may be confidently wrong about curr
 
 The interface is cleaner than Google. No ads. No sponsored results. No half a dozen different sections competing for attention on the results page. You ask a question. You get an answer and sources. That is it, and after using it for a while, the sparseness starts to feel like a feature.
 
-Perplexity has also branched out. In 2026 it offers Spaces for project-based research, a mobile app with voice input, a Comet browser extension that summarizes any page in the sidebar, and a growing set of finance and travel research tools built directly into search results. The core is still "search plus synthesis plus citations," but the surrounding product has grown.
+Perplexity has also branched out, and the shape of the product in mid-2026 is wider than most reviews describe. There are Spaces for project-based research, mobile apps with voice input, Labs and Advanced Deep Research for long multi-source work, and finance and travel research built into search results. There is also Comet, which is Perplexity's own web browser rather than an add-on to somebody else's.
+
+Comet deserves a correction, because a lot of older writing about it (including an earlier version of this review) describes it as a browser extension. It is not. Comet is a full browser with an assistant living in a sidecar panel that can read the page you are on, summarize it, pull facts out of it, and answer follow-up questions without you copying anything into a search box. It launched behind a paywall, then Perplexity made it free on March 18, 2026 across iOS, Android, Windows, and Mac.
+
+Whether you want another browser is a separate question. But for reading long documentation, comparing two product pages, or working through a dense PDF, having the assistant already looking at the same thing you are is a real reduction in friction. The core of the product is still search plus synthesis plus citations. Everything else is built around that.
 
 ## The free tier: what you get
 
 Perplexity Free gives you:
 
 - Unlimited standard searches using Perplexity's Sonar model, real-time web search with citations, no daily cap.
-- Around 5 Pro searches per day. These use more powerful models like GPT-5 and Claude for deeper answers with more careful reasoning.
+- A small daily allowance of Pro searches, usually described as around 5. These use more capable models for deeper answers with more careful reasoning.
 - Access on web, iOS, and Android with the same account and search history synced across all three.
+- Comet, the Perplexity browser, which has been free since March 2026.
 - Voice input for hands-free searching, which is useful in the kitchen or on a walk.
+
+Worth flagging on that daily allowance: Perplexity's help center confirms free users get a limited number of Pro searches per day but does not publish the actual figure. Around 5 is the number everyone repeats and it matches what people observe, but treat it as an observation rather than a published limit, and expect it to move without an announcement.
 
 For most everyday research tasks, quick fact checks, "what is X," recent news, and how-to questions, the free tier is excellent. The standard Sonar model is fast and surprisingly thorough for basic queries.
 
@@ -71,15 +84,20 @@ Where the daily limit bites: complex multi-step research sessions where you are 
 
 At $20 per month or $200 per year, Perplexity Pro removes the Pro search cap and adds real capability:
 
-- Unlimited Pro searches with GPT-5, Claude, and other premium models.
+- Unlimited Pro searches using frontier models from OpenAI and Anthropic rather than only the default Sonar.
 - File uploads for PDFs, images, and documents so Perplexity can analyze them and answer questions from the content.
-- Image generation directly in the chat using Flux and other current models.
-- Model selection per query so you can choose Sonar, GPT-5, Claude 4, or others.
+- Image generation directly in the chat.
+- Model selection per query, with a dropdown at the top of the search bar.
+- Advanced Deep Research, which currently runs on Claude Opus 4.5 and can produce presentations, spreadsheets, dashboards, and even simple websites rather than just a block of text.
 - Perplexity Pages, which turn any search into a shareable research document with sources built in.
 - Perplexity Spaces for grouping research around a project with persistent context.
 - Higher rate limits during peak hours.
 
-The model selection feature is genuinely useful for research. You can ask the same question to GPT-5 and Claude in sequence to see if their answers agree, or use different models for different kinds of queries. GPT-5 tends to be better at reasoning through numbers. Claude tends to be better at nuance and summarization. Sonar is best when you just need a fast answer with sources.
+The model selection feature is genuinely useful for research. You can ask the same question to two different frontier models in sequence and see whether they agree, which is a cheap and surprisingly effective sanity check on anything contested. In practice the reasoning-heavy models handle numeric and multi-step questions better, while Sonar is the right choice when you just want a fast answer with sources and do not need the extra depth.
+
+One caveat on model names: the lineup rotates every few months. Any review that hard-codes a model version, this one included, is describing a moment rather than a permanent state. Check the dropdown rather than trusting a blog post about which model is in there.
+
+Advanced Deep Research is the upgrade that changed my workflow most this year. Ask it something genuinely broad, like a full competitive landscape or a literature scan on a narrow topic, and it runs a long multi-source pass and hands back a structured document with citations throughout. It takes minutes rather than seconds, so it is not for quick lookups. For the kind of research that used to eat an afternoon, it is the difference between starting from nothing and starting from a solid draft.
 
 ## What Perplexity does better than anything else
 
@@ -176,11 +194,42 @@ Perplexity vs You.com and Kagi Search: You.com and Kagi Search both offer AI-pow
 
 ## Pricing
 
+The tier list got longer in 2026, and most reviews still show only Free and Pro.
+
 | Plan | Price | What you get |
 | ---- | ----------------- | ---------------------------------------------------------------- |
-| Free | $0 | Unlimited standard searches, around 5 Pro searches per day, voice input, mobile apps |
-| Pro | $20 per month or $200 per year | Unlimited Pro searches, file uploads, model selection, image generation, Spaces, Pages |
-| Enterprise Pro | Custom | Team accounts, SSO, admin controls, private data indexing |
+| Free | $0 | Unlimited standard searches, a small daily allowance of Pro searches, voice input, mobile apps, Comet |
+| Education Pro | $10 per month | Pro features at half price for verified students |
+| Pro | $20 per month or $200 per year | Unlimited Pro searches, file uploads, model selection, image generation, Spaces, Pages, Advanced Deep Research |
+| Max | $200 per month or $2,000 per year | Everything in Pro, Background Assistants, heavier Labs usage, 10,000 monthly credits |
+| Enterprise Pro | $40 per seat per month | Team accounts, SSO, admin controls, private data indexing |
+| Enterprise Max | Higher per-seat pricing | Enterprise controls plus the Max feature set |
+
+Annual billing brings Pro down to about $16.67 a month and Max to roughly $167. If you are a student, the $10 Education Pro tier is the best value on this table by a wide margin and it is easy to miss because Perplexity does not advertise it heavily.
+
+The jump from Pro to Max is the strange part. There is no middle tier, so you go from $20 to $200 in one step. I will come back to whether that is ever worth it.
+
+## The credit system, and why it probably does not affect you
+
+Perplexity added credits, and the reaction I keep seeing is people assuming their searches are now metered. They are not, and this is worth stating clearly because the confusion is causing people to avoid the tool for no reason.
+
+Perplexity Ask and standard search do not consume credits. The thing you actually use Perplexity for stays uncapped on Pro. Credits exist to pay for the compute-heavy agentic features, primarily Computer, where the tool is running extended multi-step work rather than answering a question.
+
+The allocations work like this. Pro comes with a one-time bonus of 4,000 credits and no monthly refill, so when that bonus runs out those specific agentic features stop until you move up. Max includes 10,000 credits every month plus a 35,000 one-time bonus. Credits do not roll over, so an unused balance disappears at the end of the cycle. Max accounts also carry a default $200 monthly spending cap on credit charges, which you can raise as high as $5,000 in credit settings if you genuinely need it.
+
+Consumption scales with how hard the task is. Something small like generating alt text lands in the low tens of credits. An extended coding or analysis session can run into the thousands. That spread is why a single number for "what will this cost me" does not exist, and why Pro's one-time bonus is better understood as an extended trial of the agentic features than as an allowance you can plan around.
+
+For a normal researcher, none of this matters. You will search, upload files, run Deep Research, and never see a credit counter move. It matters if you want to hand Perplexity long autonomous tasks, and at that point the honest read is that Max exists precisely because those tasks are expensive to run.
+
+## Pro or Max
+
+Max costs ten times Pro and the gap is narrower than the price suggests.
+
+Pro already gives unlimited Pro searches, file uploads, model selection, Spaces, Pages, and Advanced Deep Research. That is the full research toolkit. Nothing about ordinary research work is throttled on Pro.
+
+Max adds Background Assistants, which are autonomous tasks that run on a schedule without you present. Summarize this morning's email and today's calendar at 8:30 every day, and it is waiting when you sit down. It adds the monthly credit allowance and heavier Labs usage. For someone running agentic workflows daily, that is a real product. For everyone else it is $180 a month of headroom nobody touches.
+
+My recommendation is boring: start on Pro, and only move to Max when you hit a specific wall you can name. Buying the ceiling before you have found the floor is how subscriptions quietly become expensive.
 
 Check perplexity.ai for current pricing since it does change.
 
@@ -200,7 +249,7 @@ Rabbit holes: one interesting question turns into a 20-turn conversation about, 
 
 Perplexity AI is the best research tool I have added to my workflow in the past two years. For any task that involves finding current, factual information, which describes a large portion of knowledge work, it is faster and more reliable than the alternatives.
 
-The free tier is genuinely useful. Start there. If you find yourself frustrated by the daily Pro search limit, the $20 per month upgrade is easy to justify for anyone doing serious research. If research is casual, the free tier is enough for years.
+The free tier is genuinely useful, and it got better when Comet went free in March. Start there. If you find yourself frustrated by the daily Pro search limit, the $20 per month upgrade is easy to justify for anyone doing serious research. Students should check Education Pro at $10 before paying full price. If research is casual, the free tier is enough for years, and you can ignore Max entirely unless you are scheduling autonomous tasks.
 
 The thing I would want you to take from this review: Perplexity does not replace every search use case, but it does replace the specific use case of "I need to find information and synthesize it quickly" better than anything else available. For that use case, it is not close.
 
