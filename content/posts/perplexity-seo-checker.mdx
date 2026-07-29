@@ -1,0 +1,236 @@
+---
+title: "Perplexity SEO Checker: How to Actually Check If AI Cites Your Site (I Have 31 Posts and Only 1 Gets Cited)"
+seoTitle: "Perplexity SEO Checker: Free Ways to Check AI Citations"
+date: "2026-07-29"
+updatedAt: "2026-07-29"
+excerpt: "Every Perplexity SEO checker article is written by someone selling a Perplexity SEO checker. This one is written by a publisher with real citation data: 31 posts, 34 AI citations, and all of them coming from a single page. Here is how to check yours for free and what the paid tools actually add."
+category: "Guides"
+tags:
+  - "perplexity-seo"
+  - "ai-citations"
+  - "ai-search-visibility"
+  - "seo-tools"
+  - "geo"
+  - "perplexity-ai"
+  - "blogging"
+coverImage: "/images/perplexity-seo-checker-cover.webp"
+readTime: "14 min read"
+author: "Mahitosh Dey"
+status: "published"
+faqs:
+  - q: "What is a Perplexity SEO checker?"
+    a: "It is any tool or method that tells you whether AI search engines are crawling your site and citing it in answers. The name is misleading because most of these tools do not measure Perplexity specifically, they measure AI visibility across several assistants and report it together. Some scan your page for structural signals that make citation more likely. Others track whether your brand appears in AI answers for specific prompts. A few just check whether your robots.txt is blocking AI crawlers, which you can do yourself in about ten seconds for free."
+  - q: "How can I check if Perplexity is citing my site for free?"
+    a: "Three free methods, in order of usefulness. Check your server access logs for the user agents PerplexityBot and Perplexity-User, since a Perplexity-User hit usually means a real person just received your page inside an answer. Open Bing Webmaster Tools and look at the AI Performance tab, which reports citations from Microsoft Copilot and partners at no cost. And read your own robots.txt to confirm you are not blocking the crawlers you want. None of this requires a subscription."
+  - q: "What is the difference between PerplexityBot and Perplexity-User?"
+    a: "PerplexityBot is the traditional crawler that indexes pages for Perplexity's search index. Perplexity-User is the fetcher that retrieves a page in real time because someone asked a question and your page is being pulled into the answer. The distinction matters more than any metric a paid tool will sell you. PerplexityBot hits mean you are indexed. Perplexity-User hits mean you are being read by an actual person right now. If you only track one thing in your logs, track that second one."
+  - q: "Do I need to pay for a Perplexity SEO tool?"
+    a: "Not to start. Server logs and Bing Webmaster Tools cost nothing and answer the two questions that matter first: is anything crawling me, and is anything citing me. Paid tools become worth it when you need prompt-level tracking, meaning you want to know whether you appear for 200 specific questions and how that changes week to week. That is a real problem for a brand with competitors to monitor. It is not a problem for a site with fewer than a few dozen pages that has not confirmed it is being crawled at all."
+  - q: "Does Perplexity respect robots.txt?"
+    a: "Partially, and this is genuinely contested. Perplexity's position is that PerplexityBot honors robots.txt but Perplexity-User is an agent acting for a person rather than a bot, so it is not bound by the same rules. Beyond that dispute, Cloudflare published a report on August 4, 2025 documenting Perplexity using undeclared crawlers that rotated user agents, IP addresses, and network identifiers in ways that evaded no-crawl directives. The practical consequence is that your logs may undercount Perplexity activity, so treat a quiet log as inconclusive rather than as proof nobody is reading you."
+  - q: "Why is my site not being cited by AI search engines?"
+    a: "The usual causes, roughly in order: the crawlers are blocked in robots.txt or by your CDN's bot rules, the site is too new or too small to be a trusted source on anything, the pages are structured as continuous prose with no extractable sections, or the content does not directly answer a question anyone asks. In my own data the deciding factor appeared to be structure. The one page on my site earning citations answers narrow questions in clearly labelled sections. The pages earning none are well written but organized around topics rather than questions."
+  - q: "How long does it take to get cited by AI after publishing?"
+    a: "Longer than indexing and shorter than ranking. On my site, which launched in June 2026, the first AI citations appeared roughly six weeks in, well before the same content produced meaningful click traffic from Google. That order surprised me and it seems to be common for new sites: AI assistants will cite a small site that answers a question precisely, while Google still ranks it on page four. If you are new, AI citation is realistically your first visibility channel rather than your last."
+  - q: "Is AI citation worth optimizing for if it does not send clicks?"
+    a: "It sends fewer clicks than search, and that is the honest tradeoff. Someone who gets your answer inside an AI response often has no reason to visit. What you get instead is attribution, brand exposure, and inclusion in the set of sources an assistant treats as reliable for your topic. For a new site with no authority, being in that set early matters more than the clicks you are not yet getting anyway. I would not restructure a healthy traffic business around it. I would absolutely take it when the alternative is invisibility."
+---
+
+I have 31 published posts. Across the last week my site was cited 34 times by AI assistants. Every single one of those citations points at the same page.
+
+Not most of them. All of them. Thirty posts earned nothing, and one earned everything.
+
+I went looking for an explanation and ended up in the market for what people call a Perplexity SEO checker, where I found something worth telling you about before you spend money: almost every article ranking for that term was written by a company selling one. That does not make them wrong. It does mean nobody in the results is showing you what real citation data looks like on a real site, because most of them do not run one.
+
+So here is mine, along with the free ways to check yours, the reason your server logs might be lying to you, and an honest read on when the paid tools earn their fee.
+
+## What a Perplexity SEO checker actually is
+
+The term covers three different products that get marketed as one thing.
+
+The first type scans a page and scores it for structural signals: whether you have schema markup, whether headings are extractable, whether your content answers questions directly. This is a static audit. It never checks whether you were actually cited, it checks whether you look citable.
+
+The second type does prompt-level tracking. You give it a list of questions your customers might ask, it runs them against Perplexity and other assistants on a schedule, and it reports whether your site appeared. This is the only category that measures real citations, and it is the expensive one.
+
+The third type just checks your robots.txt for AI crawler rules and presents it as an audit. You can do this yourself in ten seconds and I will show you how below.
+
+Knowing which of the three you are buying matters, because the pricing does not track the value. Some tools charge subscription money for the robots.txt check.
+
+## Check these three things before you pay anyone
+
+Everything in this section is free, and between them they answer the two questions that actually matter: is anything crawling me, and is anything citing me.
+
+### Your server logs, which are the closest thing to truth
+
+If AI crawlers are hitting your site, they leave records. Grep your access logs for two user agents:
+
+`PerplexityBot` is the traditional crawler. It indexes pages so Perplexity's search layer knows they exist. Hits from it mean you are in the index.
+
+`Perplexity-User` is the fetcher that retrieves a page in real time because somebody asked a question right now and your page is being pulled into their answer.
+
+That second one is the important one and I rarely see it explained properly. A PerplexityBot hit tells you that you are catalogued. A Perplexity-User hit tells you that a human being is receiving your content inside an answer at that moment. It is the nearest thing to a citation event that you can observe from your own server, and it costs nothing to watch.
+
+Filter your logs by those user agents, group the hits by URL, and the pages that get the most Perplexity-User traffic are your most-cited pages. That is a report a paid tool will sell you, derived from data you already own.
+
+The catch is that this requires access to raw logs. On some hosting platforms, particularly serverless ones, you may not get them in a usable form, which pushes you toward the next method.
+
+### Bing Webmaster Tools, which is free and underused
+
+Bing Webmaster Tools has an **AI Performance** tab. It is free, it takes minutes to set up if you have already verified your site, and most site owners I talk to do not know it exists.
+
+It reports total citations, how many distinct pages of yours were cited, and which pages those were. That last breakdown is the useful part, because it turns a vague sense that AI might be reading you into a specific list of URLs.
+
+One precision point that most articles get wrong, including some I read while researching this: **this tab reports citations from Microsoft Copilot and its partners, not from Perplexity.** The label at the top of the report says so plainly. If someone tells you Bing Webmaster Tools tracks your Perplexity citations, they have not looked at it.
+
+It is still worth using. Copilot citation and Perplexity citation are driven by similar signals, so the page-level pattern it reveals is informative even though the source differs. Just do not report the number as a Perplexity metric, because it is not one.
+
+### Your own robots.txt, which takes ten seconds
+
+Open `yoursite.com/robots.txt` and read it. You are looking for any rule that blocks AI crawlers.
+
+Plenty of sites block them without realizing. It happens through a security plugin, a CDN bot-protection setting, or a robots.txt someone copied from a template three years ago. If you are blocking the crawlers, no amount of content optimization will get you cited, and no tool subscription will fix it.
+
+For reference, here is what mine allows:
+
+```
+User-Agent: *
+Allow: /
+Disallow: /calendar/
+
+User-Agent: Bingbot
+Allow: /
+
+Sitemap: https://www.aivaultblog.com/sitemap.xml
+```
+
+Everything is open except one internal path. No AI crawler is blocked. That is a deliberate choice, and given that I get cited more than I get clicked at this stage, I think it is the right one for a new site.
+
+Worth checking separately: your CDN. Cloudflare and similar services can block AI crawlers at the edge regardless of what your robots.txt says, and that block will not appear in the file you just read.
+
+## Why your logs might be lying to you
+
+Here is the part that the tool vendors skip, and it undermines the premise of checking in the first place.
+
+Perplexity runs two documented agents, PerplexityBot and Perplexity-User. Perplexity's stated position is that Perplexity-User is an agent acting on behalf of a person rather than an automated crawler, and therefore is not obliged to honor robots.txt directives. Reasonable people disagree about whether that distinction holds up, and publishers have pushed back on it hard.
+
+More seriously, on August 4, 2025 Cloudflare published a detailed report showing Perplexity using undeclared crawlers that rotated user agents, IP addresses, and network identifiers in patterns consistent with evading no-crawl directives. Traffic that does not identify itself as Perplexity does not show up when you grep for Perplexity.
+
+Two consequences follow, and both are practical rather than philosophical.
+
+If your logs are quiet, that is inconclusive rather than proof of absence. You may be read more than you can see.
+
+And if you actively want to block AI crawlers, robots.txt alone may not be sufficient. Edge-level blocking through your CDN is the enforceable version.
+
+I am not raising this to be dramatic about it. I am raising it because an article about how to check something owes you the limits of the checking. Anyone selling you a log-based citation tracker as a complete picture is overselling.
+
+## My actual data: 31 posts, 34 citations, one page
+
+Now the part I have not seen anyone else publish.
+
+My site launched in June 2026. As of late July it has 31 posts, 95 pages indexed in Google, and roughly 1,800 search impressions across three months. It is small and new, which is exactly why the citation pattern is interesting: there is not enough authority here for authority to be the explanation.
+
+Over a seven-day window, Bing reported 34 AI citations. Average cited pages: 1. The page-level breakdown showed a single URL responsible for every one of them, my [guide to the best free AI image generators](/blog/best-free-ai-image-generators).
+
+Thirty other posts, several of them longer and more thoroughly researched, earned zero.
+
+That result is more useful than a big even distribution would have been, because a single outlier is something you can examine.
+
+## What that one page does differently
+
+I pulled the structure of the cited page and compared it against the rest of the site.
+
+It was not length. At roughly 2,900 words it is slightly shorter than my site average of around 3,100.
+
+It was not the FAQ block. It has nine FAQ entries against a site average of eight, which is not a meaningful difference.
+
+Three things did stand out.
+
+**The headings are answers, not labels.** This is the one I keep coming back to. Its section headings read "No account required, generate right now" and "Free account required, significantly better quality." Those are not topics. They are the answer to a question somebody actually types. Every other post on my site uses conventional section labels that describe a subject rather than resolve a question. If you are an extraction system looking for a passage that responds to "which AI image generators work without signing up," one of those headings is a direct hit and the others are not.
+
+**It is heavily tabular.** Twelve table rows comparing tools across consistent attributes. Structured comparison data is unusually easy to lift into an answer, because the model does not have to infer relationships from prose. They are already explicit.
+
+**It is granular.** Seven H2 sections subdivided by ten H3 sections, which is a finer chop than my other posts. More sections means more independently extractable units. A 3,000 word essay with four headings offers four passages. The same length with seventeen offers seventeen.
+
+Stack those and a picture emerges that matches what I would expect from how retrieval works. The page that wins is not the best written one. It is the one that has been pre-cut into pieces the size of an answer.
+
+I want to be careful about how hard I push this. It is one page on one small site over one week. It is a hypothesis worth testing, not a law, and anyone presenting a single data point as a proven ranking factor is doing the thing I complained about at the top of this article. What makes it worth acting on is that the cost of testing is close to zero: restructuring headings is an afternoon of work with no downside if the theory is wrong, because clearer headings serve human readers regardless.
+
+## What I would change on your pages
+
+Based on the above, and stated as an experiment rather than a guarantee:
+
+Rewrite your section headings as answers. If a heading reads "Pricing," change it to what the pricing actually is. "Free tier gives you 10,000 characters a month" beats "Pricing" for both an extraction system and a person scanning the page.
+
+Put comparison data in tables rather than paragraphs. If you find yourself writing a paragraph that compares three tools across four attributes, that paragraph wants to be a table.
+
+Subdivide more aggressively. If a section runs past 400 words without a subheading, it is probably two sections.
+
+Answer the narrow question somewhere explicitly. Assistants retrieve passages that resolve a specific question. A post that circles a topic thoughtfully without ever stating a flat answer gives them nothing to lift.
+
+Keep the FAQ block. Mine did not differentiate the winning page, but question-and-answer pairs are structurally ideal for this and cost little. I would not remove them on the strength of one comparison.
+
+## Does llms.txt do anything yet
+
+You will run into this file while researching, so it is worth a straight answer.
+
+`llms.txt` is a proposed standard that sits at your site root, like robots.txt, but instead of telling crawlers what they may fetch it offers a curated map of your content for language models: which pages matter, what they cover, where the canonical version lives. The pitch is that instead of a model reconstructing your site from raw HTML, you hand it a clean summary.
+
+The idea is sound. Adoption is the problem. It is a proposal rather than a ratified standard, and support across the major assistants is inconsistent enough that nobody can honestly promise you a return. Several of the audit tools check for its presence and mark you down for not having one, which tells you more about how audit scores are constructed than about how retrieval works.
+
+My read: it costs an hour to write and it will not hurt you. If you have already fixed your headings and confirmed you are not blocking crawlers, adding one is a reasonable next move. If you have not done those things, writing an llms.txt is procrastination with a technical alibi. Do the ordering that matches the evidence, not the ordering that feels productive.
+
+## The tools that rank for this term
+
+Since you probably arrived here looking for a tool recommendation, here is what the category actually contains, grouped by what they do rather than by who markets hardest.
+
+I want to be upfront that I have not run a paid subscription with any of these long enough to review them properly, so this is a map of the landscape rather than a verdict on individual products. When I test one for a full cycle, I will write that up separately.
+
+| Type | What it actually does | Worth paying for when |
+| --- | --- | --- |
+| Page auditors | Scan a URL for structure, schema, and crawler access | You want a second opinion on why a specific page is not landing |
+| Prompt trackers | Run your questions against assistants on a schedule and log whether you appear | You need to monitor dozens of prompts and competitors over time |
+| Crawler checkers | Confirm whether AI bots can reach your pages | Never, realistically. This is your robots.txt and your CDN settings |
+
+Names you will encounter in the results include seoscore.tools, lovedby.ai, seenos.ai, airankchecker.net, Otterly.ai, and a rotating cast of others, most offering a free scan of a single URL. The free scans are genuinely worth running, if only to see whether an automated audit flags something your own check missed.
+
+Two things to watch when you evaluate any of them.
+
+**Ask what it measures, not what it reports.** A tool that gives you a "Perplexity visibility score" derived from your page structure is not measuring Perplexity. It is grading your HTML and assigning a number. That can still be useful, but it is an audit dressed as a metric, and the distinction matters when you are deciding whether the number moving means anything.
+
+**Check the sample size behind prompt tracking.** Running your query once a week against one assistant produces noisy data, because AI answers vary between runs for the same prompt. A tool that reports "you appeared for 12 of 50 prompts" without telling you how many times each was sampled is giving you a number with unstated error bars.
+
+## The paid tools, assessed honestly
+
+Having said all that, the paid category does solve a real problem, just not the one most people buy it for.
+
+What they genuinely add is **prompt-level tracking at scale**. If you need to know whether you appear for two hundred specific questions, how that changes week over week, and which competitors appear instead of you, that is not something logs or Bing will tell you. It is a legitimate product and monitoring it manually is not feasible.
+
+What they mostly do not add is a reason to buy before you have checked the free signals. If you have not confirmed that anything is crawling you, prompt tracking will report zeros at a monthly cost.
+
+My honest sequencing: check your robots.txt today, look at Bing Webmaster Tools this week, grep your logs if you can get them, and only consider a paid tracker once you have confirmed citations exist and you need to know which prompts produce them.
+
+Several of these tools offer a free scan, which is enough to see whether their audit surfaces anything your own check missed. Use the free tier before the trial, and the trial before the card.
+
+## The thing nobody says about AI citation
+
+It does not send you much traffic.
+
+Someone who receives your answer inside an AI response frequently has no reason to click through, because they already have what they wanted. My own numbers make this uncomfortably clear: 34 citations in a week against a click count I could hold up on one hand.
+
+So why care?
+
+Because for a new site, being in the set of sources an assistant treats as reliable on your topic arrives earlier than ranking does. My citations showed up around week six. My Google positions at that point were still averaging page four. The AI channel recognized the content before the search channel did, and I do not think that ordering is a coincidence: a small site that answers a narrow question precisely is exactly what a retrieval system wants and exactly what a link-weighted ranking system ignores.
+
+If you are established with real traffic, do not restructure your business around a channel that converts poorly. If you are new and invisible, this may be the first place anyone notices you, and it is worth the afternoon it takes to make your pages easier to quote.
+
+I write more about the underlying tool in my [Perplexity review](/blog/perplexity-ai-review), and if you are setting up a site from scratch, my [guide to building a blog with AI](/blog/how-to-build-a-blog-with-ai) covers the structural decisions that make this easier to get right the first time.
+
+## What to do this week
+
+Read your robots.txt and confirm you are not blocking what you want to reach you. Check your CDN's bot rules separately, because they override the file.
+
+Open Bing Webmaster Tools and find the AI Performance tab. If you have citations, note which pages earned them.
+
+If you can access server logs, grep for PerplexityBot and Perplexity-User, and pay attention to the second.
+
+Then take whichever page is already winning, work out what it does differently, and do that on purpose everywhere else. That is the whole method, and it is the one thing no subscription can do for you.
