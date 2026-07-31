@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (31)
+## Published Posts (34)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -35,6 +35,9 @@
 | 29  | Cursor AI Review 2026: Is the $20 AI IDE Still Worth It?                     | cursor-ai-review-2026                      | Reviews     | 2026-07-24 |
 | 30  | How to Use AI for YouTube Automation in 2026 (The Honest Playbook)           | how-to-use-ai-for-youtube-automation       | Tutorials   | 2026-07-24 |
 | 31  | Notion AI Review 2026: What $20/Month Actually Buys                          | notion-ai-review-2026                      | Reviews     | 2026-07-28 |
+| 32  | Perplexity SEO Checker: How to Actually Check If AI Cites Your Site          | perplexity-seo-checker                     | Guides      | 2026-07-29 |
+| 33  | What AI Pricing Did in 2026: Every Major Change, Dated and Sourced           | ai-pricing-changes-2026                    | Guides      | 2026-07-29 |
+| 34  | Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong         | cursor-vs-github-copilot                   | Comparisons | 2026-07-31 |
 
 ---
 

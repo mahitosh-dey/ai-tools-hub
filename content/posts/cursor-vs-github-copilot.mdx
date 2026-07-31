@@ -1,0 +1,190 @@
+---
+title: "Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong"
+seoTitle: "Cursor vs GitHub Copilot 2026: Real Costs Compared"
+date: "2026-07-31"
+updatedAt: "2026-07-31"
+excerpt: "Every comparison you'll read prices these tools at $10 against $20. Both numbers are still real and both are now misleading. Here is what Cursor and Copilot actually cost after the June credit switch, read off the vendors' own pages this week, plus the India-only plan nobody lists."
+category: "Comparisons"
+tags:
+  - "cursor"
+  - "github-copilot"
+  - "ai-coding"
+  - "ai-comparison"
+coverImage: "/images/cursor-vs-github-copilot-cover.webp"
+readTime: "13 min read"
+author: "Mahitosh Dey"
+status: "published"
+faqs:
+  - q: "Is Cursor or GitHub Copilot cheaper in 2026?"
+    a: "Copilot Pro is cheaper on the sticker at $10 a month against Cursor Pro at $20. The gap narrows once you look at what the money buys. Copilot Pro includes $15 of AI credits, made up of $10 in base credits plus a $5 flex allotment that GitHub adjusts over time. Cursor Pro includes $20 of third-party model usage plus a separate allowance for Cursor's own models, Composer 2.5 and Grok 4.5, which Cursor describes as generous but does not attach a published rate to. So you are comparing $15 of metered agent usage against $20 plus an unpublished amount. If you are in India, Cursor Start at ₹649 a month undercuts both."
+  - q: "What changed with GitHub Copilot pricing on June 1, 2026?"
+    a: "GitHub replaced premium request units with GitHub AI Credits. One credit is $0.01. Usage is now billed on actual token consumption, counting input, output and cached tokens at each model's published API rate, rather than on a flat count of requests. Chat, agent mode, code review, the Copilot cloud agent, Copilot CLI and Copilot Apps all draw down credits. Code completions and next edit suggestions stayed unmetered on paid plans. GitHub also introduced a Max plan at $100 a month with $200 in credits."
+  - q: "Are code completions still unlimited on Copilot?"
+    a: "On paid plans, yes. GitHub's announcement states that code completions and next edit suggestions remain included in all plans and do not consume AI Credits. The free plan is capped at 2,000 completions a month with limited chat and agent usage on top. This matters more than most comparisons admit, because autocomplete is unmetered on Cursor's paid plans too. The thing you actually pay for on both tools is agent work, not typing assistance."
+  - q: "What is Cursor Start and can I get it outside India?"
+    a: "Cursor Start is an India-only plan launched on July 27, 2026 at ₹649 a month, tax inclusive, billed monthly in rupees with UPI, credit card or debit card. It gives you Composer and Grok 4.5, more agent requests than the free Hobby tier, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. It sits below Pro, so you do not get every model, Bugbot, Auto mode or unlimited paid overages. It is not available outside India. Cursor says India is now its third-largest market."
+  - q: "Does Cursor work in JetBrains or Xcode?"
+    a: "No. Cursor is its own editor, built as a fork of VS Code, so you switch editors to use it. Copilot installs as an extension across VS Code, Visual Studio, the JetBrains IDEs, Neovim and Xcode. If your team writes Kotlin in IntelliJ or Swift in Xcode, this decides the question before any pricing or capability argument starts. It is the single most practical difference between the two and it gets buried under benchmark talk in most comparisons."
+  - q: "Who owns Cursor now that SpaceX has acquired it?"
+    a: "Anysphere, the company behind Cursor, agreed to a $60 billion all-stock acquisition by SpaceX announced on June 16, 2026, with the deal expected to close in Q3 2026 subject to regulatory approval. It follows SpaceX's merger with xAI in February 2026, which is why Grok 4.5 now sits alongside Composer as a first-party Cursor model. Day to day this changes nothing about the editor. If your employer has a policy on which companies receive your source code, it is worth raising before a team standardises on Cursor."
+  - q: "Which is better for a beginner learning to code?"
+    a: "Copilot, and it is not particularly close. It bolts onto the editor you already use, autocomplete costs you nothing on a paid plan, and the free tier gives you 2,000 completions a month to try before paying anything. Cursor asks you to change editors and hands you agent tools that are very good at producing code you do not understand yet. I would rather a beginner wrote a thousand lines with a slightly worse assistant they can follow than shipped a working feature they could not debug."
+  - q: "How do I stop GitHub Copilot from billing me overage?"
+    a: "Set a budget, and check which kind you are setting. GitHub added spending controls on July 2, 2026. A user-level budget always enforces a hard stop, and GitHub's docs state there is no option to let usage continue past it, so setting yours to zero means Copilot stops when your included credits run out and you cannot be charged extra. Budgets at the organisation, enterprise or cost centre level are different: they carry a setting called Stop usage when budget limit is reached, which GitHub documents as off by default. With that toggle off the budget only alerts you while charges keep accruing. When a limit does block you, code completions keep working because they consume no credits."
+  - q: "Do professional developers use both Cursor and Copilot?"
+    a: "Plenty do, and the reasoning holds up. The two bills are $10 and $20, autocomplete is unmetered on both, and they are strong at different jobs. Copilot covers the editors Cursor cannot reach and carries the compliance story most enterprises already accepted. Cursor handles multi-file refactors better. Paying $30 a month for both is a rounding error against a developer salary. The version of this that does not work is buying both and then splitting your agent usage so thinly that neither included allowance gets used."
+---
+
+I sat down to price these two tools properly and found that the number everybody quotes, $10 for Copilot against $20 for Cursor, is still technically accurate and no longer tells you anything useful.
+
+Both prices are real. Neither one describes what you get. GitHub changed how Copilot bills on June 1 and then changed it again with something called a flex allotment, so the $10 plan now carries $15 of usage. Cursor runs two separate usage pools and publishes a rate for only one of them. And four days ago Cursor launched a plan in India at roughly a third of Pro's price that no comparison article I can find has noticed yet.
+
+So this is a pricing-first comparison. Every figure below came off the vendors' own pages on July 31, 2026. Where I could not verify something, I say so instead of repeating what the other results say.
+
+## What GitHub Copilot actually costs now
+
+On June 1, 2026, GitHub retired premium request units and replaced them with GitHub AI Credits. One credit is one cent. Usage is metered on actual token consumption, counting input, output and cached tokens against each model's published API rate, rather than counted as requests.
+
+Then GitHub did something that has confused nearly everyone writing about this. It split each plan's allowance into two parts: base credits equal to the subscription price, and a flex allotment on top that GitHub adjusts over time as model prices move.
+
+| Plan | Price | Base credits | Flex | Total monthly credits |
+|---|---|---|---|---|
+| Free | $0 | None | None | 2,000 completions, limited chat and agents |
+| Pro | $10 | $10 | $5 | $15 |
+| Pro+ | $39 | $39 | $31 | $70 |
+| Max | $100 | $100 | $100 | $200 |
+
+Base credits get spent first. Once you pass them the flex allotment applies automatically at the same rates, whether you are working in your IDE, on github.com or in the CLI.
+
+This is where the stale numbers come from. GitHub's own launch announcement says Copilot Pro is "$10/month, including $10 in monthly AI Credits." That post is still live, still ranks, and no longer matches the product. The live plans page says $15. The Max plan does not appear in the announcement at all, because it launched alongside the change rather than being described by it. If you have read three articles this month saying Copilot Pro gives you $10 of credits, that is why.
+
+For teams, GitHub's announcement listed Business at $19 per user and Enterprise at $39 per user, each including credits equal to the price. I read those from the announcement rather than a live business pricing page, so treat them as less fresh than the individual plan figures above.
+
+## What Cursor actually costs now
+
+Cursor never sold a flat plan in the way people remember. What it sells is a dollar-denominated pool, and the important detail is that there are two of them.
+
+| Plan | Price | Third-party model pool | Notes |
+|---|---|---|---|
+| Hobby | Free | None | Limited agent requests, access to Composer |
+| Start | ₹649 | None | India only, Composer and Grok 4.5, cloud agents |
+| Pro | $20 | $20 | Unlimited tab, all models, MCP, hooks, cloud agents |
+| Pro+ | $60 | $70 | Roughly 3x Pro capacity |
+| Ultra | $200 | $400 | Roughly 20x Pro, priority access to new features |
+| Teams | $40/user | Per seat | Admin controls, SSO, privacy mode, code review |
+
+Look at the Pro+ row. It costs $60 and includes $70 of usage. Cursor prices that pool deliberately above the subscription, the same way GitHub's flex allotment does, and almost every comparison article prints $60 because that is what the plan costs. Ultra is the same story at a larger multiple: $200 buys $400.
+
+The second pool is the one that makes Cursor hard to compare. Composer 2.5 and Grok 4.5, Cursor's own models, draw from a separate Cursor Models pool that the docs describe as generous included usage without publishing a per-token rate for it. Everything from Anthropic, OpenAI and Google draws from the dollar pool at the provider's API price.
+
+Auto mode deserves a flag of its own, because this is the fact most out of date across the web and in my own [Cursor review](/blog/cursor-ai-review-2026) until I corrected it this week. Through 2025, Auto was genuinely free and became the standard advice for avoiding overages. It is now metered. Cursor's docs price Auto Cost per million tokens regardless of which model it routes to, and Auto Balance and Auto Intelligence bill at the API rate of whatever model they select. Auto is still the cheap setting. It stopped being the free one.
+
+When you exhaust a pool, Cursor lets you continue on demand at the same API rates rather than throttling you, and the docs are explicit that requests are never downgraded in quality or speed. That is a genuinely better overage design than most metered products, which quietly slow you down.
+
+## The comparison nobody runs: what is free on both
+
+Here is the part that reframes the whole question.
+
+GitHub states that code completions and next edit suggestions remain included on all plans and consume no AI Credits. Cursor gives unlimited tab completions on every paid plan. So on both tools, the thing you interact with a thousand times a day costs nothing beyond the subscription.
+
+What you pay for, on both, is agent work. Chat, multi-file edits, code review, background agents, CLI runs.
+
+That kills the $10 versus $20 framing. The honest comparison is $15 of metered agent budget on Copilot Pro against $20 of metered third-party budget on Cursor Pro plus an unquantified allowance for Cursor's own models. Cursor gives you more, and refuses to tell you exactly how much more. Copilot gives you a smaller number you can actually reason about.
+
+Which of those you prefer says something about how you like to be billed. I would rather have GitHub's smaller, fully specified allowance than Cursor's larger one with an undisclosed component. Other people will reasonably take the opposite view, since in practice Cursor's own models absorb most ordinary work and the pool rarely binds.
+
+## What a credit actually buys
+
+Both vendors now bill on tokens, and that quietly broke every "how many requests do I get" answer written before this summer.
+
+Under the old system Copilot sold premium request units, so one request cost one unit and you could count them. Since June 1 it counts input, output and cached tokens against each model's published rate. Cursor works the same way, drawing from your pool at the provider's API price.
+
+The practical consequence is that identical actions cost wildly different amounts. Ask an agent to rename a variable in a small file and you spend very little. Ask it to refactor across a large repository and it reads thousands of lines as context before writing anything, and the same single request costs many times more. Context size is the cost driver now, not request count.
+
+This is why I distrust any article that tells you $20 buys a specific number of requests. From my own usage I have seen frontier-model requests land somewhere between roughly four cents and twenty cents depending on the model and how much context came along, which puts a $20 pool somewhere in the low hundreds of requests. That is an observation from my billing dashboard, not a vendor figure, and your number will differ based on repository size more than on anything else.
+
+Neither company publishes a requests-per-dollar figure, and I think that is deliberate rather than sloppy. The honest version is that they cannot publish one, because the answer depends on your codebase.
+
+## What happens when you run out
+
+The two products handle exhaustion very differently, and Copilot's design has a trap in it worth knowing before it appears on an invoice.
+
+Cursor is the simpler of the two. When a pool empties you can continue on demand at the same API rates and pay in arrears, and the docs are explicit that requests are never downgraded in quality or speed. You keep the model you chose. You just start paying for it directly.
+
+Copilot spends base credits first, then applies the flex allotment automatically at the same rates across your IDE, github.com and the CLI. After that, usage bills as overage. GitHub added spending controls on July 2, 2026, and how they behave depends on which kind of budget you set.
+
+A user-level budget always enforces a hard stop. GitHub's docs say there is no option to allow usage to continue past it, so an individual developer who sets one cannot be billed beyond it. Set it to zero and Copilot simply stops consuming credits when the included allowance runs out.
+
+Budgets at the organisation, enterprise or cost centre level work differently, and this is the part to watch. Those have a setting called "Stop usage when budget limit is reached", and GitHub's documentation states it is off by default, followed by the instruction to always enable it when creating a budget. A budget with that toggle off is an alert, not a limit. Charges keep accruing past it. If you are an engineering manager who set a team budget and assumed it capped anything, go and check the toggle.
+
+When a limit does block someone, code completions and next edit suggestions keep working, since those consume no credits on any plan. The blocked user stays blocked until the next billing cycle resets consumption or an administrator raises the budget.
+
+I have gone looking for an equivalent default cap on the individual side and did not find GitHub documenting one. Read that as: if you set nothing, nothing stops the meter.
+
+## Where each one wins on capability
+
+Pricing decides less than people think. Two structural facts decide more.
+
+The first is editor coverage. Copilot installs into VS Code, Visual Studio, the JetBrains IDEs, Neovim and Xcode. Cursor is its own editor, forked from VS Code, so adopting it means switching editors. If your team writes Kotlin in IntelliJ or Swift in Xcode, the comparison is over before anyone opens a pricing page. This is the most practical difference between the two products and it routinely gets four sentences in articles that spend six paragraphs on benchmarks.
+
+The second is how each tool handles work that spans many files. Cursor's Composer takes an instruction like "add rate limiting to every route in this directory" and returns one atomic diff across every file it touched. Copilot has closed distance here, but Cursor still does this better, and it is why developers who switched mostly stayed switched.
+
+Everything else is closer than the marketing on either side suggests. Both handle single-file edits well. Both do inline chat competently. Both support MCP servers now.
+
+I should say plainly what I could not confirm. One of the top-ranking comparison pages reports that Copilot solved 56 percent of 500 SWE-Bench Verified tasks against Cursor's 51.7 percent, with per-task timings to two decimal places. I could not trace those numbers to any published benchmark run, and I found other pages repeating them without a source. They may be real. I am not going to pass them along as though I checked them, and you should be wary of any comparison that quotes precise benchmark figures without linking the run.
+
+## The plan no comparison article lists
+
+On July 27, 2026, Cursor launched Cursor Start: ₹649 a month, tax inclusive, billed monthly in rupees, payable by UPI, credit card or debit card. India only.
+
+That is roughly $7. It sits between the free Hobby tier and Pro. You get Composer and Grok 4.5, more agent requests than the free plan, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. You do not get access to every model, Bugbot, Auto mode or unlimited paid overages, which stay behind Pro.
+
+Cursor's reasoning is in the launch post: Indian developers asked for pricing that reflected the local market and for local payment methods. India is now Cursor's third-largest market, with its user base there passing three million developers after roughly tripling in a year.
+
+For a large share of the people reading a "which should I buy" article, the correct answer is now a plan that appears in none of them. At ₹649, Start undercuts Copilot Pro's $10 as well, while giving you a real agentic editor rather than an extension. The tradeoff is losing manual frontier-model selection, which matters less than it sounds if Composer already handles your daily work. If you are weighing this against everything else at this price point, my roundup of [AI tools under $20 a month](/blog/best-ai-tools-under-20-dollars-2026) covers the same budget band across categories.
+
+Regional pricing keeps turning up as the gap in AI tool coverage. I hit the same thing with Grammarly while writing up [every 2026 AI pricing change](/blog/ai-pricing-changes-2026), where an India-exclusive plan appeared that no comparable article mentioned.
+
+## Who owns Cursor now
+
+Anysphere agreed to a $60 billion all-stock acquisition by SpaceX, announced June 16, 2026, expected to close in Q3 2026 subject to regulatory approval. It has been reported as the largest acquisition of a venture-backed startup on record. SpaceX had secured an option to buy the company on April 21.
+
+It follows SpaceX's merger with xAI in February 2026, which explains why Grok 4.5 is now a first-party model inside Cursor alongside Composer.
+
+For a solo developer this changes nothing this year. The editor works the same on August 1 as it did on July 1. For anyone choosing a tool their team will standardise on, it is a live question: your source code will be processed by a company that is mid-acquisition by a satellite manufacturer that merged with an AI lab six months ago. Some legal departments will not care. Some will care a great deal. Better to ask now than after the rollout.
+
+Copilot's ownership story is boring by comparison, and boring is the selling point. Microsoft has been answering enterprise procurement questions for thirty years and has the compliance paperwork to prove it.
+
+## So which one should you buy
+
+| You are | Buy | Why |
+|---|---|---|
+| Learning to code | Copilot Free, then Pro | Keeps your editor, autocomplete costs nothing, 2,000 free completions to test |
+| A developer in India | Cursor Start (₹649) | Roughly $7 for a real agentic editor, UPI billing |
+| In JetBrains or Xcode | Copilot | Cursor does not exist in your editor |
+| Doing heavy multi-file refactors | Cursor Pro | Composer is still the best at this |
+| On a team with procurement | Copilot | Microsoft compliance, no pending acquisition |
+| Running agents 8 hours a day | Cursor Pro+ or Copilot Max | $70 or $200 of credits, and you will use them |
+| Undecided and employed | Both, $30 total | Autocomplete is free on each, they are good at different jobs |
+
+That last row is the honest answer for most working developers. Thirty dollars a month against a developer salary is not a real decision. The version that goes wrong is buying both and spreading your agent work so thin across them that neither included allowance gets used, which is how you end up paying $30 for what one $20 plan would have done.
+
+If you are earlier in this than the table assumes, my guide to the [top AI coding assistants for beginners](/blog/top-ai-coding-assistants-for-beginners) covers the wider field without the pricing math, and [using Claude AI for coding](/blog/how-to-use-claude-ai-for-coding) covers the terminal-first alternative to both of these.
+
+## How to check this yourself
+
+This post will go stale. Everything in this category does, usually within about six weeks, which I know because I found five wrong prices in my own ElevenLabs review seven weeks after publishing it.
+
+Three habits protect you. Read the vendor's live pricing page rather than its announcement blog, because the announcement is a snapshot of launch day and the page is current, which is exactly the trap the $10 credits figure fell into. Check whether an allowance sits behind the subscription, since the sticker price stopped being the cost when agents got metered. And check what your own checkout page offers, because regional pricing is now common enough that the dollar figure in any comparison article, including this one, may not be the number you are shown.
+
+Sources, all read on July 31, 2026:
+
+- [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans)
+- [GitHub: flex allotments and the Max plan](https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/)
+- [GitHub: Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/)
+- [GitHub Docs: budgets for usage-based billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing)
+- [Cursor pricing and billing docs](https://cursor.com/docs/account/pricing)
+- [Cursor model pricing docs](https://cursor.com/docs/models)
+- [Introducing Cursor Start](https://cursor.com/blog/cursor-start-india)
+- [CNBC: SpaceX to acquire Cursor for $60 billion](https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html)
+- [TechCrunch: Cursor's India push and localised pricing](https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/)

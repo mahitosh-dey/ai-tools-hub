@@ -2,6 +2,7 @@
 title: "Cursor AI Review 2026: Is the $20 AI IDE Still Worth It After the Credit Switch?"
 seoTitle: "Cursor AI Review 2026: Honest Verdict"
 date: "2026-07-24"
+updatedAt: "2026-07-31"
 excerpt: "An honest Cursor AI review for 2026: the credit-based pricing, Composer 2.5, Agent mode, real monthly costs for 3 dev personas, and the Cursor + Claude Code hybrid setup nobody explains."
 category: "Reviews"
 tags:
@@ -13,15 +14,15 @@ author: "Mahitosh Dey"
 status: "published"
 faqs:
   - q: "Is Cursor still worth $20/month in 2026 after the credit switch?"
-    a: "Yes for most working developers, and no for casual hobbyists who mostly use Auto mode. The $20 Pro plan gives you unlimited Tab completion and unlimited Auto-mode chat, which covers roughly 70 percent of real coding sessions. Credits only burn when you manually pick a frontier model like Claude 4.7 or GPT-5, and $20 in monthly credit is enough for about 300 to 500 frontier-model requests. If you code five days a week and lean on Composer or Agent mode for complex refactors, Pro pays for itself in the first week."
+    a: "Yes for most working developers, and no for casual hobbyists. The $20 Pro plan gives you unlimited Tab completion plus $20 of monthly usage for third-party models like Claude and GPT-5. One thing changed since this review first ran: Auto mode is no longer the free escape hatch it was in 2025. Cursor's docs now price Auto Cost per million tokens regardless of which model it routes to, and Auto Balance and Auto Intelligence bill at the underlying model's API rate. What stays generous is the separate Cursor Models pool covering Composer 2.5 and Grok 4.5. If you code five days a week and lean on Composer or Agent mode for complex refactors, Pro still pays for itself in the first week."
   - q: "What's the difference between Cursor Pro, Pro+, and Ultra?"
-    a: "Pro at $20/mo gives you a $20 monthly credit pool. Pro+ at $60/mo gives you $60 in credits (roughly 3x Pro). Ultra at $200/mo gives you $400 in credits (20x Pro's effective throughput because of bundled overage discounts). Auto mode stays unlimited across all three tiers. Pick Pro+ if you regularly hit Pro's cap by the 20th of the month. Pick Ultra only if you run 8+ hours of Agent-mode sessions daily or maintain multiple production codebases at once."
+    a: "Pro at $20/mo includes $20 of third-party model usage. Pro+ at $60/mo includes $70, not $60 — Cursor prices that pool above the subscription, which most comparison articles get wrong. Ultra at $200/mo includes $400. All three add a separate Cursor Models pool for Composer 2.5 and Grok 4.5, described as generous included usage without a published rate. Pick Pro+ if you regularly hit Pro's cap by the 20th of the month. Pick Ultra only if you run 8+ hours of Agent-mode sessions daily or maintain multiple production codebases at once."
   - q: "Cursor vs GitHub Copilot: which one should I pick in 2026?"
     a: "GitHub Copilot at $10/mo is the better choice if you mostly want autocomplete and one-line suggestions inside VS Code. Cursor Pro at $20/mo is the better choice if you want to chat with your entire codebase, edit multiple files in one prompt, or use Agent mode to complete multi-step tasks unattended. Copilot's Chat improved a lot in 2025 but still lacks Cursor's file-tree awareness and Composer-style multi-file editing. If you can only afford one, pick based on which you'd use daily. Serious developers usually end up wanting both."
   - q: "Does Cursor really replace VS Code, or should I run both?"
     a: "Cursor replaces VS Code fully for me because it is VS Code under the hood, forked from the same open-source base. Every VS Code extension, keybinding, theme, and settings.json rule works. The only reason to keep vanilla VS Code installed is if your employer restricts AI editors or if you need Live Share, which Cursor doesn't yet support natively. Otherwise there's no ergonomic loss switching completely."
   - q: "How does the Cursor credit system actually work, and how do I avoid overages?"
-    a: "Each plan comes with a monthly credit pool (Pro $20, Pro+ $60, Ultra $400). Requests to frontier models like Claude Sonnet 4.7, Opus 4.7, GPT-5, and Gemini 2.5 Pro cost credits per request (roughly $0.04 to $0.20 depending on model and context). Auto mode routes requests to lower-cost models and doesn't burn credits at all. To avoid overages, keep Auto mode as your default for casual questions and switch to a specific frontier model only when you need it. MAX mode adds a 20 percent surcharge, so use it sparingly."
+    a: "Each plan includes a dollar-denominated pool for third-party models (Pro $20, Pro+ $70, Ultra $400) plus a separate Cursor Models pool covering Composer 2.5 and Grok 4.5. Requests to Claude Sonnet 4.7, Opus 4.7, GPT-5, and Gemini 2.5 Pro draw down the first pool at the provider's API price, roughly $0.04 to $0.20 per request depending on model and context. Auto mode is metered too, priced per million tokens rather than per request. To avoid overages, watch the spend dashboard, keep Cursor's own models as your working default, and reserve manual frontier selection for the work that needs it. MAX mode adds a 20 percent surcharge, so use it sparingly."
   - q: "Is Cursor safe for proprietary code?"
     a: "Yes if you enable Privacy Mode, which sets your account to zero data retention with the underlying model providers. In Privacy Mode, Cursor and its model partners (Anthropic, OpenAI, Google) don't store your code or use it for training. Teams and Enterprise tiers get Privacy Mode enabled by default and add SSO, audit logs, and workspace-level model controls. If you're on a personal Pro account, toggle Privacy Mode on in settings before you paste anything sensitive."
   - q: "Can beginners use Cursor, or is it only for senior developers?"
@@ -35,6 +36,8 @@ I paid for Pro, then Pro+, then briefly Ultra during a heavy refactor month, the
 ## What Cursor is in 2026
 
 Cursor is an AI-first code editor built as a VS Code fork by Anysphere, and as of mid-2026 it has passed 2 million paid users and roughly $2 billion in annualized revenue, per reporting from The Information in April 2026. It looks like VS Code because it is VS Code with the AI features baked into the core editor instead of bolted on as an extension.
+
+Who owns it changed this summer. SpaceX agreed to buy Anysphere for $60 billion in an all-stock deal announced on June 16, 2026, expected to close in Q3 pending regulatory approval, and reported as the largest acquisition of a venture-backed startup on record. It follows SpaceX's merger with xAI in February, which is why Grok 4.5 now sits alongside Composer as a first-party Cursor model. For most solo developers this changes nothing about the editor today. If you work somewhere with a view on which companies your source code gets sent to, it's a question worth asking before you standardise a team on Cursor.
 
 The product identity shifted through 2025. Cursor started as "autocomplete on steroids" and matured into a full agentic development environment. In the current 3.0 release, you can chat with your entire codebase, edit dozens of files in one prompt, run background agents that finish tasks while you work on something else, and use MCP servers to connect Cursor to your database, browser, or internal tools.
 
@@ -60,7 +63,7 @@ Tab completion is still the best in the industry and the reason many developers 
 
 Cmd+K opens an inline prompt over the current selection. I use it for renames, quick refactors, adding a docstring, or converting a function from callback to async/await. Cmd+K is my most-used feature because it stays in flow with normal editing.
 
-Chat (Cmd+L) opens a sidebar conversation scoped to your codebase. Ask "where is the auth middleware defined" and it finds the file, opens it in a preview, and explains the relevant logic. Chat with Auto mode doesn't burn credits, so I use it as freely as I'd use Google.
+Chat (Cmd+L) opens a sidebar conversation scoped to your codebase. Ask "where is the auth middleware defined" and it finds the file, opens it in a preview, and explains the relevant logic. Chat routed through Cursor's own models is cheap enough that I use it about as freely as I'd use Google, though it is no longer free the way it was a year ago.
 
 Composer is the multi-file editor. Ask "add rate limiting to every route in /api/v1" and Composer edits every file in one atomic diff you can review and accept. This is the feature that put Cursor ahead of Copilot in 2024 and remains the moat.
 
@@ -90,18 +93,21 @@ Is Composer 2.5 as smart as Opus 4.7 on the hardest tasks? No, not always. On ge
 
 Cursor moved from a request-based model to a credit-based model in June 2025, and the change caused a Reddit meltdown for about six weeks. The current 2026 pricing looks like this.
 
-| Plan | Monthly | Credit pool | Notes |
+| Plan | Monthly | Third-party model pool | Notes |
 |---|---|---|---|
 | Hobby | Free | None | Limited Agent + Tab, 7-day Pro trial |
+| Start (India only) | ₹649 | None | Composer + Grok 4.5, more agent requests than free, UPI billing |
 | Pro | $20 | $20 | Unlimited Tab, all frontier models, MCPs, hooks, cloud agents |
-| Pro+ | $60 | $60 | ~3x Pro capacity, same feature set |
+| Pro+ | $60 | $70 | ~3x Pro capacity, same feature set |
 | Ultra | $200 | $400 | 20x Pro's effective throughput, priority routing |
 | Teams | $40/user | Pro-equivalent per seat | SSO, admin, shared rules, Privacy Mode default |
 | Enterprise | Custom | Pooled | SCIM, audit logs, model/repo controls |
 
-Annual billing saves roughly 20 percent across all paid tiers. Auto mode requests are unlimited on every paid plan and don't touch the credit pool. Frontier-model requests (Claude, GPT, Gemini, Opus) deplete credits at the model provider's underlying API price plus a small markup. MAX mode adds a 20 percent surcharge on top of the base credit cost for a longer-context version of the same request.
+Read off Cursor's pricing docs on July 31, 2026. Two details in that table trip people up. Pro+ costs $60 but includes $70 of usage, not $60 — the pool is deliberately priced above the subscription, and most comparison articles still print the wrong number. And the pool covers third-party models only. Composer 2.5 and Grok 4.5 draw from a separate Cursor Models pool that the docs describe as generous included usage without publishing a rate for it.
 
-The trap most people hit: assuming Pro's $20 credit pool means $20 of arbitrary AI. It doesn't. It's specifically credit for frontier-model requests. If you never switch off Auto mode, you'll never use your credits. If you always pick Opus manually, you'll burn through $20 in about 100 to 150 requests.
+Annual billing saves roughly 20 percent across all paid tiers. Frontier-model requests (Claude, GPT, Gemini, Opus) deplete the pool at the model provider's underlying API price plus a small markup. MAX mode adds a 20 percent surcharge on top for a longer-context version of the same request.
+
+The trap most people hit: assuming Pro's $20 means $20 of arbitrary AI. It doesn't. Auto mode used to be the way around this, and through 2025 it genuinely was free. That has changed. Cursor's docs now price Auto Cost per million tokens no matter which model it routes to, and Auto Balance and Auto Intelligence bill at the API rate of whatever model they pick. Auto is still the cheap option; it is no longer the free one. If you always pick Opus by hand, you'll burn $20 in about 100 to 150 requests.
 
 ## The June 2025 credit switch controversy
 
@@ -125,7 +131,7 @@ Nobody uses only one AI coding tool in 2026. Understanding the tradeoffs helps y
 | Best model | Composer 2.5 default | GPT-5 | Claude 4.7 default | Claude Opus 4.7 |
 | Ideal for | Full-time AI-first coding | Autocomplete-focused workflow | Cursor alternative, cheaper | Terminal-heavy, agent-first |
 
-Copilot is the safer enterprise pick because of Microsoft's compliance story and its $10 price. Windsurf is Cursor's closest direct competitor and slightly cheaper, but its Cascade agent still feels one release behind Cursor's Composer. Claude Code (Anthropic's terminal tool) isn't an IDE at all, but it's the best agentic tool for long-running background work.
+Copilot is the safer enterprise pick because of Microsoft's compliance story and its $10 price, though that $10 now includes $15 of metered credits rather than unlimited chat, which I unpack properly in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot). Windsurf is Cursor's closest direct competitor and slightly cheaper, but its Cascade agent still feels one release behind Cursor's Composer. Claude Code (Anthropic's terminal tool) isn't an IDE at all, but it's the best agentic tool for long-running background work.
 
 My honest ranking for daily coding in 2026: Cursor Pro first, Windsurf Pro second, Copilot Pro third for pure IDE work. Claude Code fills a different niche (see the hybrid workflow section below).
 
@@ -170,9 +176,9 @@ Cursor's pricing pages show list prices. Real bills look different. These are es
 
 Codes 6 to 10 hours per week on side projects. Uses Chat and Tab constantly, rarely triggers Agent mode. Sticks with Auto mode by default.
 
-Monthly Cursor bill: $20 (Pro flat, credits unused because Auto covers everything).
+Monthly Cursor bill: $20 (Pro flat, third-party pool barely touched because Auto and Cursor's own models cover almost everything at this volume).
 
-Best plan: Pro. No reason to go higher.
+Best plan: Pro, or Start at ₹649 if you're in India and can live without Bugbot and manual frontier-model picks. No reason to go higher.
 
 ### Persona 2: Senior engineer on a 200K-LOC Next.js SaaS
 
@@ -231,6 +237,10 @@ I still write this article inside Cursor, using Composer 2.5 for structural edit
 ## Sources
 
 - [Cursor pricing page](https://cursor.com/pricing)
+- [Cursor pricing and billing docs](https://cursor.com/docs/account/pricing) — plan pools and Auto mode rates, checked July 31, 2026
+- [Cursor model pricing docs](https://cursor.com/docs/models) — per-token rates and the Cursor Models pool
+- [Introducing Cursor Start (India)](https://cursor.com/blog/cursor-start-india) — July 27, 2026
+- [CNBC: SpaceX to acquire Cursor for $60 billion](https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html)
 - [Cursor Composer 2.5 announcement](https://cursor.com/blog/composer-2)
 - [Cursor 3.0 release notes](https://cursor.com/blog/cursor-3)
 - [Reddit r/cursor pricing megathread (June 2025)](https://www.reddit.com/r/cursor/)
