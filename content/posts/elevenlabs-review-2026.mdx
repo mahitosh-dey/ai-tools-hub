@@ -2,8 +2,8 @@
 title: "ElevenLabs Review 2026: Is It Still the Best AI Voice Generator?"
 seoTitle: "ElevenLabs Review 2026: Best AI Voice Generator?"
 date: "2026-06-30"
-updatedAt: "2026-07-29"
-excerpt: "ElevenLabs makes AI voices that genuinely pass for real people. Here's what actually works, what the pricing adds up to, how it stacks up against Play.ht, Murf, Descript, and OpenAI TTS, and who needs the paid tiers."
+updatedAt: "2026-08-03"
+excerpt: "ElevenLabs makes AI voices that genuinely pass for real people. Here's what actually works, what the pricing adds up to, how it stacks up against Murf, Descript, OpenAI TTS and self-hosted Chatterbox, and who needs the paid tiers."
 category: "Reviews"
 tags:
   - "elevenlabs"
@@ -26,7 +26,7 @@ faqs:
   - q: "What languages does ElevenLabs support?"
     a: "ElevenLabs supports 29 languages including English, Spanish, French, German, Italian, Portuguese, Polish, Chinese, Japanese, Korean, Arabic, and Hindi. The Multilingual v2 model handles cross-language generation and performs best for European languages."
   - q: "What are the main ElevenLabs alternatives?"
-    a: "The closest alternatives are Play.ht, Murf AI, Descript, and Replica Studios. ElevenLabs generally produces more natural results but costs more than some of these. OpenAI's TTS API is cheaper for developers building apps but offers no voice cloning and fewer voice options."
+    a: "The closest live alternatives are Murf AI, Descript, and self-hosted Chatterbox. Check any list you read against reality first: Play.ht shut down on December 31, 2025 after Meta acqui-hired the team, and its domain no longer resolves, while LOVO filed for Chapter 7 bankruptcy in May 2026. Both still appear in alternatives round-ups published this year. ElevenLabs generally produces more natural results than Murf or Descript but costs more. OpenAI's TTS API is cheaper for developers building apps but offers no voice cloning and fewer voice options."
   - q: "Is it legal to clone someone's voice with ElevenLabs?"
     a: "Cloning your own voice or a voice you have explicit written permission to use is fine. Cloning a public figure or anyone who has not agreed, and using it for deceptive or commercial purposes, breaks ElevenLabs' terms of service and may break local laws (fraud, right of publicity, defamation). ElevenLabs requires an explicit consent verification for Professional voice cloning."
 ---
@@ -45,9 +45,9 @@ Before writing this I used ElevenLabs on the free tier for a week, then paid for
 
 I ran a 3-minute clean recording of my own voice through Instant Voice Cloning, then a 30-minute clean recording through Professional Voice Cloning to compare the two tiers.
 
-I also ran the same 500-word script through Play.ht, Murf AI, Descript Overdub, and the OpenAI TTS API, using each platform's closest equivalent voice, so the comparison later in this review is based on identical input rather than cherry-picked demos.
+I also ran the same 500-word script through Murf AI, Descript Overdub, and the OpenAI TTS API, using each platform's closest equivalent voice, so the comparison later in this review is based on identical input rather than cherry-picked demos. The Chatterbox section further down is the exception: that one is built from the project's published specs and repository activity, not from my own audio test, and it says so.
 
-Prices, credit allowances, and voice model names in this review were verified against elevenlabs.io on 2026-07-29. ElevenLabs revises pricing periodically, so check elevenlabs.io for current numbers before subscribing.
+Prices, credit allowances, and voice model names in this review were re-verified against elevenlabs.io on 2026-08-03 and had not changed since the previous check on 2026-07-29. Competitor availability was checked the same day by resolving each domain. ElevenLabs revises pricing periodically, so check elevenlabs.io for current numbers before subscribing.
 
 ---
 
@@ -190,11 +190,21 @@ Script quality is the single biggest factor in how convincing the output sounds.
 
 ## ElevenLabs vs the alternatives
 
-Every review of an AI voice tool is really a review compared to the other options. Here is how ElevenLabs stacked up against the four alternatives I ran the same 500-word script through.
+Every review of an AI voice tool is really a review compared to the other options. Here is how ElevenLabs stacked up against the alternatives I ran the same 500-word script through, plus the self-hosted option that has become the real answer for anyone balking at the pricing.
 
-### ElevenLabs vs Play.ht
+### What happened to Play.ht
 
-**Play.ht** ($19 to $99/month) is the closest direct competitor. Voice cloning available on paid tiers, decent quality, over 800 voices. On the same script, Play.ht's output was intelligible and natural but noticeably less nuanced than ElevenLabs on English narration. Play.ht occasionally has better handling of Indian and Southeast Asian English accents. If your content targets those markets specifically, Play.ht is worth testing. Otherwise, ElevenLabs wins on quality.
+An earlier version of this review compared ElevenLabs against Play.ht. That comparison is gone because Play.ht is gone. Meta acqui-hired the team into its Superintelligence Labs division in July 2025, signups closed that August, and the service shut down permanently on December 31, 2025 with user data deleted and no export path offered. Checked on August 3, 2026, the domain does not resolve at all.
+
+I have left this section here rather than quietly deleting it, because Play.ht still appears in most "best AI voice generator" lists published this year, including ones dated after it died. If you arrived looking for it, that is why you could not find it. I resolved every domain in those lists and wrote up what is actually still running in [best ElevenLabs alternatives](/blog/best-elevenlabs-alternatives), where Play.ht is not the only dead entry.
+
+### ElevenLabs vs Chatterbox (self-hosted)
+
+**Chatterbox** is the option ElevenLabs comparisons skip, because nobody earns a commission recommending it. It is an open-source TTS model from Resemble AI under the MIT license, with zero-shot voice cloning and inline emotion tags. Reading the repository on August 3, 2026: 25,829 stars, last commit July 21, 2026, actively maintained. Most articles quoting star counts for it are working from numbers less than half that.
+
+Resemble published a blind listening study, run through Podonos, in which 65.3 percent of listeners preferred Chatterbox over ElevenLabs, against 24.5 percent for ElevenLabs and 10.2 percent neutral. Worth being clear about what that is: Resemble ran a study on Resemble's own model. It is a vendor result, not an independent benchmark, and I would treat the margin with suspicion while still taking the underlying point seriously, which is that the quality gap has narrowed a long way.
+
+The honest catch is that this is not a drop-in swap for a hosted subscription. You need a GPU, you need to set it up, and you own the reliability. What you get for that is no per-character cost and no vendor who can change pricing or shut down underneath you. Given the two shutdowns in this category, that second point is worth more than it was a year ago.
 
 ### ElevenLabs vs Murf AI
 
@@ -210,7 +220,7 @@ Every review of an AI voice tool is really a review compared to the other option
 
 ### The short answer
 
-If quality and voice cloning matter, ElevenLabs. If you are building an app and cost matters more than voice variety, OpenAI TTS. If you want an editor bundled with voice generation, Descript. Play.ht and Murf are competent alternatives worth testing on free tiers to see if the cheaper price justifies the quality gap for your use case.
+If quality and voice cloning matter, ElevenLabs. If you are building an app and cost matters more than voice variety, OpenAI TTS. If you want an editor bundled with voice generation, Descript. If you have a GPU and object to paying per character forever, Chatterbox. Murf is worth a free-tier test to see whether the cheaper price justifies the quality gap for your use case.
 
 ---
 

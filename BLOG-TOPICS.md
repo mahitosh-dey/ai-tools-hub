@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (34)
+## Published Posts (35)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -38,6 +38,7 @@
 | 32  | Perplexity SEO Checker: How to Actually Check If AI Cites Your Site          | perplexity-seo-checker                     | Guides      | 2026-07-29 |
 | 33  | What AI Pricing Did in 2026: Every Major Change, Dated and Sourced           | ai-pricing-changes-2026                    | Guides      | 2026-07-29 |
 | 34  | Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong         | cursor-vs-github-copilot                   | Comparisons | 2026-07-31 |
+| 35  | Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First  | best-elevenlabs-alternatives               | Tools       | 2026-08-03 |
 
 ---
 
