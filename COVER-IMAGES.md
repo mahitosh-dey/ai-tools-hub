@@ -173,6 +173,17 @@ wireframe polygons, floating particles, volumetric haze, dramatic rim
 lighting, photoreal 3D render, no text, no letters, no logos
 ```
 
+**Midjourney vs Stable Diffusion** — `midjourney-vs-stable-diffusion-cover.webp`
+```
+Cinematic 16:9 blog cover, split composition on a near-black background, on
+the left a single polished glowing violet picture frame floating alone and
+pristine, on the right a loose cluster of translucent cyan wireframe frames at
+different angles suggesting many open models, one of the cyan frames wrapped
+in a faint glowing legal seal ring, thin polygon network linking the cluster,
+floating light particles, volumetric haze, photoreal 3D render, no text,
+no letters, no logos
+```
+
 **Midjourney vs DALL-E 3** — `midjourney-dalle-cover.webp`
 ```
 Cinematic 16:9 blog cover, split composition, two glowing art canvases side by

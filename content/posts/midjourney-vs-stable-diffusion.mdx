@@ -1,0 +1,181 @@
+---
+title: "Midjourney vs Stable Diffusion Is the Wrong Question in 2026"
+seoTitle: "Midjourney vs Stable Diffusion 2026: Read This First"
+date: "2026-08-04"
+updatedAt: "2026-08-04"
+excerpt: "Every comparison pits Midjourney against Stable Diffusion, whose reference repo has not been touched since January 2025. Meanwhile the model everyone recommends as the free alternative is licensed for non-commercial use only, and its GitHub page says Apache-2.0."
+category: "Comparisons"
+tags:
+  - "midjourney"
+  - "ai-image"
+  - "ai-comparison"
+  - "free-ai-tools"
+coverImage: "/images/midjourney-vs-stable-diffusion-cover.webp"
+readTime: "13 min read"
+author: "Mahitosh Dey"
+status: "published"
+faqs:
+  - q: "Is Stable Diffusion still the best free alternative to Midjourney in 2026?"
+    a: "Not on quality. FLUX.2 and Qwen-Image both produce better output than Stable Diffusion 3.5, and Qwen-Image is far better at rendering readable text inside an image. Stable Diffusion still wins on ecosystem, because ControlNet, LoRAs and years of community checkpoints are built around it, and that tooling depth is a real advantage for repeatable production work. But if you are choosing purely on image quality, the honest answer in 2026 is that Stable Diffusion is no longer the frontier. Its reference repository, Stability-AI/sd3.5, last received a commit on January 8, 2025."
+  - q: "Can I use FLUX.2 commercially for free if I self-host it?"
+    a: "No, not the dev model. FLUX.2 [dev] is covered by the FLUX [dev] Non-Commercial License v2.0, which names FLUX.2 [dev] directly and defines non-commercial to exclude revenue-generating activity, use that has direct impact on end users, and training or fine-tuning models for commercial purposes. Selling images made with a self-hosted FLUX.2 [dev], or using it in client work, falls outside that. Commercial routes exist: Black Forest Labs sells licence tiers, its API output is licensed for commercial use, and licensed providers like Replicate, fal.ai and Together include commercial rights in their terms."
+  - q: "Why does the FLUX GitHub page say Apache-2.0 if the model is non-commercial?"
+    a: "Because the repository licence covers the inference code, not the weights. GitHub reads the top-level licence file and reports Apache-2.0, while the model weights are licensed separately in files inside the repo called LICENSE-FLUX-DEV and LICENSE-FLUX-NON-COMMERICAL. The licence text says as much, noting that certain elements such as the inference code may be made available under a separate licence. So checking the GitHub badge gives you the opposite of the answer you need. Hugging Face is more honest about it and tags FLUX.2-dev simply as other."
+  - q: "Which open image models are actually free for commercial use?"
+    a: "Qwen-Image is the clearest case: Apache-2.0, which permits commercial use, modification and redistribution with no fee. Stable Diffusion 3.5 is free to self-host commercially only while your organisation is under $1 million in annual revenue, under the Stability AI Community License, and above that you need a paid licence. HunyuanImage 3.0 ships a custom licence that GitHub cannot categorise, so read it. For anything else, open the weights licence on the model card rather than the repository badge."
+  - q: "Do I own the images an open-source model generates?"
+    a: "Under the FLUX licences, yes. The text is explicit that outputs are not considered derivatives of the model, and Black Forest Labs states users retain ownership of generated outputs. The restriction is on what you may do with the model, not on who owns the picture. That distinction catches people out in both directions: owning the output does not grant you the right to have run a non-commercial model to produce it commercially, and a restrictive model licence does not mean the vendor claims your images."
+  - q: "What GPU do I need to run these models at home?"
+    a: "More than most articles admit. Qwen-Image wants about 40GB of VRAM at BF16 precision, around 16GB at FP8, and roughly 14GB as a Q4 GGUF quantisation. Sana is the outlier that produces sharp output on an 8GB card, which makes it the realistic pick for consumer hardware. FLUX.2 targets native 4MP-plus generation and is correspondingly heavy. The phrase run it free on your own hardware assumes you own a 16GB or better GPU, which is a real cost that never appears in the free column of a comparison table."
+  - q: "How much does Midjourney cost in 2026?"
+    a: "Third-party sources consistently report four tiers: Basic at $10, Standard at $30, Pro at $60 and Mega at $120 a month, with roughly 3.3, 15, 30 and 60 fast GPU hours respectively and about 20 percent off for annual billing. I have to label those as unverified, because midjourney.com returns HTTP 403 to my requests, so I could not read the pricing page first-hand. Check the site yourself before subscribing. Any article quoting Midjourney prices as confirmed is either using a different method than mine or is not checking."
+  - q: "So should I pay for Midjourney or run an open model?"
+    a: "Pay for Midjourney if you want good images with no setup, no GPU and unambiguous commercial rights, which covers most people. Run Qwen-Image if you need commercial-safe generation at volume, own suitable hardware, and want no per-image cost. Run Sana if your GPU is modest. Stay on Stable Diffusion if your work depends on ControlNet or a specific LoRA ecosystem. Use FLUX.2 through a licensed provider rather than self-hosting if you want its quality for paid work without buying a licence tier."
+---
+
+I opened the licence file, which is apparently an unusual thing to do.
+
+The plan was a straightforward comparison: Midjourney against Stable Diffusion, the way roughly forty other pages do it. Two things stopped that. The Stable Diffusion reference repository has not received a commit since January 2025. And the model everyone now recommends as the free replacement, FLUX.2, is published under a licence that forbids exactly the use most readers want it for, while its GitHub page displays a badge saying Apache-2.0.
+
+Over 1.2 million people have downloaded that model from Hugging Face. I have no idea how many read the licence.
+
+## The comparison is pointed at the wrong model
+
+Every article on this topic frames it as Midjourney, polished and paid, against Stable Diffusion, free and do-it-yourself. That framing was accurate in 2023. It is now aimed at a model that has fallen behind the open-weight frontier.
+
+Rather than repeat what articles say about these projects, I read the repositories on August 4, 2026.
+
+| Repo | Stars | Repo licence | Last commit |
+|---|---|---|---|
+| NVlabs/Sana | 8,668 | Apache-2.0 | 2026-08-04 |
+| QwenLM/Qwen-Image | 8,200 | Apache-2.0 | 2026-02-10 |
+| Tencent-Hunyuan/HunyuanImage-3.0 | 3,214 | NOASSERTION | 2026-06-23 |
+| black-forest-labs/flux2 | 2,594 | Apache-2.0 | 2026-03-12 |
+| Stability-AI/sd3.5 | 1,526 | MIT | 2025-01-08 |
+
+Sana received a commit the day I wrote this. The Stable Diffusion 3.5 repository has been quiet for nineteen months.
+
+On capability, the current picture is that FLUX.2, released by Black Forest Labs on November 25, 2025, set the open-weight quality benchmark and targets native 4MP-plus output where older architectures topped out near 1MP. Qwen-Image is the one to use when the image has to contain readable text, which used to be the reliable giveaway of AI generation. HunyuanImage 3.0 is the largest of them at 80 billion parameters. Sana is the practical one, producing sharp images on an 8GB card.
+
+Stable Diffusion still has the deepest ecosystem, and that matters more than benchmark scores for some work. ControlNet for pose and composition, LoRA fine-tuning, textual inversion, and years of community checkpoints are all built around it. If your pipeline depends on that tooling, the newer models do not replace it yet. Just do not confuse ecosystem depth with being the best model, which is the conflation every comparison makes.
+
+## The licence trap
+
+Here is the part that turned this into a different article.
+
+FLUX.2 [dev] is covered by the FLUX [dev] Non-Commercial License v2.0. I read the file in the repository rather than a summary of it. The licence names FLUX.2 [dev] explicitly in its list of covered models, and defines a non-commercial purpose to exclude, in its own words, use "for revenue-generating activity", use "in direct interactions with or that has impact on end users", and use "to train, fine tune, or distill other models for commercial use".
+
+Read that against how the model is usually recommended. A freelancer generating images for a client is doing revenue-generating activity. A startup putting a generator in its product is having direct impact on end users. Both are outside the licence while self-hosting FLUX.2 [dev].
+
+Now the trap itself. The `black-forest-labs/flux2` repository reports its licence as **Apache-2.0**, because that is what covers the inference code. The weights are licensed separately, in two files sitting inside the same repo:
+
+```
+model_licenses/LICENSE-FLUX-DEV
+model_licenses/LICENSE-FLUX-NON-COMMERICAL
+```
+
+The licence text acknowledges the split directly, noting that the company "may also make available certain elements of what is included in the definition of FLUX [dev] Model under a separate license, such as the inference code". So the Apache-2.0 badge is not wrong. It is answering a question about the code while readers are asking a question about the weights, and it gives them the opposite of the true answer.
+
+Hugging Face handles it more honestly. Its API returns the licence for `black-forest-labs/FLUX.2-dev` as simply `other`, with 1,225,979 downloads recorded as of February 17, 2026.
+
+Commercial routes for FLUX.2 do exist, and I want to be fair about that. Black Forest Labs sells licence tiers, listed on its own licensing page as Builder, Platform, Professional and Enterprise, where commercial use is permitted within the licensed scope and the Builder tier is described as covering fine-tuning and LoRA rights, 10,000 images a month, and commercial use within a single domain. Images generated through the official API are licensed for commercial use. And licensed providers such as Replicate, fal.ai and Together include commercial rights in their own terms. What does not exist is the free commercial self-hosting that the comparison articles imply.
+
+## What each model actually permits
+
+This table is the thing I could not find published anywhere, which is why I built it.
+
+| Model | Free commercial self-hosting? | Basis |
+|---|---|---|
+| Qwen-Image | Yes | Apache-2.0 |
+| Stable Diffusion 3.5 | Only under $1M annual revenue | Stability AI Community License |
+| FLUX.2 [dev] | No | FLUX [dev] Non-Commercial License v2.0 |
+| FLUX.2 [klein] 9B | Not automatically | BFL lists it under paid tiers, commercial use within licensed scope |
+| HunyuanImage 3.0 | Read the licence | Custom terms, GitHub reports NOASSERTION |
+| Sana | Verify the weights licence | Repo code is Apache-2.0, which tells you nothing about the checkpoint |
+
+That last row is deliberate. Sana's repository is Apache-2.0, and after everything above I am not going to tell you the weights are therefore free for commercial use, because I did not open that model card. The whole point of this article is that the repo badge and the weights licence are different facts. It would be strange to make the exact mistake I am describing in the row below the one describing it.
+
+If you take one thing from this piece: open the weights licence on the model card, not the licence badge on the repository.
+
+## What free actually costs
+
+The other omission in these comparisons is hardware. Free software running on a GPU you do not own is not free.
+
+Qwen-Image wants roughly 40GB of VRAM at BF16 precision. At FP8 that drops to about 16GB. As a Q4_K_M GGUF quantisation it comes down to around 14GB, with some quality loss. FLUX.2 aims at 4MP-plus generation and is heavy to match. Sana is the one that genuinely runs on consumer hardware, producing sharp output on an 8GB card, which is why it deserves more attention than it gets.
+
+For context, a 16GB consumer GPU is a serious purchase, and a 40GB card is data-centre hardware. Renting is the sane alternative for occasional work, at which point you are paying per hour and the free column of the comparison table has quietly become a variable cost. That may still beat a subscription for your volume. It is not zero, and it should not be presented as zero.
+
+There is also a time cost nobody prices. ComfyUI workflows, model downloads measured in tens of gigabytes, quantisation choices, and the debugging that follows all take hours. If your hourly rate is meaningful, a $10 subscription buys back a lot of that.
+
+## What Midjourney costs, with a caveat
+
+Third-party sources agree closely on four tiers: Basic at $10 a month, Standard at $30, Pro at $60, Mega at $120, with about 3.3, 15, 30 and 60 fast GPU hours respectively, and roughly 20 percent off for annual billing.
+
+I could not verify any of that first-hand. midjourney.com returns HTTP 403 to my requests, the same behaviour I hit when compiling [every 2026 AI pricing change](/blog/ai-pricing-changes-2026), so these figures are third-party consensus rather than checked facts and I am labelling them accordingly. Read the pricing page yourself before you subscribe.
+
+What Midjourney gives you that no open model does is the absence of all of the above. No GPU, no licence research, no workflow debugging, and commercial rights that come with the subscription rather than requiring a legal opinion. For a working creator that bundle is worth considerably more than $10.
+
+## What open weights give you that a subscription cannot
+
+Cost dominates these comparisons, which is a shame, because cost is the least interesting difference. Four things matter more, and none of them are about money.
+
+Reproducibility is the big one. When you run a fixed checkpoint with a fixed seed, you can regenerate the same image in eighteen months. With a hosted service you cannot, because the model underneath you changes and you have no way to pin a version. If you have ever gone back to recreate a variant of an image for a client and found the tool now produces something subtly different, that is the whole problem. Open weights are a file on your disk. They do not get quietly upgraded.
+
+Programmatic generation is the second. Open models let you generate ten thousand images in a loop, on your own schedule, in whatever pipeline you like. Midjourney meters you in fast GPU hours, which is a fine model for a person making pictures and an awkward one for a system making pictures. If image generation is a step inside a product rather than a task inside your day, the subscription shape stops fitting.
+
+Third, privacy. Self-hosting means prompts and outputs never leave your machine. For agency work under NDA, anything touching unreleased products, or regulated industries, that is not a preference but a requirement. No amount of vendor assurance is equivalent to the data never leaving.
+
+Fourth, and worth stating plainly rather than winking at: hosted services apply a moderation layer and self-hosted models do not. There are legitimate professional reasons this matters, including medical illustration, security research imagery, and fine art that a general-purpose filter reads as unacceptable. There are obviously illegitimate reasons too. I am noting the difference because it is a real factor in tool choice, not endorsing the second category.
+
+Set against all four is one fact that keeps most people on a subscription: a hosted model gets better while you sleep, and a checkpoint on your disk does not. You inherit improvements you did not work for. Whether that beats reproducibility depends entirely on whether you ever need to go backwards.
+
+## What Midjourney still wins at
+
+I have spent most of this article picking at the open-source side's licensing, so it is worth being clear that Midjourney remains the right answer for most people, and not only because it is easy.
+
+Its real advantage is the aesthetic default. Midjourney makes an opinionated, attractive image from a lazy prompt. The open models are more literal: they do closer to what you asked, which sounds better until you realise that what you asked for was underspecified and the result is flat. Getting comparable polish out of an open model means prompt work, negative prompts, sampler choices, and often a LoRA. Midjourney front-loads that taste into the model. For anyone whose job is to produce a good image rather than to control every parameter, that is worth paying for.
+
+Style and character consistency across a set is the second win, and it is the practical one for commercial work. Producing twelve images that plausibly belong to the same campaign is a different task from producing one good image, and Midjourney's style and character referencing handles it with less effort than assembling the equivalent open-source workflow.
+
+Third, the commercial rights arrive with the subscription. After the licence archaeology above, there is something to be said for a product where the answer to "may I sell this" is in the terms you already agreed to rather than in a text file inside a repository.
+
+Where Midjourney cannot compete is precision. There is no equivalent of ControlNet for saying "this pose, this composition, this depth map". If you need the output to match a layout exactly, the open ecosystem is not merely cheaper but genuinely more capable. The same goes for training on your own visual identity, which LoRA fine-tuning does and a subscription does not.
+
+The honest summary is that these tools have stopped being substitutes. Midjourney is a very good image maker. The open models are an image infrastructure. Most people want the former and a growing number of businesses need the latter, which is why the "which is better" framing keeps producing unsatisfying answers.
+
+## So which one should you use
+
+| Your situation | Use | Why |
+|---|---|---|
+| Want good images, no setup | Midjourney | No hardware, no licence homework, clear commercial rights |
+| Commercial work at volume, own a GPU | Qwen-Image | Apache-2.0, no per-image cost, strongest at in-image text |
+| Modest GPU, 8GB class | Sana | The only one designed to be sharp at that size |
+| Need ControlNet or specific LoRAs | Stable Diffusion 3.5 | Ecosystem depth the newer models lack, free under $1M revenue |
+| Want FLUX.2 quality for paid work | A licensed provider | Replicate, fal.ai or Together carry commercial rights; self-hosting dev does not |
+| Hobby project, no revenue | FLUX.2 [dev] | Genuinely free for this, which is what the licence is for |
+
+The last row matters. FLUX.2 [dev] is not a trap if you are experimenting, learning, or making pictures for your own amusement. That is precisely the use the licence grants. It becomes a problem at the moment money changes hands, which is also the moment the comparison articles stop being any help.
+
+If you are earlier in this than the table assumes, my [Midjourney beginners guide](/blog/how-to-use-midjourney-beginners) covers prompting from scratch, [Midjourney vs DALL-E 3](/blog/midjourney-vs-dalle3) compares the two paid options, and [best free AI image generators](/blog/best-free-ai-image-generators) covers the browser-based tools that need no hardware at all.
+
+## How to check a model's licence in two minutes
+
+I now do this before downloading anything, because it is faster than the alternative.
+
+Go to the model card on Hugging Face, not the GitHub repository, and read the licence field. If it says `other`, that is a signal in itself: there is a custom licence and somebody wants you to read it.
+
+Then find the actual licence file and search it for the word commercial. In the FLUX case the relevant definition is one paragraph long and unambiguous once you are looking at it.
+
+Check whether code and weights are licensed separately. If the repo has a `model_licenses/` directory, or a licence file whose name mentions the model rather than the project, the badge at the top of the page is not describing the weights.
+
+If you are using a hosted provider instead of self-hosting, read that provider's terms rather than the model's, since providers such as Replicate and fal.ai negotiate commercial rights that self-hosters do not get. This is the step that lets you use a restrictively licensed model for paid work legitimately.
+
+None of this is legal advice, and if real money depends on the answer, pay a lawyer rather than trusting a blog. The point is narrower: the two-minute version is enough to notice that the free alternative everyone recommends is not licensed the way they say it is. Nobody in the top twenty results appears to have spent those two minutes.
+
+Sources, checked August 4, 2026:
+
+- [FLUX [dev] Non-Commercial License v2.0](https://raw.githubusercontent.com/black-forest-labs/flux2/main/model_licenses/LICENSE-FLUX-DEV), read directly from the repository
+- [black-forest-labs/flux2](https://github.com/black-forest-labs/flux2) and [Black Forest Labs licensing tiers](https://bfl.ai/licensing)
+- [FLUX.2-dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-dev), licence field and download count via the HF API
+- Repository stars, licences and commit dates via the GitHub API for [Sana](https://github.com/NVlabs/Sana), [Qwen-Image](https://github.com/QwenLM/Qwen-Image), [HunyuanImage-3.0](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) and [sd3.5](https://github.com/Stability-AI/sd3.5)
+- Midjourney pricing: third-party consensus only, unverified, midjourney.com returned HTTP 403

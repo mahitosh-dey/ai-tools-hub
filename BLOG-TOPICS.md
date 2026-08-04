@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (35)
+## Published Posts (36)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -39,6 +39,7 @@
 | 33  | What AI Pricing Did in 2026: Every Major Change, Dated and Sourced           | ai-pricing-changes-2026                    | Guides      | 2026-07-29 |
 | 34  | Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong         | cursor-vs-github-copilot                   | Comparisons | 2026-07-31 |
 | 35  | Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First  | best-elevenlabs-alternatives               | Tools       | 2026-08-03 |
+| 36  | Midjourney vs Stable Diffusion Is the Wrong Question in 2026                  | midjourney-vs-stable-diffusion             | Comparisons | 2026-08-04 |
 
 ---
 
