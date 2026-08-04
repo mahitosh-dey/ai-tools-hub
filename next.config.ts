@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
       { source: "/tag/openai", destination: "/tag/chatgpt", permanent: true },
       { source: "/tag/side-income", destination: "/tag/make-money", permanent: true },
       { source: "/tag/tutorial", destination: "/tag/beginners", permanent: true },
+      // News category retired 2026-08-04. It only ever held 2 posts, below the
+      // 3-post threshold the sitemap uses, so /category/news was live but never
+      // submitted. Both posts moved to Guides.
+      { source: "/category/news", destination: "/category/guides", permanent: true },
     ];
   },
 };
