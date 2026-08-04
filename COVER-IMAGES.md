@@ -165,7 +165,9 @@ between them, volumetric haze, photoreal 3D render, no text, no letters,
 no logos
 ```
 
-**GPT-5 vs Claude 4** — `gpt5-vs-claude4-cover.webp`
+**GPT-5.6 vs Claude 5** — `gpt5-vs-claude4-cover.webp`
+> Slug and filename kept from the post's original "GPT-5 vs Claude 4" title.
+> The cover is model-agnostic, so it survives the retitle unchanged.
 ```
 Cinematic 16:9 blog cover, two glowing neural core structures suspended in
 dark space, one cyan and one warm orange, energy arcs connecting them, thin
