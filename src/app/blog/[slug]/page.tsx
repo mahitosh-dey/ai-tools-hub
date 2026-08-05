@@ -17,6 +17,8 @@ import StarRating from "@/components/StarRating";
 import ProsConsList from "@/components/ProsConsList";
 import AuthorBio from "@/components/AuthorBio";
 import SponsoredNotice from "@/components/SponsoredNotice";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import { isAffiliateLink } from "@/lib/affiliate";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -25,29 +27,38 @@ interface Props {
 const baseUrl = "https://www.aivaultblog.com";
 
 /**
- * Anchor override applied only to sponsored posts. Google requires paid links
- * to be marked, and on a paid placement every outbound link is potentially the
- * thing being paid for, so all external links get rel="sponsored nofollow".
- * Internal links are left alone or the post would stop passing signal to the
+ * Anchor override for MDX links. Two separate cases get rel="sponsored nofollow":
+ *
+ * 1. Any external link on a paid post, because on a paid placement any outbound
+ *    link could be the thing being paid for.
+ * 2. Known affiliate URLs on any post, matched from the registry in lib/affiliate
+ *    rather than by treating all external links as paid. Most outbound links here
+ *    are citations, and marking those would misrepresent them.
+ *
+ * Internal links are never marked or the post would stop passing signal to the
  * rest of the site.
  */
-function SponsoredAnchor({
-  href,
-  children,
-  ...rest
-}: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
-  const isExternal =
-    !!href && /^https?:\/\//i.test(href) && !href.startsWith(baseUrl);
+function makeAnchor(postIsSponsored: boolean) {
+  return function Anchor({
+    href,
+    children,
+    ...rest
+  }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+    const isExternal =
+      !!href && /^https?:\/\//i.test(href) && !href.startsWith(baseUrl);
 
-  if (!isExternal) {
-    return <a href={href} {...rest}>{children}</a>;
-  }
+    const paid = isExternal && (postIsSponsored || isAffiliateLink(href));
 
-  return (
-    <a href={href} rel="sponsored nofollow" {...rest}>
-      {children}
-    </a>
-  );
+    if (!paid) {
+      return <a href={href} {...rest}>{children}</a>;
+    }
+
+    return (
+      <a href={href} rel="sponsored nofollow" {...rest}>
+        {children}
+      </a>
+    );
+  };
 }
 
 export async function generateStaticParams() {
@@ -350,6 +361,11 @@ export default async function PostPage({ params }: Props) {
         {/* Paid-placement disclosure, above the fold and above the body */}
         {post.sponsored && <SponsoredNotice sponsoredBy={post.sponsoredBy} />}
 
+        {/* Affiliate disclosure. The disclosure page promises readers this
+            appears at the top of any post carrying affiliate links, so it has
+            to actually render. */}
+        {post.affiliate && !post.sponsored && <AffiliateDisclosure />}
+
         {/* Editorial transparency note */}
         <div
           style={{
@@ -391,9 +407,7 @@ export default async function PostPage({ params }: Props) {
             components={{
               StarRating,
               ProsConsList,
-              // Only sponsored posts get the rel override, so existing posts
-              // keep their current link behaviour untouched.
-              ...(post.sponsored ? { a: SponsoredAnchor } : {}),
+              a: makeAnchor(!!post.sponsored),
             }}
             options={{
               mdxOptions: {
