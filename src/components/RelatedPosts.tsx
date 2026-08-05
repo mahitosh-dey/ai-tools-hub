@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { PostMeta } from "@/lib/posts";
 import CategoryBadge from "./CategoryBadge";
+import SponsoredBadge from "./SponsoredBadge";
 
 interface Props {
   posts: PostMeta[];
@@ -71,8 +72,12 @@ export default function RelatedPosts({ posts }: Props) {
               }}
             >
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ marginBottom: "0.35rem" }}>
+                {/* This is the third place a post gets listed, so it needs the
+                    label too. Missing it here would put an unlabelled paid post
+                    at the foot of every post in the same category. */}
+                <div style={{ marginBottom: "0.35rem", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
                   <CategoryBadge category={post.category} asLink={false} />
+                  {post.sponsored && <SponsoredBadge />}
                 </div>
                 <p
                   style={{

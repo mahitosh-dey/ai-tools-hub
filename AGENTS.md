@@ -8,4 +8,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 All non-negotiable working rules for this project live in `HARD-RULES.md`. Read that file at the start of any session. It is the canonical restore source if assistant memory is lost.
 
-Summary of what it covers: preserve existing setup, verify sitemap + JSON-LD after every change, apply `/humanizer` to all content (blog/job/schema/exam/admit/result/Quora/Medium/Reddit), do top-20 research before writing, show research and wait for approval before writing final content, never push/deploy without explicit permission, ask before refreshing old posts.
+Summary of what it covers: preserve existing setup, verify sitemap + JSON-LD after every change, apply `/humanizer` to all content (blog/job/schema/exam/admit/result/Quora/Medium/Reddit), do top-20 research before writing, show research and wait for approval before writing final content, never push/deploy without explicit permission, ask before refreshing old posts, and the paid-placement terms published on `/disclosure` (rankings are never for sale, the fee never buys the verdict, always label all four surfaces).

@@ -16,16 +16,43 @@ import PostCoverImage from "@/components/PostCoverImage";
 import StarRating from "@/components/StarRating";
 import ProsConsList from "@/components/ProsConsList";
 import AuthorBio from "@/components/AuthorBio";
+import SponsoredNotice from "@/components/SponsoredNotice";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
+const baseUrl = "https://www.aivaultblog.com";
+
+/**
+ * Anchor override applied only to sponsored posts. Google requires paid links
+ * to be marked, and on a paid placement every outbound link is potentially the
+ * thing being paid for, so all external links get rel="sponsored nofollow".
+ * Internal links are left alone or the post would stop passing signal to the
+ * rest of the site.
+ */
+function SponsoredAnchor({
+  href,
+  children,
+  ...rest
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const isExternal =
+    !!href && /^https?:\/\//i.test(href) && !href.startsWith(baseUrl);
+
+  if (!isExternal) {
+    return <a href={href} {...rest}>{children}</a>;
+  }
+
+  return (
+    <a href={href} rel="sponsored nofollow" {...rest}>
+      {children}
+    </a>
+  );
+}
+
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
-
-const baseUrl = "https://www.aivaultblog.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -320,6 +347,9 @@ export default async function PostPage({ params }: Props) {
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
         <TableOfContents items={toc} />
 
+        {/* Paid-placement disclosure, above the fold and above the body */}
+        {post.sponsored && <SponsoredNotice sponsoredBy={post.sponsoredBy} />}
+
         {/* Editorial transparency note */}
         <div
           style={{
@@ -345,9 +375,12 @@ export default async function PostPage({ params }: Props) {
             <Link href="/about" style={{ color: "#a855f7", textDecoration: "none", fontWeight: 600 }}>
               Mahitosh Dey
             </Link>
-            {" "}· Independent opinion · No sponsored content ·{" "}
+            {/* "No sponsored content" must never render on a paid post. */}
+            {post.sponsored
+              ? <> · Paid placement · Verdict is my own · </>
+              : <> · Independent opinion · No sponsored content · </>}
             <Link href="/disclosure" style={{ color: "#64748b", textDecoration: "underline" }}>
-              Affiliate disclosure
+              {post.sponsored ? "Disclosure" : "Affiliate disclosure"}
             </Link>
           </p>
         </div>
@@ -355,7 +388,13 @@ export default async function PostPage({ params }: Props) {
         <article className="prose-blog">
           <MDXRemote
             source={post.content}
-            components={{ StarRating, ProsConsList }}
+            components={{
+              StarRating,
+              ProsConsList,
+              // Only sponsored posts get the rel override, so existing posts
+              // keep their current link behaviour untouched.
+              ...(post.sponsored ? { a: SponsoredAnchor } : {}),
+            }}
             options={{
               mdxOptions: {
                 remarkPlugins: [remarkGfm],

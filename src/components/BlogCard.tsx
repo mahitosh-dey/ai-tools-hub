@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { PostMeta } from "@/lib/posts";
 import CategoryBadge from "./CategoryBadge";
+import SponsoredBadge from "./SponsoredBadge";
 
 interface Props {
   post: PostMeta;
@@ -87,6 +88,10 @@ export default function BlogCard({ post, featured = false }: Props) {
           <div style={{ position: "absolute", top: "0.6rem", left: "0.6rem" }}>
             <CategoryBadge category={post.category} asLink={false} />
           </div>
+
+          {/* Paid placement must be labelled in listings too, not only on the
+              post itself, or the reader clicks through without knowing. */}
+          {post.sponsored && <SponsoredBadge overlay />}
         </div>
 
         {/* Content */}

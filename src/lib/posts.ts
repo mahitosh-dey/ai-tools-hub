@@ -17,6 +17,12 @@ export interface PostMeta {
   readTime: string;
   author: string;
   affiliate?: boolean;
+  // Paid placement. `sponsored: true` switches on the disclosure block, the
+  // listing badge, and rel="sponsored" on outbound links. `sponsoredBy` names
+  // the advertiser so the disclosure can say who paid, which is the part the
+  // FTC actually cares about. Never set one without the other.
+  sponsored?: boolean;
+  sponsoredBy?: string;
   rating?: number;
   featured?: boolean;
   faqs?: Array<{ q: string; a: string }>;
@@ -51,6 +57,8 @@ export function getAllPosts(): PostMeta[] {
       readTime: data.readTime ?? "5 min read",
       author: data.author ?? "Mahitosh Dey",
       affiliate: data.affiliate ?? false,
+      sponsored: data.sponsored ?? false,
+      sponsoredBy: data.sponsoredBy ?? undefined,
       rating: data.rating ?? undefined,
       updatedAt: data.updatedAt ?? undefined,
       featured: data.featured ?? false,
@@ -88,6 +96,8 @@ export function getPostBySlug(slug: string): Post | null {
       readTime: data.readTime ?? "5 min read",
       author: data.author ?? "Mahitosh Dey",
       affiliate: data.affiliate ?? false,
+      sponsored: data.sponsored ?? false,
+      sponsoredBy: data.sponsoredBy ?? undefined,
       rating: data.rating ?? undefined,
       updatedAt: data.updatedAt ?? undefined,
       faqs: data.faqs ?? undefined,

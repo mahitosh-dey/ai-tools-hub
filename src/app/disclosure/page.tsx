@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 
+const DESCRIPTION =
+  "How AI Vault makes money: affiliate commissions and paid placements. What each one is, how we label it, and why neither one buys a good review.";
+
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure",
-  description: "AI Vault's affiliate disclosure. We earn commissions on some links at no cost to you. This never affects how we rate or review AI tools.",
+  title: "Disclosure: Affiliate Links and Paid Placements",
+  description: DESCRIPTION,
   alternates: { canonical: "https://www.aivaultblog.com/disclosure" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "AI Vault",
     url: "https://www.aivaultblog.com/disclosure",
-    title: "Affiliate Disclosure | AI Vault",
-    description: "AI Vault's affiliate disclosure. We earn commissions on some links at no cost to you. This never affects how we rate or review AI tools.",
+    title: "Disclosure: Affiliate Links and Paid Placements | AI Vault",
+    description: DESCRIPTION,
     images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
@@ -19,10 +22,10 @@ export default function DisclosurePage() {
   return (
     <div style={{ maxWidth: "780px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#e2e8f0", marginBottom: "0.5rem" }}>
-        Affiliate Disclosure
+        Disclosure
       </h1>
       <p style={{ color: "#64748b", fontSize: "0.85rem", marginBottom: "3rem" }}>
-        Last updated: June 9, 2025
+        Last updated: August 5, 2026
       </p>
 
       <div style={{ color: "#cbd5e1", lineHeight: 1.8, fontSize: "1rem" }}>
@@ -37,10 +40,12 @@ export default function DisclosurePage() {
           }}
         >
           <p style={{ margin: 0, fontSize: "1rem" }}>
-            <strong style={{ color: "#c084fc" }}>Short version:</strong> Some links on this
-            website are affiliate links. If you click one and make a purchase or sign up, we
-            may earn a commission at no extra cost to you. This helps us keep the blog
-            running. We only recommend tools we genuinely believe are worth it.
+            <strong style={{ color: "#c084fc" }}>Short version:</strong> AI Vault makes money
+            two ways. Some links are affiliate links, which pay us a commission if you buy,
+            at no extra cost to you. A small number of posts are paid placements, where a
+            company paid for the post to exist. Those are labelled at the top of the post and
+            in every listing, and you can spot them by the amber Sponsored badge. Neither
+            arrangement buys a good review. If a tool is bad, we say so and keep the fee.
           </p>
         </div>
 
@@ -108,13 +113,86 @@ export default function DisclosurePage() {
           </ul>
         </Section>
 
+        <Section title="Paid Placements and Sponsored Posts">
+          <p>
+            A paid placement is different from an affiliate link, and it is worth being
+            precise about the difference. An affiliate link pays us only if you click it and
+            buy something. A paid placement means a company paid a flat fee for the post to
+            exist at all. That is a bigger conflict of interest, so it gets a bigger label.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            How you will always be able to tell:
+          </p>
+          <ul style={{ paddingLeft: "1.5rem", marginTop: "0.5rem" }}>
+            <li style={{ marginBottom: "0.4rem" }}>
+              An amber <strong>Paid placement</strong> box sits at the top of the post, above
+              the article, naming the company that paid.
+            </li>
+            <li style={{ marginBottom: "0.4rem" }}>
+              An amber <strong>Sponsored</strong> badge appears on the post card everywhere it
+              is listed, so you know before you click.
+            </li>
+            <li style={{ marginBottom: "0.4rem" }}>
+              Every outbound link to the advertiser carries{" "}
+              <code style={{ color: "#c084fc", fontSize: "0.85rem" }}>rel=&quot;sponsored&quot;</code>,
+              which tells search engines the link was paid for and stops it passing ranking
+              credit.
+            </li>
+          </ul>
+
+          <p style={{ marginTop: "1.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>What the money buys.</strong> It buys the
+            time to test the product properly and the space on this site to publish the
+            result. That is all it buys.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>What it does not buy.</strong> Advertisers do
+            not get approval over the wording. They do not see the post before it is
+            published. They cannot ask for a line to be removed after publication. And they
+            do not get a positive verdict. That last one is agreed in writing before any money
+            changes hands, because it is the only part of the arrangement that becomes awkward
+            afterwards.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            If a product turns out to be poor, one of two things happens, agreed up front:
+            the review says it is poor and we keep the fee, or the advertiser pays a partial
+            fee for the testing work and nothing is published. There is no third option where
+            we publish something we do not believe.
+          </p>
+
+          <p style={{ marginTop: "1.5rem" }}>
+            <strong style={{ color: "#e2e8f0" }}>Two rules we hold ourselves to.</strong>
+          </p>
+          <ul style={{ paddingLeft: "1.5rem", marginTop: "0.5rem" }}>
+            <li style={{ marginBottom: "0.4rem" }}>
+              Paid placements are never inserted into an existing comparison post, roundup or
+              best-of list. Those rankings are not for sale at any price, because a paid entry
+              in a ranking makes the whole ranking worthless. A paid placement gets its own
+              post. If the product then earns a spot in a roundup on its own merits, it goes
+              in there separately and for free.
+            </li>
+            <li style={{ marginBottom: "0.4rem" }}>
+              If an advertiser shuts down or their product stops working inside the placement
+              period, the post gets a dated note saying so, the same as any other post on this
+              site. Paying does not exempt a tool from that.
+            </li>
+          </ul>
+
+          <p style={{ marginTop: "1.5rem" }}>
+            If you are a company interested in a paid placement, the rules above are the
+            terms, and they are not negotiable. Enquiries go to the address at the bottom of
+            this page.
+          </p>
+        </Section>
+
         <Section title="FTC Compliance">
           <p>
             This disclosure is made in accordance with the United States Federal Trade
             Commission (FTC) guidelines on endorsements and testimonials (16 CFR, Part 255).
             These guidelines require that we disclose any material connection between ourselves
-            and the companies whose products we recommend, including receiving compensation
-            through affiliate programmes.
+            and the companies whose products we recommend. That covers both kinds of payment
+            described above: commissions from affiliate programmes, and flat fees for paid
+            placements.
           </p>
           <p style={{ marginTop: "1rem" }}>
             We are also committed to transparency in line with advertising standards in other

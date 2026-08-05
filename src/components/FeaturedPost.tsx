@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { PostMeta } from "@/lib/posts";
 import CategoryBadge from "./CategoryBadge";
+import SponsoredBadge from "./SponsoredBadge";
 
 const categoryStyle: Record<string, { gradient: string; emoji: string }> = {
   reviews:     { gradient: "linear-gradient(135deg,#1e0f40,#2d1b69)", emoji: "⭐" },
@@ -39,6 +40,9 @@ export default function FeaturedPost({ post }: { post: PostMeta }) {
         <div style={{ padding: "2rem" }}>
           <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.85rem", flexWrap: "wrap" }}>
             <CategoryBadge category={post.category} asLink={false} />
+            {/* The newest post takes this slot, so a paid post can land here.
+                It must carry the label like any other listing. */}
+            {post.sponsored && <SponsoredBadge />}
             <span style={{ color: "#475569", fontSize: "0.78rem" }}>{post.readTime}</span>
             <span style={{ color: "#475569", fontSize: "0.78rem" }}>
               {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
