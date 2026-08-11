@@ -38,7 +38,7 @@ export default function NewsletterPage() {
         </h1>
         <p style={{ color: "#94a3b8", fontSize: "1.1rem", lineHeight: 1.7 }}>
           Every week, get the best AI tool discoveries, honest reviews, and
-          exclusive affiliate deals — curated for makers, marketers, and
+          exclusive affiliate deals, curated for makers, marketers, and
           developers.
         </p>
       </div>

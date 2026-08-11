@@ -54,7 +54,7 @@ export default function NewsletterSignup() {
       </h2>
       <p style={{ color: "#94a3b8", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
         Get weekly reviews of the hottest AI tools, exclusive tutorials, and
-        affiliate deals — straight to your inbox. No spam, unsubscribe anytime.
+        affiliate deals, straight to your inbox. No spam, unsubscribe anytime.
       </p>
 
       {status === "success" ? (

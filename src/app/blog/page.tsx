@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const canonical = pageNum > 1 ? `${baseUrl}/blog?page=${pageNum}` : `${baseUrl}/blog`;
   return {
     title: "All Posts",
-    description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
+    description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more, updated weekly.",
     alternates: { canonical },
     openGraph: {
       type: "website",
@@ -26,7 +26,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       siteName: "AI Vault",
       url: canonical,
       title: "All Posts | AI Vault",
-      description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more — updated weekly.",
+      description: "Browse all AI tool reviews, tutorials, and comparisons on AI Vault. Honest picks for ChatGPT, Midjourney, Grammarly, and more, updated weekly.",
       images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" }],
     },
   };
@@ -78,7 +78,7 @@ export default async function BlogPage({ searchParams }: Props) {
         <p style={{ color: "#64748b", fontSize: "0.9rem" }}>
           {q
             ? `${filtered.length} result${filtered.length !== 1 ? "s" : ""} for "${q}"`
-            : `${allPosts.length} article${allPosts.length !== 1 ? "s" : ""} — reviews, tutorials & comparisons`}
+            : `${allPosts.length} article${allPosts.length !== 1 ? "s" : ""} reviews, tutorials & comparisons`}
         </p>
         {q && (
           <Link

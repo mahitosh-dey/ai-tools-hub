@@ -1,10 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+// No robots meta set here on purpose, but not because the page should be
+// indexable. Next.js injects <meta name="robots" content="noindex"> for any
+// page returning 404, so declaring it again was redundant. The old declaration
+// also set follow:false, which pointlessly told crawlers to ignore the links
+// out of this page. Search Console files these URLs under "Excluded by
+// 'noindex' tag" as a result, which is expected framework behaviour and not a
+// defect to chase.
 export const metadata: Metadata = {
-  title: "Coming Soon",
-  description: "This page is coming soon to AI Vault.",
-  robots: { index: false, follow: false },
+  title: "Page not found",
+  description: "This page does not exist on AI Vault. It may have been moved or removed.",
 };
 
 export default function NotFound() {
@@ -62,7 +68,7 @@ export default function NotFound() {
             backgroundClip: "text",
           }}
         >
-          Coming Soon
+          Page not found
         </h1>
 
         {/* Divider */}
@@ -85,26 +91,47 @@ export default function NotFound() {
             marginBottom: "2.5rem",
           }}
         >
-          We're working on this page. Check back soon for new content, tools, and reviews.
+          This page does not exist. It may have been moved or removed. The links below
+          will get you back to something real.
         </p>
 
-        {/* CTA */}
-        <Link
-          href="/"
-          style={{
-            display: "inline-block",
-            background: "linear-gradient(135deg, #a855f7, #7c3aed)",
-            color: "#fff",
-            fontWeight: 600,
-            fontSize: "0.95rem",
-            padding: "0.75rem 2rem",
-            borderRadius: "8px",
-            textDecoration: "none",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Back to home
-        </Link>
+        {/* CTA. Two routes out, because most 404s here come from retired tag
+            URLs where the visitor wanted to browse rather than land on home. */}
+        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link
+            href="/blog"
+            style={{
+              display: "inline-block",
+              background: "linear-gradient(135deg, #a855f7, #7c3aed)",
+              color: "#fff",
+              fontWeight: 600,
+              fontSize: "0.95rem",
+              padding: "0.75rem 2rem",
+              borderRadius: "8px",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            Browse all posts
+          </Link>
+          <Link
+            href="/"
+            style={{
+              display: "inline-block",
+              background: "transparent",
+              border: "1px solid #2a2a3d",
+              color: "#94a3b8",
+              fontWeight: 600,
+              fontSize: "0.95rem",
+              padding: "0.75rem 2rem",
+              borderRadius: "8px",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            Home
+          </Link>
+        </div>
       </div>
     </div>
   );
