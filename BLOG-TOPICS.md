@@ -61,6 +61,13 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **AI Coding Agent Pricing in 2026: What $20 Actually Buys** (`drafts/ai-coding-agent-pricing-2026.mdx`, written 2026-08-13).
+  Needs `ai-coding-agent-pricing-2026-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
+  Lead finding: Anthropic's own Claude Code cost docs put a developer at $13/active day and $150-250/month at API rates,
+  against a $20 subscription. Supporting finding: six vendors, six incompatible units of account.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
