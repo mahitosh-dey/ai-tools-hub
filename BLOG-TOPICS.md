@@ -60,6 +60,12 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping** (`drafts/cursor-alternatives-2026.mdx`, written 2026-08-13).
+  Needs `cursor-alternatives-2026-cover.webp` generated from the `coverImagePrompt` in the draft's frontmatter, then move to `content/posts/`.
+  Research finding worth keeping: Windsurf and Codeium both redirect to devin.ai/desktop, and Aider's last release was 2025-08-09.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?

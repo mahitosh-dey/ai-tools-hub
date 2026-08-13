@@ -1,0 +1,198 @@
+---
+title: "Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping"
+seoTitle: "Best Cursor Alternatives 2026 (Verified)"
+date: "2026-08-13"
+updatedAt: "2026-08-13"
+excerpt: "Most Cursor alternatives lists still recommend a product that no longer exists and an open-source tool that has not shipped a release in a year. I checked every one against its own site and its own repository before writing a word."
+category: "Comparisons"
+tags:
+  - "cursor"
+  - "ai-coding"
+  - "ai-comparison"
+  - "ai-tools"
+coverImage: "/images/cursor-alternatives-2026-cover.webp"
+coverImagePrompt: |
+  Cinematic 16:9 blog cover, near-black background, deep navy and black,
+  five translucent glass code-editor panels arranged in a loose arc floating
+  in dark space, three of them lit with cyan and violet neon edge glow and
+  two of them dark and unlit with only faint grey rim light, thin wireframe
+  polygon network connecting the lit panels while the dark ones sit
+  disconnected, floating light particles, volumetric haze, soft rim lighting,
+  high contrast, photoreal 3D render, no text, no letters, no words,
+  no logos, no watermarks
+readTime: "13 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "What happened to Windsurf?"
+    a: "It stopped existing under that name. Cognition acquired it and folded it into the Devin product line, and both windsurf.com and codeium.com now redirect to devin.ai/desktop, which is titled Devin Desktop. I checked both redirects on August 13, 2026. Reporting puts the acquisition at around $250 million in December 2025 and the rebrand on June 2, 2026. If a comparison article is still recommending Windsurf at $15 a month, it has not been checked since before that."
+  - q: "Is Aider still maintained?"
+    a: "Barely, on the evidence. GitHub's API shows the last release as v0.86.0 published on August 9, 2025, which is a year ago, and the most recent commit as May 22, 2026. For comparison, Zed, Cline and Continue had all pushed code on the day I checked. Aider is not abandoned and the code still works, but it is not keeping pace, and it is the tool most open-source alternatives lists put first."
+  - q: "What is the best free Cursor alternative?"
+    a: "Cline or Continue, if you are willing to bring your own API key. Both are Apache-2.0 licensed extensions rather than editors, so the software costs nothing and you pay Anthropic or OpenAI directly for the tokens. That is often cheaper than a subscription and it means no vendor sits between you and the model deciding your allowance. Zed's Personal tier is also free and lets you use your own keys."
+  - q: "Is Zed actually different from Cursor, or just another VS Code fork?"
+    a: "Genuinely different. Zed is written in Rust from scratch rather than forked from VS Code, which is why it feels faster and why your VS Code extensions do not transfer. That is the trade. Most things marketed as Cursor alternatives are VS Code forks, so they inherit the same architecture and the same feel, which is why switching between them rarely changes much."
+  - q: "How much does Zed cost?"
+    a: "Personal is free forever and includes 2,000 accepted edit predictions plus unlimited use with your own API keys. Pro is $10 a month with unlimited edit predictions and $5 of tokens included, after which hosted models bill at API list price plus 10 percent. Business is $30 per seat. Note that $10 buying $5 of tokens is the reverse of GitHub Copilot, where $10 buys $15 of credits."
+  - q: "Does Zed's licence allow commercial use?"
+    a: "Check it against your own situation rather than trusting a summary, including this one. The repository carries both LICENSE-APACHE and LICENSE-GPL, which is why GitHub reports the licence as NOASSERTION rather than a single identifier. Split licensing is exactly the kind of detail that causes trouble at enterprise procurement, and it is the same class of trap as the open image models that look permissive until you read the file."
+  - q: "What does Devin Desktop cost now that it is not Windsurf?"
+    a: "Devin has a free tier with a light quota, Pro at $20 a month, and Max at $200. Teams is $80 a month base plus $40 per full developer seat, and Enterprise is custom. Devin Desktop is included on the paid plans. Reporting says the individual plan went from $15 to $20 in March 2026 and moved from credits to daily and weekly quotas, so the old $15 figure in most articles is two price changes out of date."
+  - q: "Should I switch away from Cursor?"
+    a: "Probably not for capability reasons, and that is the honest answer. Cursor is good and the alternatives are not dramatically better at the same job. Switch if you want something specific: a faster editor that is not VS Code, a billing relationship where nobody meters you, or a terminal workflow instead of an editor. Switching to another VS Code fork gets you a different logo."
+  - q: "Which alternative is best for a beginner?"
+    a: "None of these, probably. Bring-your-own-key tools assume you can get an API key and reason about token costs, and Zed assumes you are willing to lose your VS Code extensions. A beginner is better served by something that works on day one. I went through the beginner-appropriate options separately."
+  - q: "Is Claude Code or Codex a Cursor alternative?"
+    a: "They compete for the same work but they are not editors, so it depends what you are replacing. If what you value in Cursor is the agent doing multi-file work, then yes, a terminal agent does that and often better. If what you value is seeing the diff in an editor you already know, then no. Plenty of people run Cursor and a terminal agent together rather than choosing."
+---
+
+I went looking for Cursor alternatives and found that the two names at the top of almost every list are a product that no longer exists and a repository that has not cut a release in a year.
+
+So this is not a ranked list of ten editors. It is what happened when I checked each one against its own website and its own source repository before writing anything about it, which took an afternoon and changed most of what I was going to say.
+
+## Checked on August 13, 2026
+
+| Tool | Status | Evidence |
+| --- | --- | --- |
+| Windsurf | Gone as a brand | windsurf.com redirects to devin.ai/desktop |
+| Codeium | Gone as a brand | codeium.com redirects to the same place |
+| Devin Desktop | Live, is what Windsurf became | Free, $20, $200 on devin.ai/pricing |
+| Zed | Live, actively developed | Pushed code the day I checked |
+| Cline | Live, actively developed | Pushed code the day I checked |
+| Continue | Live, actively developed | Pushed code the day I checked |
+| Aider | Live but stalled | Last release August 9, 2025 |
+| Cursor | Live | Free, $20, $60, $200 |
+
+## Windsurf is not a thing you can buy
+
+This is the one that surprised me, because Windsurf was the default answer to this question for two years.
+
+Both `windsurf.com` and `codeium.com` now redirect to `devin.ai/desktop`, and the page title is Devin Desktop. Cognition acquired the company and absorbed the product into its Devin line. Reporting puts the deal at around $250 million in December 2025 and the rebrand at June 2, 2026. I am marking the deal figure and dates as reported rather than verified, because I read them in press coverage; the redirect I checked myself.
+
+The pricing moved too. Most articles still say Windsurf Pro is $15 a month. Devin's own plans page today lists Free, Pro at $20, and Max at $200, with Teams at $80 base plus $40 per developer seat. Reporting says the individual price went from $15 to $20 in March 2026 and swapped credits for daily and weekly quotas at the same time.
+
+So if you have been holding Windsurf in your head as the cheaper Cursor, that gap has closed. Both are $20 now.
+
+I should say that my own site had this wrong until today. A post here recommended Windsurf at $15, pointed readers at codeium.com, and told them to start there. That is being fixed. I am mentioning it because the same error is sitting in dozens of articles that rank above this one, and the reason is always the same: nobody re-checks a fact that was true when they wrote it.
+
+## Aider has not shipped a release in a year
+
+Aider is the answer everybody gives when the question is "what is the open source one." It deserves the reputation. It is a genuinely good terminal tool and the design was ahead of its time.
+
+Here is what GitHub's API says as of today. The most recent release is `v0.86.0`, published on **August 9, 2025**. The one before that was June 2025, and the one before that May 2025. The most recent commit to the default branch is **May 22, 2026**.
+
+For contrast, Zed, Cline and Continue had all pushed code on the day I ran the check.
+
+That is not abandonment. The project has 48,000 stars, an Apache-2.0 licence, and the code does not stop working because nobody touched it for a quarter. But an AI coding tool is unusually exposed to going stale, because the models it drives change every few weeks. A tool that is not tracking model releases starts quietly underperforming rather than visibly breaking.
+
+If you are choosing today, that matters. If you already use Aider happily, it is not a reason to stop.
+
+## Why most alternatives lists are useless
+
+Here is the structural problem with this genre. Cursor is a fork of VS Code. So are most of the things recommended as alternatives to it.
+
+Fork the same editor, wire in an agent, and you get a product that looks different in screenshots and feels almost identical in use. The keybindings are the same, the extension model is the same, the file tree is the same. Switching from one VS Code fork to another gets you a new logo and a different billing page.
+
+So the useful question is not which alternative ranks highest. It is which one is different along an axis you actually care about. There are three.
+
+**A different editor.** Zed is written in Rust from scratch, not forked. That is why it is fast and why your VS Code extensions do not come with you.
+
+**A different billing relationship.** Cline and Continue are extensions, not editors, and you supply your own API key. Nobody sits between you and the model rationing your usage.
+
+**A different interaction model.** Terminal agents like Claude Code and Codex do not give you an editor at all. You point them at a directory and describe what you want.
+
+Pick the axis first. The tool follows from it.
+
+## Zed, if you want a genuinely different editor
+
+Zed is the only thing on this list that is a real editor rewrite rather than a reskin. Started in 2021, 88,000 stars, written in Rust, and it was pushed to on the day I checked.
+
+The speed is not marketing. Opening a large repository and moving around it feels different from VS Code in a way that is obvious within a minute. If you have ever been annoyed by editor latency, this is the one to try.
+
+What it costs you is the ecosystem. Your VS Code extensions do not transfer. For some people that is a shrug and for others it ends the conversation, and only you know which you are.
+
+Pricing is straightforward. Personal is free forever, with 2,000 accepted edit predictions and unlimited use if you bring your own API keys or point it at an external agent. Pro is $10 a month, unlimited edit predictions, and $5 of tokens included, after which hosted models bill at API list price plus 10 percent. Business is $30 per seat.
+
+That $10 for $5 of tokens is worth pausing on. GitHub Copilot does the opposite: $10 buys $15 of credits, because GitHub tops the allowance above the subscription price. Zed prices the subscription above the included tokens. Neither is wrong, but they are opposite strategies and it tells you Zed expects most users to bring their own key.
+
+One thing to check before a team standardises on it. The repository carries both `LICENSE-APACHE` and `LICENSE-GPL`, which is why GitHub cannot report a single licence and shows `NOASSERTION`. Split licensing is not a problem in itself, and it is exactly the kind of detail that stalls at procurement. Read the files against your own situation. I ran into the same class of trap with open image models, where a repository shows a permissive badge and the licence file says something narrower, which I went through in [Midjourney vs Stable Diffusion](/blog/midjourney-vs-stable-diffusion).
+
+## Cline and Continue, if you want nobody metering you
+
+These two are the most underrated option in this space and the least like Cursor commercially.
+
+Both are extensions rather than editors, both Apache-2.0, and both are actively developed. Cline has 66,000 stars and was created in 2024. Continue has 35,000 and dates to 2023. Both pushed code the day I checked.
+
+The model is simple: the software is free, you plug in your own API key, and you pay Anthropic or OpenAI or whoever directly for tokens. There is no subscription, no included allowance, no flex allotment, no credits, and no vendor deciding you have had enough this week.
+
+For anyone who has been irritated by the metering across this whole category, and I have written enough about [what AI pricing did in 2026](/blog/ai-pricing-changes-2026) to be one of them, that is the actual escape route. Not a cheaper subscription. No subscription.
+
+Two honest caveats. You need to be comfortable getting an API key and watching a token bill, which is a real barrier for some people and trivial for others. And the raw API cost of heavy agent work can exceed a $20 subscription, because subscriptions are partly a bet by the vendor that you will not use your full allowance. If you are a light user, bring-your-own-key is cheaper. If you hammer an agent all day, do the arithmetic before switching.
+
+## Working out whether your own key is cheaper
+
+This is the calculation nobody does before switching, and it is the difference between saving money and doubling your bill.
+
+A subscription is a bet. The vendor is wagering that most subscribers use less than their allowance, and they price accordingly. That means a subscription is good value if you are a heavy user and poor value if you are light. Bring-your-own-key inverts it exactly: you pay for what you consume, so it is cheap when you are light and unbounded when you are not.
+
+The variable that decides it is not how many hours you work. It is how much context each request drags along. Agent work on a large repository sends a great deal of input tokens, and input is what you are billed for even though output is what you read. So the same hour of work can cost wildly different amounts depending on repository size.
+
+I am not going to give you a cost per request, because anyone who does is guessing. What I will give you is the way to find out in an afternoon. Put ten dollars of credit on an API key, wire it into Cline or Continue, and work normally for two or three days. Then look at what you actually spent. Multiply out to a month. Compare against $20. That number is real and it is yours, and it beats any estimate in any article including this one.
+
+Two things that shift the answer. Cheaper models change it enormously, because agent work on a mid-tier model rather than a frontier one can cost a fraction as much for tasks that do not need the extra reasoning, and most tasks do not. And spending caps matter: set one, because the failure mode of bring-your-own-key is not a slightly larger bill, it is an agent looping overnight against an uncapped key.
+
+The honest summary is that bring-your-own-key wins on control rather than on price. You may spend more. You will always know why, and nobody will tell you that you have run out for the week.
+
+## Devin Desktop, which is what Windsurf became
+
+Worth covering on its own terms rather than as a footnote to the rebrand, because the product did not get worse.
+
+It is still an AI-native editor competing for the same job as Cursor. What changed is the company behind it, the name, the price, and the billing model. Cognition positions Devin as the place you run coding agents, local or cloud, and Desktop is the local half of that.
+
+At $20 for Pro it is now priced level with Cursor rather than under it. The old argument for Windsurf was a more generous free tier, and if that is why you were interested, check the current free quota yourself before committing, because quota-based limits are harder to compare than credit balances and I would not want to quote you a number that shifts.
+
+## What about Copilot, Claude Code and Codex
+
+Copilot is the obvious alternative and I have already priced it properly against Cursor in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot), where the short version is that the $10 against $20 framing everyone repeats is misleading in both directions.
+
+Claude Code and Codex are terminal agents rather than editors. If what you actually value about Cursor is the agent doing multi-file work, a terminal agent does that job and often does it better, because it is not constrained by an editor UI. If what you value is watching diffs land in a familiar editor, they will feel like a downgrade. My workflow for the Claude side is in [how to use Claude AI for coding](/blog/how-to-use-claude-ai-for-coding).
+
+Plenty of developers run an editor and a terminal agent together and never pick one. That is a reasonable answer and it costs more.
+
+## What it all costs
+
+| Tool | Free tier | Paid | Who pays for tokens |
+| --- | --- | --- | --- |
+| Cursor | Hobby | $20 Pro, $60 Pro+, $200 Ultra | Included, then metered |
+| Devin Desktop | Yes, light quota | $20 Pro, $200 Max | Included via quota |
+| Zed | Personal, forever | $10 Pro, $30 Business | $5 included on Pro, then list +10% |
+| Cline | Whole thing | None | You, directly |
+| Continue | Whole thing | None | You, directly |
+| Aider | Whole thing | None | You, directly |
+
+Cursor and Devin figures come from their own pricing pages, Zed's from zed.dev/pricing, all checked August 13, 2026. Cline, Continue and Aider are free software, so the only cost is whatever your API provider charges.
+
+Notice the pattern in the paid column. Cursor tops out at $200, Devin tops out at $200. That is the same number I keep finding at the top of every AI product ladder this year, alongside ChatGPT Pro and Google AI Ultra. It is not a coincidence and it is not related to what the compute costs.
+
+## Who should actually switch
+
+**Nobody, for capability alone.** Cursor is good, and I said why at length in the [Cursor review](/blog/cursor-ai-review-2026). None of these will make you meaningfully better at your job, and switching editors costs you a week of small frictions.
+
+**Switch to Zed** if editor speed genuinely bothers you and you can live without your VS Code extensions.
+
+**Switch to Cline or Continue** if the metering is what you object to. This is the strongest reason on the list, because it is the only one that changes your relationship with the vendor rather than just the interface.
+
+**Look at Devin Desktop** if you were already interested in Windsurf. Same product, new name, now the same price as Cursor.
+
+**Do not switch to another VS Code fork** expecting a different experience. You will get a different logo.
+
+**If you are new to this**, none of these is the right first tool. Start with something that works out of the box, which I covered in [top AI coding assistants for beginners](/blog/top-ai-coding-assistants-for-beginners).
+
+## The verdict, and the method
+
+The most useful thing I did here was not comparing features. It was opening each project's repository and looking at when it last shipped.
+
+That is how I found that the most-recommended open-source option has not cut a release in a year, and it is the same method that turned up two dead tools when I looked at [ElevenLabs alternatives](/blog/best-elevenlabs-alternatives). Websites stay up long after products stop moving. A commit log does not lie about it.
+
+If you take one thing from this: before you adopt any AI tool that is not from a company you already trust to still exist next year, spend two minutes on its repository. Check the last release date, not the star count. Stars measure how many people liked it once.
+
+Verified on August 13, 2026. Redirects checked directly. Repository activity, licences and star counts read from the GitHub API. Zed, Devin and Cursor pricing read from their own pricing pages. The Cognition acquisition figure and dates, and the March 2026 Windsurf price change, come from press coverage rather than the vendor, and are marked as reported in the text.
