@@ -146,8 +146,11 @@ photoreal 3D render, no text, no letters, no logos
 ```
 
 **ChatGPT vs Google Gemini** — `chatgpt-vs-google-gemini-cover.webp`
-> Needs regeneration. The current file is light-background, shows garbled
-> UI text, and does not match the house style.
+> Post retitled 2026-08-13 to "Same Price Ladder, Different Gates". Filename kept.
+> Still needs regeneration, re-checked 2026-08-13. The current file is
+> light-background, shows garbled UI text, and does not match the house style.
+> File size is fine at 35 KB, so this is an image-content problem and
+> re-encoding will not help.
 ```
 Cinematic 16:9 blog cover, split composition on a near-black background, two
 glowing orbs facing each other, the left one purple-green and the right one
@@ -427,5 +430,5 @@ step is what caused the gap being repaired here.
 
 | Cover | Problem | Action |
 |---|---|---|
-| `chatgpt-vs-google-gemini-cover.webp` | Light background, visible garbled UI text, off-theme | Regenerate with the prompt above |
-| `rise-of-ai-agents-cover.webp` | 204 KB, roughly 2x the site norm | Re-encode |
+| `chatgpt-vs-google-gemini-cover.webp` | Light background, visible garbled UI text, off-theme. Still outstanding as of 2026-08-13, checked again when the post was rewritten. File size is fine at 35 KB; the problem is the image content, so it needs regenerating through Gemini rather than re-encoding. | Regenerate with the prompt above |
+| `rise-of-ai-agents-cover.webp` | RESOLVED 2026-08-04. Was 204 KB; the optimiser fix brought it to 117 KB, under the 120 KB ceiling. No cover on the site now exceeds 120 KB. | None |
