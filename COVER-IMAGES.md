@@ -1,10 +1,10 @@
 # Blog Cover Images — Guide
 
-Last updated: 2026-07-31
+Last updated: 2026-08-13
 
 Every published post has a cover image. Until now only 6 of the prompts that
 produced them were written down, so each new cover was re-invented from scratch
-and the look drifted. This file records a prompt for all 33 published posts,
+and the look drifted. This file records a prompt for all 37 published posts,
 reverse-engineered from the images actually on disk, so covers stay consistent.
 
 ---
@@ -135,6 +135,19 @@ by thin cyan wireframes, teal and violet accents, volumetric haze, photoreal
 ---
 
 ### Comparisons
+
+**Cursor Alternatives 2026** — `cursor-alternatives-2026-cover.webp`
+> Three lit panels and two dark ones encode "some of these are gone" without text.
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+five translucent glass code-editor panels arranged in a loose arc floating
+in dark space, three of them lit with cyan and violet neon edge glow and
+two of them dark and unlit with only faint grey rim light, thin wireframe
+polygon network connecting the lit panels while the dark ones sit
+disconnected, floating light particles, volumetric haze, soft rim lighting,
+high contrast, photoreal 3D render, no text, no letters, no words,
+no logos, no watermarks
+```
 
 **Cursor vs GitHub Copilot** — `cursor-vs-github-copilot-cover.webp`
 ```

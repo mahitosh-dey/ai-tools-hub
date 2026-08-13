@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (36)
+## Published Posts (37)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -40,6 +40,7 @@
 | 34  | Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong         | cursor-vs-github-copilot                   | Comparisons | 2026-07-31 |
 | 35  | Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First  | best-elevenlabs-alternatives               | Tools       | 2026-08-03 |
 | 36  | Midjourney vs Stable Diffusion Is the Wrong Question in 2026                  | midjourney-vs-stable-diffusion             | Comparisons | 2026-08-04 |
+| 37  | Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping           | cursor-alternatives-2026                   | Comparisons | 2026-08-13 |
 
 ---
 
@@ -59,12 +60,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping** (`drafts/cursor-alternatives-2026.mdx`, written 2026-08-13).
-  Needs `cursor-alternatives-2026-cover.webp` generated from the `coverImagePrompt` in the draft's frontmatter, then move to `content/posts/`.
-  Research finding worth keeping: Windsurf and Codeium both redirect to devin.ai/desktop, and Aider's last release was 2025-08-09.
 
 ### Comparisons
 
