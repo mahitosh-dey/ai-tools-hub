@@ -36,13 +36,19 @@ faqs:
     a: "It sends fewer clicks than search, and that is the honest tradeoff. Someone who gets your answer inside an AI response often has no reason to visit. What you get instead is attribution, brand exposure, and inclusion in the set of sources an assistant treats as reliable for your topic. For a new site with no authority, being in that set early matters more than the clicks you are not yet getting anyway. I would not restructure a healthy traffic business around it. I would absolutely take it when the alternative is invisibility."
 ---
 
-I have re-measured this since first publishing, and the numbers moved enough that the original finding no longer holds.
+I have re-measured this since first publishing, and the numbers moved enough that I had to test my own argument against them. It did not fully survive.
 
-On July 29, 2026 I had 31 posts and Bing reported 34 AI citations across the previous week, every one of them pointing at a single page. On August 14 I checked again: 38 posts, and **108 citations in seven days across 5 different pages**.
+On July 29, 2026 I had 31 posts and Bing reported 34 AI citations across the previous week, every one of them pointing at a single page. On August 14 I checked again: 38 posts, and **108 citations in seven days**, with 183 across 30 days spread over 7 pages.
 
-Citations roughly tripled in a fortnight, and the number of pages earning them went from one to five. Bing's three-month total is 199, which means **more than half of every citation this site has ever received arrived in the last seven days**.
+Citations roughly tripled in a fortnight and spread from one page to seven. Bing's three-month total is 199, so **more than half of every citation this site has ever received arrived in the last seven days**.
 
-I am leading with that because it is the opposite of what most articles in this category do. The first version of this post built an argument on a single cited page. That argument is now standing on different ground, and pretending otherwise would make me exactly the kind of source I complained about at the top.
+That gave me enough data to check the theory I published, and I want to report the result plainly because two parts of it did not hold.
+
+The first version argued that three things explained why one page won: headings written as answers rather than labels, heavy use of tables, and finer subdivision into sections. I said the headings mattered most.
+
+With seven cited pages I can compare them against the thirty-one that earn nothing. Word count is identical, 3,048 against 3,051. H2 count is identical, 11 against 12. **Answer-style headings show no advantage at all: cited pages average six, uncited average seven.** The thing I kept coming back to is the thing the data does not support.
+
+What does separate them is table rows, 18 against 10, and H3 subsections, 9 against 4. Cited pages are roughly twice as subdivided and twice as tabular at the same length.
 
 I went looking for an explanation and ended up in the market for what people call a Perplexity SEO checker, where I found something worth telling you about before you spend money: almost every article ranking for that term was written by a company selling one. That does not make them wrong. It does mean nobody in the results is showing you what real citation data looks like on a real site, because most of them do not run one.
 
@@ -142,9 +148,25 @@ Here is what changed between the two measurements.
 
 Bing's three-month total across the same account is 199 citations. With 108 of those falling in the final week, the curve is not flat and drifting, it is bending upward sharply.
 
-The original single-page outlier was my [guide to the best free AI image generators](/blog/best-free-ai-image-generators), which earned every one of the first 34. It is no longer alone.
+Here is the page-level breakdown over 30 days, which is the part nobody publishes.
 
-One honest limitation on the newer number: I can see that five pages are being cited, and I have not yet broken out which five or how the 108 distributes across them. Until I have, treat what follows as a hypothesis that survived its first real test rather than one that has been confirmed.
+| Page | Citations | Share |
+| --- | --- | --- |
+| Best free AI image generators | 114 | 62% |
+| How to use AI for YouTube automation | 44 | 24% |
+| Best AI tools for social media | 11 | 6% |
+| How to use ChatGPT to make money online | 6 | 3% |
+| How to use Midjourney for beginners | 4 | 2% |
+| ChatGPT vs Google Gemini | 3 | 2% |
+| ChatGPT Plus review | 1 | 1% |
+
+The original outlier is still the outlier. It went from 34 citations to 114 without me doing anything meaningful to it.
+
+And now the finding that matters most, because it is the one that could have flattered me and does not.
+
+Over the same fortnight I rewrote eighteen posts on this site, restructuring them to answer questions in clearly labelled sections. That is almost exactly the intervention my own theory predicts should earn citations. **98% of the citations went to pages I did not touch.** The two rewritten pages that are cited earn three citations and one.
+
+So the surge was not caused by my rewrites. Whatever is driving it, it is not the thing I spent two weeks doing.
 
 ## What that first page did differently, and whether it still explains anything
 
@@ -156,7 +178,7 @@ It was not the FAQ block. It has nine FAQ entries against a site average of eigh
 
 Three things did stand out.
 
-**The headings are answers, not labels.** This is the one I keep coming back to. Its section headings read "No account required, generate right now" and "Free account required, significantly better quality." Those are not topics. They are the answer to a question somebody actually types. Every other post on my site uses conventional section labels that describe a subject rather than resolve a question. If you are an extraction system looking for a passage that responds to "which AI image generators work without signing up," one of those headings is a direct hit and the others are not.
+**The headings are answers, not labels.** This was the one I kept coming back to, and it is the one the larger sample killed. Across seven cited pages against thirty-one uncited, answer-style headings show no advantage whatsoever. I am leaving the original reasoning below so you can see what a plausible-sounding theory looks like before it meets data. Its section headings read "No account required, generate right now" and "Free account required, significantly better quality." Those are not topics. They are the answer to a question somebody actually types. Every other post on my site uses conventional section labels that describe a subject rather than resolve a question. If you are an extraction system looking for a passage that responds to "which AI image generators work without signing up," one of those headings is a direct hit and the others are not.
 
 **It is heavily tabular.** Twelve table rows comparing tools across consistent attributes. Structured comparison data is unusually easy to lift into an answer, because the model does not have to infer relationships from prose. They are already explicit.
 
@@ -164,11 +186,25 @@ Three things did stand out.
 
 Stack those and a picture emerges that matches what I would expect from how retrieval works. The page that wins is not the best written one. It is the one that has been pre-cut into pieces the size of an answer.
 
-When I first wrote this, that analysis rested on exactly one page, and I said so: a hypothesis worth testing, not a law.
+## What survived the test, and what did not
 
-Two weeks later there are five cited pages and three times the citations, which is the first real test it has had. The honest reading is that the theory survived, because the site did not gain authority in a fortnight and nothing else obvious changed. What did change is that I have spent that fortnight rewriting posts to answer questions directly in labelled sections, largely for readers rather than for machines. If extraction-friendly structure is what earns citations, that is roughly the intervention you would run.
+Seven cited pages against thirty-one uncited is still a small sample on one small site, but it is seven times what I had.
 
-I want to be careful not to overclaim on the back of that. Correlation on a sample of one site is thin evidence, the acceleration could have causes I cannot see, and I have not yet confirmed which five pages are being cited, which is the check that would actually test it. What makes it worth acting on anyway is that the cost is close to zero: restructuring headings is an afternoon of work with no downside if the theory is wrong, because clearer headings serve human readers regardless.
+**Dead: headings as answers.** Cited pages average six answer-style headings, uncited average seven. This was my headline claim and it has no support.
+
+**Alive: tables.** 18 table rows on cited pages against 10. The second most-cited page has 68.
+
+**Alive: granularity.** Nine H3 subsections against four, at identical word counts. Cited pages are chopped roughly twice as fine.
+
+**Not a factor: length.** 3,048 words against 3,051. Writing more does nothing.
+
+There is a competing explanation I cannot rule out and would be dishonest to omit. Look at what the cited pages are about: image generators, YouTube automation, social media tools, making money, a beginners guide. They are practical, do-this-now pages. The uncited ones skew towards comparison and analysis. It may be that assistants cite practical pages because their users ask practical questions, and the structural difference is a side effect of practical pages naturally being more tabular and more subdivided.
+
+I cannot separate those two explanations with 38 posts on one site, and neither can anyone else selling you a tool that claims to.
+
+The most useful thing I can tell you is what happened when I acted on my own advice. I restructured eighteen posts in a fortnight. They earned four citations between them, out of 183. If structure alone were the lever, that should have moved. It did not.
+
+What I would still act on is the cheap half: tables and finer subdivision cost an afternoon and help human readers regardless. What I would stop doing is what I did, which is rewriting headings on the strength of a theory with one data point behind it.
 
 ## What I would change on your pages
 
