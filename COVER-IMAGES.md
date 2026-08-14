@@ -1,10 +1,10 @@
 # Blog Cover Images — Guide
 
-Last updated: 2026-08-13
+Last updated: 2026-08-14
 
 Every published post has a cover image. Until now only 6 of the prompts that
 produced them were written down, so each new cover was re-invented from scratch
-and the look drifted. This file records a prompt for all 37 published posts,
+and the look drifted. This file records a prompt for all 38 published posts,
 reverse-engineered from the images actually on disk, so covers stay consistent.
 
 ---
@@ -133,6 +133,22 @@ by thin cyan wireframes, teal and violet accents, volumetric haze, photoreal
 ```
 
 ---
+
+### Guides
+
+**AI Coding Agent Pricing 2026** — `ai-coding-agent-pricing-2026-cover.webp`
+> Six vessels at different fill levels encode "nobody sells the same unit" without text.
+> Supplied at 150 KB, optimiser took it to 60 KB at q78.
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+six translucent glass measuring vessels of clearly different shapes and
+sizes standing in a row on a dark reflective surface, each filled to a
+different level with glowing liquid light, cyan in some and violet in
+others, thin wireframe polygon grid on the surface beneath them,
+floating light particles, volumetric haze, soft rim lighting, high
+contrast, photoreal 3D render, no text, no letters, no words, no numbers,
+no logos, no watermarks
+```
 
 ### Comparisons
 

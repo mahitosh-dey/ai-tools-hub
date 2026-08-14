@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (37)
+## Published Posts (38)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -41,6 +41,7 @@
 | 35  | Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First  | best-elevenlabs-alternatives               | Tools       | 2026-08-03 |
 | 36  | Midjourney vs Stable Diffusion Is the Wrong Question in 2026                  | midjourney-vs-stable-diffusion             | Comparisons | 2026-08-04 |
 | 37  | Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping           | cursor-alternatives-2026                   | Comparisons | 2026-08-13 |
+| 38  | AI Coding Agent Pricing in 2026: What $20 Actually Buys                        | ai-coding-agent-pricing-2026               | Guides      | 2026-08-14 |
 
 ---
 
@@ -60,13 +61,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **AI Coding Agent Pricing in 2026: What $20 Actually Buys** (`drafts/ai-coding-agent-pricing-2026.mdx`, written 2026-08-13).
-  Needs `ai-coding-agent-pricing-2026-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
-  Lead finding: Anthropic's own Claude Code cost docs put a developer at $13/active day and $150-250/month at API rates,
-  against a $20 subscription. Supporting finding: six vendors, six incompatible units of account.
 
 ### Comparisons
 
