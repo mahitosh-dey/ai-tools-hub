@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audit": "node scripts/audit-content.mjs",
+    "audit:links": "node scripts/audit-content.mjs --links"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
