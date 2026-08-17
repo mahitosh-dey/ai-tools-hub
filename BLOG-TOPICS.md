@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (38)
+## Published Posts (39)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -42,6 +42,7 @@
 | 36  | Midjourney vs Stable Diffusion Is the Wrong Question in 2026                  | midjourney-vs-stable-diffusion             | Comparisons | 2026-08-04 |
 | 37  | Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping           | cursor-alternatives-2026                   | Comparisons | 2026-08-13 |
 | 38  | AI Coding Agent Pricing in 2026: What $20 Actually Buys                        | ai-coding-agent-pricing-2026               | Guides      | 2026-08-14 |
+| 39  | Free AI Video Generators in 2026: Most of Them Stopped Being Free              | best-free-ai-video-generators              | Tools       | 2026-08-17 |
 
 ---
 
@@ -61,14 +62,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Free AI Video Generators in 2026: Most of Them Stopped Being Free** (`drafts/best-free-ai-video-generators.mdx`, written 2026-08-17).
-  Needs `best-free-ai-video-generators-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
-  Findings: Sora removed free access 2026-01-10; Runway's free tier is 125 one-time credits, about 10 seconds of video ever;
-  Luma Agents launched March 2026 with no free option; Kling cut from a reported 166 to 66 daily credits.
-  Written because AI cites practical how-to and which-tool pages only, and video sits between the site's two most-cited topics.
 
 ### Comparisons
 
