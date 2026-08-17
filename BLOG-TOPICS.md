@@ -62,6 +62,14 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Free AI Video Generators in 2026: Most of Them Stopped Being Free** (`drafts/best-free-ai-video-generators.mdx`, written 2026-08-17).
+  Needs `best-free-ai-video-generators-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
+  Findings: Sora removed free access 2026-01-10; Runway's free tier is 125 one-time credits, about 10 seconds of video ever;
+  Luma Agents launched March 2026 with no free option; Kling cut from a reported 166 to 66 daily credits.
+  Written because AI cites practical how-to and which-tool pages only, and video sits between the site's two most-cited topics.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
