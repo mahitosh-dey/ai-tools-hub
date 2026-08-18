@@ -260,6 +260,18 @@ photoreal 3D render, no text, no letters, no logos
 
 ### Tools
 
+**Free AI Presentation Makers in 2026** — `best-free-ai-presentation-makers-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a fanned stack of translucent glass presentation slides floating in dark
+space at a slight angle, the front two slides glowing with cyan and
+violet neon edge light while the ones behind fade to unlit grey, thin
+wireframe polygon lines connecting only the lit slides, small glowing
+particles drifting like spent credits, volumetric haze, soft rim
+lighting, high contrast, photoreal 3D render, no text, no letters,
+no words, no numbers, no logos, no watermarks
+```
+
 **Free AI Video Generators in 2026** — `best-free-ai-video-generators-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,

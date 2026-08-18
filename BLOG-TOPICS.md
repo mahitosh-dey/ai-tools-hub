@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (39)
+## Published Posts (40)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -43,6 +43,7 @@
 | 37  | Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping           | cursor-alternatives-2026                   | Comparisons | 2026-08-13 |
 | 38  | AI Coding Agent Pricing in 2026: What $20 Actually Buys                        | ai-coding-agent-pricing-2026               | Guides      | 2026-08-14 |
 | 39  | Free AI Video Generators in 2026: Most of Them Stopped Being Free              | best-free-ai-video-generators              | Tools       | 2026-08-17 |
+| 40  | Free AI Presentation Makers in 2026: Free Is Metered Per Slide                 | best-free-ai-presentation-makers           | Tools       | 2026-08-18 |
 
 ---
 
@@ -62,15 +63,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Free AI Presentation Makers in 2026: Free Is Metered Per Slide** (`drafts/best-free-ai-presentation-makers.mdx`, written 2026-08-18).
-  Needs `best-free-ai-presentation-makers-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
-  Findings: Tome has no working website, tome.com does not resolve and tome.app returns deployment not found;
-  Gamma meters credits per slide and per image and free users cannot buy credits; SlidesAI's free tier is 120 credits per YEAR;
-  Beautiful.ai and Plus AI are trial-only despite being listed as free; plusdocs.com moved to plusai.com.
-  Chosen because presentations had zero title coverage and fits the practical which-tool shape that earns every citation this site gets.
 
 ### Comparisons
 
