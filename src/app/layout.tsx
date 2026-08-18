@@ -74,8 +74,8 @@ const organizationJsonLd = {
   logo: {
     "@type": "ImageObject",
     url: `${baseUrl}/ailogo.png`,
-    width: 512,
-    height: 512,
+    width: 500,
+    height: 500,
   },
   description:
     "Independent publication covering AI tool reviews, tutorials, and comparisons.",
