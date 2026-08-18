@@ -136,6 +136,19 @@ by thin cyan wireframes, teal and violet accents, volumetric haze, photoreal
 
 ### Guides
 
+**Are AI Detectors Accurate in 2026** — `are-ai-detectors-accurate-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a dense grid of small translucent glass document cards floating in dark
+space, almost all of them lit with soft neutral cyan edge light while
+three scattered cards glow hot red and violet as if wrongly singled out,
+thin wireframe polygon lines radiating from the red cards, faint drifting
+light particles, volumetric haze, soft rim lighting, high contrast,
+photoreal 3D render, no text, no letters, no words, no numbers,
+no logos, no watermarks
+```
+
+
 **AI Coding Agent Pricing 2026** — `ai-coding-agent-pricing-2026-cover.webp`
 > Six vessels at different fill levels encode "nobody sells the same unit" without text.
 > Supplied at 150 KB, optimiser took it to 60 KB at q78.

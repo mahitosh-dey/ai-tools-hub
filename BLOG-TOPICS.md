@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (40)
+## Published Posts (41)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -43,7 +43,8 @@
 | 37  | Cursor Alternatives in 2026: I Checked Which Ones Are Still Shipping           | cursor-alternatives-2026                   | Comparisons | 2026-08-13 |
 | 38  | AI Coding Agent Pricing in 2026: What $20 Actually Buys                        | ai-coding-agent-pricing-2026               | Guides      | 2026-08-14 |
 | 39  | Free AI Video Generators in 2026: Most of Them Stopped Being Free              | best-free-ai-video-generators              | Tools       | 2026-08-17 |
-| 40  | Free AI Presentation Makers in 2026: Free Is Metered Per Slide                 | best-free-ai-presentation-makers           | Tools       | 2026-08-18 |
+| 40  | Best AI Tool for PPT in 2026: Free Is Metered Per Slide                        | best-free-ai-presentation-makers           | Tools       | 2026-08-18 |
+| 41  | Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does                  | are-ai-detectors-accurate                  | Guides      | 2026-08-18 |
 
 ---
 
@@ -63,16 +64,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does** (`drafts/are-ai-detectors-accurate.mdx`, written 2026-08-18).
-  Needs `are-ai-detectors-accurate-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
-  Chosen from keyword research: the AI detector cluster is 1,633 queries with zero coverage on this site.
-  Deliberately excludes the bypass/cheat half of that demand.
-  Findings: Winston claims 99.98% and GPTZero 99%, a 50x disagreement on the same task; Turnitin publishes
-  0.013 native vs 0.014 ELL false positive rates, which contradicts the widely repeated ESL bias claim;
-  reliability figures only hold above 300 words; Sapling openly admits false positives are inevitable.
 
 ### Comparisons
 
