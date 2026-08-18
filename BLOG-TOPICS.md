@@ -64,6 +64,16 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does** (`drafts/are-ai-detectors-accurate.mdx`, written 2026-08-18).
+  Needs `are-ai-detectors-accurate-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
+  Chosen from keyword research: the AI detector cluster is 1,633 queries with zero coverage on this site.
+  Deliberately excludes the bypass/cheat half of that demand.
+  Findings: Winston claims 99.98% and GPTZero 99%, a 50x disagreement on the same task; Turnitin publishes
+  0.013 native vs 0.014 ELL false positive rates, which contradicts the widely repeated ESL bias claim;
+  reliability figures only hold above 300 words; Sapling openly admits false positives are inevitable.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
