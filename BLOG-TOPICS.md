@@ -63,6 +63,15 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Free AI Presentation Makers in 2026: Free Is Metered Per Slide** (`drafts/best-free-ai-presentation-makers.mdx`, written 2026-08-18).
+  Needs `best-free-ai-presentation-makers-cover.webp` from the `coverImagePrompt` in the draft, then move to `content/posts/`.
+  Findings: Tome has no working website, tome.com does not resolve and tome.app returns deployment not found;
+  Gamma meters credits per slide and per image and free users cannot buy credits; SlidesAI's free tier is 120 credits per YEAR;
+  Beautiful.ai and Plus AI are trial-only despite being listed as free; plusdocs.com moved to plusai.com.
+  Chosen because presentations had zero title coverage and fits the practical which-tool shape that earns every citation this site gets.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
