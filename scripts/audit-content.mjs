@@ -82,10 +82,59 @@ function frontmatterValue(lines, key) {
   return null;
 }
 
+/**
+ * Where a mention sits decides whether it is an error. Prose saying
+ * "Windsurf is gone" is correct writing. The same word in a table cell
+ * beside a price is a claim that the product exists and costs that.
+ * These classify the surrounding line so the report can rank by severity
+ * instead of printing every occurrence at the same volume.
+ */
+const isTableRow = (ln) => /^\s*\|.*\|\s*$/.test(ln) && !/^\s*\|[\s:|-]+\|\s*$/.test(ln);
+const hasPrice = (ln) => /\$\s?\d/.test(ln);
+const RECOMMENDS =
+  /\b(use|try|pick|choose|go with|recommend|start with|best|alternative|option|worth|switch to|sign up|check out|see)\b/i;
+
+/** True when the retired term appears inside markdown link anchor text. */
+function inAnchorText(line, re) {
+  for (const m of line.matchAll(/\[([^\]]*)\]\([^)]*\)/g)) {
+    if (new RegExp(re.source, "i").test(m[1])) return true;
+  }
+  return false;
+}
+
+/**
+ * Same-line proximity. An FAQ answer runs to 600 characters, so "there is a
+ * price on this line" says nothing about whether the price belongs to the
+ * retired product. Cursor's review lists Gemini 2.5 Pro as a selectable model
+ * 400 characters away from its plan prices, which is not a claim that Gemini
+ * 2.5 is current. Table cells are tight enough that the whole row counts.
+ */
+const NEAR = 80;
+const around = (line, at, len) => line.slice(Math.max(0, at - NEAR), at + len + NEAR);
+
+/**
+ * Severity for one occurrence.
+ *   high   asserts the product exists at a price, or steers a reader to it
+ *   med    reads as a recommendation
+ *   low    a bare mention with nothing riding on it
+ */
+function severity(line, re, at, len) {
+  const table = isTableRow(line);
+  const scope = table ? line : around(line, at, len);
+  const price = hasPrice(scope);
+  const rec = RECOMMENDS.test(scope);
+  if (table && price) return "high"; // a dead product with a price beside it
+  if (inAnchorText(line, re)) return "high"; // link text sends people to it
+  if (price && rec) return "high";
+  if (table || rec) return "med";
+  return "low";
+}
+
 /** Retired products asserted as current, ignoring correction context. */
 function checkStale(posts) {
   const rows = [];
   let total = 0;
+  let highTotal = 0;
   for (const { slug, lines } of posts) {
     // A post whose own title or excerpt names the retired thing is about it.
     // Without this, the ElevenLabs alternatives piece scores 19 hits for
@@ -104,11 +153,17 @@ function checkStale(posts) {
     const SUBJECT_THRESHOLD = 8;
 
     const hits = new Map();
+    // Terms the post corrects somewhere. Tracked separately so a post that
+    // explains a rename and then contradicts itself is reported louder,
+    // not silenced. cursor-ai-review-2026 priced Windsurf at $15 in a table
+    // twelve lines above a paragraph explaining Windsurf no longer exists.
+    const corrected = new Set();
+
     lines.forEach((ln, i) => {
       // Three lines each way. A correction usually sits beside its claim,
       // but "X was retired" can be a paragraph above the next mention.
       const window = lines.slice(Math.max(0, i - 3), i + 4).join(" ");
-      if (CONTEXT_OK.test(window)) return;
+      const isCorrection = CONTEXT_OK.test(window);
       for (const [re, why] of RETIRED) {
         const n = (ln.match(re) || []).length;
         if (!n) continue;
@@ -116,24 +171,54 @@ function checkStale(posts) {
         // Skip if the post is about this thing rather than recommending it.
         if (new RegExp(re.source, "i").test(subject)) continue;
         if ((body.match(re) || []).length >= SUBJECT_THRESHOLD) continue;
-        const prev = hits.get(key) || { n: 0, why, line: i + 1 };
-        hits.set(key, { ...prev, n: prev.n + n });
+        if (isCorrection) {
+          corrected.add(key);
+          continue;
+        }
+        const prev = hits.get(key) || { n: 0, why, at: [], sev: "low" };
+        prev.n += n;
+        // Severity is per match, because position decides it.
+        for (const m of ln.matchAll(new RegExp(re.source, re.flags.includes("g") ? re.flags : re.flags + "g"))) {
+          const sev = severity(ln, re, m.index, m[0].length);
+          prev.at.push({ line: i + 1, sev });
+          if (sev === "high" || (sev === "med" && prev.sev === "low")) prev.sev = sev;
+        }
+        hits.set(key, prev);
       }
     });
+
+    // Mark contradictions: the post knows better elsewhere and still asserts it.
+    // Only when the assertion itself carries weight. A passing low-severity
+    // mention alongside a correction is ordinary writing, and flagging those
+    // buried the one real case in four false positives: cursor-alternatives
+    // narrating its own past mistake is exactly the writing you want.
+    for (const [key, h] of hits) {
+      if (corrected.has(key) && h.sev !== "low") h.contradiction = true;
+    }
+
     if (hits.size) {
       const n = [...hits.values()].reduce((a, h) => a + h.n, 0);
+      const high = [...hits.values()].filter((h) => h.sev === "high" || h.contradiction).length;
       total += n;
-      rows.push({ slug, n, hits });
+      highTotal += high;
+      rows.push({ slug, n, high, hits });
     }
   }
-  rows.sort((a, b) => b.n - a.n);
+  // Worst first: posts with high-severity claims outrank posts with many mentions.
+  rows.sort((a, b) => b.high - a.high || b.n - a.n);
+
+  const MARK = { high: "HIGH", med: "med ", low: "low " };
   console.log("\n=== Retired products asserted as current ===");
   if (!rows.length) console.log("  none");
-  for (const { slug, n, hits } of rows) {
-    console.log(`  ${pad(slug, 44)} ${String(n).padStart(3)}`);
-    for (const [k, h] of hits) console.log(`      L${pad(h.line, 5)} ${pad(k, 20)} ${h.why}`);
+  for (const { slug, n, high, hits } of rows) {
+    console.log(`  ${pad(slug, 44)} ${String(n).padStart(3)}${high ? `  ${high} high` : ""}`);
+    for (const [k, h] of hits) {
+      const where = [...new Set(h.at.map((a) => `L${a.line}`))].join(",");
+      const flag = h.contradiction ? "  CONTRADICTS ITSELF" : "";
+      console.log(`      ${MARK[h.sev]} ${pad(k, 20)} ${pad(where, 18)} ${h.why}${flag}`);
+    }
   }
-  console.log(`  total: ${total}`);
+  console.log(`  total: ${total}, high severity: ${highTotal}`);
   return total;
 }
 
