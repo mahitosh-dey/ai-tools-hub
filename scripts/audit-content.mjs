@@ -320,12 +320,54 @@ async function checkExternalLinks(posts) {
   return dead;
 }
 
+/**
+ * The site's own interface. A retired product name hard-coded into a component
+ * is invisible to every check above, because those only read content/posts.
+ * GPT-4o sat in the homepage hero illustration for months for exactly that
+ * reason, on a site whose whole subject is catching stale AI references.
+ */
+async function checkUI() {
+  const roots = ["src"];
+  const files = [];
+  async function walk(dir) {
+    for (const e of await readdir(dir, { withFileTypes: true })) {
+      const full = join(dir, e.name);
+      if (e.isDirectory()) await walk(full);
+      else if (/\.(tsx|ts)$/.test(e.name)) files.push(full);
+    }
+  }
+  for (const r of roots) await walk(r);
+
+  const rows = [];
+  for (const f of files) {
+    const text = await readFile(f, "utf8");
+    const lines = text.split("\n");
+    lines.forEach((ln, i) => {
+      // Only user-visible strings matter here. A retired name inside an import
+      // path, a URL or a redirect rule is usually deliberate.
+      if (/^\s*(import|\/\/)/.test(ln)) return;
+      for (const [re, why] of RETIRED) {
+        if (!re.test(ln)) continue;
+        const key = re.source.replace(/\\b|\(\?!.*?\)/g, "");
+        rows.push({ file: f, line: i + 1, key, why });
+      }
+    });
+  }
+  console.log("\n=== Retired products in the UI (src) ===");
+  if (!rows.length) console.log("  none");
+  for (const r of rows) {
+    console.log(`  ${pad(r.file + ":" + r.line, 44)} ${pad(r.key, 20)} ${r.why}`);
+  }
+  return rows.length;
+}
+
 const posts = await loadPosts();
 console.log(`Auditing ${posts.length} posts in ${POSTS_DIR}`);
 checkStale(posts);
 checkInternalLinks(posts);
 checkFreshness(posts);
 checkPrices(posts);
+await checkUI();
 if (arg("--links")) await checkExternalLinks(posts);
 else console.log("\n(skipping external link check; pass --links to include it)");
 console.log("");

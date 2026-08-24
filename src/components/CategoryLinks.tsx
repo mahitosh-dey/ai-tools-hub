@@ -7,6 +7,7 @@ const CATEGORIES = [
   { name: "Tutorials", slug: "tutorials", icon: "📖", accent: "#38bdf8", bg: "rgba(56,189,248,0.08)", border: "rgba(56,189,248,0.2)" },
   { name: "Comparisons", slug: "comparisons", icon: "⚖️", accent: "#4ade80", bg: "rgba(74,222,128,0.08)", border: "rgba(74,222,128,0.2)" },
   { name: "Tools", slug: "tools", icon: "🛠️", accent: "#f97316", bg: "rgba(249,115,22,0.08)", border: "rgba(249,115,22,0.2)" },
+  { name: "Guides", slug: "guides", icon: "🧭", accent: "#22d3ee", bg: "rgba(34,211,238,0.08)", border: "rgba(34,211,238,0.2)" },
 ];
 
 export default function CategoryLinks({ counts = {} }: { counts?: Record<string, number> }) {

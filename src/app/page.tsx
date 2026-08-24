@@ -40,7 +40,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section style={{ padding: "4rem 0 3rem", borderBottom: "1px solid #252538" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
+        <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
         <div>
           <div
             style={{
@@ -137,6 +137,11 @@ export default function HomePage() {
         </div>
 
         </div>
+        <style>{`
+          @media (max-width: 860px) {
+            .hero-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* Featured Post */}

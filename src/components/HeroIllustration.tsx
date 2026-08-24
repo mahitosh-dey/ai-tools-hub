@@ -138,7 +138,7 @@ export default function HeroIllustration() {
 
       {/* ── Floating AI tool chip labels (top) ── */}
       <rect x="148" y="10" width="64" height="20" rx="4" fill="#13131e" stroke="#a855f7" strokeWidth="0.75" strokeOpacity="0.55" />
-      <text x="180" y="24" fill="#c084fc" fontSize="9.5" textAnchor="middle" fontFamily="monospace" fontWeight="500">GPT-4o</text>
+      <text x="180" y="24" fill="#c084fc" fontSize="9.5" textAnchor="middle" fontFamily="monospace" fontWeight="500">ChatGPT</text>
 
       <rect x="252" y="14" width="58" height="20" rx="4" fill="#13131e" stroke="#a855f7" strokeWidth="0.75" strokeOpacity="0.45" />
       <text x="281" y="28" fill="#c084fc" fontSize="9.5" textAnchor="middle" fontFamily="monospace" fontWeight="500">Claude</text>
