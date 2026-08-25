@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "audit": "node scripts/audit-content.mjs",
-    "audit:links": "node scripts/audit-content.mjs --links"
+    "audit:links": "node scripts/audit-content.mjs --links",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
