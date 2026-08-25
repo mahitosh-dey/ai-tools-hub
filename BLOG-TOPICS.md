@@ -65,6 +65,15 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **What Happened to These AI Tools: Dead, Renamed, and Still Alive** (`drafts/what-happened-to-ai-tools.mdx`, written 2026-08-25).
+  Needs `what-happened-to-ai-tools-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
+  Built as a backlink asset, not a normal post. Consolidates every liveness finding already scattered across the 41 posts
+  into one maintained reference page with a Checked date and method per row. Reference pages earn links, articles earn reads.
+  Targets the real query clusters found in autocomplete: "what happened to windsurf" and "is play.ht still working",
+  which is why those two get dedicated sections. Keep it updated whenever a check turns something up.
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
