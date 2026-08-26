@@ -136,6 +136,20 @@ by thin cyan wireframes, teal and violet accents, volumetric haze, photoreal
 
 ### Guides
 
+**What Happened to These AI Tools** — `what-happened-to-ai-tools-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a grid of translucent glass server or tool tiles floating in dark space,
+most of them glowing steadily with cyan edge light, three of them dark
+and fractured with their light extinguished and thin cracks running
+through the glass, two more mid-transition glowing violet as if being
+relabelled, faint wireframe lines connecting the living tiles and broken
+threads hanging from the dead ones, volumetric haze, soft rim lighting,
+high contrast, photoreal 3D render, no text, no letters, no words,
+no numbers, no logos, no watermarks
+```
+
+
 **Are AI Detectors Accurate in 2026** — `are-ai-detectors-accurate-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,

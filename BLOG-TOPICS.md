@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (41)
+## Published Posts (42)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -45,6 +45,7 @@
 | 39  | Free AI Video Generators in 2026: Most of Them Stopped Being Free              | best-free-ai-video-generators              | Tools       | 2026-08-17 |
 | 40  | Best AI Tool for PPT in 2026: Free Is Metered Per Slide                        | best-free-ai-presentation-makers           | Tools       | 2026-08-18 |
 | 41  | Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does                  | are-ai-detectors-accurate                  | Guides      | 2026-08-18 |
+| 42  | What Happened to These AI Tools: Dead, Renamed, and Still Alive                | what-happened-to-ai-tools                  | Guides      | 2026-08-26 |
 
 ---
 
@@ -64,15 +65,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **What Happened to These AI Tools: Dead, Renamed, and Still Alive** (`drafts/what-happened-to-ai-tools.mdx`, written 2026-08-25).
-  Needs `what-happened-to-ai-tools-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
-  Built as a backlink asset, not a normal post. Consolidates every liveness finding already scattered across the 41 posts
-  into one maintained reference page with a Checked date and method per row. Reference pages earn links, articles earn reads.
-  Targets the real query clusters found in autocomplete: "what happened to windsurf" and "is play.ht still working",
-  which is why those two get dedicated sections. Keep it updated whenever a check turns something up.
 
 ### Comparisons
 
