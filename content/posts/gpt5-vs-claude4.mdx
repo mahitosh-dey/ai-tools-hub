@@ -2,7 +2,7 @@
 title: "GPT-5.6 vs Claude 5: What Actually Changed in 2026"
 seoTitle: "GPT-5.6 vs Claude 5: The 2026 Comparison"
 date: "2026-06-10"
-updatedAt: "2026-08-25"
+updatedAt: "2026-09-01"
 excerpt: "Both vendors stopped shipping one flagship and started shipping families. The question is no longer which brand but which tier. Verified prices and dates."
 category: "Comparisons"
 tags:
@@ -19,7 +19,7 @@ faqs:
   - q: "What happened to GPT-5 and Claude 4?"
     a: "Both were superseded. OpenAI's current flagship line is the GPT-5.6 family, and GPT-5.5 came and went between them. On Anthropic's side, Claude 4 gave way to Opus 4.6, then 4.7, then 4.8 across the first half of 2026, and then the Claude 5 family: Claude Opus 5 arrived on July 24, 2026, alongside Sonnet 5 and Fable 5. If an article is still comparing GPT-5 against Claude 4, it is describing roughly two generations back on each side."
   - q: "What does the Claude 5 family cost on the API?"
-    a: "Read against Anthropic's model reference on August 4, 2026, per million tokens input and output: Claude Fable 5 is $10 and $50, Claude Opus 5 is $5 and $25, Claude Sonnet 5 is $3 and $15 with an introductory $2 and $10 running through August 31, 2026, and Claude Haiku 4.5 is $1 and $5. Context windows are 1 million tokens on everything except Haiku 4.5, which is 200,000."
+    a: "Read against Anthropic's model reference on August 4, 2026, per million tokens input and output: Claude Fable 5 is $10 and $50, Claude Opus 5 is $5 and $25, Claude Sonnet 5 is $2 and $10, and Claude Haiku 4.5 is $1 and $5. One correction there: this page previously said Sonnet 5 was $3 and $15 with an introductory rate expiring on August 31, 2026. I re-checked on September 1 and Anthropic still lists $2 and $10 with no introductory label anywhere on the page, so the $3 figure has been removed rather than promoted. Context windows are 1 million tokens on everything except Haiku 4.5, which is 200,000."
   - q: "Which model should I use for coding in 2026?"
     a: "Claude Opus 5 is positioned specifically for complex agentic coding, and Fable 5 sits above it for the most demanding long-horizon work. On the OpenAI side, Sol is the frontier tier. What I would not do is pick based on the head-to-head coding percentages circulating right now, because I could not trace any of them to a published benchmark run. Pick the tier that matches your task size, then test both on your own code, which is the only benchmark that reflects your codebase."
   - q: "Why won't you give me a benchmark comparison table?"
@@ -62,16 +62,18 @@ The shared pattern is the interesting part. Both vendors independently concluded
 
 ## What they cost
 
-API pricing per million tokens, input and output, read off Anthropic's model reference on August 4, 2026:
+API pricing per million tokens, input and output, read off Anthropic's model reference on August 4, 2026 and re-checked on September 1, 2026:
 
 | Model | Input | Output | Context |
 |---|---|---|---|
 | Claude Fable 5 | $10 | $50 | 1M |
 | Claude Opus 5 | $5 | $25 | 1M |
-| Claude Sonnet 5 | $3 ($2 intro) | $15 ($10 intro) | 1M |
+| Claude Sonnet 5 | $2 | $10 | 1M |
 | Claude Haiku 4.5 | $1 | $5 | 200K |
 
-The Sonnet 5 introductory rate runs through August 31, 2026, so if you are budgeting past that date use the $3 and $15 figures.
+A correction on that Sonnet 5 row. This page used to show $3 and $15 as the standard rate with $2 and $10 as an introductory price expiring on August 31, 2026, and told you to budget with the higher pair after that date. I went back to Anthropic on September 1, the day after it supposedly expired, and the page lists Sonnet 5 at $2 and $10 with the word introductory appearing nowhere on it. Budget with $2 and $10.
+
+Worth knowing where $3 and $15 comes from, because it is a real Anthropic price: it is what Sonnet 4.6 costs. Whether this page originally conflated the two models or Anthropic restructured the tier, I cannot tell from the outside, and I am not going to invent a reason.
 
 On the OpenAI side I can report a dated movement rather than a full table: on July 30, 2026, GPT-5.6 Luna dropped 80% in price and Terra dropped 20%. An 80% cut on the cheap tier is a real signal about where that vendor expects volume to go.
 
@@ -169,4 +171,4 @@ Check whether what you are reading names a model that still exists. The fastest 
 
 And be suspicious of precise benchmark numbers without a link to the run. One decimal place is not evidence.
 
-Verified August 4, 2026 against Anthropic's published model reference and OpenAI's GPT-5.6 announcement. Model lineups, release dates, API prices and context windows are from those sources. Consumer plan prices are sticker rates and worth confirming at checkout, since regional pricing is now common. Head-to-head capability claims are deliberately absent, as explained above.
+Verified August 4, 2026 against Anthropic's published model reference and OpenAI's GPT-5.6 announcement, with the Anthropic prices re-checked on September 1, 2026, which is when the Sonnet 5 row was corrected. Model lineups, release dates, API prices and context windows are from those sources. Consumer plan prices are sticker rates and worth confirming at checkout, since regional pricing is now common. Head-to-head capability claims are deliberately absent, as explained above.
