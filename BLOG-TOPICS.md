@@ -66,6 +66,15 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Best AI for Small Business in 2026: What the Stack Actually Costs** (`drafts/best-ai-for-small-business.mdx`, written 2026-09-02).
+  Needs `best-ai-for-small-business-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
+  Chosen from keyword research: small business was 13 of the top 34 uncovered queries, ~500 demand score, zero title coverage.
+  Angle is the arithmetic nobody publishes, plus the seat multiplication when a second person joins.
+  Verified today: Fireflies $18/$10, Otter $16.99/$8.33, Zapier task ladder, Xero $29/$50/$75.
+  Not quoted: QuickBooks (Intuit rate-limits), Canva (403), Mailchimp and Tidio (JS-rendered).
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
