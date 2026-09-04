@@ -287,6 +287,19 @@ photoreal 3D render, no text, no letters, no logos
 
 ### Tools
 
+**Best AI for Small Business** — `best-ai-for-small-business-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a stack of translucent glass subscription cards floating in dark space
+arranged like a rising column, each card glowing a slightly stronger
+cyan than the one below it so the stack reads as accumulating cost,
+the topmost card glowing hot violet, thin wireframe lines connecting
+them vertically, small drifting light particles, volumetric haze,
+soft rim lighting, high contrast, photoreal 3D render, no text,
+no letters, no words, no numbers, no logos, no watermarks
+```
+
+
 **Free AI Presentation Makers in 2026** — `best-free-ai-presentation-makers-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,

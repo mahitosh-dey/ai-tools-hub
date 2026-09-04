@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (42)
+## Published Posts (43)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -46,6 +46,7 @@
 | 40  | Best AI Tool for PPT in 2026: Free Is Metered Per Slide                        | best-free-ai-presentation-makers           | Tools       | 2026-08-18 |
 | 41  | Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does                  | are-ai-detectors-accurate                  | Guides      | 2026-08-18 |
 | 42  | What Happened to These AI Tools: Dead, Renamed, and Still Alive                | what-happened-to-ai-tools                  | Guides      | 2026-08-26 |
+| 43  | Best AI for Small Business in 2026: What the Stack Actually Costs              | best-ai-for-small-business                 | Tools       | 2026-09-04 |
 
 ---
 
@@ -65,15 +66,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Best AI for Small Business in 2026: What the Stack Actually Costs** (`drafts/best-ai-for-small-business.mdx`, written 2026-09-02).
-  Needs `best-ai-for-small-business-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
-  Chosen from keyword research: small business was 13 of the top 34 uncovered queries, ~500 demand score, zero title coverage.
-  Angle is the arithmetic nobody publishes, plus the seat multiplication when a second person joins.
-  Verified today: Fireflies $18/$10, Otter $16.99/$8.33, Zapier task ladder, Xero $29/$50/$75.
-  Not quoted: QuickBooks (Intuit rate-limits), Canva (403), Mailchimp and Tidio (JS-rendered).
 
 ### Comparisons
 
