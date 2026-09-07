@@ -43,7 +43,7 @@ const RETIRED = [
   [/\bGoogle Bard\b/gi, "renamed Gemini"],
   [/\bWindsurf\b/gi, "now Devin Desktop"],
   [/\bCodeium\b/gi, "now Devin"],
-  [/\bSuno Basic\b/gi, "no such tier; Suno sells Free, Pro $8, Premier $24"],
+  [/\bSuno Basic\b/gi, "no such tier; Suno sells Free, Pro $10/mo ($8 annual), Premier $30/mo ($24 annual)"],
   [/\bPlay\.ht\b/gi, "dead, NXDOMAIN"],
   [/\bLOVO\b/gi, "Chapter 7 bankruptcy"],
   [/chat\.openai\.com/gi, "now chatgpt.com"],
