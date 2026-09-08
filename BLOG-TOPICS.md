@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (43)
+## Published Posts (44)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -47,6 +47,7 @@
 | 41  | Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does                  | are-ai-detectors-accurate                  | Guides      | 2026-08-18 |
 | 42  | What Happened to These AI Tools: Dead, Renamed, and Still Alive                | what-happened-to-ai-tools                  | Guides      | 2026-08-26 |
 | 43  | Best AI for Small Business in 2026: What the Stack Actually Costs              | best-ai-for-small-business                 | Tools       | 2026-09-04 |
+| 44  | Free AI Music Generators in 2026: You Can Make Songs, Not Keep Them            | best-free-ai-music-generators              | Tools       | 2026-09-08 |
 
 ---
 
@@ -66,16 +67,6 @@
 - Canva AI Review: Magic Studio Features Worth Using?
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
-
-### Drafts awaiting a cover image
-
-- **Free AI Music Generators in 2026: You Can Make Songs, Not Keep Them** (`drafts/best-free-ai-music-generators.mdx`, written 2026-09-08).
-  Needs `best-free-ai-music-generators-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
-  Completes the generative-media set: images, video, PPT, now music.
-  Findings: Suno free makes ~300 songs a month with ZERO downloads and no commercial use; Suno Pro generates 500 but downloads 20;
-  AIVA free gives 3 downloads but keeps the copyright, which only transfers at the 33 euro tier; Soundraw Creator $5.99 is the
-  cheapest verified commercial-use route; Beatoven has no findable pricing page.
-  Not verified: Udio, Stable Audio, Mubert, Boomy (all JS-rendered).
 
 ### Comparisons
 
