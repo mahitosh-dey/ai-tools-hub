@@ -68,6 +68,17 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **AI Tools for Client and Pitch Decks in 2026: The Client-Ready Parts Are Paid** (`drafts/ai-tools-for-client-and-pitch-decks.mdx`, written 2026-09-08).
+  Needs `ai-tools-for-client-and-pitch-decks-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
+  Second post in the presentation cluster, the only one where GSC position is moving (33.8 -> 19 -> 7.7).
+  Targets "best consulting presentation ai tools free", the top 7-day query, plus investor/sales/client deck terms with zero prior coverage.
+  Findings: Pitch free gives 100 AI credits that do NOT renew, and gates PowerPoint export + custom fonts behind Plus (10 euros);
+  Gamma's Made with Gamma badge needs Plus to remove; Slidebean is purpose-built for startup decks.
+  Fourth tool found with the one-time-credit pattern after Runway, Gamma and Suno.
+  Not verified: exact Pitch/Slidebean prices (JS-rendered), Canva (403).
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
