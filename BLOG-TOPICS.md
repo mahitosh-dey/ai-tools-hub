@@ -67,6 +67,16 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
+### Drafts awaiting a cover image
+
+- **Free AI Music Generators in 2026: You Can Make Songs, Not Keep Them** (`drafts/best-free-ai-music-generators.mdx`, written 2026-09-08).
+  Needs `best-free-ai-music-generators-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
+  Completes the generative-media set: images, video, PPT, now music.
+  Findings: Suno free makes ~300 songs a month with ZERO downloads and no commercial use; Suno Pro generates 500 but downloads 20;
+  AIVA free gives 3 downloads but keeps the copyright, which only transfers at the 33 euro tier; Soundraw Creator $5.99 is the
+  cheapest verified commercial-use route; Beatoven has no findable pricing page.
+  Not verified: Udio, Stable Audio, Mubert, Boomy (all JS-rendered).
+
 ### Comparisons
 
 - Midjourney vs Stable Diffusion: Which Is Better for Free?
