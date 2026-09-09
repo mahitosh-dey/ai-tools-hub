@@ -2,7 +2,7 @@
 title: "What AI Pricing Did in 2026: Every Major Change, Dated and Sourced"
 seoTitle: "AI Tool Pricing Changes 2026: Dated and Verified"
 date: "2026-07-29"
-updatedAt: "2026-08-25"
+updatedAt: "2026-09-09"
 excerpt: "2026 was the year AI tools stopped selling subscriptions and started selling credits. A dated record of every major change, and what I could verify."
 category: "Guides"
 tags:
@@ -183,15 +183,21 @@ Every row below carries where I checked it and when. **Verify before you buy.** 
 
 | Tool | Free tier | Entry paid | Source | Checked |
 | --- | --- | --- | --- | --- |
-| Claude | Yes | Pro $17/mo annual, $20 monthly | claude.com, official | 2026-07-29 |
-| Notion | Yes, trial AI only | Plus $10, Business $20/member | notion.com, official | 2026-07-28 |
-| Perplexity | Yes | Pro $20/mo or $200/yr | perplexity.ai, official | 2026-07-28 |
-| GitHub Copilot | Yes, 2,000 completions | Pro $10/mo | github.com, official | 2026-07-29 |
-| ElevenLabs | Yes, 10k credits | Starter $6/mo | elevenlabs.io, official | 2026-07-29 |
+| Claude | Yes | Pro $17/mo annual, $20 monthly | anthropic.com, official | 2026-09-09 |
+| Notion | Yes, trial AI only | Plus $10, Business $20/member | notion.com, official | 2026-09-09 |
+| Perplexity | Yes | Pro $20/mo or $200/yr | was official, now blocked | 2026-07-28 |
+| GitHub Copilot | Yes, 2,000 completions | Pro $10/mo | github.com, official | 2026-09-09 |
+| ElevenLabs | Yes, 10k credits | Starter $6/mo | elevenlabs.io, official | 2026-09-09 |
 | ChatGPT | Yes | Plus $20/mo | third-party, unverified | 2026-07-29 |
 | Midjourney | No | Basic $10/mo | third-party, unverified | 2026-07-29 |
 
-Two of those rows are marked unverified for a specific reason. **OpenAI and Midjourney both returned HTTP 403 when I tried to read their pricing pages**, twice each, from two different URLs. The figures I have for them come from third-party aggregators that broadly agree with each other, which is weaker evidence than a vendor's own page.
+Three rows now carry a caveat rather than two, and the change is worth explaining.
+
+On September 9, 2026 I re-checked every row against the vendor's own page. Claude, Notion, GitHub Copilot and ElevenLabs all still hold exactly as printed, so those four carry today's date. ElevenLabs states the free tier as 10,000 credits and Starter at $6 with 30,000 in its own FAQ, and Anthropic still lists Pro at $17 with the annual discount and $20 monthly.
+
+Perplexity moved into the caveat column. It was read from their own pricing page in July, and perplexity.ai now returns a 403 to automated requests, as does their help centre. So I cannot re-confirm $20 a month or $200 a year, and the row keeps its July date rather than borrowing today's. Their API documentation is still readable, but that prices Sonar tokens rather than consumer plans, so it does not help here.
+
+The other two rows are marked unverified for a specific reason. **OpenAI and Midjourney both returned HTTP 403 when I tried to read their pricing pages**, twice each, from two different URLs. The figures I have for them come from third-party aggregators that broadly agree with each other, which is weaker evidence than a vendor's own page.
 
 Most comparison articles would print those numbers without the caveat. I would rather you know which half of my table is load-bearing.
 
@@ -227,13 +233,15 @@ Because you should ask that of anything claiming to be a pricing reference.
 
 Every figure marked official came from the vendor's own pricing or documentation page, read on the date in the table. Where a vendor's page displayed both monthly and annual rates, I recorded both, because pricing pages frequently default to the annual figure and comparison articles frequently copy it as if it were the monthly one.
 
-Where I could not reach an official page, the row says so. I did not fill those gaps with confident-sounding numbers from a competitor's blog and present them as verified. Two rows in that table are weaker than the others and they are labelled.
+Where I could not reach an official page, the row says so. I did not fill those gaps with confident-sounding numbers from a competitor's blog and present them as verified. Three rows in that table are weaker than the others and they are labelled. Two of them were always weaker. Perplexity became weaker in September, when their site started refusing the automated request that had worked in July, which is a useful reminder that sourcing can decay even when the price does not.
 
 Dated changes came from vendor announcements and documentation where available. Where a fact came only from third-party reporting, I have said so in the entry.
 
-I will not be revising this page monthly, and I want to be upfront about that rather than let it quietly rot while looking current. It is a record of 2026, dated on purpose. The changelog entries stay true forever. The snapshot table does not, which is exactly why every row carries the day I checked it.
+I do not revise this page on a schedule, and I want to be upfront about that rather than let it quietly rot while looking current. It is a record of 2026, dated on purpose. The changelog entries stay true forever. The snapshot table does not, which is exactly why every row carries the day I checked it.
 
-If you are reading this well after July 2026, use the changelog and ignore the table.
+That table was re-checked on September 9, 2026, six weeks after it was first built. Four of the seven rows were confirmed unchanged against the vendor's own page and now carry September dates. Nothing in it had drifted, which is worth reporting as plainly as a correction would have been.
+
+If you are reading this well after the dates in the Checked column, use the changelog and treat the table as a starting point rather than an answer. The changelog is history and does not move. The table is a photograph.
 
 One related piece of housekeeping for anyone publishing in this space: AI assistants cite sources for pricing questions constantly, and a page with dated, sourced figures is exactly the kind of thing they pick up. [How to check whether AI is citing your site](/blog/perplexity-seo-checker) covers the free ways to find out, with real citation data from this blog.
 
