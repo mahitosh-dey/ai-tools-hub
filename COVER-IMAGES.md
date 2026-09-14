@@ -1,6 +1,6 @@
 # Blog Cover Images — Guide
 
-Last updated: 2026-08-14
+Last updated: 2026-09-14
 
 Every published post has a cover image. Until now only 6 of the prompts that
 produced them were written down, so each new cover was re-invented from scratch
@@ -336,6 +336,24 @@ dark ones sit disconnected, floating light particles, volumetric haze,
 soft rim lighting, high contrast, photoreal 3D render, no text,
 no letters, no words, no numbers, no logos, no watermarks
 ```
+
+**AI Tools for Client and Pitch Decks in 2026** — `ai-tools-for-client-and-pitch-decks-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black, a
+single translucent glass presentation slide floating centrally in dark
+space and glowing cyan, clearly polished and finished, with three
+smaller glass panels beside it representing branding, export and
+sharing, each one dimmed and sealed behind a thin violet locked outline,
+faint wireframe lines running between them, floating light particles,
+volumetric haze, soft rim lighting, high contrast, photoreal 3D render,
+no text, no letters, no words, no numbers, no logos, no watermarks
+```
+Delivered 2026-09-14 at 1672x941 and 130 KB, the largest cover on the site
+and the only one over the 120 KB ceiling. The optimiser took it to 1600x900
+and 52 KB at q78, a 60 percent reduction. Render matched the prompt closely:
+the finished slide reads cyan and lit, the branding, export and sharing
+panels each carry a violet padlock, and there is no text anywhere in frame.
+
 
 **Best ElevenLabs Alternatives** — `best-elevenlabs-alternatives-cover.webp`
 ```
