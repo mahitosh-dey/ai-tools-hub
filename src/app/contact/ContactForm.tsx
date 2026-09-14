@@ -8,7 +8,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:hello@aivaultblog.com?subject=${encodeURIComponent(form.subject || "Contact from AI Vault")}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    const mailto = `mailto:mahitosh@aivaultblog.com?subject=${encodeURIComponent(form.subject || "Contact from AI Vault")}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
     window.location.href = mailto;
     setStatus("success");
   };
@@ -34,8 +34,8 @@ export default function ContactForm() {
         I&apos;m Mahitosh Dey, the founder and sole author of AI Vault. Every message here comes to me
         directly. Whether it&apos;s a review request, a correction, or a collaboration idea, I read all of
         them. You can also reach me directly at{" "}
-        <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-          hello@aivaultblog.com
+        <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+          mahitosh@aivaultblog.com
         </a>.
       </p>
       <p style={{ color: "#64748b", marginBottom: "2.5rem", lineHeight: 1.7, fontSize: "0.9rem" }}>
@@ -87,8 +87,8 @@ export default function ContactForm() {
           <h3 style={{ color: "#34d399", marginBottom: "0.5rem" }}>Your mail app should have opened</h3>
           <p style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
             If it didn&apos;t, email me directly at{" "}
-            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-              hello@aivaultblog.com
+            <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+              mahitosh@aivaultblog.com
             </a>
           </p>
         </div>

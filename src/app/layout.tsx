@@ -88,7 +88,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
-    email: "hello@aivaultblog.com",
+    email: "mahitosh@aivaultblog.com",
     url: `${baseUrl}/contact`,
     availableLanguage: ["English"],
   },

@@ -55,7 +55,7 @@ export default function Footer() {
             real assessments to help you work smarter.
           </p>
           <a
-            href="mailto:hello@aivaultblog.com"
+            href="mailto:mahitosh@aivaultblog.com"
             style={{
               color: "#64748b",
               fontSize: "0.82rem",
@@ -66,7 +66,7 @@ export default function Footer() {
               marginBottom: "0.6rem",
             }}
           >
-            <span>✉️</span> hello@aivaultblog.com
+            <span>✉️</span> mahitosh@aivaultblog.com
           </a>
           <a
             href="https://www.facebook.com/share/1EhMzVMJmr/"

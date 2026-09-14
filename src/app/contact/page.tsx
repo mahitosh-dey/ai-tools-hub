@@ -6,7 +6,7 @@ const baseUrl = "https://www.aivaultblog.com";
 export const metadata: Metadata = {
   title: "Contact Mahitosh Dey | AI Vault",
   description:
-    "Get in touch about review requests, corrections, or general questions on AI tools. I respond within 24 to 48 hours. Direct email: hello@aivaultblog.com.",
+    "Get in touch about review requests, corrections, or general questions on AI tools. I respond within 24 to 48 hours. Direct email: mahitosh@aivaultblog.com.",
   alternates: { canonical: `${baseUrl}/contact` },
   openGraph: {
     type: "website",
@@ -51,7 +51,7 @@ const contactPageJsonLd = {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: "hello@aivaultblog.com",
+      email: "mahitosh@aivaultblog.com",
       url: `${baseUrl}/contact`,
       availableLanguage: ["English"],
     },
@@ -61,7 +61,7 @@ const contactPageJsonLd = {
     "@id": `${baseUrl}/about#mahitosh-dey`,
     name: "Mahitosh Dey",
     url: `${baseUrl}/about`,
-    email: "hello@aivaultblog.com",
+    email: "mahitosh@aivaultblog.com",
   },
   dateModified: "2026-07-21",
 };

@@ -58,8 +58,8 @@ export default function TermsPage() {
         <Section title="1. Who runs this site">
           <p>
             AI Vault is an independent publication operated by Mahitosh Dey. Contact:{" "}
-            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-              hello@aivaultblog.com
+            <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+              mahitosh@aivaultblog.com
             </a>. For details about the site, see the{" "}
             <Link href="/about" style={{ color: "#a855f7" }}>About page</Link>.
           </p>
@@ -182,8 +182,8 @@ export default function TermsPage() {
         <Section title="14. Contact">
           <p>
             Questions about these Terms? Email{" "}
-            <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-              hello@aivaultblog.com
+            <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+              mahitosh@aivaultblog.com
             </a>{" "}
             or use the{" "}
             <Link href="/contact" style={{ color: "#a855f7" }}>contact page</Link>.

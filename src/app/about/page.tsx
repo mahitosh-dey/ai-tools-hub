@@ -34,7 +34,7 @@ const personJsonLd = {
   jobTitle: "Founder, AI Vault",
   description:
     "Developer and founder of AI Vault. Independent reviewer of AI tools since 2022.",
-  email: "hello@aivaultblog.com",
+  email: "mahitosh@aivaultblog.com",
   knowsAbout: [
     "Artificial Intelligence",
     "Large Language Models",
@@ -231,8 +231,8 @@ export default function AboutPage() {
         </p>
         <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
           Found an error, an outdated price, or a factual mistake? Email{" "}
-          <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-            hello@aivaultblog.com
+          <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+            mahitosh@aivaultblog.com
           </a>{" "}
           or use the <Link href="/contact" style={{ color: "#a855f7" }}>contact page</Link>. Corrections are made within 48 hours.
         </p>
@@ -316,8 +316,8 @@ export default function AboutPage() {
         </p>
         <p style={{ marginBottom: "0.5rem" }}>
           <strong style={{ color: "#e2e8f0" }}>Email:</strong>{" "}
-          <a href="mailto:hello@aivaultblog.com" style={{ color: "#a855f7" }}>
-            hello@aivaultblog.com
+          <a href="mailto:mahitosh@aivaultblog.com" style={{ color: "#a855f7" }}>
+            mahitosh@aivaultblog.com
           </a>
         </p>
         <p>
@@ -380,7 +380,7 @@ export default function AboutPage() {
           LinkedIn
         </a>
         <a
-          href="mailto:hello@aivaultblog.com"
+          href="mailto:mahitosh@aivaultblog.com"
           style={{
             background: "transparent",
             color: "#64748b",

@@ -4,7 +4,7 @@ Working document. Backlinks are the only lever on Google position and this site 
 so this is the growth channel. Bing already ranks the content at ~5.7 without links, which is
 why that channel works and Google does not.
 
-Identity for all outreach: **Mahitosh Dey**, hello@aivaultblog.com,
+Identity for all outreach: **Mahitosh Dey**, mahitosh@aivaultblog.com,
 linkedin.com/in/mahitosh-dey-b70575147
 
 **Rule for everything below:** never ask for a link. Offer a fact that is useful on its own.
