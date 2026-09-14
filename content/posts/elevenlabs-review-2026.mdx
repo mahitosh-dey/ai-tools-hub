@@ -2,7 +2,7 @@
 title: "ElevenLabs Review 2026: Is It Still the Best AI Voice Generator?"
 seoTitle: "ElevenLabs Review 2026: Best AI Voice Generator?"
 date: "2026-06-30"
-updatedAt: "2026-08-25"
+updatedAt: "2026-09-14"
 excerpt: "What ElevenLabs actually does well, what the pricing adds up to, how it compares with Murf, Descript and OpenAI TTS, and who needs the paid tiers."
 category: "Reviews"
 tags:
@@ -47,7 +47,7 @@ I ran a 3-minute clean recording of my own voice through Instant Voice Cloning, 
 
 I also ran the same 500-word script through Murf AI, Descript Overdub, and the OpenAI TTS API, using each platform's closest equivalent voice, so the comparison later in this review is based on identical input rather than cherry-picked demos. The Chatterbox section further down is the exception: that one is built from the project's published specs and repository activity, not from my own audio test, and it says so.
 
-Prices, credit allowances, and voice model names in this review were re-verified against elevenlabs.io on 2026-08-03 and had not changed since the previous check on 2026-07-29. Competitor availability was checked the same day by resolving each domain. ElevenLabs revises pricing periodically, so check elevenlabs.io for current numbers before subscribing.
+Prices, credit allowances, and voice model names in this review were re-verified against elevenlabs.io on 2026-09-14. Every tier price and credit allowance below held unchanged from the 2026-08-03 and 2026-07-29 checks. The credit rollover policy did not hold: this review had it backwards, and that is corrected below. Competitor availability was checked the same day by resolving each domain. ElevenLabs revises pricing periodically, so check elevenlabs.io for current numbers before subscribing.
 
 ---
 
@@ -82,13 +82,17 @@ Where it falls short: 10k credits disappears fast if you are producing real cont
 | Scale    | $299        | 1.8M          | Instant + Pro |
 | Business | $990        | 6M, 10 seats  | Instant + Pro |
 
-Verified against elevenlabs.io on 2026-07-29. Two things changed since this review first published, and both are worth flagging because older guides (including an earlier version of this one) still carry the old numbers.
+Verified against elevenlabs.io on 2026-09-14. Two things changed since this review first published, and both are worth flagging because older guides (including an earlier version of this one) still carry the old numbers.
 
 ElevenLabs renamed the unit from characters to **credits**, and rebalanced the allowances upward on several tiers. Creator went from 100,000 to 121k, Pro from 500,000 to 600k. Scale got cheaper, dropping from $330 to $299, while its allowance moved to 1.8M. Starter rose a dollar to $6. There is also a Business tier at $990 that did not exist in the earlier structure.
 
 Creator often runs a first-month discount, listed at 50 percent off at the time of writing, which brings the first payment to around $11.
 
-Unused credits do not roll over. Check elevenlabs.io before subscribing, because this table has already gone stale once. That is not unique to ElevenLabs either. I logged every major [AI pricing change in 2026](/blog/ai-pricing-changes-2026) with dates, and the pattern of prices holding steady while the product behind them shifts turns out to be the story of the whole year.
+Unused credits do roll over, for up to two months. Your balance can reach at most three times your monthly quota, and that survives only while the subscription stays active and you have not downgraded or cancelled. Rollover does not apply to the Free plan, and pay-as-you-go top-up credits sit outside the cap entirely.
+
+This review said the opposite until today. It read "unused credits do not roll over," which is wrong against both [elevenlabs.io/pricing](https://elevenlabs.io/pricing) and ElevenLabs' own help article on [how credit rollover works](https://help.elevenlabs.io/hc/en-us/articles/27561768104081-How-does-credit-rollover-work). My own [ElevenLabs alternatives](/blog/best-elevenlabs-alternatives) post had it right, so for a while these two pages contradicted each other about the same vendor's money. That is worse than either page being wrong alone, and it is fixed here rather than quietly.
+
+Check elevenlabs.io before subscribing, because this table has already gone stale once. That is not unique to ElevenLabs either. I logged every major [AI pricing change in 2026](/blog/ai-pricing-changes-2026) with dates, and the pattern of prices holding steady while the product behind them shifts turns out to be the story of the whole year.
 
 The Creator tier at $22/month remains the sweet spot for most content creators. 121k credits is roughly 100 to 120 minutes of audio, which covers a lot of weekly content production.
 
@@ -200,7 +204,7 @@ I have left this section here rather than quietly deleting it, because Play.ht s
 
 ### ElevenLabs vs Chatterbox (self-hosted)
 
-**Chatterbox** is the option ElevenLabs comparisons skip, because nobody earns a commission recommending it. It is an open-source TTS model from Resemble AI under the MIT license, with zero-shot voice cloning and inline emotion tags. Reading the repository on August 3, 2026: 25,829 stars, last commit July 21, 2026, actively maintained. Most articles quoting star counts for it are working from numbers less than half that.
+**Chatterbox** is the option ElevenLabs comparisons skip, because nobody earns a commission recommending it. It is an open-source TTS model from Resemble AI under the MIT license, with zero-shot voice cloning and inline emotion tags. Reading the repository through the GitHub API on September 14, 2026: 26,407 stars, MIT licensed, not archived, with the most recent commit dated July 21, 2026. That commit date has not moved in eight weeks, so "actively maintained" is doing less work than it was when I first wrote it, though a mature model repository going quiet for two months is not the same signal as a hosted service going quiet. Most articles quoting star counts for it are working from numbers less than half that.
 
 Resemble published a blind listening study, run through Podonos, in which 65.3 percent of listeners preferred Chatterbox over ElevenLabs, against 24.5 percent for ElevenLabs and 10.2 percent neutral. Worth being clear about what that is: Resemble ran a study on Resemble's own model. It is a vendor result, not an independent benchmark, and I would treat the margin with suspicion while still taking the underlying point seriously, which is that the quality gap has narrowed a long way.
 
@@ -208,7 +212,9 @@ The honest catch is that this is not a drop-in swap for a hosted subscription. Y
 
 ### ElevenLabs vs Murf AI
 
-**Murf AI** ($19 to $79/month) is aimed more at corporate voiceovers than creative content. Their studio is easy to use and their voices sound polished in a business-narration way. The catch: fewer natural conversational voices, and voice cloning is more limited than ElevenLabs. For explainer videos and internal training content, Murf is competent. For anything where you want the voice to sound like a person talking, ElevenLabs is a clear step up.
+**Murf AI** (Creator $29/month, Business $99/month, or $19 and $66 if you pay annually) is aimed more at corporate voiceovers than creative content. Their studio is easy to use and their voices sound polished in a business-narration way. The catch: fewer natural conversational voices, and voice cloning is more limited than ElevenLabs. For explainer videos and internal training content, Murf is competent. For anything where you want the voice to sound like a person talking, ElevenLabs is a clear step up.
+
+A note on those Murf numbers, because I got them wrong here before. This review previously listed Murf at "$19 to $79/month". The $19 is the annual-billing rate printed as though it were the monthly one, and $79 did not match any tier. Murf's pricing page renders entirely in JavaScript and serves a six-kilobyte shell with no prices in it to anything that is not a browser, which is how the error survived. Confirm the current figures in a real browser on murf.ai/pricing before you budget against them.
 
 ### ElevenLabs vs Descript
 
