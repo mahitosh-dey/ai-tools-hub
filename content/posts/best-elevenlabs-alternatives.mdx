@@ -2,8 +2,8 @@
 title: "Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First"
 seoTitle: "Best ElevenLabs Alternatives 2026 (Verified Live)"
 date: "2026-08-03"
-updatedAt: "2026-08-25"
-excerpt: "Two tools recommended most often as ElevenLabs alternatives are dead, one shut down and one bankrupt. I resolved all 18 domains before writing a word."
+updatedAt: "2026-09-14"
+excerpt: "Three tools most often recommended as ElevenLabs alternatives are dead: one shut down, one bankrupt, one closed since 2025. I missed the third for six weeks."
 category: "Tools"
 tags:
   - "elevenlabs"
@@ -16,11 +16,13 @@ author: "Mahitosh Dey"
 status: "published"
 faqs:
   - q: "What is the best ElevenLabs alternative in 2026?"
-    a: "It depends on what you are replacing. For creator voiceover work Murf and Descript are the closest hosted options that are verifiably still operating. For developers who need cheap synthesis at scale, OpenAI's TTS API costs a fraction of ElevenLabs and needs no cloning. For real-time voice agents, Cartesia and Deepgram are built for low latency in a way ElevenLabs is not. And if you have a GPU, self-hosted Chatterbox removes the per-character bill entirely. What I would not do is pick from a list without checking the tool still exists, because two of the most-recommended ones do not."
+    a: "It depends on what you are replacing. For creator voiceover work Murf and Descript are the closest hosted options that are verifiably still operating. For developers who need cheap synthesis at scale, OpenAI's TTS API costs a fraction of ElevenLabs and needs no cloning. For real-time voice agents, Cartesia and Deepgram are built for low latency in a way ElevenLabs is not. And if you have a GPU, self-hosted Chatterbox removes the per-character bill entirely. What I would not do is pick from a list without checking the tool still exists, because three of the most-recommended ones do not."
   - q: "Did Play.ht shut down?"
     a: "Yes. Meta acquired the company behind it, PlayAI, in July 2025, taking on the whole team, reported at around 35 people, into its Superintelligence Labs division. New signups closed that August and the service terminated permanently on December 31, 2025, with user data deleted and no export path offered. I tried to resolve play.ht on August 3, 2026 and it returns NXDOMAIN, meaning the domain does not exist in DNS at all. Any 2026 article still recommending Play.ht was not checked before publishing."
   - q: "Is LOVO still in business?"
     a: "LOVO, Inc. filed for Chapter 7 bankruptcy on May 27, 2026 in the Southern District of New York, case number 26-11249. Chapter 7 means liquidation rather than reorganisation. The filing also stayed a copyright lawsuit brought by voice actors who alleged their voices were used in training without permission. When I checked lovo.ai on August 3, 2026, it returned HTTP 402 Payment Required, which is what a host serves when an account is suspended over unpaid bills. I would not enter payment details there."
+  - q: "Did Replica Studios shut down?"
+    a: "Yes, on June 30, 2025. The Brisbane company announced it was ceasing operations that day, citing an inability to reach profitability in a crowded market. It was the studio that signed the first SAG-AFTRA AI voice agreement back in 2023. Its site kept serving a farewell page for about a year afterwards, which is why automated checks kept reading it as alive, and I made exactly that mistake in this post. Rechecked on September 14, 2026, replicastudios.com no longer resolves at all, returning SERVFAIL, and the domain registration expires on September 25, 2026."
   - q: "Is there a free open-source alternative to ElevenLabs?"
     a: "Chatterbox, from Resemble AI, is the strongest one. It is MIT licensed, does zero-shot voice cloning, and supports inline emotion tags like [laugh] and [sigh]. Reading its GitHub repository on August 3, 2026: 25,829 stars and a commit from July 21, 2026, so it is actively maintained. The honest tradeoff is that it is not a hosted subscription. You need a GPU, you do the setup, and reliability is your problem. In exchange there is no per-character cost and no vendor who can raise prices or shut down underneath you."
   - q: "Is Chatterbox really better than ElevenLabs?"
@@ -30,7 +32,7 @@ faqs:
   - q: "Why do so many articles recommend AI tools that no longer exist?"
     a: "Because of who writes them. Nearly every result ranking for ElevenLabs alternatives is published by a company selling a competing voice tool, and the purpose of the page is to be a list with their product on it. Verifying that the other entries still operate adds work and removes competitors from a list that is supposed to look comprehensive. Nobody is being malicious. The incentive simply does not reward checking, so the same names get copied forward year after year, and dead products stay in circulation long after their domains stop resolving."
   - q: "How can I check whether an AI tool is still alive before subscribing?"
-    a: "Four checks take about two minutes. Load the site and watch the HTTP status: anything other than 200, particularly 402 or 403, is a warning. Look for a changelog, blog or release feed and check the most recent date, because an abandoned product usually goes quiet months before it closes. If it has a GitHub repository, look at the last commit. And search the company name with the word bankruptcy or acquisition, since a Chapter 7 filing or acqui-hire is public and often predates any notice on the website. LOVO's own site carried no bankruptcy notice while it was in liquidation."
+    a: "Four checks take about two minutes. Load the site and watch the HTTP status: anything other than 200, particularly 402 or 403, is a warning. Look for a changelog, blog or release feed and check the most recent date, because an abandoned product usually goes quiet months before it closes. If it has a GitHub repository, look at the last commit. And search the company name with the word bankruptcy or acquisition, since a Chapter 7 filing or acqui-hire is public and often predates any notice on the website. LOVO's own site carried no bankruptcy notice while it was in liquidation. And read the page rather than just the status code: Replica Studios returned HTTP 200 for a year after it closed, because a farewell notice is still a page."
 ---
 
 I sat down to write an ordinary ElevenLabs alternatives post. Pull the top results, compare the tools, rank them by use case. Standard work.
@@ -39,11 +41,13 @@ Then I ran the list of recommended tools through a script that resolves each dom
 
 Both are still being recommended in articles published this year. One of the results I had open while researching was suggesting I switch to a product whose parent company is in Chapter 7 liquidation.
 
+A third one got past the script and past me. It answered 200, so I logged it as alive and moved on. It was a farewell page, and the company behind it had been gone for over a year. I found that six weeks after publishing. The correction is written into this post rather than quietly folded into the table, because burying it would make this the same kind of page I am complaining about.
+
 So this became a different post. The tools are still ranked by use case further down, and ElevenLabs is still a good product. But the first section is now the part nobody else does.
 
 ## What I actually checked
 
-On August 3, 2026 I resolved every domain in the recommendation lists and recorded the HTTP status after following redirects. Here is the raw result.
+On August 3, 2026 I resolved every domain in the recommendation lists and recorded the HTTP status after following redirects. I re-ran the whole table on September 14, 2026. Here is the current result.
 
 | Tool | Domain | Status | Verdict |
 |---|---|---|---|
@@ -51,24 +55,24 @@ On August 3, 2026 I resolved every domain in the recommendation lists and record
 | Murf | murf.ai | 200 | Live |
 | Speechify | speechify.com | 200 | Live |
 | Resemble AI | resemble.ai | 200 | Live, repositioned |
-| WellSaid Labs | wellsaidlabs.com | 200 | Live, owned by Podcastle since 2024 |
+| WellSaid Labs | wellsaidlabs.com | 301 to wellsaid.io | Live, owned since 2024 by Podcastle, now renamed Async |
 | Descript | descript.com | 200 | Live |
-| Podcastle | podcastle.ai | 200 | Live |
+| Podcastle (now Async) | podcastle.ai | 200 | Live, renamed Async on January 28, 2026 |
 | Listnr | listnr.ai | 200 | Live |
 | Voicemaker | voicemaker.in | 200 | Live |
 | Fliki | fliki.ai | 200 | Live |
 | Typecast | typecast.ai | 200 | Live |
-| Notevibes | notevibes.com | 200 | Live |
+| Notevibes | notevibes.com | 403 | Live, Cloudflare challenge blocks automated checks |
 | HeyGen | heygen.com | 200 | Live |
 | Cartesia | cartesia.ai | 200 | Live |
 | Deepgram | deepgram.com | 200 | Live |
-| Replica Studios | replicastudios.com | 200 | Resolves, product status unconfirmed |
+| Replica Studios | replicastudios.com | No response | Dead, closed June 30, 2025, domain no longer resolves |
 | Play.ht | play.ht | No response | Dead, domain does not resolve |
 | LOVO (Genny) | lovo.ai | 402 | Chapter 7, host returning Payment Required |
 
-Most of the category is fine. Thirteen tools answered normally and are running businesses. This is not a story about AI voice collapsing.
+Most of the category is fine. Fifteen of the eighteen answered normally and are running businesses. This is not a story about AI voice collapsing.
 
-It is a story about two specific entries that should have been removed from every list months ago and were not.
+It is a story about three specific entries that should have been removed from every list months ago and were not. One of the three was still sitting in my own table until today.
 
 ## Play.ht is gone, and the domain does not even resolve
 
@@ -92,13 +96,29 @@ Reporting from July described the site as still selling subscriptions with no ba
 
 Meanwhile the search result that sent me down this path was recommending LOVO's directable voices as a reason to switch from ElevenLabs.
 
+## Replica Studios closed in 2025 and I recorded it as alive
+
+Replica Studios ceased operations on June 30, 2025. The announcement was plain about it: "It is with a heavy heart that we announce Replica Studios is ceasing operations as of June 30, 2025." The company was Brisbane based, founded in 2018, and it could not reach profitability or raise again in a crowded market. MultiLingual covered it under the headline [Replica Studios to Shut Down Operations by June 30](https://multilingual.com/replica-studios-shutdown-2025/). Most customers found out on the [Unreal Engine forums](https://forums.unrealengine.com/t/replica-studios-shut-down/2590545) or in [Reallusion's community](https://discussions.reallusion.com/t/replica-studios-shut-down/14198), by noticing their plugin had stopped working.
+
+Replica mattered more than its size suggests. In 2023 it signed [the first AI voice agreement with SAG-AFTRA](https://www.sagaftra.org/sag-aftra-and-replica-studios-introduce-groundbreaking-ai-voice-agreement-ces), licensing actors' voices with consent and payment at a point when nobody else in the category was bothering. The company that did the ethical version is the one that ran out of money.
+
+Now the part that is mine to answer for.
+
+When I published this post on August 3, 2026, replicastudios.com returned HTTP 200. My script marked it alive, and I wrote "Resolves, product status unconfirmed" into the table above. I even noticed the site was served from GitHub Pages addresses, wrote that this was "unusual infrastructure for a live commercial SaaS," called it a hint rather than a finding, and moved on.
+
+The page I got that 200 from was a farewell notice. It said the company had "officially signed off" and told users goodbye, "for now, probably forever." The answer was in the body of the page my own script had just downloaded. I logged the status code and never read what came with it. The tool had been dead for thirteen months.
+
+That is the exact failure this post exists to criticise, committed inside the post, and it stood here for six weeks.
+
+Rechecking on September 14, 2026, the domain has gone past even the farewell page. It returns SERVFAIL from every resolver I tried, including Cloudflare's over DNS-over-HTTPS, which means the registrar still delegates to Route 53 nameservers but the hosted zone behind them has been deleted. Registration expires on September 25, 2026. In eleven days there will be nothing left to check at all.
+
+The lesson is narrower than "check the domain," which is what I thought I had learned in August. A 200 means a server answered. It does not mean a business did.
+
 ## Two more things the lists get wrong
 
 **Resemble AI has repositioned.** It appears in nearly every alternatives list as a voice cloning competitor. Reading resemble.ai/pricing today, the plans sold there are for deepfake detection and security: audio and video detection billed per second, identity search per call, watermarking per call, on Flex, Team at $350 a month, Business at $1,000 and custom Enterprise. Voice cloning is not on the pricing page. The generation work is still there, and Resemble builds Chatterbox, but a reader arriving expecting an ElevenLabs-shaped product will not find one at that price structure.
 
-**WellSaid Labs is not an independent company.** Podcastle acquired it in 2024, and its pricing now runs through Podcastle. It is still listed as a standalone rival in current comparisons. I went looking at this because wellsaidlabs.com and resemble.ai resolve to the same IP address and I suspected Resemble had bought it. That guess was wrong, and I would rather record the wrong guess than quietly present the corrected version as though I knew all along.
-
-One caveat on my own table. Replica Studios returns 200, but it serves from GitHub Pages IP addresses, which is unusual infrastructure for a live commercial SaaS. That is a hint, not a finding. I did not confirm whether the product still works, so I have marked it unconfirmed rather than guessing in either direction.
+**WellSaid Labs is not an independent company.** Podcastle acquired it in 2024, and its pricing runs through the parent. Podcastle itself [renamed to Async on January 28, 2026](https://async.com/announcements/podcastle-is-now-async/), folding recording, cloning, dubbing and video generation into one credits-based product, with existing accounts and pricing carried over unchanged. So the current answer is that WellSaid belongs to Async, and wellsaidlabs.com now redirects to wellsaid.io. It is still listed as a standalone rival in current comparisons. I went looking at this because wellsaidlabs.com and resemble.ai resolve to the same IP address and I suspected Resemble had bought it. That guess was wrong, and I would rather record the wrong guess than quietly present the corrected version as though I knew all along.
 
 ## What happens to your work when a voice tool dies
 
@@ -128,7 +148,7 @@ So it is worth asking two questions before committing a brand to a voice. Where 
 
 Look at who publishes the top results for ElevenLabs alternatives. HeyGen. Murf. Typecast. Notevibes. Brilo. Ringly. eesel. SlideSpeak. Every one of them sells a competing voice product, and the page exists so that their product appears on a list of alternatives.
 
-That incentive does not reward verification. Checking whether the other twelve entries still trade takes time and can only shorten your list. A longer list looks more authoritative. So names get copied from last year's article into this year's, and a product can stay in circulation for eight months after its domain stops resolving.
+That incentive does not reward verification. Checking whether the other twelve entries still trade takes time and can only shorten your list. A longer list looks more authoritative. So names get copied from last year's article into this year's, and a product can stay in circulation for more than a year after it closes. Replica Studios was still being recommended, by me among others, fourteen months after it shut the doors.
 
 I do not think anyone is lying. The system just has nobody in it whose job is to check, and readers assume that a post updated for 2026 was looked at in 2026.
 
@@ -182,9 +202,12 @@ Search the company name alongside bankruptcy and acquisition. Court filings and 
 
 If you are budgeting a stack around these tools, my [AI tools under $20 a month](/blog/best-ai-tools-under-20-dollars-2026) roundup and the dated record of [every 2026 AI pricing change](/blog/ai-pricing-changes-2026) both apply the same check-it-yourself approach to prices, and the [YouTube automation playbook](/blog/how-to-use-ai-for-youtube-automation) shows where voice sits in a working production stack.
 
-Sources, checked August 3, 2026:
+Sources, checked August 3, 2026 and re-checked September 14, 2026:
 
 - Domain and HTTP status for all 18 tools: resolved directly, results in the table above
+- [MultiLingual: Replica Studios to shut down operations by June 30](https://multilingual.com/replica-studios-shutdown-2025/)
+- [SAG-AFTRA and Replica Studios introduce groundbreaking AI voice agreement](https://www.sagaftra.org/sag-aftra-and-replica-studios-introduce-groundbreaking-ai-voice-agreement-ces)
+- [Async: Podcastle is now Async](https://async.com/announcements/podcastle-is-now-async/)
 - [TechCrunch: Meta acquires voice startup Play AI](https://techcrunch.com/2025/07/13/meta-acquires-voice-startup-play-ai/)
 - [TheStreet: AI voice cloning firm collapses in Chapter 7 bankruptcy](https://www.thestreet.com/technology/ai-voice-cloning-firm-collapses-lovo-in-chapter-7-bankruptcy)
 - [MLex: Lovo files for Chapter 7 amid AI voice-cloning lawsuit](https://www.mlex.com/mlex/articles/2482604/lovo-files-for-chapter-7-bankruptcy-in-us-amid-ai-voice-cloning-lawsuit)
