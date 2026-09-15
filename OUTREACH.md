@@ -17,16 +17,26 @@ If the fact is good the link follows, and if it does not, the fact was still wor
 Ranked by how newsworthy each finding is to somebody who is not us. The top four are things
 no other publisher has written down, each verifiable in under a minute by the recipient.
 
+All facts below re-verified 2026-09-15. Re-check before every send: the whole point of this
+site is that other people pitch stale facts, and sending one would cost more than silence.
+
 | # | Finding | Evidence they can check | Best for |
 |---|---|---|---|
-| 1 | **Tome has no working website.** tome.com does not resolve, tome.app returns a deployment error | Both domains, checkable instantly | Journalists, roundup authors |
+| 0 | **Replica Studios died 2025-06-30 and is still on every AI voice list.** The company that signed the first SAG-AFTRA AI voice agreement in 2023 ran out of money. Its domain now returns SERVFAIL and the registration expires 2026-09-25 | The shutdown announcement, the SAG-AFTRA release, and a dead domain | Journalists, AI voice writers, SAG-AFTRA/actor press |
+| 1 | **Tome has no working website.** tome.com does not resolve, tome.app returns 404 | Both domains, checkable instantly | Journalists, roundup authors |
 | 2 | **LOVO filed Chapter 7** on 2026-05-27, SDNY case 26-11249 | Public court docket | Journalists, AI voice writers |
 | 3 | **Runway's "free tier" is 125 one-time credits**, about 10 seconds of video, ever | Runway's own pricing page | Journalists, video creators |
 | 4 | **Turnitin's 1.3% false positive rate** means roughly 650 falsely flagged students a year at a 50,000-submission university | Turnitin's published figure, our arithmetic | Education press, teachers |
 | 5 | **Play.ht shut down** 2025-12-31 after Meta acqui-hired the team | Dead domain | AI voice roundup authors |
-| 6 | **Windsurf is now Devin Desktop**, and the price went $15 to $20 | windsurf.com redirect | Dev tool writers |
+| 6 | **Windsurf is now Devin Desktop**, and the price went $15 to $20 | windsurf.com redirects to devin.ai/desktop | Dev tool writers |
+| 7 | **Podcastle renamed itself Async** on 2026-01-28, and most comparison pages still call it Podcastle | Async's own announcement | AI audio and creator-tool writers |
 
 The tracker page collects all of it: `/blog/what-happened-to-ai-tools`
+
+Finding 0 is the strongest thing on this list and it is the newest. A company shutting down is
+ordinary. The company that did the *ethical* version shutting down, while the ones that did not
+are still trading, is a story with a point to it. It also has a named union angle, which gives
+a reporter somebody else to call. Lead with it.
 
 ---
 
