@@ -37,30 +37,51 @@ both are live.
 
 ### Paste this as your expert bio
 
-Use the long version on Connectively, HARO, Featured, Qwoted and MentionMatch.
-Trim from the bottom if a field is too short.
+This is the version actually used on Connectively on 2026-09-16. Use the same text
+everywhere. Trim from the bottom if a field is too short.
 
-> I publish AI Vault, where I check whether an AI tool still exists before
-> writing about it. That sounds obvious and almost nobody does it.
+> I have been a web and mobile developer for seven years. I also run AI Vault,
+> a site about AI tools.
 >
-> I resolve domains myself, read vendor pricing pages directly rather than
-> quoting other blogs, and record the date of every check so a reader can tell
-> how old the claim is.
+> What I do differently there is check whether a tool still exists before
+> recommending it. I resolve the domain myself and read the vendor's own
+> pricing page instead of another blog's summary of it. Where I have checked
+> something, I put the date on the page so a reader can see how old the claim is.
 >
-> Recent findings: Replica Studios shut down in June 2025 and still appears on
-> current best-of lists. LOVO filed Chapter 7 in May 2026, SDNY case 26-11249.
-> Play.ht's domain no longer resolves at all.
+> That keeps turning up tools which closed a year or more ago and are still
+> being recommended in current articles, including one company that filed for
+> bankruptcy while its own site was still selling subscriptions.
 >
-> I can give you dated figures with sources on AI tool pricing, shutdowns,
-> ownership changes and free-tier limits. If I have not verified something
-> myself, I will tell you that instead of guessing.
+> I have used AI tools in my own development work since 2023, which is why the
+> coding tools get the most attention on the site. I can talk about those from
+> using them on real projects rather than from a feature list.
+>
+> I started the site in June 2026 and have published 45 posts. If you need
+> dated pricing figures, shutdown dates or ownership changes, I can give you
+> those with sources. If I have not checked something myself, I will tell you
+> that instead of guessing.
+
+Two earlier drafts of this bio were wrong and must not be reused.
+
+One said "record the date of every check". That is false: 24 of 45 posts carry an
+explicit dated check, not all of them. The current wording, "where I have checked
+something, I put the date on the page", is true.
+
+The other listed four dated findings by name. Those expire. Replica's domain
+registration lapses on 2026-09-25, and nobody ever remembers to update a profile
+bio. The profile sells the method; the pitch delivers the evidence, re-verified on
+the day it is sent.
 
 ### Topics to select
 
 Pick these where the platform asks for expertise tags:
 
-AI tools, artificial intelligence, SaaS, software pricing, content creation,
-productivity software, freelancing, small business technology
+AI coding tools, AI tool pricing, AI tools, software development, AI startups
+
+Five, in that order. Most platforms display only the first few, and this order puts
+the developer credential first, which is the part almost nobody else on these
+platforms can claim. Avoid bare "artificial intelligence": thousands of profiles
+have it and it tells a reporter nothing.
 
 Do not tick everything. A profile claiming twenty specialities reads as
 nobody's specialist.
@@ -129,7 +150,7 @@ Suggested submission text:
 
 ## Before you close the laptop Friday
 
-- [ ] All six journalist platforms created and bio pasted
+- [ ] All five journalist platforms created and the current bio pasted
 - [ ] Email alerts switched **on** for Connectively, HARO and Qwoted, so the
       queries arrive in your inbox each morning
 - [ ] Medium, Reddit, Quora created
@@ -143,9 +164,14 @@ That is the whole setup. Monday the daily routine in `PLAN-MONTH.md` starts.
 
 ## Two warnings
 
-**Do not answer a journalist query on Thursday or Friday.** Read a few to see
-the format, and answer nothing until Monday. A rushed first answer on a topic
-you have not verified is worse than no answer.
+**Answer a query only when the material is already verified and published.** The
+blanket "wait until Monday" rule was wrong and got dropped on 2026-09-16, because
+a good AI Insider query had a 19 September deadline that waiting would have missed.
+The real rule is the one underneath it: never send something you have not checked.
+Where the answer is already researched and on the site, send it.
+
+The free tier allows only 3 answers. One went to AI Insider on 2026-09-16, so 2
+remain. Do not spend one to feel productive.
 
 **Do not post a Reddit link in week one.** New accounts posting links get
 removed automatically in most of the subreddits worth being in, and the
