@@ -76,7 +76,19 @@ These are published on `/disclosure`, so breaking one makes the site's own polic
 
 - This Next.js version has breaking changes vs. common training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing framework code. Heed deprecation notices.
 
-## 10. Rule persistence
+## 10. Always verify with a live search, never from memory alone
+
+Added 2026-09-16 after telling the user Connectively was a dead product. It was not. Cision discontinued it on 2024-12-09, Featured then bought the brand and relaunched it, and by 2026-06-09 it had passed 100,000 users. The correct, current answer was in the same search results that produced the wrong one.
+
+- **Never answer a factual question from training knowledge alone.** Prices, tiers, tool status, company ownership, platform features, policies, dates and product names all change. Search or fetch before asserting, every time, including when the fact feels certain.
+- **A status code describes a server, not a business.** 403 is usually a bot wall (Notevibes, CapCut, Ahrefs). 429 is a rate limit from a server that is very much running (Connectively). 000 can be a transient failure (Flick). Only NXDOMAIN or a sustained SERVFAIL across independent resolvers is evidence of death, and even then read the page before saying a product is gone.
+- **A shutdown notice is not proof of current state.** Check whether the thing came back under new ownership. Vendors do not update their own obituary pages.
+- **Prefer primary sources.** Vendor pricing page, press release, court docket, official docs. Aggregators and "best X in 2026" blogs have been wrong here repeatedly: Murf, ElevenLabs, Suno, the AdSense six-month rule.
+- **Watch for the annual-billing trap.** Pricing pages often default to the annual view. Record the monthly figure and say which is which. This produced wrong prices for Suno and Murf.
+- **Re-verify immediately before any outward-facing use.** A fact that was true last month is not cleared for a pitch to a journalist today. Sending a stale figure costs more than sending nothing.
+- **When sources conflict, say so** and give the confidence level, rather than picking the more definite-sounding one. Do not present an unverified number as verified; label it.
+
+## 11. Rule persistence
 
 - These hard rules must exist in the project (this file) AND in assistant auto-memory.
 - If memory is lost, restore rules from this file.
