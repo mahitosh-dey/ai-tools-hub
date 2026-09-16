@@ -143,8 +143,8 @@ Paid listings and reciprocal links are worth less than nothing.
 
 Suggested submission text:
 
-> AI Vault reviews AI tools and verifies they still operate before
-> recommending them, with the date of every check published on the page.
+> AI Vault reviews AI tools and checks they still operate before recommending
+> them, with the date of the check published on the page.
 
 ---
 
