@@ -46,10 +46,12 @@ Highest authority per unit of effort. Reporters need dated, sourced figures and 
 
 Sign up for: **Featured**, **HARO**, **Qwoted**, **SourceBottle**, **MentionMatch**.
 
-Two corrections as of 2026-09-16. Connectively was discontinued by Cision on 2024-12-09;
-Featured then bought the HARO and Connectively brands and HARO runs again as a free
-three-times-a-day newsletter, so Featured and HARO are one company now. And Help a B2B
-Writer renamed itself MentionMatch, helpab2bwriter.com now redirects there.
+Ownership as of 2026-09-16. Cision discontinued Connectively on 2024-12-09. Featured then
+acquired the HARO and Connectively brands, revived HARO in 2025 and **Connectively in 2026**,
+and Connectively passed 100,000 users on 2026-06-09. All three are one company now: HARO is
+the free newsletter, Connectively is the platform, Featured owns both. Connectively is very
+much alive, whatever the 2024-era blog posts say. Also, Help a B2B Writer renamed itself
+MentionMatch, and helpab2bwriter.com now redirects there.
 
 Answer only queries where we already did the work. Do not stretch. A specific number with a
 date beats three paragraphs of opinion every time.
