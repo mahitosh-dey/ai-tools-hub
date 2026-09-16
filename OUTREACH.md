@@ -44,7 +44,12 @@ a reporter somebody else to call. Lead with it.
 
 Highest authority per unit of effort. Reporters need dated, sourced figures and we have them.
 
-Sign up for: **Featured**, **Qwoted**, **SourceBottle**, **Help a B2B Writer**.
+Sign up for: **Featured**, **HARO**, **Qwoted**, **SourceBottle**, **MentionMatch**.
+
+Two corrections as of 2026-09-16. Connectively was discontinued by Cision on 2024-12-09;
+Featured then bought the HARO and Connectively brands and HARO runs again as a free
+three-times-a-day newsletter, so Featured and HARO are one company now. And Help a B2B
+Writer renamed itself MentionMatch, helpab2bwriter.com now redirects there.
 
 Answer only queries where we already did the work. Do not stretch. A specific number with a
 date beats three paragraphs of opinion every time.
