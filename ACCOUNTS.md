@@ -19,12 +19,18 @@ Friday never happens.
 
 | # | Platform | URL | Notes |
 |---|---|---|---|
-| 1 | **Connectively** | https://www.connectively.us/ | **Start here.** The platform with filtering and tracking. Free tier |
-| 2 | **HARO** | https://www.helpareporter.com/ | Free newsletter, three a day. Same owner as Connectively |
-| 3 | **Featured** | https://featured.com/ | Owns both brands above. Free tier |
-| 4 | **Qwoted** | https://app.qwoted.com/users/sign_up | Note the **app** subdomain, not www. www 404s |
-| 5 | **SourceBottle** | https://www.sourcebottle.com/ | Smaller, AU and UK heavy |
-| 6 | **MentionMatch** | https://mentionmatch.com/ | Was "Help a B2B Writer" before it renamed |
+| 1 | **Connectively** | https://www.connectively.us/ | **Start here.** DONE 2026-09-16 |
+| 2 | **HARO** | https://www.helpareporter.com/ | Free email newsletter, three a day. Separate signup |
+| 3 | **Qwoted** | https://app.qwoted.com/users/sign_up | Note the **app** subdomain, not www. www 404s |
+| 4 | **SourceBottle** | https://www.sourcebottle.com/ | Smaller, AU and UK heavy |
+| 5 | **MentionMatch** | https://mentionmatch.com/ | Was "Help a B2B Writer" before it renamed |
+
+**Do not create a Featured account.** Checked 2026-09-16: Featured migrated its whole
+platform onto connectively.us, all 100,000+ users, profiles, subscriptions and workflows,
+and said the only changes were the name, the logo and the URL. Your Connectively account
+already is your Featured account. A second one would only split your history.
+
+HARO is genuinely separate, because it is an email newsletter rather than a platform login.
 
 Connectively and HARO may show a browser check before loading. That is normal,
 both are live.
