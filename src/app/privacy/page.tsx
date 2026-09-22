@@ -102,8 +102,9 @@ export default function PrivacyPage() {
               </a>.
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
-              <strong>Advertising cookies</strong>: third-party ad networks including Google
-              AdSense use cookies to serve ads based on your visits to this and other websites.
+              <strong>Advertising cookies</strong>: this site does not currently display ads. If
+              it does in future, third-party ad networks including Google AdSense would use cookies
+              to serve ads based on your visits to this and other websites.
               You can manage or opt out of personalised advertising via{" "}
               <a
                 href="https://adssettings.google.com"
@@ -151,10 +152,11 @@ export default function PrivacyPage() {
             </li>
             <li style={{ marginBottom: "0.4rem" }}>
               <strong>Google AdSense and Google-certified third-party ad partners</strong>: display
-              advertising. As a third-party vendor, Google uses cookies to serve ads on this site.
-              Google&apos;s use of advertising cookies enables it and its partners to serve ads to
-              users based on their visits to this website and other sites on the Internet. Users
-              may opt out of personalised advertising by visiting{" "}
+              advertising, if and when this site carries ads. It does not today. Were that to change,
+              Google would act as a third-party vendor using cookies to serve ads here, and its use of
+              advertising cookies would enable it and its partners to serve ads based on visits to this
+              website and other sites on the Internet. Users can opt out of personalised advertising at
+              any time by visiting{" "}
               <a
                 href="https://adssettings.google.com"
                 target="_blank"
