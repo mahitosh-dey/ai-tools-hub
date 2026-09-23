@@ -1,7 +1,17 @@
 # Pitch draft: MarketingSherpa, transparency and AEO
 
 **Drafted:** 2026-09-17
-**Status:** DRAFT. Two gaps unanswered. Not sent.
+**Status:** NOT SENT. Abandoned 2026-09-23, deadline was 2026-09-24.
+
+Why it died: the draft was handed over with two bracketed gaps for the author to
+fill, twice, rather than as a finished piece. That was the wrong shape of help. The
+query asked three things, and two of them, what changed and what surprised you, were
+fully answerable from documented evidence already in the repo. Only "how did you get
+the idea" genuinely needed the author. Leaving three blanks where one belonged turned
+a ten-minute review into a writing task that never got done.
+
+Lesson for future pitches: draft it complete from what is verifiable, mark the single
+line that needs confirming, and never hand back more than one open question.
 
 ---
 
