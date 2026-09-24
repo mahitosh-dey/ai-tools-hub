@@ -46,8 +46,10 @@ AI into a development process, reusing the Claude Code context story. **One
 answer left, and the free tier's reset period is unknown, so hold it for a
 query that fits as well as those two did.**
 
-**Accounts never created:** SourceBottle, MentionMatch, Reddit, Quora, and
-the six directories.
+**Accounts never created:** SourceBottle, MentionMatch, Reddit, and the six
+directories. Quora was created and fully filled on 2026-09-24: name, photo,
+profile credential, description, employment, education, location and seven
+topics. Nothing answered there yet, by design.
 
 **Two config questions unanswered since 2026-09-21:** whether to run IndexNow
 now that the sitemap has been re-read, and whether to unblock YandexBot and

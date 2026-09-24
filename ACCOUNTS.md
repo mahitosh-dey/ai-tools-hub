@@ -96,7 +96,7 @@ These bring readers, not links. All three are nofollow.
 |---|---|---|---|
 | 7 | **Medium** | https://medium.com/ | Create only. Do not publish yet |
 | 8 | **Reddit** | https://www.reddit.com/register/ | Create only. **No links for three weeks** |
-| 9 | **Quora** | https://www.quora.com/ | Create and fill credentials properly |
+| 9 | **Quora** | https://www.quora.com/ | Created 2026-09-24. Credentials below |
 
 Medium and Quora will show a browser check first. Both are live.
 
@@ -111,14 +111,75 @@ Copy and paste creates a duplicate that Medium can rank above you.
 
 ### Quora credentials
 
-Quora shows your credential line under every answer, so it matters more here
-than anywhere else. Set:
+Created 2026-09-24. Quora shows your credential line under every answer, so it
+matters more here than anywhere else.
 
-- **Profile credential**: Publisher at AI Vault, aivaultblog.com
-- **Topic credential** for AI tools: Reviewed 45 AI tools and checked which
-  ones still operate
+**Profile name: Mahitosh Dey, not AI Vault.** Quora dropped its real name policy
+in April 2021, so a brand name is permitted, but the site's whole angle is a
+developer who checks whether tools still exist. That is a person's claim. A
+brand account making it reads as marketing, and the brand still appears in the
+credential line under every answer.
 
-Fill the "Knows about" topics with the same list as above.
+Set these five fields:
+
+| Field | Value |
+|---|---|
+| **Profile credential** | Publisher at AI Vault, aivaultblog.com |
+| **Employment credential** | Senior Developer at INFLUXIQ TECH |
+| **Location credential** | Krishnanagar, West Bengal, India |
+| **Education credential** | Master of Computer Applications, Academy of Technology, graduated 2018 |
+| **Topic credential**, AI tools | Reviewed 45 AI tools and checked which ones still operate |
+
+The profile credential is plain text on Quora, not a clickable link, so it does
+not break the no-links-for-three-weeks rule in `DISTRIBUTION.md`.
+
+**Description, paste as written:**
+
+> I have been a web and mobile developer for seven years, and I work as a
+> senior developer at INFLUXIQ TECH in Kalyani, West Bengal.
+>
+> I also run AI Vault, a site about AI tools. The thing I do there that most
+> tool blogs skip is check whether a tool still exists before recommending it.
+> I resolve the domain myself and read the vendor's own pricing page rather
+> than another blog's summary of it. Where I have checked something, I put the
+> date on the page so you can see how old the claim is.
+>
+> That keeps turning up tools which closed a year or more ago and are still
+> being recommended in current articles, including one company that filed for
+> bankruptcy while its own site was still selling subscriptions.
+>
+> I have used AI tools in my own development work since 2023, so the coding
+> tools get the most attention. If I have not checked something myself, I will
+> say so instead of guessing.
+
+**Knows about**, the seven actually set on 2026-09-24. Quora topics come from a
+fixed list, so the names in the table above do not all exist and these are the
+closest real ones:
+
+Comparison of AI Tools, AI Video Tools, Free AI Tools, Artificial Intelligence
+Startups, Software Development, AI Tools, AI Coding Assistants.
+
+Every one of those maps to a published post. Web Development was tried and
+removed: it is one of the largest topics on Quora and it floods the answer
+suggestions with questions about learning HTML, which costs time every morning
+and produces nothing.
+
+Quora also auto-adds your education as a topic. That is a feed subscription,
+not a qualification, and it is separate from the education credential.
+
+**Two Quora field traps, both hit on the day:**
+
+1. Employment has separate **Position** and **Company** fields and joins them
+   with the word "at" itself. Typing "Senior Developer at INFLUXIQ TECH" into
+   position produces "Senior Developer at INFLUXIQ TECH at INFLUXIQ TECH".
+   Position takes the role alone.
+2. Proofread the school name. "Academy of technologty" shipped live before it
+   was caught. A spelling error in a credential is read by the reporters this
+   profile exists to convince.
+
+**Photo:** the grey silhouette is the biggest trust problem on a new profile.
+Use the same photo as LinkedIn and Connectively, so a reporter checking across
+platforms finds the same face.
 
 ### Reddit
 
@@ -153,7 +214,7 @@ Suggested submission text:
 - [ ] All five journalist platforms created and the current bio pasted
 - [ ] Email alerts switched **on** for Connectively, HARO and Qwoted, so the
       queries arrive in your inbox each morning
-- [ ] Medium, Reddit, Quora created
+- [x] Quora created and filled 2026-09-24. Medium created. Reddit not yet
 - [ ] Six directories submitted
 - [ ] Nothing published on Medium yet
 - [ ] No links posted on Reddit yet
