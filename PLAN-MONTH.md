@@ -8,6 +8,73 @@ what missed.
 
 ---
 
+## Next session: Monday 2026-09-28
+
+Written 2026-09-25 at the end of the week. Saturday and Sunday are off.
+
+### Where things actually stand
+
+| Target | Baseline | Now | Review 2026-10-16 |
+|---|---|---|---|
+| Dofollow referring domains | 0 | **0** | 3 |
+| Google clicks, 28 days | 2 | not re-measured | 10 |
+| Bing indexed pages | 53 | sitemap re-read 2026-09-22, recheck | 80 |
+| Posts with stale verification | 8 (understated) | **22** | 0 |
+| Audit items | 26 | **19** | high severity 0, held |
+
+### What moved this week
+
+Fourteen posts corrected. Eight checked at full depth, eight contained real
+errors. Nine dead or retired products removed from recommendations: Operator,
+ChatGPT agent, Atlas, Copilot Workspace, Sora, Pika's free tier, Gamma's
+non-renewing credits, plus stale model names across five posts.
+
+Four of the eight errors were **statistics with no source**: the Upwork
+figures, the agent reliability curve, the 10x headline, and WordPress at 43
+percent. A script cannot find those. Each one cost a research session.
+
+### What did not move
+
+**DR is still zero and no outreach has been sent.** Three attempts failed:
+the HARO pitch was handed back with gaps instead of finished, the correction
+batch was drafted before qualifying the targets, and both targets turned out
+to have no email address. Two of those three failures were mine.
+
+**Two Connectively answers remain unused** since 2026-09-16. That is the
+highest-value action available and the only channel that has produced
+anything.
+
+**Accounts never created:** SourceBottle, MentionMatch, Reddit, Quora, and
+the six directories.
+
+**Two config questions unanswered since 2026-09-21:** whether to run IndexNow
+now that the sitemap has been re-read, and whether to unblock YandexBot and
+SeznamBot, which the middleware blocks while IndexNow submits to both.
+
+### Monday, in order
+
+1. **Check Bing Site Explorer first.** Indexed was 53 before the sitemap
+   resubmission on 2026-09-22. If it has climbed toward 80, that question is
+   answered and IndexNow can wait. If it has not, run IndexNow.
+2. **Connectively queries.** Two answers left. One good answer beats none.
+3. **Next drift post.** Oldest is `how-to-make-money-with-ai-tools`, 45 days
+   by Monday. Given the title, check every earnings claim hard: this month's
+   pattern says the numbers are the risk, not the tool names.
+4. Accounts, if there is time.
+
+### The honest position on the month
+
+The DR target of 3 referring domains by 2026-10-16 is very likely to miss. It
+was named on day one as the target most at risk, for exactly the reason it is
+failing: it depends on outreach leaving the building. Three weeks remain and
+nothing has been sent.
+
+The content target is the one that is working, and it is producing something
+more valuable than planned: a site where the corrections are visible and
+dated, which is the only genuine differentiator here.
+
+---
+
 ## The three targets
 
 Set 2026-09-14. Baselines are real numbers from GSC and Bing Webmaster Tools.

@@ -196,7 +196,7 @@ sending twenty. The filler is your competition, and it is bad.
 | Wednesday | Publish. Cover image, then IndexNow |
 | Thursday | Syndicate an older post to Medium via Import story |
 | Friday | Outreach batch: five correction emails maximum |
-| Saturday | Refresh one old post from the verification drift list |
+| Saturday | **Off.** PLAN-MONTH.md sets Monday to Friday working days and this line contradicted it |
 | Sunday | Off |
 
 One new post a week is the target, not three. You have 45 posts and almost no
