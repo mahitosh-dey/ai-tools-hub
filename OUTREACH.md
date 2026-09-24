@@ -146,7 +146,8 @@ nothing after ten attempts, stop using it.
 
 | Date | Channel | Target | What was sent | Response | Link? |
 |---|---|---|---|---|---|
-| | | | | | |
+| 2026-09-25 | Correction | technoparkai.com | PlayHT and LOVO both closed, drafted, NOT SENT YET | | |
+| 2026-09-25 | Correction | thinkdom.co | Play.ht, Lovo.ai and Replica all closed, drafted, NOT SENT YET | | |
 
 ## What not to do
 
