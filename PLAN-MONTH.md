@@ -40,9 +40,11 @@ the HARO pitch was handed back with gaps instead of finished, the correction
 batch was drafted before qualifying the targets, and both targets turned out
 to have no email address. Two of those three failures were mine.
 
-**Two Connectively answers remain unused** since 2026-09-16. That is the
-highest-value action available and the only channel that has produced
-anything.
+**Connectively answers used: 2 of 3.** AI Insider on 2026-09-16, still In
+Review. WeblineIndia on 2026-09-28, on the unexpected challenge of integrating
+AI into a development process, reusing the Claude Code context story. **One
+answer left, and the free tier's reset period is unknown, so hold it for a
+query that fits as well as those two did.**
 
 **Accounts never created:** SourceBottle, MentionMatch, Reddit, Quora, and
 the six directories.

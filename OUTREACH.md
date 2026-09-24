@@ -160,6 +160,7 @@ nothing after ten attempts, stop using it.
 | Date | Channel | Target | What was sent | Response | Link? |
 |---|---|---|---|---|---|
 | 2026-09-25 | Correction | technoparkai, thinkdom | Abandoned before sending: no email address, contact form only | n/a | n/a |
+| 2026-09-28 | Connectively | WeblineIndia | Unexpected challenge integrating AI into software development. Reused the Claude Code context story | pending | |
 
 ## What not to do
 
