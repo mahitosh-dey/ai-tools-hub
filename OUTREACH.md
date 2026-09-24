@@ -10,6 +10,19 @@ linkedin.com/in/mahitosh-dey-b70575147
 **Rule for everything below:** never ask for a link. Offer a fact that is useful on its own.
 If the fact is good the link follows, and if it does not, the fact was still worth sending.
 
+**Qualify the target before writing a word.** Both checks take a minute and both were
+skipped on the first batch, which is why it was abandoned.
+
+1. **Is there a real email address?** If the only route is a contact form, skip it. A form
+   leaves no sent record, no thread to reference and no evidence it was read. You cannot
+   follow a channel you cannot measure.
+2. **How old is the domain?** `whois <domain> | grep -i 'creation date'`. Under about two
+   years and a link is worth close to nothing. technoparkai.com turned out to be one day
+   older than this site.
+
+Qualify first, verify the error second, draft third. Drafting before qualifying wastes the
+research.
+
 ---
 
 ## What we actually have to offer
@@ -146,8 +159,7 @@ nothing after ten attempts, stop using it.
 
 | Date | Channel | Target | What was sent | Response | Link? |
 |---|---|---|---|---|---|
-| 2026-09-25 | Correction | technoparkai.com | PlayHT and LOVO both closed, drafted, NOT SENT YET | | |
-| 2026-09-25 | Correction | thinkdom.co | Play.ht, Lovo.ai and Replica all closed, drafted, NOT SENT YET | | |
+| 2026-09-25 | Correction | technoparkai, thinkdom | Abandoned before sending: no email address, contact form only | n/a | n/a |
 
 ## What not to do
 

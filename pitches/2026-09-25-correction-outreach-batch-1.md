@@ -1,7 +1,19 @@
 # Correction outreach, batch 1
 
 **Prepared:** 2026-09-25
-**Status:** DRAFTED, not sent. Two targets, both verified.
+**Status:** ABANDONED 2026-09-25. Not sent, and correctly so.
+
+Two reasons, neither of which was checked before drafting.
+
+Neither site publishes an email address. Reaching them means a contact form,
+which leaves no sent record, no thread to reference, and no way to know it was
+read. That is not outreach, it is posting into a void.
+
+And technoparkai.com's domain was created 2026-06-08, one day older than this
+site. A link from a three month old site with no history is worth roughly
+nothing, so the effort was misdirected before the contact problem even came up.
+
+Both checks belong before the drafting, not after. Added to `OUTREACH.md`.
 
 Rule from `OUTREACH.md`: never ask for a link. Offer a fact that is useful on
 its own. Expect silence. Never follow up twice.
