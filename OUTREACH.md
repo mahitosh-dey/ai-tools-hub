@@ -159,8 +159,9 @@ nothing after ten attempts, stop using it.
 
 | Date | Channel | Target | What was sent | Response | Link? |
 |---|---|---|---|---|---|
-| 2026-09-25 | Correction | technoparkai, thinkdom | Abandoned before sending: no email address, contact form only | n/a | n/a |
-| 2026-09-28 | Connectively | WeblineIndia | Unexpected challenge integrating AI into software development. Reused the Claude Code context story | pending | |
+| 2026-09-24 | Correction | technoparkai, thinkdom | Abandoned before sending: no email address, contact form only | n/a | n/a |
+| 2026-09-24 | Connectively | WeblineIndia | Unexpected challenge integrating AI into software development. Reused the Claude Code context story | pending | |
+| 2026-09-23 | Inbound | BookTranslator.app (Dott, founder) | He asked to be added to `best-ai-tools-for-students`. Declined: the title says Ranked and Tested and the tool has not been used. Offered to test it if a document translation post is ever written | Accepted without arguing, thread closed 2026-09-23 | no |
 
 ## What not to do
 

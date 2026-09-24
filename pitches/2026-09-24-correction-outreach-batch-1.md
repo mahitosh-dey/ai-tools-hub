@@ -1,7 +1,7 @@
 # Correction outreach, batch 1
 
-**Prepared:** 2026-09-25
-**Status:** ABANDONED 2026-09-25. Not sent, and correctly so.
+**Prepared:** 2026-09-24
+**Status:** ABANDONED 2026-09-24. Not sent, and correctly so.
 
 Two reasons, neither of which was checked before drafting.
 
@@ -22,13 +22,13 @@ its own. Expect silence. Never follow up twice.
 
 ## Facts, re-verified on send day
 
-All checked 2026-09-25, the morning these go out.
+All checked 2026-09-24.
 
 | Claim | Evidence today |
 |---|---|
 | **Play.ht is gone** | Meta acqui-hired PlayAI July 2025, service terminated 2025-12-31, accounts and API keys deleted with no export. `play.ht` returns **no DNS record at all** |
 | **LOVO is in Chapter 7** | Filed 2026-05-27, SDNY case **26-11249**. `lovo.ai` returns **HTTP 402 Payment Required** |
-| **Replica Studios is gone** | Ceased operations 2025-06-30. Domain returns **SERVFAIL** from independent resolvers, and the registration **expired 2026-09-25 at 05:57 UTC**, this morning |
+| **Replica Studios is gone** | Ceased operations 2025-06-30. Domain returns **SERVFAIL** from independent resolvers, and the registration **expires 2026-09-25 at 05:57 UTC**, tomorrow |
 
 Re-check all three before sending. If any has changed, the email changes.
 
@@ -39,7 +39,7 @@ Re-check all three before sending. If any has changed, the email changes.
 **Article:** "Best AI Voice Generators in 2026: Ultimate Guide"
 **URL:** https://technoparkai.com/best-ai-voice-generators-2026-2/
 **Published:** 2026-07-09
-**Verified 2026-09-25:** recommends **PlayHT at #3** ("Highly realistic voice
+**Verified 2026-09-24:** recommends **PlayHT at #3** ("Highly realistic voice
 replication", "Excellent Voice Cloning") and **LOVO AI at #5** ("Wide range of
 speaking styles"). Both presented as currently operational.
 
@@ -78,8 +78,8 @@ LOVO filed for bankruptcy and six months after Play.ht shut down.
 
 **Article:** "17 Best AI Voiceover Tools in 2026"
 **URL:** https://www.thinkdom.co/post/top-ai-voiceover-tools
-**Updated:** three days before 2026-09-25
-**Verified 2026-09-25:** **Play.ht at #9** ("used by Hollywood studios, auto
+**Updated:** 2026-09-21
+**Verified 2026-09-24:** **Play.ht at #9** ("used by Hollywood studios, auto
 manufacturers, and enterprise teams"), **Lovo.ai at #10** ("500+ emotional
 voice generator options in 100+ languages"), and **Replica Studios** in the FAQ
 ("purpose-built for gaming, with Unreal Engine and Unity native integrations").
@@ -104,7 +104,7 @@ three dead tools.
 > 26-11249. The site currently returns HTTP 402 Payment Required.
 >
 > Replica Studios, in your FAQ, ceased operations on 30 June 2025. Its domain
-> stopped resolving some time ago and the registration lapsed this week.
+> stopped resolving some time ago and the registration lapses tomorrow.
 >
 > The Unreal and Unity integrations you mention for Replica were real, which is
 > part of why it is an easy one to miss. It signed the first SAG-AFTRA AI voice

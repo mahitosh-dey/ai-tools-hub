@@ -8,9 +8,14 @@ what missed.
 
 ---
 
-## Next session: Monday 2026-09-28
+## Next session: Friday 2026-09-25
 
-Written 2026-09-25 at the end of the week. Saturday and Sunday are off.
+Written 2026-09-24, a Thursday. Friday the 25th is still a working day and
+the weekend starts after it.
+
+An earlier version of this block was dated 2026-09-25 and pointed at Monday
+2026-09-28. Both were wrong. Every commit behind the week's work is dated
+2026-09-24. The same slip put a future `updatedAt` on nine published posts.
 
 ### Where things actually stand
 
@@ -41,7 +46,7 @@ batch was drafted before qualifying the targets, and both targets turned out
 to have no email address. Two of those three failures were mine.
 
 **Connectively answers used: 2 of 3.** AI Insider on 2026-09-16, still In
-Review. WeblineIndia on 2026-09-28, on the unexpected challenge of integrating
+Review. WeblineIndia on 2026-09-24, on the unexpected challenge of integrating
 AI into a development process, reusing the Claude Code context story. **One
 answer left, and the free tier's reset period is unknown, so hold it for a
 query that fits as well as those two did.**
@@ -55,15 +60,16 @@ topics. Nothing answered there yet, by design.
 now that the sitemap has been re-read, and whether to unblock YandexBot and
 SeznamBot, which the middleware blocks while IndexNow submits to both.
 
-### Monday, in order
+### Friday, in order
 
 1. **Check Bing Site Explorer first.** Indexed was 53 before the sitemap
    resubmission on 2026-09-22. If it has climbed toward 80, that question is
    answered and IndexNow can wait. If it has not, run IndexNow.
 2. **Connectively queries.** Two answers left. One good answer beats none.
-3. **Next drift post.** Oldest is `how-to-make-money-with-ai-tools`, 45 days
-   by Monday. Given the title, check every earnings claim hard: this month's
-   pattern says the numbers are the risk, not the tool names.
+3. **Next drift post.** Oldest is `how-to-make-money-with-ai-tools`, last
+   updated 2026-08-14, so 41 days today. Given the title, check every earnings
+   claim hard: this month's pattern says the numbers are the risk, not the
+   tool names.
 4. Accounts, if there is time.
 
 ### The honest position on the month
