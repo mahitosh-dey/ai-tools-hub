@@ -8,14 +8,9 @@ what missed.
 
 ---
 
-## Next session: Friday 2026-09-25
+## Next session: Wednesday 2026-09-30
 
-Written 2026-09-24, a Thursday. Friday the 25th is still a working day and
-the weekend starts after it.
-
-An earlier version of this block was dated 2026-09-25 and pointed at Monday
-2026-09-28. Both were wrong. Every commit behind the week's work is dated
-2026-09-24. The same slip put a future `updatedAt` on nine published posts.
+Written Tuesday 2026-09-29.
 
 ### Where things actually stand
 
@@ -23,65 +18,59 @@ An earlier version of this block was dated 2026-09-25 and pointed at Monday
 |---|---|---|---|
 | Dofollow referring domains | 0 | **0** | 3 |
 | Google clicks, 28 days | 2 | not re-measured | 10 |
-| Bing indexed pages | 53 | sitemap re-read 2026-09-22, recheck | 80 |
-| Posts with stale verification | 8 (understated) | **22** | 0 |
-| Audit items | 26 | **19** | high severity 0, held |
+| Bing indexed pages | 53 | sitemap re-read 2026-09-22, still not rechecked | 80 |
+| Posts over 30 days since check | 14 | **13** | 0 |
+| Posts over 45 days | 1 | **0** | 0 |
 
-### What moved this week
+### What moved
 
-Fourteen posts corrected. Eight checked at full depth, eight contained real
-errors. Nine dead or retired products removed from recommendations: Operator,
-ChatGPT agent, Atlas, Copilot Workspace, Sora, Pika's free tier, Gamma's
-non-renewing credits, plus stale model names across five posts.
+`how-to-make-money-with-ai-tools` cleared, and it was the worst one yet. The
+YouTube threshold it quoted is correct today and wrong for every reader who
+acts on it, because the entry bar doubles to 8,000 watch hours on 2027-02-01
+and the post's own 6 to 12 month estimate lands readers past that date. Pictory
+was in a list introduced with "all have free tiers" and has none. CapCut was
+recommended by someone in India, where it has been blocked since 2020. Three
+places contradicted themselves, all dating back to June.
 
-Four of the eight errors were **statistics with no source**: the Upwork
-figures, the agent reliability curve, the 10x headline, and WordPress at 43
-percent. A script cannot find those. Each one cost a research session.
+Nine of nine drift posts checked at depth have now contained real errors.
+
+Two research notes worth keeping. Google's own help page confirmed a February
+2027 change without giving the numbers, so only the blog announcement was
+usable. And InVideo's pricing page shows no free plan while its help centre
+documents one, so reading the obvious page would have introduced a fresh error
+while fixing an old one.
 
 ### What did not move
 
-**DR is still zero and no outreach has been sent.** Three attempts failed:
-the HARO pitch was handed back with gaps instead of finished, the correction
-batch was drafted before qualifying the targets, and both targets turned out
-to have no email address. Two of those three failures were mine.
+**DR is still zero and nothing has been sent.** Three weeks of the month gone.
+This is now almost certain to miss on 2026-10-16.
 
-**Connectively answers used: 2 of 3.** AI Insider on 2026-09-16, still In
-Review. WeblineIndia on 2026-09-24, on the unexpected challenge of integrating
-AI into a development process, reusing the Claude Code context story. **One
-answer left, and the free tier's reset period is unknown, so hold it for a
-query that fits as well as those two did.**
+**Connectively: 1 answer left**, reset period unknown, still held.
 
-**Accounts never created:** SourceBottle, MentionMatch, Reddit, and the six
-directories. Quora was created and fully filled on 2026-09-24: name, photo,
-profile credential, description, employment, education, location and seven
-topics. Nothing answered there yet, by design.
+**Accounts never created:** SourceBottle, MentionMatch, Reddit, six directories.
+Quora was completed 2026-09-24.
 
-**Two config questions unanswered since 2026-09-21:** whether to run IndexNow
-now that the sitemap has been re-read, and whether to unblock YandexBot and
-SeznamBot, which the middleware blocks while IndexNow submits to both.
+**Two config questions unanswered since 2026-09-21:** whether to run IndexNow,
+and whether to unblock YandexBot and SeznamBot, which the middleware blocks
+while IndexNow submits to both.
 
-### Friday, in order
+### Wednesday, in order
 
-1. **Check Bing Site Explorer first.** Indexed was 53 before the sitemap
-   resubmission on 2026-09-22. If it has climbed toward 80, that question is
-   answered and IndexNow can wait. If it has not, run IndexNow.
-2. **Connectively queries.** Two answers left. One good answer beats none.
-3. **Next drift post.** Oldest is `how-to-make-money-with-ai-tools`, last
-   updated 2026-08-14, so 41 days today. Given the title, check every earnings
-   claim hard: this month's pattern says the numbers are the risk, not the
-   tool names.
-4. Accounts, if there is time.
+1. **Check Bing Site Explorer.** Still unanswered after a week. Indexed was 53
+   before the 2026-09-22 resubmission. That decides the IndexNow question.
+2. **Create the Reddit account.** It does nothing on the day, which is the
+   point: it needs three weeks of age before a link survives, and the month
+   ends in two and a half.
+3. **Next drift post.** Oldest is `top-ai-coding-assistants-for-beginners`,
+   35 days, and a beginners post naming coding tools is squarely in the
+   category where this month's errors have been.
+4. Journalist queries, one Quora answer.
 
-### The honest position on the month
+### The honest position
 
-The DR target of 3 referring domains by 2026-10-16 is very likely to miss. It
-was named on day one as the target most at risk, for exactly the reason it is
-failing: it depends on outreach leaving the building. Three weeks remain and
-nothing has been sent.
-
-The content target is the one that is working, and it is producing something
-more valuable than planned: a site where the corrections are visible and
-dated, which is the only genuine differentiator here.
+The content work is doing what it should. The outreach work has not started,
+and no amount of content fixes that, because referring domains only come from
+things leaving the building.
 
 ---
 
