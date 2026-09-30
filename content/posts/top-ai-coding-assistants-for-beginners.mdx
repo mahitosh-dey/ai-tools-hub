@@ -2,7 +2,7 @@
 title: "Top AI Coding Assistants for Beginners in 2026 (Free + Paid)"
 seoTitle: "Top AI Coding Assistants for Beginners (2026)"
 date: "2026-06-16"
-updatedAt: "2026-08-25"
+updatedAt: "2026-09-30"
 excerpt: "The best AI coding assistants for beginners in 2026: what each does, who it is for, and which are worth paying for. No fluff, no affiliate padding."
 category: "Tools"
 tags:
@@ -196,7 +196,7 @@ The experience is closer to a "no-code tool that actually generates real code" t
 - Bolt maintains the entire project in a structured file environment.
 - Claude is better for learning and explanation. Bolt is better for shipping.
 
-**Limitations:** The free tier has generous but finite token limits (token usage depends on project size). Complex applications eat tokens quickly. The Pro plan at $20/month covers most realistic project sizes.
+**Limitations:** The free tier is 300,000 tokens a day, capped at 1 million a month, and token usage scales with project size, so a complex application eats through it quickly. The Pro plan at $25/month starts at 10 million tokens a month and unused tokens roll over.
 
 ---
 
@@ -204,7 +204,7 @@ The experience is closer to a "no-code tool that actually generates real code" t
 
 **Website:** replit.com
 **Free tier:** Yes (limited resources)
-**Paid:** Core at $25/month, Teams plans available
+**Paid:** Core at $20/month, or $18/month billed annually. Pro is $100/month. Note that Replit's pricing page opens on the annual view, so $18 is the number you see first
 **Best for:** Students, beginners who want an all-in-one environment without local setup
 
 Replit is a browser-based development environment, meaning you write, run, and host code entirely in your browser without installing anything. For beginners, the lack of setup matters: there is no Python installation, no VS Code configuration, no terminal to set up.
@@ -260,12 +260,12 @@ It is still worth knowing about, particularly if you work with AWS, where its kn
 
 | Tool | Type | Free Tier | Paid Tier | Best For |
 |------|------|-----------|-----------|----------|
-| Claude | Conversational AI | Yes (limited/day) | $20/month | Beginners, learning, explanations |
-| ChatGPT | Conversational AI | Yes (images, voice, memory) | $8 Go, $20 Plus | Beginners, general coding Q&A |
-| GitHub Copilot | IDE plugin | Yes (2K/month) | $10/month | Developers, inline completion |
+| Claude | Conversational AI | Yes (no fixed message count) | $20/mo, $17 annual | Beginners, learning, explanations |
+| ChatGPT | Conversational AI | Yes (images, voice, memory) | $8 Go, $20 Plus (unverified) | Beginners, general coding Q&A |
+| GitHub Copilot | IDE plugin | Yes (2,000 completions, 50 chats/mo) | $10/month | Developers, inline completion |
 | Cursor | AI code editor | Yes (Hobby) | $20/month | Developers, multi-file editing |
-| Bolt.new | App generator | Yes (limited tokens) | $20/month | Non-coders, deploy fast |
-| Replit | Browser IDE + AI | Yes (limited) | $25/month | Students, zero-setup learning |
+| Bolt.new | App generator | Yes (300K tokens/day, 1M/mo) | $25/month | Non-coders, deploy fast |
+| Replit | Browser IDE + AI | Yes (Starter, 1 published app) | $20/month | Students, zero-setup learning |
 | Devin Desktop | AI code editor | Yes (light quota) | $20/month | Formerly Windsurf, renamed 2026 |
 | Amazon Q Developer | IDE plugin | Yes (50 requests/mo) | $19/month | Developers, AWS work |
 
@@ -285,6 +285,22 @@ Evaluate whether Cursor's multi-file capabilities would help your current projec
 The tools in this list are not competitors you pick one from forever. They are a progression. Claude gets you started. Copilot accelerates writing. Cursor scales with more complex projects.
 
 One thing to understand before you start paying for any of them: the subscription is priced below what a working developer actually consumes, and the usage limits are how that arithmetic works for the vendor. That is not a scam, it is how flat pricing always works, but it explains every credit system and cap you will run into. [AI coding agent pricing](/blog/ai-coding-agent-pricing-2026) has the numbers.
+
+## Where these prices come from
+
+Every figure in the table was read off the vendor's own pricing page on 30 September 2026. Prices in this market move, so the date matters more than the number.
+
+**Two prices in this post were wrong until that date, and they were wrong in an unusual way: they were swapped.** Bolt.new was listed at $20 and Replit at $25. It is the reverse. Bolt.new Pro is $25 a month and Replit Core is $20, or $18 if you pay for a year. The error appeared in both the body and the summary table, so it was copied rather than mistyped once.
+
+The Replit figure is worth a note of its own. Several pricing aggregators still print Core at $25. Replit's own page says $20, marked down to $18 annually, and their "up to 10 percent off" line matches that arithmetic exactly. Where a vendor and an aggregator disagree about the vendor's own price, the vendor wins.
+
+Replit also opens its pricing page on the annual view, so $18 is the first number you see. That is ordinary and most vendors do it. It is only a problem when a comparison article copies the annual figure across as though it were the monthly one, which is how a wrong price survives for months.
+
+**One row is marked unverified.** openai.com returns HTTP 403 to an automated request, so the ChatGPT figures come from third-party sources that agree with each other rather than from OpenAI. That is weaker evidence than everything else in the table, and the row says so instead of hiding it. The same row carries the same warning in the [AI pricing tracker](/blog/ai-pricing-changes-2026).
+
+The free tier descriptions were vague and are now specific, because every one of those limits is published and there was no reason to summarise them as "limited". Bolt.new is 300,000 tokens a day capped at 1 million a month. GitHub Copilot Free is 2,000 completions and 50 chat requests. Replit's free Starter plan allows one published app. Anthropic states there is no fixed message count on Claude's free tier, which is why this post no longer invents one.
+
+Checked and unchanged: Cursor's Hobby tier and $20 plan, Copilot Pro at $10, Devin Desktop's free quota and $20 plan, and Amazon Q Developer's 50 free agentic requests and $19 plan. Both windsurf.com and codeium.com still redirect to devin.ai/desktop, so the rename recorded earlier in this post is still accurate.
 
 ---
 
