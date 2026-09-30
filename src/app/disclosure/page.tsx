@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const DESCRIPTION =
-  "How AI Vault makes money: affiliate commissions and paid placements. What each one is, how we label it, and why neither one buys a good review.";
+  "How AI Vault makes money: affiliate commissions and paid placements, plus free accounts given for review. What each one is, how we label it, and why none of them buys a good review.";
 
 export const metadata: Metadata = {
   title: "Disclosure: Affiliate Links and Paid Placements",
@@ -25,7 +25,7 @@ export default function DisclosurePage() {
         Disclosure
       </h1>
       <p style={{ color: "#64748b", fontSize: "0.85rem", marginBottom: "3rem" }}>
-        Last updated: August 5, 2026
+        Last updated: September 30, 2026
       </p>
 
       <div style={{ color: "#cbd5e1", lineHeight: 1.8, fontSize: "1rem" }}>
@@ -44,8 +44,10 @@ export default function DisclosurePage() {
             two ways. Some links are affiliate links, which pay us a commission if you buy,
             at no extra cost to you. A small number of posts are paid placements, where a
             company paid for the post to exist. Those are labelled at the top of the post and
-            in every listing, and you can spot them by the amber Sponsored badge. Neither
-            arrangement buys a good review. If a tool is bad, we say so and keep the fee.
+            in every listing, and you can spot them by the amber Sponsored badge. Separately,
+            some companies give us a free account so we can test their product, which earns us
+            nothing but is still worth telling you about. None of the three buys a good review.
+            If a tool is bad, we say so and keep the fee.
           </p>
         </div>
 
@@ -185,14 +187,57 @@ export default function DisclosurePage() {
           </p>
         </Section>
 
+        <Section title="Free Access to Test a Tool">
+          <p>
+            Some companies give us a free account so we can review their product. We ask for
+            one when a tool cannot honestly be assessed without it. You cannot review a study
+            app you are not allowed to open, and buying a subscription to every tool on this
+            site is not something a one-person publication can do.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            This is the smallest of the three arrangements on this page, because no money
+            changes hands in either direction. It is still a material connection, so it gets
+            disclosed.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            A free account buys access and nothing else. Specifically:
+          </p>
+          <ul style={{ marginTop: "0.75rem", paddingLeft: "1.25rem" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
+              It does not buy coverage. We may test a tool and decide it is not worth writing
+              about.
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              It does not buy a good verdict. If the product is weak, the review says so.
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              It does not buy a preview. Nobody sees a review before it publishes, and we do
+              not make changes on request afterwards.
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              It does not buy a place in a ranked list. Anything titled Ranked and Tested
+              contains only tools we used before they went in, and never one added because a
+              company asked.
+            </li>
+            <li>
+              It does not buy a link, and we do not trade links. We decline link exchanges in
+              both directions.
+            </li>
+          </ul>
+          <p style={{ marginTop: "1.5rem" }}>
+            Where we used an account provided by the company, the review says so in the piece
+            itself, not only here.
+          </p>
+        </Section>
+
         <Section title="FTC Compliance">
           <p>
             This disclosure is made in accordance with the United States Federal Trade
             Commission (FTC) guidelines on endorsements and testimonials (16 CFR, Part 255).
             These guidelines require that we disclose any material connection between ourselves
-            and the companies whose products we recommend. That covers both kinds of payment
-            described above: commissions from affiliate programmes, and flat fees for paid
-            placements.
+            and the companies whose products we recommend. That covers all three arrangements
+            described above: commissions from affiliate programmes, flat fees for paid
+            placements, and free accounts provided for review.
           </p>
           <p style={{ marginTop: "1rem" }}>
             We are also committed to transparency in line with advertising standards in other
