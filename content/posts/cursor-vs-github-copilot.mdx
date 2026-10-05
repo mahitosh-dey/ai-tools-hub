@@ -2,7 +2,7 @@
 title: "Cursor vs GitHub Copilot in 2026: The $10 vs $20 Comparison Is Wrong"
 seoTitle: "Cursor vs GitHub Copilot 2026: Real Costs Compared"
 date: "2026-07-31"
-updatedAt: "2026-08-25"
+updatedAt: "2026-10-05"
 excerpt: "Everyone prices these at $10 against $20. Both numbers are real and both mislead. What Cursor and Copilot actually cost after the June credit switch."
 category: "Comparisons"
 tags:
@@ -16,17 +16,17 @@ author: "Mahitosh Dey"
 status: "published"
 faqs:
   - q: "Is Cursor or GitHub Copilot cheaper in 2026?"
-    a: "Copilot Pro is cheaper on the sticker at $10 a month against Cursor Pro at $20. The gap narrows once you look at what the money buys. Copilot Pro includes $15 of AI credits, made up of $10 in base credits plus a $5 flex allotment that GitHub adjusts over time. Cursor Pro includes $20 of third-party model usage plus a separate allowance for Cursor's own models, Composer 2.5 and Grok 4.5, which Cursor describes as generous but does not attach a published rate to. So you are comparing $15 of metered agent usage against $20 plus an unpublished amount. If you are in India, Cursor Start at ₹649 a month undercuts both."
+    a: "Copilot Pro is cheaper on the sticker at $10 a month against Cursor Pro at $20. The gap narrows once you look at what the money buys. Copilot Pro includes $15 of AI credits, made up of $10 in base credits plus a $5 flex allotment that GitHub adjusts over time. Cursor Pro includes $20 of third-party model usage plus a separate allowance for Cursor's own models, Composer 2.5 and Grok, which Cursor describes as generous but does not attach a published rate to. So you are comparing $15 of metered agent usage against $20 plus an unpublished amount. If you are in India, Cursor Start at ₹649 a month undercuts both."
   - q: "What changed with GitHub Copilot pricing on June 1, 2026?"
     a: "GitHub replaced premium request units with GitHub AI Credits. One credit is $0.01. Usage is now billed on actual token consumption, counting input, output and cached tokens at each model's published API rate, rather than on a flat count of requests. Chat, agent mode, code review, the Copilot cloud agent, Copilot CLI and Copilot Apps all draw down credits. Code completions and next edit suggestions stayed unmetered on paid plans. GitHub also introduced a Max plan at $100 a month with $200 in credits."
   - q: "Are code completions still unlimited on Copilot?"
     a: "On paid plans, yes. GitHub's announcement states that code completions and next edit suggestions remain included in all plans and do not consume AI Credits. The free plan is capped at 2,000 completions a month with limited chat and agent usage on top. This matters more than most comparisons admit, because autocomplete is unmetered on Cursor's paid plans too. The thing you actually pay for on both tools is agent work, not typing assistance."
   - q: "What is Cursor Start and can I get it outside India?"
-    a: "Cursor Start is an India-only plan launched on July 27, 2026 at ₹649 a month, tax inclusive, billed monthly in rupees with UPI, credit card or debit card. It gives you Composer and Grok 4.5, more agent requests than the free Hobby tier, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. It sits below Pro, so you do not get every model, Bugbot, Auto mode or unlimited paid overages. It is not available outside India. Cursor says India is now its third-largest market."
+    a: "Cursor Start is an India-only plan launched on July 27, 2026 at ₹649 a month, tax inclusive, billed monthly in rupees with UPI, credit card or debit card. It gives you Composer and Grok, more agent requests than the free Hobby tier, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. It sits below Pro, so you do not get every model, Bugbot, Auto mode or unlimited paid overages. It is not available outside India. Cursor says India is now its third-largest market."
   - q: "Does Cursor work in JetBrains or Xcode?"
     a: "No. Cursor is its own editor, built as a fork of VS Code, so you switch editors to use it. Copilot installs as an extension across VS Code, Visual Studio, the JetBrains IDEs, Neovim and Xcode. If your team writes Kotlin in IntelliJ or Swift in Xcode, this decides the question before any pricing or capability argument starts. It is the single most practical difference between the two and it gets buried under benchmark talk in most comparisons."
   - q: "Has SpaceX acquired Cursor, and who owns it now?"
-    a: "Nobody yet. Anysphere, the company behind Cursor, agreed to a $60 billion all-stock acquisition by SpaceX announced on June 16, 2026, but as of August 12, 2026 the deal has not closed. The filing pointed at Q3 and reporting on August 11 suggested completion by the end of August. It follows SpaceX's merger with xAI in February 2026, which is why Grok 4.5 now sits alongside Composer as a first-party Cursor model. Day to day this changes nothing about the editor. If your employer has a policy on which companies receive your source code, it is worth raising before a team standardises on Cursor."
+    a: "SpaceX. Anysphere, the company behind Cursor, agreed to a $60 billion all-stock acquisition announced on June 16, 2026, and it completed on August 14, 2026. SpaceX subsidiary X67 Inc. merged into Anysphere, Cursor survives as a wholly owned SpaceX subsidiary, and it now sits in a division called SpaceXAI. The filing pointed at Q3 and reporting on August 11 suggested completion by the end of August. It follows SpaceX's merger with xAI in February 2026, which is why Grok now sits alongside Composer as a first-party Cursor model, with 4.7, 4.6 and 4.5 all available as of October 2026. Day to day this changes nothing about the editor. If your employer has a policy on which companies receive your source code, it is worth raising before a team standardises on Cursor."
   - q: "Which is better for a beginner learning to code?"
     a: "Copilot, and it is not particularly close. It bolts onto the editor you already use, autocomplete costs you nothing on a paid plan, and the free tier gives you 2,000 completions a month to try before paying anything. Cursor asks you to change editors and hands you agent tools that are very good at producing code you do not understand yet. I would rather a beginner wrote a thousand lines with a slightly worse assistant they can follow than shipped a working feature they could not debug."
   - q: "How do I stop GitHub Copilot from billing me overage?"
@@ -67,7 +67,7 @@ Cursor never sold a flat plan in the way people remember. What it sells is a dol
 | Plan | Price | Third-party model pool | Notes |
 |---|---|---|---|
 | Hobby | Free | None | Limited agent requests, access to Composer |
-| Start | ₹649 | None | India only, Composer and Grok 4.5, cloud agents |
+| Start | ₹649 | None | India only, Composer and Grok, cloud agents |
 | Pro | $20 | $20 | Unlimited tab, all models, MCP, hooks, cloud agents |
 | Pro+ | $60 | $70 | Roughly 3x Pro capacity |
 | Ultra | $200 | $400 | Roughly 20x Pro, priority access to new features |
@@ -75,7 +75,7 @@ Cursor never sold a flat plan in the way people remember. What it sells is a dol
 
 Look at the Pro+ row. It costs $60 and includes $70 of usage. Cursor prices that pool deliberately above the subscription, the same way GitHub's flex allotment does, and almost every comparison article prints $60 because that is what the plan costs. Ultra is the same story at a larger multiple: $200 buys $400.
 
-The second pool is the one that makes Cursor hard to compare. Composer 2.5 and Grok 4.5, Cursor's own models, draw from a separate Cursor Models pool that the docs describe as generous included usage without publishing a per-token rate for it. Everything from Anthropic, OpenAI and Google draws from the dollar pool at the provider's API price.
+The second pool is the one that makes Cursor hard to compare. Composer 2.5 and the Grok models, Cursor's own, draw from a separate Cursor Models pool that the docs describe as generous included usage without publishing a per-token rate for it. Everything from Anthropic, OpenAI and Google draws from the dollar pool at the provider's API price.
 
 Auto mode deserves a flag of its own, because this is the fact most out of date across the web, and it was wrong in my own [Cursor review](/blog/cursor-ai-review-2026) until I corrected it on July 31. Through 2025, Auto was genuinely free and became the standard advice for avoiding overages. It is now metered. Cursor's docs price Auto Cost per million tokens regardless of which model it routes to, and Auto Balance and Auto Intelligence bill at the API rate of whatever model they select. Auto is still the cheap setting. It stopped being the free one.
 
@@ -139,7 +139,7 @@ I should say plainly what I could not confirm. One of the top-ranking comparison
 
 On July 27, 2026, Cursor launched Cursor Start: ₹649 a month, tax inclusive, billed monthly in rupees, payable by UPI, credit card or debit card. India only.
 
-That is roughly $7. It sits between the free Hobby tier and Pro. You get Composer and Grok 4.5, more agent requests than the free plan, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. You do not get access to every model, Bugbot, Auto mode or unlimited paid overages, which stay behind Pro.
+That is roughly $7. It sits between the free Hobby tier and Pro. You get Composer and Grok, more agent requests than the free plan, always-on cloud agents, the iOS app, plugins, MCP servers, hooks and skills. You do not get access to every model, Bugbot, Auto mode or unlimited paid overages, which stay behind Pro.
 
 Cursor's reasoning is in the launch post: Indian developers asked for pricing that reflected the local market and for local payment methods. India is now Cursor's third-largest market, with its user base there passing three million developers after roughly tripling in a year.
 
@@ -149,11 +149,11 @@ Regional pricing keeps turning up as the gap in AI tool coverage. I hit the same
 
 ## Who owns Cursor now
 
-Anysphere agreed to a $60 billion all-stock acquisition by SpaceX, announced June 16, 2026, subject to regulatory approval. It has been reported as the largest acquisition of a venture-backed startup on record. SpaceX had secured an option to buy the company on April 21.
+Anysphere agreed to a $60 billion all-stock acquisition by SpaceX, announced June 16, 2026, and **the deal completed on August 14, 2026**. SpaceX subsidiary X67 Inc. merged into Anysphere, leaving Cursor as a wholly owned SpaceX subsidiary inside a division called SpaceXAI. It has been reported as the largest acquisition of a venture-backed startup on record. SpaceX had secured an option to buy the company on April 21.
 
 As of August 12, 2026 the deal has still not closed. The original filing pointed at Q3, and reporting on August 11 suggested completion by the end of August. The share exchange ratio is set by the volume-weighted average closing price of SpaceX stock over the seven trading days before closing, so the headline $60 billion is a valuation at announcement rather than a fixed figure. I will date this section rather than predict it.
 
-It follows SpaceX's merger with xAI in February 2026, which explains why Grok 4.5 is now a first-party model inside Cursor alongside Composer.
+It follows SpaceX's merger with xAI in February 2026, which explains why Grok sits as a first-party model inside Cursor alongside Composer. Cursor's model documentation now describes them as "jointly trained by Cursor and SpaceXAI".
 
 For a solo developer this changes nothing this year. The editor has behaved identically through every week of this saga. For anyone choosing a tool their team will standardise on, it is a live question: your source code will be processed by a company that is mid-acquisition by a satellite manufacturer that merged with an AI lab six months ago. Some legal departments will not care. Some will care a great deal. Better to ask now than after the rollout.
 
@@ -183,14 +183,14 @@ This post will go stale. Everything in this category does, usually within about 
 
 Three habits protect you. Read the vendor's live pricing page rather than its announcement blog, because the announcement is a snapshot of launch day and the page is current, which is exactly the trap the $10 credits figure fell into. Check whether an allowance sits behind the subscription, since the sticker price stopped being the cost when agents got metered. And check what your own checkout page offers, because regional pricing is now common enough that the dollar figure in any comparison article, including this one, may not be the number you are shown.
 
-Sources first read on July 31, 2026, and re-checked on August 12, 2026. Every individual-plan figure for both vendors still matched on the re-check. The two exceptions are noted in the text: GitHub's live plans page no longer prints Business or Enterprise prices, and the SpaceX deal has not closed.
+Sources first read on July 31, 2026, re-checked on August 12, and re-checked again on **October 5, 2026**. Three things had moved by the third check and one of them had been wrong since the second.
 
-- [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans)
-- [GitHub: flex allotments and the Max plan](https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/)
-- [GitHub: Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/)
-- [GitHub Docs: budgets for usage-based billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing)
-- [Cursor pricing and billing docs](https://cursor.com/docs/account/pricing)
-- [Cursor model pricing docs](https://cursor.com/docs/models)
-- [Introducing Cursor Start](https://cursor.com/blog/cursor-start-india)
-- [CNBC: SpaceX to acquire Cursor for $60 billion](https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html)
-- [TechCrunch: Cursor's India push and localised pricing](https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/)
+**The acquisition closed and this post did not say so.** It read "as of August 12, 2026 the deal has not closed" and "subject to regulatory approval". The merger became effective on **August 14, 2026**: SpaceX subsidiary X67 Inc. merged into Anysphere, Cursor survives as a wholly owned subsidiary, and it now sits in a division called SpaceXAI. This post was last updated on August 25, eleven days after the close, and still said it was pending. The Cursor review on this site had the correct date. Two pages here disagreed with each other for six weeks.
+
+**Grok moved two versions.** This post named Grok 4.5 throughout. Cursor's model documentation now lists Grok 4.7, 4.6 and 4.5, all with Fast variants, and describes them as jointly trained by Cursor and SpaceXAI. Version numbers are the fastest-decaying thing in any of these comparisons, so the specific ones are gone from the places they were not load-bearing.
+
+**Composer is on 2.5**, which this post already had right.
+
+Everything else held. GitHub Copilot Pro is still $10 with 1,500 AI credits, made up of 1,000 base and a 500 flex allotment, at one cent per credit. Pro+ is $39 for 7,000 and Max is $100 for 20,000. Cursor Individual is still $20 and Teams $40 per user.
+
+One figure I could not re-verify, and the reason is worth recording. **Cursor Start, the India-only plan at ₹649, does not appear when cursor.com/pricing is fetched automatically.** The page serves $20 Individual and $40 Teams and nothing else. I hit the identical thing with another vendor this month, who confirmed in writing that they serve different plan sets by country and device. So an automated read of a pricing page is a read of one country's pricing page, and for a plan that exists only in India that is not good enough. The ₹649 figure here is from Cursor's own launch post and I have not re-confirmed it against a live page from inside India.
