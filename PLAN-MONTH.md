@@ -234,8 +234,10 @@ from real data instead of guesses.
 
 ## Standing rules for the month
 
-- One new post per week. Not three. You have 45 posts and almost no readers,
-  so production is not the bottleneck.
+- **Minimum two new posts per week.** Set 2026-10-08 and recorded in
+  `HARD-RULES.md` section 7. Correction work does not count towards it. The
+  earlier "one per week" line is superseded, and in practice even that was
+  missed: zero new posts between 2026-09-14 and 2026-10-08.
 - Never write final content before showing research and getting approval.
 - Re-verify any fact on the day you use it. A figure true last month is not
   cleared for a journalist pitch today.

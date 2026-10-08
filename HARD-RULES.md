@@ -57,8 +57,19 @@ If a content type is not in this list but is user-facing writing, apply humanize
 
 ## 7. Editorial cadence
 
-- "One old post per day" refresh cadence — always ask before updating an existing published post.
+- **Minimum 2 new blog posts per week.** This is a floor, not a target. Correction
+  work on existing posts does not count towards it and must never be traded against
+  it. If a week is ending and fewer than 2 new posts have been published, say so
+  before proposing any more drift work.
+- "One old post per day" refresh cadence — always ask before updating an existing
+  published post.
 - Humanizer rules auto-apply to new posts without asking.
+
+**Why this exists.** Between 2026-09-14 and 2026-10-08 the site published zero new
+posts while 10 existing posts were corrected. Each correction was worth doing and
+nine of ten found a real error, but the new-post cadence was dropped silently and
+nobody flagged it. The failure was not choosing corrections, it was not saying out
+loud that the trade was being made.
 
 ## 8. Paid placements — publicly committed terms
 
