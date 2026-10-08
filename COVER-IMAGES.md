@@ -1,6 +1,6 @@
 # Blog Cover Images — Guide
 
-Last updated: 2026-09-14
+Last updated: 2026-10-08
 
 Every published post has a cover image. Until now only 6 of the prompts that
 produced them were written down, so each new cover was re-invented from scratch
@@ -256,6 +256,25 @@ dramatic lighting, volumetric haze, no text, no letters, no logos
 ---
 
 ### Guides
+
+**Mozilla Solo Closes on 30 November** — `mozilla-solo-shutting-down-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a single large translucent glass webpage panel floating in dark space,
+its layout blocks and wireframe structure dissolving into a stream of
+glowing cyan particles that flow downward into a sealed glass container
+below it, but three empty picture frames within the panel stay behind as
+hollow violet outlines with nothing inside them, their contents already
+gone, thin broken wireframe threads hanging from the empty frames toward
+the container and not reaching it, faint countdown rings of light around
+the dissolving panel, floating light particles, volumetric haze, soft rim
+lighting, high contrast, photoreal 3D render, no text, no letters, no
+words, no logos, no watermarks
+```
+Abstract mode. The hollow frames that never reach the container are the
+article: the export happens, the images are not in it. Watch rule 1 harder
+than usual here, because a webpage panel invites the model to draw fake
+interface text.
 
 **What AI Pricing Did in 2026** — `ai-pricing-changes-2026-cover.webp`
 ```
