@@ -257,6 +257,23 @@ dramatic lighting, volumetric haze, no text, no letters, no logos
 
 ### Guides
 
+**Twelve AI Tools Say Free** — `what-free-means-ai-tools-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+five identical translucent glass credit tokens arranged in a row floating
+in dark space, the leftmost five glowing steadily with cyan light and
+circling renewal arrows orbiting them, the next two dimming to half
+brightness with their arrows broken and falling away as particles, the
+final three dark and hollow with no light inside them at all, a faint
+wireframe timeline running beneath the row from bright to extinguished,
+floating light particles, volumetric haze, soft rim lighting, high
+contrast, photoreal 3D render, no text, no letters, no words, no numbers,
+no logos, no watermarks
+```
+Abstract mode. The row reads left to right as the article does: renews,
+then runs out once, then was never there. Added "no numbers" to the
+negative prompt because a row of tokens invites the model to label them.
+
 **Mozilla Solo Closes on 30 November** — `mozilla-solo-shutting-down-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,
