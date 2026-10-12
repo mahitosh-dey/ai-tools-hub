@@ -257,6 +257,23 @@ dramatic lighting, volumetric haze, no text, no letters, no logos
 
 ### Guides
 
+**Nine AI Models Retired in 2026** — `ai-model-retirements-2026-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a long horizontal timeline rail of glowing cyan light receding into dark
+haze, nine translucent glass model cores spaced along it already dark and
+extinguished with faint smoke still rising from them, one core near the
+right end still glowing bright violet but visibly cracking with its light
+leaking out, two more further right still intact and dim waiting their
+turn, thin wireframe connection lines running from the dead cores and
+terminating in nothing, floating light particles, volumetric haze, soft
+rim lighting, high contrast, photoreal 3D render, no text, no letters,
+no words, no numbers, no logos, no watermarks
+```
+Abstract mode. Reads left to right as a timeline: nine already gone, one
+cracking now, two waiting. "No numbers" kept in the negative prompt since
+a counted row invites labelling.
+
 **Twelve AI Tools Say Free** — `what-free-means-ai-tools-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,

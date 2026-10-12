@@ -1,0 +1,145 @@
+---
+title: "Nine AI Models Retired in 2026. GPT-5.5 Goes on Wednesday"
+seoTitle: "AI Model Retirements 2026: Dates and What Breaks"
+date: "2026-10-12"
+updatedAt: "2026-10-12"
+excerpt: "GPT-5.5 retires from ChatGPT and Codex on 14 October but stays on the API. Six models already went this year. Here is every date and what quietly breaks."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "ai-coding"
+  - "ai-comparison"
+coverImage: "/images/ai-model-retirements-2026-cover.webp"
+readTime: "8 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "When does GPT-5.5 stop working?"
+    a: "14 October 2026. OpenAI's documentation says that on that date GPT-5.5 retires from ChatGPT, ChatGPT Work, and Codex on all plans. The same page adds that this retirement does not apply to the OpenAI API, so the model stays available to code while disappearing from the product. That split catches people out, because the same name behaves differently depending on where you call it from."
+  - q: "What replaces GPT-5.5?"
+    a: "OpenAI names GPT-6 Sol (gpt-6-sol) for Plus, Pro, Business, Enterprise and Edu, and GPT-6 Luna (gpt-6-luna) in the desktop app for Free and Go. For complex work it points at GPT-6.1 Sol (gpt-6.1-sol) where available. If you only ever pick a model from a dropdown, you will see the new name and carry on. The problem is everywhere you are not looking."
+  - q: "Where does a model retirement actually break things?"
+    a: "In the places that run without you. OpenAI lists workspace defaults, saved model settings, managed configurations, custom agents, scheduled tasks and scripts as things to update. A chat window shows you a new name. A scheduled task pinned to a retired model just fails, usually at the moment you were relying on it."
+  - q: "Which AI models were retired in 2026?"
+    a: "Nine, across six separate dates, before GPT-5.5 makes it ten. Anthropic retired Claude 3.5 Haiku and Claude Sonnet 3.7 on 19 February, Claude Haiku 3 on 20 April, Claude Opus 4 and Claude Sonnet 4 on 15 June, and Claude Opus 4.1 on 5 August. OpenAI retired gpt-5.4 and gpt-5.4-mini from Codex on 31 August and GPT-5.3-Codex-Spark on 14 September. GPT-5.5 goes on 14 October and Claude Sonnet 4.5 on 30 November."
+  - q: "How much notice do AI companies give before retiring a model?"
+    a: "It varies, and only one of them publishes a commitment. Anthropic's deprecation page states it provides at least 60 days' notice before model retirement for publicly released models, and backs that with a full lifecycle table showing every model's status and retirement date. OpenAI publishes retirement dates in its documentation without a stated minimum notice period."
+  - q: "How do I find out if I am still using a retired model?"
+    a: "On Anthropic, go to the Usage page in the Claude Console, click Export, and read the CSV. It breaks usage down by API key and model, so you can see exactly where an old model is still being called. For other providers, search your own code and configuration for hardcoded model strings. The ones that bite are rarely in the file you remember writing."
+---
+
+On Wednesday, GPT-5.5 stops working in ChatGPT.
+
+Not everywhere. OpenAI's own documentation is specific about this in a way that is easy to misread:
+
+> On October 14, 2026, GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on all plans.
+
+and then, two lines later:
+
+> This retirement does not apply to the OpenAI API.
+
+So the same model name keeps working in your code and stops working in the product. If you have been testing against the API and assuming the app behaves the same way, Wednesday is the day those two stop agreeing.
+
+Nine models have already been retired this year across these two companies, on six separate dates. GPT-5.5 makes ten. I have yet to meet anyone who noticed more than one of them.
+
+## Every model retirement in 2026
+
+Both of these came from the vendors' own deprecation pages, read on 12 October 2026.
+
+| Date | Model | Vendor |
+|---|---|---|
+| 19 February | claude-3-5-haiku, claude-3-7-sonnet | Anthropic |
+| 20 April | claude-3-haiku | Anthropic |
+| 15 June | claude-opus-4, claude-sonnet-4 | Anthropic |
+| 5 August | claude-opus-4-1 | Anthropic |
+| 31 August | gpt-5.4, gpt-5.4-mini (Codex) | OpenAI |
+| 14 September | GPT-5.3-Codex-Spark | OpenAI |
+| **14 October** | **GPT-5.5** (not the API) | OpenAI |
+| 30 November | claude-sonnet-4-5 | Anthropic |
+
+Eight dates, nine models already gone and two retirements still ahead of you. Claude Sonnet 4.5 goes on 30 November, which happens to be the same day Mozilla Solo deletes every website it hosts. November is going to be a bad month for things you assumed would still be there.
+
+## Where this actually hurts
+
+Nobody loses a weekend because a dropdown changed. The damage is in the places that run without you watching.
+
+OpenAI's migration note lists exactly where to look, and the list is worth reading slowly:
+
+> workspace defaults, saved model settings, managed configurations, custom agents, scheduled tasks, and scripts
+
+Read that as a hierarchy of how late you find out.
+
+**A chat window** tells you immediately. The model picker shows a new name, you shrug, you carry on.
+
+**A saved setting** tells you the next time you open that thing, which might be a month.
+
+**A scheduled task** tells you nothing. It runs at 6am, fails, and sits there failing until somebody notices the report stopped arriving. If you built something clever with a pinned model six months ago, that is the thing that breaks, and it breaks quietly.
+
+**A script in someone else's repository** may never tell you at all.
+
+The asymmetry is the point. The cost of a retirement is not proportional to how much you used the model. It is proportional to how automated your use of it was.
+
+## What to replace GPT-5.5 with
+
+OpenAI's recommendations, verbatim from their docs:
+
+| Your plan | Replacement |
+|---|---|
+| Plus, Pro, Business, Enterprise, Edu | GPT-6 Sol (`gpt-6-sol`) |
+| Free and Go | GPT-6 Luna (`gpt-6-luna`), desktop app |
+| Complex work, where available | GPT-6.1 Sol (`gpt-6.1-sol`) |
+
+If you are on a paid plan and doing anything involved, the docs point at GPT-6.1 Sol rather than GPT-6 Sol, which is the kind of detail that only appears if you read past the headline replacement.
+
+## The difference between the two companies is larger than it looks
+
+This is the part I did not expect to find, and it changes how I would plan around either vendor.
+
+**Anthropic publishes a lifecycle.** Every model carries one of four states: Active, Legacy, Deprecated, Retired. The deprecation page lists every model, its current state, the date it was deprecated and its retirement date, including models that have not been deprecated yet, where the entry reads "not sooner than" a given date.
+
+They also commit to a minimum:
+
+> Anthropic notifies customers with active deployments for models with upcoming retirements, providing at least 60 days' notice before model retirement for publicly released models.
+
+And they tell you how to audit yourself. Go to the Usage page in the Claude Console, click Export, and the CSV shows usage broken down by API key and model. That is a direct answer to "am I still calling something that is about to die", which is the only question that matters here.
+
+They have also committed to preserving the weights of retired models, with a public note on why retirement carries real costs for researchers and for anyone who valued a specific model.
+
+**OpenAI publishes dates.** The retirement dates are in the documentation, clearly, with replacements named. What is not there is a stated minimum notice period or a single table showing the lifecycle state of everything at once.
+
+Neither approach is wrong. But if you are deciding where to build something that has to keep running unattended, "at least 60 days and here is a CSV of your exposure" is a materially different proposition from "check the docs".
+
+## What to actually do this week
+
+**If you use ChatGPT casually:** nothing. You will see a different name on Wednesday.
+
+**If you have a saved default or a workspace setting:** change it now rather than Wednesday. There is no benefit to waiting and the change takes seconds.
+
+**If you have anything scheduled, automated, or in a script:** this is your week. Search your own configuration for the string `gpt-5.5` and anywhere a model is named. The ones that catch people are custom agents set up months ago and scheduled tasks that have been quietly working ever since.
+
+**If you build on Anthropic:** run the usage export. Console, Usage, Export, read the CSV. Claude Sonnet 4.5 retires on 30 November and you have the tooling to find out in two minutes whether that affects you.
+
+**If you are choosing a provider for something long-lived:** read their deprecation policy before their benchmark scores. One of these companies will tell you 60 days ahead and show you your own exposure. That is worth more than a few points on an evaluation.
+
+## Why this keeps happening
+
+Anthropic is unusually direct about the reason, which I appreciated:
+
+> Anthropic currently deprecates and retires models to ensure capacity for new model releases.
+
+That is the whole thing. GPUs are finite, every serving model occupies some, and a new release needs that capacity to come from somewhere. The same page acknowledges the cost: users who valued a specific model have to migrate, researchers lose access for comparative work, and there are safety and model welfare risks in retirement.
+
+It is a capacity decision, not a product one, which is why it will keep happening regardless of how much people liked the model.
+
+The practical consequence for anyone building on these tools is simple and slightly uncomfortable. **A model is not a dependency you pin once.** It is closer to a hosted service with an end date you were told about in a document you did not read.
+
+## Sourcing
+
+Every date and quotation here came from the vendor's own deprecation documentation, read on 12 October 2026 from India on desktop.
+
+**OpenAI:** the GPT-5.5 retirement date and the wording that it does not apply to the API, the GPT-6 Sol, GPT-6 Luna and GPT-6.1 Sol replacements, the list of places to update, and the 31 August and 14 September retirements.
+
+**Anthropic:** the full model status table, the 60 days notice commitment, the four lifecycle states, the Console usage export instructions, the capacity explanation, and all six Claude retirement dates including Claude Sonnet 4.5 on 30 November.
+
+Retirement dates move occasionally, usually later rather than earlier. If you are reading this after 14 October, the table above is a record of what was announced rather than a forecast, and the vendor pages are the place to check.
+
+This sits alongside [what happened to these AI tools](/blog/what-happened-to-ai-tools), which tracks whole products rather than models, and [what the word free now means](/blog/what-free-means-ai-tools), which covers the other way access disappears without the product doing so.
