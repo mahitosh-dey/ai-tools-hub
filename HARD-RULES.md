@@ -18,6 +18,28 @@ These are non-negotiable rules for any AI assistant working in this project. The
   - All JSON-LD schema blocks on affected pages are valid, well-formed, and match the actual content (title, dates, author, images, URLs).
 - Never ship work that leaves sitemap or structured data broken, stale, or malformed.
 
+## 2b. Correcting a claim means grepping for it, not remembering it
+
+- When a fact turns out to be wrong, **grep the entire `content/` directory for the
+  claim** before deciding which posts to fix. Do not rely on memory of where it was
+  written.
+- Within each post, check **every surface**: the FAQ frontmatter block, comparison
+  tables, the body prose, the summary table, and any recommendation section. Fixing
+  the heading is not fixing the post.
+- Re-grep after the fix and verify against the **built HTML**, not just the source.
+
+**Why this exists.** Six separate times between 2026-09-24 and 2026-10-15, a stale
+figure survived in an FAQ block or a comparison table after the body had been
+corrected. FAQ blocks are what Google lifts for AI Overviews, so a corrected body and
+a stale FAQ can surface side by side.
+
+The clearest case was 2026-10-15. The play.ht DNS claim was corrected in two posts
+from memory. A grep found a third post that had never been checked, and an FAQ in one
+of the two already-corrected posts still contradicted its own body hours later, on the
+same day a post about checking systematically was published.
+
+Memory found two posts. Grep found three.
+
 ## 3. Humanizer rules apply to ALL content
 
 Apply the `/humanizer` skill (v2.8.0 — 33 anti-AI patterns + 6 AI-citation rules + 10 human-voice rules) to every piece of written content, including but not limited to:
