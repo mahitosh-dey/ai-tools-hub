@@ -257,6 +257,24 @@ dramatic lighting, volumetric haze, no text, no letters, no logos
 
 ### Guides
 
+**How to Check Whether an AI Tool Is Dead** — `is-this-ai-tool-dead-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+a single translucent glass diagnostic panel floating in dark space with
+three signal lanes running through it, the first lane carrying a steady
+cyan pulse that passes straight through, the second lane blocked by a
+translucent violet barrier that deflects the pulse sideways without
+extinguishing it, the third lane ending in a dark severed connector with
+the pulse dying out and thin smoke rising, faint wireframe probe lines
+fanning out from the left edge toward all three lanes, floating light
+particles, volumetric haze, soft rim lighting, high contrast, photoreal
+3D render, no text, no letters, no words, no numbers, no logos, no
+watermarks
+```
+Abstract mode. Three lanes, three outcomes: passes through, blocked but
+alive, actually dead. That is the article. Counted the groups before
+writing the prompt this time.
+
 **Nine AI Models Retired in 2026** — `ai-model-retirements-2026-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,

@@ -2,7 +2,7 @@
 title: "Best ElevenLabs Alternatives in 2026: I Checked Which Ones Still Exist First"
 seoTitle: "Best ElevenLabs Alternatives 2026 (Verified Live)"
 date: "2026-08-03"
-updatedAt: "2026-09-14"
+updatedAt: "2026-10-15"
 excerpt: "Three tools most often recommended as ElevenLabs alternatives are dead: one shut down, one bankrupt, one closed since 2025. I missed the third for six weeks."
 category: "Tools"
 tags:
@@ -67,20 +67,26 @@ On August 3, 2026 I resolved every domain in the recommendation lists and record
 | Cartesia | cartesia.ai | 200 | Live |
 | Deepgram | deepgram.com | 200 | Live |
 | Replica Studios | replicastudios.com | No response | Dead, closed June 30, 2025, domain no longer resolves |
-| Play.ht | play.ht | No response | Dead, domain does not resolve |
+| Play.ht | play.ht | No response | No product. Domain resolves, served by Meta, no website |
 | LOVO (Genny) | lovo.ai | 402 | Chapter 7, host returning Payment Required |
 
 Most of the category is fine. Fifteen of the eighteen answered normally and are running businesses. This is not a story about AI voice collapsing.
 
 It is a story about three specific entries that should have been removed from every list months ago and were not. One of the three was still sitting in my own table until today.
 
-## Play.ht is gone, and the domain does not even resolve
+## Play.ht is gone, and its DNS now points at Meta
 
 Meta acquired PlayAI, the company behind Play.ht, in July 2025. [TechCrunch reported it on July 13](https://techcrunch.com/2025/07/13/meta-acquires-voice-startup-play-ai/). The whole team, reported at roughly 35 people, moved into Meta's Superintelligence Labs division to work on Meta AI, AI Characters and wearables, under Johan Schalkwyk, who had previously led voice work at Google.
 
 For customers the sequence went like this. The API went dark in late July 2025, ahead of the announced timeline, which broke integrations for developers who had built on it. New signups closed in August. The service terminated permanently on December 31, 2025. Accounts, voice clones, saved audio and API keys were deleted, and no export tooling was provided.
 
-My check on August 3, 2026 returned NXDOMAIN for play.ht. That is stronger than a dead site. It means the domain has no DNS record at all, so there is nothing to load, no redirect, no farewell page.
+**Correction, 15 October 2026.** This section said a check on 3 August returned NXDOMAIN for play.ht, and called that stronger than a dead site. That is wrong today and I cannot be sure it was right then.
+
+Checked again today against three independent resolvers, play.ht returns **NOERROR**, not NXDOMAIN. The domain exists. It has no A record, so nothing serves a website, but it has working MX records pointing at Google Workspace and its nameservers are `b.ns.facebook.com` and `d.ns.facebook.com`, with the SOA on `a.ns.facebook.com`.
+
+In other words the domain did not die. Meta absorbed it, and the DNS says so. Mail still runs. The product is gone and the asset is not.
+
+The reason I got this wrong is worth more than the correction. `dig +short play.ht` prints nothing. It also prints nothing for a domain whose nameservers have vanished, and nothing for a domain that has never existed. Three different situations, one identical blank line, and I read the blank as death.
 
 I had this in three of my own posts, including the ElevenLabs review that gets more search traffic than anything else I have written. Play.ht was named in that post's excerpt, which means it was sitting in the Google snippet. I fixed all three today. I am including that detail because it would be dishonest to write this piece as though only other people make this mistake. The difference is whether you check.
 

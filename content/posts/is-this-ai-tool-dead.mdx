@@ -1,0 +1,162 @@
+---
+title: "How to Check Whether an AI Tool Is Dead, in 60 Seconds"
+seoTitle: "Is This AI Tool Dead? How to Check It Yourself"
+date: "2026-10-15"
+updatedAt: "2026-10-15"
+excerpt: "A 403 is a bot wall. A 451 is a geo-block. A timeout is a network. Only one result actually means dead, and the lazy version of the command hides it."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "ai-comparison"
+  - "free-ai-tools"
+coverImage: "/images/is-this-ai-tool-dead-cover.webp"
+readTime: "9 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "How can I tell if an AI tool has shut down?"
+    a: "Resolve the domain and read the full DNS status, then follow the redirects. A domain returning NXDOMAIN across several independent resolvers is dead. SERVFAIL with no nameservers usually means the registration has lapsed or broken. A 403, 429, 451 or a timeout tell you about a server or a network, not about a business. The single most common mistake is treating a page you cannot load as a company that no longer exists."
+  - q: "Does a 403 error mean a website is down?"
+    a: "No. A 403 means a server refused your specific request, which is usually a bot wall. Gamma, Canva, OpenAI and Perplexity all return 403 to an automated request today and all four are running normally. If you see a 403, open the page in a browser before concluding anything."
+  - q: "What does a 451 status code mean?"
+    a: "Unavailable For Legal Reasons. It usually means a geographic or regulatory block rather than a closure. capcut.com returns 451 from an Indian connection because India banned ByteDance apps in June 2020. CapCut is running perfectly well in other countries. A 451 tells you where you are, not whether the product exists."
+  - q: "Why does dig +short give the wrong answer?"
+    a: "Because it prints a blank line for three completely different situations: a domain that never existed, a domain whose nameservers have disappeared, and a domain that exists and simply has no web server. Use dig without +short and read the status line. I got this wrong on a published post and only found out by checking properly fourteen weeks later."
+  - q: "Is a shutdown notice proof that a tool is dead?"
+    a: "No, and it is not proof it is alive either. Vendors rarely update their own obituary pages, so a notice may describe a service that was later revived by a buyer. Connectively was shut down by Cision in 2024, acquired, and relaunched. Its old shutdown page outlived the shutdown. Check the live domain, not the announcement."
+  - q: "How do I know if a tool was acquired rather than closed?"
+    a: "Follow the redirect and look at the nameservers. windsurf.com and codeium.com both return 200 and land on devin.ai/desktop, which is an acquisition in plain sight. play.ht has no website at all but its DNS sits on facebook.com nameservers with working Google mail, which tells you Meta holds the asset. The DNS often names the buyer before any article does."
+---
+
+Three weeks ago I told a reader that a site was dead. It was not. It was rate limiting me.
+
+Last week I nearly told another one that a tool had shut down because it timed out three times. It had not. The server is in Kyiv and the problem was the route between us.
+
+And for about ten weeks this site carried a sentence saying a domain returned NXDOMAIN when it did not, because I used the short version of a command that hides the difference between three completely different answers.
+
+I have become the person who checks whether AI tools still exist, and I have got it wrong in three distinct ways this year. So here is the method, with every mistake in it marked.
+
+## The sixty second version
+
+```
+dig tome.com A
+curl -sSIL -o /dev/null -w "%{http_code} %{url_effective}\n" https://tome.com
+```
+
+That is it. Read the DNS status, then read where the redirect lands. Everything below is how to interpret those two lines without fooling yourself.
+
+## Stop using dig +short
+
+This is the error I want to put first, because it is mine and because it is invisible.
+
+`dig +short play.ht` prints nothing. So does `dig +short tome.com`. So does `dig +short a-domain-nobody-ever-registered.com`.
+
+One blank line, three completely different situations:
+
+| Domain | Real status | Nameservers | What it means |
+|---|---|---|---|
+| a domain that never existed | **NXDOMAIN** | none | no such name |
+| tome.com | **SERVFAIL** | none | nameservers gone |
+| play.ht | **NOERROR** | facebook.com | alive and parked |
+
+Run it without `+short` and the status line appears. That one word is the whole answer, and the convenient version of the command throws it away.
+
+I read a blank line as death, wrote it into a post with a date on it, and left it there for ten weeks.
+
+## What play.ht actually tells you
+
+This is my favourite example because it looks like death and is something more interesting.
+
+```
+status: NOERROR
+A      (none)
+MX     aspmx.l.google.com
+NS     b.ns.facebook.com
+       d.ns.facebook.com
+SOA    a.ns.facebook.com
+```
+
+No A record, so nothing serves a web page. But working Google Workspace mail, and nameservers on facebook.com.
+
+Meta acqui-hired the PlayAI team in July 2025 and the product shut down that December. The domain did not die with it. Meta holds it, keeps mail running, and serves nothing.
+
+**The DNS named the acquirer before any article did.** That is a pattern worth knowing: when a tool vanishes, its nameservers often tell you who took it.
+
+## Every status code, with a tool that returns it today
+
+All checked on 15 October 2026.
+
+| Code | Example | What it actually means |
+|---|---|---|
+| **SERVFAIL**, no NS | tome.com, replicastudios.com | dead. Registration lapsed or broken |
+| **NOERROR**, no A | play.ht | alive, owned, no website |
+| **200** to a new brand | windsurf.com goes to devin.ai/desktop | acquired or renamed |
+| **200** | soloist.ai | running, but read the page, it carries a closing notice |
+| **402** | lovo.ai | Payment Required. Billing suspension. LOVO filed Chapter 7 |
+| **403** | gamma.app | bot wall. Running fine in a browser |
+| **451** | capcut.com | Unavailable For Legal Reasons. Geo-block |
+| **000** or timeout | charm.li | network. Often a route, not a server |
+
+Only the first row means dead.
+
+## The three mistakes, named
+
+**A 429 is a server telling you to slow down.** I read one as a shutdown. Connectively returned 429 and I concluded the service was gone, partly because Cision really had shut it down in 2024 and the announcement was still online. What had actually happened was that Featured acquired it and relaunched it, and the thing refusing my request was a rate limiter on a running server. A 429 is proof of life. Nothing dead rate limits you.
+
+**A timeout is a route.** charm.li timed out for me on port 80, on 443, and on www. Three failures in a row feels conclusive. The site is served from Kyiv, it is running, and the problem was the path between an Indian connection and a Ukrainian server. If you are going to declare something dead, check from somewhere else first, or at least ask whether geography explains it.
+
+**A 451 is a map, not an obituary.** capcut.com returns 451 to me because India banned ByteDance apps in June 2020. CapCut is perfectly healthy in most of the world. The status code described my location, not the company.
+
+## A shutdown notice is not proof of anything
+
+Companies do not maintain their own obituary pages.
+
+Cision's 2024 notice announcing the end of Connectively was still up and still read as current after the service had been bought and relaunched. If I had read the page and stopped there, I would have been wrong in exactly the way the page invited.
+
+The reverse trap exists too. A product can have a cheerful homepage and a shutdown notice two clicks away. soloist.ai returns 200 and looks alive, and its own support pages say it ceases operations on 30 November 2026 and deletes every site.
+
+**Read the live domain. Then read the live pages. Announcements are evidence of what someone intended on the day they wrote it.**
+
+## Follow the redirect, because it names the buyer
+
+Redirects are the most honest thing on the internet. Nobody writes a press release when a product is folded into another one, but somebody has to update the DNS.
+
+```
+windsurf.com   -> devin.ai/desktop
+codeium.com    -> devin.ai/desktop
+plusdocs.com   -> plusai.com
+runwayml.com   -> runway.com
+klingai.com    -> kling.ai
+labs.google/fx/tools/image-fx  -> flow.google.com/?from=imagefx
+```
+
+That last one is the clearest shutdown signal I have ever seen. Google is routing the stragglers from a closed product and tagging the redirect with where they came from.
+
+Two domains landing on a third brand is an acquisition. A path redirecting to a different product with a `from=` parameter is a closure with the paperwork attached.
+
+## The checklist
+
+1. **`dig <domain> A`**, without `+short`. Read the status word.
+2. If it looks dead, **repeat against 8.8.8.8, 1.1.1.1 and 9.9.9.9.** One resolver having a bad day is not evidence.
+3. **Check NS and MX.** Nameservers on a different company's domain means acquisition. Live mail with no website means somebody is still paying for it.
+4. **`curl -L`** and read both the code and the final URL.
+5. **Open it in a browser** if you saw 403, 451 or a timeout. Those three are about you, not about them.
+6. **Read the live pages**, not the announcement.
+7. **Get a second source** before writing it down anywhere.
+
+Steps 2 and 5 are the ones I skipped, and they are the ones that cost me.
+
+## Why I keep doing this
+
+Because almost nobody else does, and the result is that round-ups recommend products that have not existed for a year.
+
+I have found a voice generator list recommending two tools that were gone, a presentation tool with no website still ranking on page one, and an image generator this site itself recommended for five months after Google closed it. That last one was mine, and I only caught it because a newer post contradicted an older one.
+
+Which is the real argument for having a method rather than an instinct. You will not remember to doubt yourself. A checklist does not need to.
+
+## Sourcing
+
+Every domain result in this post was produced on 15 October 2026 from India, on desktop, against Google, Cloudflare and Quad9 resolvers. Location matters more than it sounds: the 451 and the timeout in this post are both artefacts of where I was sitting, which is the entire point of two of the sections.
+
+The play.ht correction described here has been applied to the two posts on this site that carried the wrong claim: [best ElevenLabs alternatives](/blog/best-elevenlabs-alternatives) and [what happened to these AI tools](/blog/what-happened-to-ai-tools). Both said the domain did not resolve. Both now say what it actually does.
+
+If you want the running list rather than the method, the tracker is [here](/blog/what-happened-to-ai-tools), and it now includes a section for tools that have announced a closing date and are still running, which is the only point at which this kind of checking can still save anybody anything.
