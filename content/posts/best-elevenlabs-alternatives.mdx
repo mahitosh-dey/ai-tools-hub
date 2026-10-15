@@ -18,7 +18,7 @@ faqs:
   - q: "What is the best ElevenLabs alternative in 2026?"
     a: "It depends on what you are replacing. For creator voiceover work Murf and Descript are the closest hosted options that are verifiably still operating. For developers who need cheap synthesis at scale, OpenAI's TTS API costs a fraction of ElevenLabs and needs no cloning. For real-time voice agents, Cartesia and Deepgram are built for low latency in a way ElevenLabs is not. And if you have a GPU, self-hosted Chatterbox removes the per-character bill entirely. What I would not do is pick from a list without checking the tool still exists, because three of the most-recommended ones do not."
   - q: "Did Play.ht shut down?"
-    a: "Yes. Meta acquired the company behind it, PlayAI, in July 2025, taking on the whole team, reported at around 35 people, into its Superintelligence Labs division. New signups closed that August and the service terminated permanently on December 31, 2025, with user data deleted and no export path offered. I tried to resolve play.ht on August 3, 2026 and it returns NXDOMAIN, meaning the domain does not exist in DNS at all. Any 2026 article still recommending Play.ht was not checked before publishing."
+    a: "Yes. Meta acquired the company behind it, PlayAI, in July 2025, taking on the whole team, reported at around 35 people, into its Superintelligence Labs division. New signups closed that August and the service terminated permanently on December 31, 2025, with user data deleted and no export path offered. Checked again on October 15, 2026 against Google, Cloudflare and Quad9, play.ht returns NOERROR rather than NXDOMAIN. The domain exists. It has no A record so nothing serves a website, but mail still works through Google Workspace and its nameservers are b.ns.facebook.com and d.ns.facebook.com. Meta is holding the domain. An earlier version of this answer said NXDOMAIN, which came from running dig +short and reading a blank line as death."
   - q: "Is LOVO still in business?"
     a: "LOVO, Inc. filed for Chapter 7 bankruptcy on May 27, 2026 in the Southern District of New York, case number 26-11249. Chapter 7 means liquidation rather than reorganisation. The filing also stayed a copyright lawsuit brought by voice actors who alleged their voices were used in training without permission. When I checked lovo.ai on August 3, 2026, it returned HTTP 402 Payment Required, which is what a host serves when an account is suspended over unpaid bills. I would not enter payment details there."
   - q: "Did Replica Studios shut down?"
@@ -66,7 +66,7 @@ On August 3, 2026 I resolved every domain in the recommendation lists and record
 | HeyGen | heygen.com | 200 | Live |
 | Cartesia | cartesia.ai | 200 | Live |
 | Deepgram | deepgram.com | 200 | Live |
-| Replica Studios | replicastudios.com | No response | Dead, closed June 30, 2025, domain no longer resolves |
+| Replica Studios | replicastudios.com | No response | Dead, closed June 30, 2025, SERVFAIL with no nameservers |
 | Play.ht | play.ht | No response | No product. Domain resolves, served by Meta, no website |
 | LOVO (Genny) | lovo.ai | 402 | Chapter 7, host returning Payment Required |
 
