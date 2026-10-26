@@ -110,6 +110,43 @@ choose sources who sound like people.
 
 ---
 
+## Only syndicate posts with no tables
+
+Learned the hard way on 26 October 2026. Medium's Import story does not handle
+markdown tables. Every row becomes loose paragraphs, and the cover image gets
+repeated between them. An import of `what-happened-to-ai-tools` came out
+unreadable and had to be deleted.
+
+**Check the post before importing:**
+
+```
+grep -c "^| " content/posts/<slug>.mdx
+```
+
+Zero means safe. Anything else means Medium will break it.
+
+As of 26 October 2026 these seven posts have no tables and are the Medium
+rotation:
+
+| Post | Words |
+|---|---|
+| is-ai-replacing-freelancers | 3,870 |
+| rise-of-ai-agents | 3,814 |
+| best-ai-tools-for-productivity-2026 | 4,457 |
+| best-ai-tools-for-social-media | 3,987 |
+| how-to-use-claude-ai-for-coding | 4,041 |
+| 7-ai-tools-that-replace-expensive-software | 3,455 |
+| midjourney-vs-dalle3 | 3,113 |
+
+This rules out the tracker, the pricing posts and most comparisons, which are
+some of the strongest work on the site. That is a limitation of Medium, not a
+reason to strip tables out of posts that need them.
+
+**Topics:** pick five, and prefer the specific over the enormous. On an account
+with no followers, Freelancing surfaces you better than Artificial Intelligence,
+where you compete with everything. Never use two names for the same audience,
+such as AI and Artificial Intelligence.
+
 ## The Medium rule that people get wrong
 
 If you copy and paste a post into Medium, you create a duplicate of your own
