@@ -19,6 +19,38 @@ with it, which is why they read slightly flatter than the later ones.
 
 ---
 
+## Two house styles, and when to use each
+
+Updated 2026-10-27. Until now every cover used the same dark neon abstract, and
+after fifty posts the index had started to look like one image repeated. The
+illustration style below was introduced to fix that.
+
+### Style A: flat editorial illustration (preferred for new posts)
+
+Characters doing something that carries the article's meaning. Light background,
+muted palette, clean linework, generous negative space.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, side view, generous negative space,
+no text, no letters, no words, no numbers, no logos, no watermarks
+```
+
+Then describe a scene where **the composition is the argument**. The agents post
+works because the steps to the raised platform stop short: four helpers you can
+reach, two you cannot, and stairs that do not connect. Nobody has to read a
+number to understand it.
+
+Rules that differ from Style B: **light backgrounds are fine here**, and so are
+human faces. The two rules in the old guide saying otherwise applied to the neon
+style and were written before this one existed.
+
+### Style B: dark neon abstract (legacy, still valid)
+
+The original look, kept for technical and data-heavy posts where there is no
+scene to draw.
+
 ## House style
 
 Every prompt below is built on the same base. Keep it intact when writing new
