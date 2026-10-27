@@ -1,6 +1,6 @@
 # AI Vault — Blog Topics
 
-## Published Posts (44)
+## Published Posts (51)
 
 | #   | Title                                                                        | Slug                                       | Category    | Date       |
 | --- | ---------------------------------------------------------------------------- | ------------------------------------------ | ----------- | ---------- |
@@ -48,6 +48,13 @@
 | 42  | What Happened to These AI Tools: Dead, Renamed, and Still Alive                | what-happened-to-ai-tools                  | Guides      | 2026-08-26 |
 | 43  | Best AI for Small Business in 2026: What the Stack Actually Costs              | best-ai-for-small-business                 | Tools       | 2026-09-04 |
 | 44  | Free AI Music Generators in 2026: You Can Make Songs, Not Keep Them            | best-free-ai-music-generators              | Tools       | 2026-09-08 |
+| 45  | AI Tools for Client and Pitch Decks in 2026: The Client-Ready Parts Are Paid | ai-tools-for-client-and-pitch-decks | Tools | 2026-09-14 |
+| 46  | Mozilla Solo Closes on 30 November. Your Export Does Not Include Your Images | mozilla-solo-shutting-down | Guides | 2026-10-08 |
+| 47  | Twelve AI Tools Say Free. Five Actually Renew | what-free-means-ai-tools | Guides | 2026-10-09 |
+| 48  | Nine AI Models Retired in 2026. GPT-5.5 Goes on Wednesday | ai-model-retirements-2026 | Guides | 2026-10-12 |
+| 49  | How to Check Whether an AI Tool Is Dead, in 60 Seconds | is-this-ai-tool-dead | Guides | 2026-10-15 |
+| 50  | AI Agents for Freelancers: The Useful Ones Cost $20, the Business Ones Cost $50 | ai-agents-for-freelancers | Tools | 2026-10-27 |
+| 51  | Grammarly Costs 2.5x More If You Pay Monthly. Ten Other Tools, Checked | annual-vs-monthly-ai-pricing | Guides | 2026-10-27 |
 
 ---
 
@@ -68,16 +75,6 @@
 - Notion AI Review: Is It Better Than ChatGPT for Notes?
 - Copy.ai Review: Does It Actually Save You Time?
 
-### Drafts awaiting a cover image
-
-- **AI Tools for Client and Pitch Decks in 2026: The Client-Ready Parts Are Paid** (`drafts/ai-tools-for-client-and-pitch-decks.mdx`, written 2026-09-08).
-  Needs `ai-tools-for-client-and-pitch-decks-cover.webp` from the `coverImagePrompt`, then move to `content/posts/`.
-  Second post in the presentation cluster, the only one where GSC position is moving (33.8 -> 19 -> 7.7).
-  Targets "best consulting presentation ai tools free", the top 7-day query, plus investor/sales/client deck terms with zero prior coverage.
-  Findings: Pitch free gives 100 AI credits that do NOT renew, and gates PowerPoint export + custom fonts behind Plus (10 euros);
-  Gamma's Made with Gamma badge needs Plus to remove; Slidebean is purpose-built for startup decks.
-  Fourth tool found with the one-time-credit pattern after Runway, Gamma and Suno.
-  Not verified: exact Pitch/Slidebean prices (JS-rendered), Canva (403).
 
 ### Comparisons
 
