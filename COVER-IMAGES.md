@@ -257,6 +257,23 @@ dramatic lighting, volumetric haze, no text, no letters, no logos
 
 ### Guides
 
+**AI Agents for Freelancers** — `ai-agents-for-freelancers-cover.webp`
+```
+Cinematic 16:9 blog cover, near-black background, deep navy and black,
+two groups of translucent glass agent cores floating at different heights
+on an invisible shelf, four cores on the left sitting low and glowing an
+even cyan with small steady orbit rings around each, two cores on the
+right raised much higher and glowing violet with larger heavier rings and
+a visible gap of empty dark space between the two groups, a faint
+wireframe price rail running beneath both groups that steps up sharply
+where the gap is, floating light particles, volumetric haze, soft rim
+lighting, high contrast, photoreal 3D render, no text, no letters, no
+words, no numbers, no logos, no watermarks
+```
+Abstract mode. Four low cyan cores, a visible gap, two high violet ones.
+The step in the rail is the article: everything useful sits at one price,
+then the business tier jumps. Counted the groups before writing it.
+
 **How to Check Whether an AI Tool Is Dead** — `is-this-ai-tool-dead-cover.webp`
 ```
 Cinematic 16:9 blog cover, near-black background, deep navy and black,
