@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.aivaultblog.com/category/${category}`,
       title: `${name}: AI Tools | AI Vault`,
       description: `Browse all ${name} articles on AI Vault. Honest reviews, tutorials, and tool comparisons to help you find what actually works.`,
-      images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
     },
   };
 }

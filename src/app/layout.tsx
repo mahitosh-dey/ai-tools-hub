@@ -32,13 +32,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "AI Vault",
     url: baseUrl,
-    images: [
-      { url: "/og-default.png", width: 1200, height: 630, alt: "AI Vault" },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-default.png"],
   },
   other: {
     "impact-site-verification": "df6f5b88-794d-40ae-baf4-4c79a9864a56",

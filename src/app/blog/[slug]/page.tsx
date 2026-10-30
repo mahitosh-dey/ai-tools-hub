@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { extractToc } from "@/lib/toc";
+import { getPublicImageSize } from "@/lib/imageSize";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
@@ -82,13 +83,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       url,
       siteName: "AI Vault",
-      images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [`${baseUrl}/og-default.png`],
     },
   };
 }
@@ -112,9 +111,14 @@ export default async function PostPage({ params }: Props) {
 
   const postUrl = `${baseUrl}/blog/${slug}`;
 
-  const postImage = post.coverImage?.startsWith("/")
-    ? `${baseUrl}${post.coverImage}`
-    : `${baseUrl}/og-default.png`;
+  // The Article schema used to assert width 1200 height 630 for every post.
+  // No cover on the site is that size, so it was wrong on all of them. Read the
+  // real file, and omit the dimensions rather than guess when it cannot be read.
+  const coverPath = post.coverImage?.startsWith("/") ? post.coverImage : null;
+  const coverSize = coverPath ? getPublicImageSize(coverPath) : null;
+  const postImage = coverPath
+    ? `${baseUrl}${coverPath}`
+    : `${baseUrl}/blog/${slug}/opengraph-image`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -137,8 +141,7 @@ export default async function PostPage({ params }: Props) {
     image: {
       "@type": "ImageObject",
       url: postImage,
-      width: 1200,
-      height: 630,
+      ...(coverSize ?? {}),
     },
     articleSection: post.category,
     keywords: post.tags.join(", "),

@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     title: "Terms of Service | AI Vault",
     description:
       "Terms of Service for AI Vault. Rules for using the website, disclaimers, and limitations of liability.",
-    images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
 

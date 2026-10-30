@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     url: "https://www.aivaultblog.com/privacy",
     title: "Privacy Policy | AI Vault",
     description: "Privacy Policy for AI Vault. Learn how we collect, use, and protect your data, including cookies, analytics, and third-party services.",
-    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
 

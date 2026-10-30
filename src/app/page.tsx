@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     url: baseUrl,
     title: "AI Vault: Reviews, Tutorials & Comparisons",
     description: "Honest reviews, tutorials, and comparisons of the best AI tools. Stay ahead with weekly insights on ChatGPT, Midjourney, Jasper, and more.",
-    images: [{ url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
 

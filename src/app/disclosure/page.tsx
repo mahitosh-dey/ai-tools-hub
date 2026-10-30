@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     url: "https://www.aivaultblog.com/disclosure",
     title: "Disclosure: Affiliate Links and Paid Placements | AI Vault",
     description: DESCRIPTION,
-    images: [{ url: "https://www.aivaultblog.com/og-default.png", width: 1200, height: 630, alt: "AI Vault" }],
   },
 };
 

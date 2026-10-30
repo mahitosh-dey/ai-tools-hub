@@ -16,9 +16,6 @@ export const metadata: Metadata = {
     title: "Contact Mahitosh Dey | AI Vault",
     description:
       "Get in touch about review requests, corrections, or general questions on AI tools. I respond within 24 to 48 hours.",
-    images: [
-      { url: `${baseUrl}/og-default.png`, width: 1200, height: 630, alt: "AI Vault" },
-    ],
   },
 };
 
