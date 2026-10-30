@@ -422,6 +422,26 @@ in diminishing sizes, simple props only,
 no text, no letters, no words, no numbers, no logos, no watermarks
 ```
 
+---
+
+**I Checked 250 Income Claims in 15 Make Money With AI Articles** — `income-claims-audit-cover.webp`
+Style A. The argument is support: one sign is planted in the ground, the rest
+float with nothing holding them up. A sourced figure rests on something, an
+unsourced one hangs in the air, and no number has to appear to say it.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, side view, generous negative space,
+a person on the left in side view leaning in with one hand raised to steady
+a line of small blank placards that recede to the right in diminishing sizes,
+each placard sitting on top of a single thin vertical stem, the nearest stem
+driven firmly into the ground with a small visible footing of packed soil at
+its base, every other stem stopping short and floating a clear hand's width
+above the ground, each with a small soft shadow beneath it that makes the gap
+obvious, all placards completely blank,
+no text, no letters, no words, no numbers, no logos, no watermarks
+```
+
 ### Tools
 
 **Free AI Music Generators in 2026** — `best-free-ai-music-generators-cover.webp`
@@ -692,4 +712,5 @@ step is what caused the gap being repaired here.
 | Cover | Problem | Action |
 |---|---|---|
 | `chatgpt-vs-google-gemini-cover.webp` | Light background, visible garbled UI text, off-theme. Still outstanding as of 2026-08-13, checked again when the post was rewritten. File size is fine at 35 KB; the problem is the image content, so it needs regenerating through Gemini rather than re-encoding. | Regenerate with the prompt above |
+| `income-claims-audit-cover.webp` | Not a defect in the file. Covers render at 780x300 and 360x140, both about 2.6:1, so a 1672x941 cover is scaled to width and the top and bottom 16 percent are cropped away. The soil mound at the base of the planted sign falls outside that band and is not visible on the post page. The argument still reads, because the planted stem runs past the bottom edge while the floating stems visibly stop in mid-air. | None for this cover. For future Style A covers, keep the detail that carries the argument inside the central 68 percent of the height. |
 | `rise-of-ai-agents-cover.webp` | RESOLVED 2026-08-04. Was 204 KB; the optimiser fix brought it to 117 KB, under the 120 KB ceiling. No cover on the site now exceeds 120 KB. | None |
