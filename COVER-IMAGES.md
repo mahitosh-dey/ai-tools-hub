@@ -442,6 +442,30 @@ obvious, all placards completely blank,
 no text, no letters, no words, no numbers, no logos, no watermarks
 ```
 
+---
+
+**I Read the Privacy Policy of 19 AI Tools** — `ai-training-privacy-cover.webp`
+Style A. The argument is the enclosure: two people doing identical work, and
+only one of them is protected. The papers lifting off the unprotected desk are
+the training data. Nothing marks which desk is the paid one, because the point
+is that the work is the same either way.
+First cover drawn with the central-68-percent rule in mind, and the first where
+nothing that carries the argument is lost to the crop.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, side view, generous negative space,
+two desks side by side in the centre of the frame, each with a person seated
+at it working on a document, seen from the side, the left desk standing in the
+open with nothing above or around it and a thin stream of small paper sheets
+lifting off that desk and drifting up and away to the right, the right desk
+sitting inside a simple glass box, clean-edged and slightly tinted teal, with
+the sheets on that desk staying put, the two people drawn the same size doing
+the same work, keeping the desks, the people and the drifting sheets within the
+middle band of the frame with clear empty space above and below,
+no text, no letters, no words, no numbers, no logos, no watermarks
+```
+
 ### Tools
 
 **Free AI Music Generators in 2026** — `best-free-ai-music-generators-cover.webp`
