@@ -704,6 +704,26 @@ violet rim light, wireframe network between them, volumetric haze, photoreal,
 no faces, no text, no letters, no logos
 ```
 
+**I Compared 12 AI Pricing Pages to Their August Versions** — `pricing-page-audit-cover.webp`
+Style A, fifth in the illustration run. The argument is that most of the shelf
+did not move and two items did. A row of identical price tags hanging level,
+with two of them visibly swapped for different ones, and the old tags lying
+discarded below. The level row is the eight unchanged tools and has to read as
+the dominant shape, because the finding is the stability, not the change.
+Keep the swapped tags and the discarded ones inside the central 68 percent of
+the height, since the top and bottom 16 percent are cropped away.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, side view, generous negative space,
+a long horizontal rail across the centre of the frame with eight simple price
+tags hanging from it at an even height in charcoal, two of the tags replaced
+by larger amber tags hanging noticeably lower and slightly askew, two small
+discarded charcoal tags lying on the ground directly beneath them, the rail
+and all tags held within the middle band of the image, nothing important near
+the top or bottom edge, no text, no numbers, no letters, no logos, no faces
+```
+
 ---
 
 ## How to add a cover to a post
