@@ -59,8 +59,11 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Skip static assets and API routes
+  // Skip static assets and API routes. The hex .txt is the IndexNow key file:
+  // api.indexnow.org fetches it to verify a submission, and it does not send a
+  // user-agent we allow, so blocking it rejects every submission we make. It is
+  // named in scripts/indexnow.mjs, and the two have to stay in step.
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|ads.txt|images/|.*\\.(?:png|jpg|jpeg|webp|svg|ico|css|js)$).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|ads.txt|5e7ad4ecaae57bce806ce0f6a205215a.txt|images/|.*\\.(?:png|jpg|jpeg|webp|svg|ico|css|js)$).*)",
   ],
 };
