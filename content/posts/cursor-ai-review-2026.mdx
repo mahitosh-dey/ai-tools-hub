@@ -1,35 +1,35 @@
 ---
-title: "Cursor AI Review 2026: Is the $20 AI IDE Still Worth It After the Credit Switch?"
-seoTitle: "Cursor AI Review 2026: $20 Plan, Credits, SpaceX"
+title: "Cursor AI Review 2026: The $20 Plan Is Gone, and the $8 One Cannot Run Claude"
+seoTitle: "Cursor AI Review 2026: Plus, Premium and Legacy Plans"
 date: "2026-07-24"
-updatedAt: "2026-09-24"
-excerpt: "SpaceX now owns Cursor, and the $20 Pro plan changed to credits. What it really costs a month for three kinds of developer, with the dates I checked."
+updatedAt: "2026-11-04"
+excerpt: "Cursor rebuilt its plans in late 2026. The cheapest paid tier dropped to $8 and cannot run Claude, GPT or Gemini at all. What it really costs now for three kinds of developer, with the dates I checked."
 category: "Reviews"
 tags:
   - "cursor"
   - "ai-coding"
 coverImage: "/images/cursor-ai-review-2026-cover.webp"
-readTime: "15 min read"
+readTime: "17 min read"
 author: "Mahitosh Dey"
 status: "published"
 faqs:
-  - q: "Is Cursor still worth $20/month in 2026 after the credit switch?"
-    a: "Yes for most working developers, and no for casual hobbyists. The $20 Pro plan gives you unlimited Tab completion plus $20 of monthly usage for third-party models from Anthropic and OpenAI. One thing changed since this review first ran: Auto mode is no longer the free escape hatch it was in 2025. Cursor's docs now price Auto Cost per million tokens regardless of which model it routes to, and Auto Balance and Auto Intelligence bill at the underlying model's API rate. What stays generous is the separate Cursor Models pool covering Composer 2.5 and Grok, whose version keeps moving since the SpaceX acquisition closed. If you code five days a week and lean on Composer or Agent mode for complex refactors, Pro still pays for itself in the first week."
-  - q: "What's the difference between Cursor Pro, Pro+, and Ultra?"
-    a: "Pro at $20/mo includes $20 of third-party model usage. Pro+ at $60/mo includes $70, not $60. Cursor prices that pool above the subscription, which most comparison articles get wrong. Ultra at $200/mo includes $400. All three add a separate Cursor Models pool for Composer 2.5 and Grok, described as generous included usage without a published rate. Pick Pro+ if you regularly hit Pro's cap by the 20th of the month. Pick Ultra only if you run 8+ hours of Agent-mode sessions daily or maintain multiple production codebases at once."
+  - q: "Is Cursor still worth paying for in 2026?"
+    a: "Yes if you buy the right tier, and the right tier is probably not the cheapest one. You cannot buy the $20 Pro plan any more; it is legacy only. New customers choose between Plus at $8, which runs Cursor's own Grok and Composer models and cannot run Claude, GPT or Gemini at all, and Premium at $30, which can. For a working developer who wants frontier models against their codebase, the real entry price is $30 rather than $20, so this is a rise dressed as a cut. If you are still on legacy Pro at $20 and it covers your work, stay on it."
+  - q: "What is the difference between Cursor Plus, Premium, Super and Ultra?"
+    a: "Plus at $8 runs only Cursor's own models, Grok 4.7, 4.6, 4.5 and Composer 2.5, at fixed settings with no Auto and no Cloud Agents. Premium at $30 unlocks third-party models at the provider's API list price, paid from prepaid credit you buy separately, and gives four times Plus's included usage. Super at $100 gives fifteen times Plus, and Ultra at $200 gives fifty times. Cursor does not publish what Plus's base pool actually is, so every multiple above it is a multiple of an unpublished number. Pro, Pro+ and the old Ultra are legacy plans and are not sold to new customers."
   - q: "Cursor vs GitHub Copilot: which one should I pick in 2026?"
-    a: "GitHub Copilot at $10/mo is the better choice if you mostly want autocomplete and one-line suggestions inside VS Code. Cursor Pro at $20/mo is the better choice if you want to chat with your entire codebase, edit multiple files in one prompt, or use Agent mode to complete multi-step tasks unattended. Copilot's Chat improved a lot in 2025 but still lacks Cursor's file-tree awareness and Composer-style multi-file editing. If you can only afford one, pick based on which you'd use daily. Serious developers usually end up wanting both."
+    a: "The comparison everyone repeats, Copilot at $10 against Cursor at $20, no longer describes anything you can buy. Copilot is still $10 and includes third-party models. Cursor's $8 Plus plan undercuts it on price but cannot run Claude, GPT or Gemini, and its $30 Premium plan can. So Copilot at $10 is now the cheapest way to get frontier models inside an editor, and Cursor's advantage has to be argued on file-tree awareness, Composer-style multi-file editing and Agent mode rather than on price. If autocomplete is most of what you want, Copilot. If you want to hand an agent a multi-step task across a large codebase, Cursor Premium and the extra $20."
   - q: "Does Cursor really replace VS Code, or should I run both?"
     a: "Cursor replaces VS Code fully for me because it is VS Code under the hood, forked from the same open-source base. Every VS Code extension, keybinding, theme, and settings.json rule works. The only reason to keep vanilla VS Code installed is if your employer restricts AI editors or if you need Live Share, which Cursor doesn't yet support natively. Otherwise there's no ergonomic loss switching completely."
-  - q: "How does the Cursor credit system actually work, and how do I avoid overages?"
-    a: "Each plan includes a dollar-denominated pool for third-party models (Pro $20, Pro+ $70, Ultra $400) plus a separate Cursor Models pool covering Composer 2.5 and Grok, which was 4.5 when this table was read and is at least 4.6 as of Cursor's August 14 announcement. Requests to Claude Sonnet 4.7, Opus 4.7, GPT-5, and Gemini 2.5 Pro draw down the first pool at the provider's API price, roughly $0.04 to $0.20 per request depending on model and context. Auto mode is metered too, priced per million tokens rather than per request. To avoid overages, watch the spend dashboard, keep Cursor's own models as your working default, and reserve manual frontier selection for the work that needs it. MAX mode adds a 20 percent surcharge, so use it sparingly."
+  - q: "How does Cursor's usage system actually work now?"
+    a: "It depends which side of the change you are on, and this is where earlier versions of this review are out of date. New plans include one weekly pool of usage for Cursor's own models, shared across Agent in the editor, the CLI, Cloud Agents and Grok, with the tiers expressed as multiples of Plus rather than in dollars. Third-party models are not in that pool at all: on Premium and above you use them at the provider's API list price, paid from prepaid credit. Legacy Pro, Pro+ and Ultra work the old way, with two monthly pools and on-demand usage. Max Mode, which extends context and bills at the model's API rate plus 20 percent, is now available only on those legacy plans. To control spend on a new plan, keep Cursor's own models as the default and buy prepaid credit deliberately rather than leaving it to top up."
   - q: "Is Cursor safe for proprietary code?"
-    a: "Yes if you enable Privacy Mode, which sets your account to zero data retention with the underlying model providers. In Privacy Mode, Cursor and its model partners (Anthropic, OpenAI, Google) don't store your code or use it for training. Teams and Enterprise tiers get Privacy Mode enabled by default and add SSO, audit logs, and workspace-level model controls. If you're on a personal Pro account, toggle Privacy Mode on in settings before you paste anything sensitive."
+    a: "Mostly yes, with carve-outs worth reading before you rely on it. Privacy Mode sets your account to zero data retention with the underlying providers, and Cursor says it holds zero retention agreements with all of them, so your code is not stored or trained on. It is on by default for Teams, and admins can lock it on for the whole organisation. The exceptions matter: zero retention does not apply when you use your own API key, a few models require retention with the provider and sit outside those agreements, and Cursor states that for Opus models with cyber safeguards switched off it cannot honour zero retention or your team's Privacy Mode policy. There is also a separate Privacy Mode (Legacy) setting now, so check which one your account is on rather than assuming."
   - q: "Can beginners use Cursor, or is it only for senior developers?"
     a: "Beginners can absolutely use Cursor. The Tab completion and Chat features have a shallower learning curve than the underlying language you're learning. Where beginners struggle is trusting the AI too much and shipping code they don't understand. My honest advice for new coders: use Cursor for explanations and pair-programming, but write your first 1,000 lines of any new language by hand so you build real understanding of syntax, control flow, and errors. Cursor accelerates learners who already have fundamentals faster than it accelerates absolute beginners."
 ---
 
-I switched to Cursor full-time in October 2024, quit it twice, came back both times, and I now spend roughly six hours a day inside it. The June 2025 credit-billing change made me seriously consider going back to VS Code plus Copilot for a week. I didn't. This review is what I would have wanted to read before that first switch, and what I would tell any developer asking me if Cursor is worth $20 in 2026.
+I switched to Cursor full-time in October 2024, quit it twice, came back both times, and I now spend roughly six hours a day inside it. The June 2025 credit-billing change made me seriously consider going back to VS Code plus Copilot for a week. I didn't. This review is what I would have wanted to read before that first switch, and what I would tell any developer asking me what Cursor costs now and whether to pay it.
 
 I paid for Pro, then Pro+, then briefly Ultra during a heavy refactor month, then back to Pro. I've watched the pricing shift twice and the Composer model evolve through three major versions. What follows is what actually holds up after real use.
 
@@ -59,7 +59,7 @@ Design Mode takes a Figma link or a screenshot and generates the corresponding R
 
 The /worktree command spawns a git worktree scoped to a specific task, so you can work on three branches simultaneously without stashing. This is the kind of quiet improvement I didn't know I wanted until I had it.
 
-Composer 2.5 replaced the earlier Composer model and now handles most agent-mode requests unless you manually override. Faster than Opus 4.7 in my testing, cheaper in credit cost, and usually good enough for well-scoped tasks.
+Composer 2.5 replaced the earlier Composer model and now handles most agent-mode requests unless you manually override. In my testing it was faster and cheaper than the frontier models I compared it against, and usually good enough for well-scoped tasks. The numbers behind that are in the next section, with the caveat that I measured them against models which have since been superseded.
 
 ## The features I use daily
 
@@ -75,7 +75,7 @@ Composer is the multi-file editor. Ask "add rate limiting to every route in /api
 
 Agent mode is Composer with the ability to run terminal commands, read output, and iterate. I use Agent for tasks like "run the test suite, find the failing test, fix it, run again until green."
 
-Background Agents run Agent tasks in the cloud on separate infrastructure. You can spin one up on your phone during a walk, come back to your laptop 20 minutes later, and merge the completed work. Background Agents cost more credits than local Agent runs because they use a longer-context model.
+Cloud Agents, which you may still see called Background Agents, run Agent tasks in the cloud on separate infrastructure. You can spin one up on your phone during a walk, come back to your laptop 20 minutes later, and merge the completed work. They draw more usage than local Agent runs because they use a longer-context model, and they are not available on the Plus tier at all.
 
 MCP servers extend Cursor to any external tool that speaks the Model Context Protocol. I've hooked Cursor to my Postgres database (so the AI can query real schema when writing migrations), my Sentry account (so it can pull recent errors), and Linear (so it can create issues from code comments).
 
@@ -87,33 +87,72 @@ Plan Mode is a newer 3.0 feature. Cursor drafts a step-by-step plan before makin
 
 ## Composer 2.5: the in-house model and benchmarks
 
-Composer 2.5 is Anysphere's proprietary coding model, launched April 15, 2026 per the [Cursor blog announcement](https://cursor.com/blog/composer-2). It scored 79.8 percent on the SWE-bench Multilingual benchmark, effectively tied with Claude Opus 4.7 (80.1 percent) and ahead of GPT-5 (76.4 percent) on the same test.
+Composer 2.5 is Cursor's proprietary coding model, launched April 15, 2026 per the [Cursor blog announcement](https://cursor.com/blog/composer-2). It scored 79.8 percent on the SWE-bench Multilingual benchmark, effectively tied with Claude Opus 4.7 (80.1 percent) and ahead of GPT-5 (76.4 percent) on the same test.
 
-The bigger deal is speed. Composer 2.5 runs at roughly 200 tokens per second on Cursor's infrastructure, compared to about 80 to 100 tok/s for Opus 4.7 through the API. In practice this means a multi-file refactor that took 90 seconds with Opus now completes in 35 to 40 seconds with Composer 2.5.
+Everything in this section was measured in the spring of 2026 and the comparison models have moved on since. Cursor's own model list now offers Claude Opus 5.5, GPT-5.6 in three variants, Gemini 4 Argon and Grok 4.7, none of which existed when these benchmarks were run. Composer 2.5 is still the current version of Cursor's model, so the figures below describe it accurately. What they no longer tell you is how it stands against today's frontier models, and I am not going to extrapolate a ranking I have not measured.
 
-The cost per request is also lower. Composer 2.5 typically burns $0.04 to $0.08 per Agent action, while Opus 4.7 runs $0.15 to $0.25 for the same action. For everyday work Composer is my default, and I switch to Opus only when I need extra reasoning on a genuinely tricky problem.
+The bigger deal was speed. Composer 2.5 ran at roughly 200 tokens per second on Cursor's infrastructure against about 80 to 100 for Opus 4.7 through the API, which turned a 90 second multi-file refactor into 35 to 40 seconds. That gap is the reason Composer became my default and it has not closed in daily use since.
 
-Is Composer 2.5 as smart as Opus 4.7 on the hardest tasks? No, not always. On genuinely novel architecture decisions or subtle debugging, Opus still edges ahead. But it's close enough that for 90 percent of coding work, Composer wins on speed-per-dollar.
+Cost per request was lower too, $0.04 to $0.08 per Agent action against $0.15 to $0.25 for Opus 4.7. Those per-request figures belong to the legacy billing model, where third-party models drew down a dollar pool. On the new plans Cursor's own models come out of the weekly pool instead and third-party models are billed as prepaid credit at list price, so the shape of the comparison has changed even though the direction has not: Cursor's own model is still the cheap default and the frontier models are still what you reach for on hard problems.
+
+Is Composer 2.5 as smart as a frontier model on the hardest tasks? No, not always. On genuinely novel architecture decisions or subtle debugging, the big models still edge ahead. But it is close enough that for most coding work Composer wins on speed per dollar, which is also why Plus at $8 is a reasonable plan despite having nothing else in it.
 
 ## Cursor pricing 2026 explained
 
-Cursor moved from a request-based model to a credit-based model in June 2025, and the change caused a Reddit meltdown for about six weeks. The current 2026 pricing looks like this.
+Every plan name in the previous version of this review is now a legacy plan. If you read this article before November and went to buy what it recommended, you could not have bought it. Cursor is now sold as part of what its own docs call The X Subscription, one subscription covering Grok, Cursor and X.
 
-| Plan | Monthly | Third-party model pool | Notes |
+These are the plans a new customer sees.
+
+| Plan | Monthly | Included usage | Third-party models |
 |---|---|---|---|
-| Hobby | Free | None | Limited Agent + Tab, 7-day Pro trial |
-| Start (India only) | ₹649 | None | Composer + Grok, more agent requests than free, UPI billing |
-| Pro | $20 | $20 | Unlimited Tab, all frontier models, MCPs, hooks, cloud agents |
-| Pro+ | $60 | $70 | ~3x Pro capacity, same feature set |
-| Ultra | $200 | $400 | 20x Pro's effective throughput, priority routing |
-| Teams | $40/user | Pro-equivalent per seat | SSO, admin, shared rules, Privacy Mode default |
-| Enterprise | Custom | Pooled | SCIM, audit logs, model/repo controls |
+| Free | $0 | Limited | Not available |
+| Plus | $8 | Base | Not available |
+| Premium | $30 | 4x Plus | API list price, from prepaid credit |
+| Super | $100 | 15x Plus | API list price, from prepaid credit |
+| Ultra | $200 | 50x Plus | API list price, from prepaid credit |
+| Teams | $30, $100 or $200 per seat | Matches the seat's tier | Same as the matching tier |
+| Enterprise | Custom | Pooled | SCIM, audit logs, invoice billing |
 
-Read off Cursor's pricing docs on July 31, 2026. Re-checked on September 9, 2026: the three tier prices of $20, $60 and $200 are unchanged on Cursor's pricing page. The pool amounts and the Teams per-user figure are not in that page's readable markup any more, so those keep their July date rather than borrowing September's. Two details in that table trip people up. Pro+ costs $60 but includes $70 of usage, not $60. The pool is deliberately priced above the subscription, and most comparison articles still print the wrong number. And the pool covers third-party models only. Composer 2.5 and Grok draw from a separate Cursor Models pool that the docs describe as generous included usage without publishing a rate for it.
+Read off Cursor's models and pricing docs on November 4, 2026. Annual billing is $80 for Plus, $300 for Premium, $1,000 for Super and $2,000 for Ultra.
 
-Annual billing saves roughly 20 percent across all paid tiers. Frontier-model requests (Claude, GPT, Gemini, Opus) deplete the pool at the model provider's underlying API price plus a small markup. MAX mode adds a 20 percent surcharge on top for a longer-context version of the same request.
+The headline reads like a price cut. Cursor's cheapest paid plan went from $20 to $8. Read the right-hand column before celebrating.
 
-The trap most people hit: assuming Pro's $20 means $20 of arbitrary AI. It doesn't. Auto mode used to be the way around this, and through 2025 it genuinely was free. That has changed. Cursor's docs now price Auto Cost per million tokens no matter which model it routes to, and Auto Balance and Auto Intelligence bill at the API rate of whatever model they pick. Auto is still the cheap option; it is no longer the free one. If you always pick Opus by hand, you'll burn $20 in about 100 to 150 requests.
+### The $8 plan cannot run Claude, GPT or Gemini
+
+On Free and Plus, third-party models are not available. Not metered, not rationed, not expensive. Not available.
+
+What Plus gives you is Cursor's own models, which the docs list as Grok 4.7, Grok 4.6, Grok 4.5 and Composer 2.5, and it runs them at fixed settings: Fast off, effort medium, and Grok 4.7 held to its 256k context window. No Auto. No Cloud Agents.
+
+So if you came to Cursor to point Claude at your codebase, your entry price is not $8. It is Premium at $30, where third-party models become available at the provider's API list price, paid from prepaid credit you buy on top of the subscription.
+
+Set that against legacy Pro at $20, which included $20 of third-party usage in the subscription. The comparable plan now costs half again as much and bundles none of it. That is a price rise wearing a price cut's clothes, and it is the single most important thing in this review.
+
+### If you already pay for Cursor, you are on a legacy plan
+
+Cursor's help page is straightforward about this: subscribe before the change and you are on a legacy plan, which keeps working as it is with two monthly usage pools and on-demand usage. It also publishes a mapping table, which is where the cost lands.
+
+| Legacy plan | Price | Comparable plan now | Price now |
+|---|---|---|---|
+| Hobby | Free | Free | $0 |
+| Start (India only) | ₹649 | Plus | $8 |
+| Pro | $20 | Premium | $30 |
+| Pro+ | $60 | Super | $100 |
+| Ultra | $200 | Ultra | $200 |
+| Teams Standard | $40/user | Teams, Premium seat | $30/user |
+
+A legacy Pro subscriber who moves pays 50 percent more. Pro+ pays 67 percent more. Teams Standard customers are the only ones who gain, dropping from $40 to $30 a seat.
+
+And the move is one way. Cursor states that switching cancels your Cursor subscription with a prorated refund, you then pick a plan on The X Subscription, and the change is permanent. You can still move between legacy plans, Pro to Pro+ for instance, without triggering that.
+
+If you are on legacy Pro and it still covers your month, the arithmetic says stay where you are.
+
+### Two pools became one
+
+The earlier version of this review explained Cursor's dollar-denominated pools: Pro included $20 of third-party usage, Pro+ included $70 rather than $60, Ultra included $400. I described that as the current system. It is now the legacy system, and the distinction is not cosmetic.
+
+New plans include one weekly pool of usage for Cursor's own models, shared across everything on the subscription: Agent in the editor, the CLI, Cloud Agents and Grok. The tiers are multiples of Plus rather than dollar amounts, and Cursor does not publish what Plus's base pool is in tokens or requests. Four times an unpublished number is as precise as anyone can be about Premium, including me.
+
+Max Mode moved with it. The docs now say it is available only on legacy request-based plans, where it extends a model's context window beyond the default and bills at the model's API rate plus 20 percent. On a new plan that lever does not exist.
 
 ## The June 2025 credit switch controversy
 
@@ -149,7 +188,7 @@ If you're earlier in this than the table assumes, my rundown of the [top AI codi
 
 The setup that nobody documents well: run Cursor as your primary IDE for interactive edits, and run Claude Code in a terminal tab for heavy agent tasks. This is what many senior developers I know settled on in early 2026, and it costs less than a single Ultra subscription.
 
-Why hybrid? Cursor's Composer 2.5 is fast and cheap for edits inside a file or across a small file set. Claude Code (running Claude Opus 4.7 or Sonnet 4.7) is better for tasks that run 30+ minutes autonomously: large migrations, whole-feature scaffolds, or debugging sessions that touch a dozen files.
+Why hybrid? Cursor's Composer 2.5 is fast and cheap for edits inside a file or across a small file set. Claude Code, running whichever Opus or Sonnet is current, is better for tasks that run 30+ minutes autonomously: large migrations, whole-feature scaffolds, or debugging sessions that touch a dozen files. This split is also a way around the new pricing, since Claude Code bills through your Anthropic plan rather than Cursor's prepaid credit.
 
 Here's the split I use:
 
@@ -178,31 +217,37 @@ If the Claude half of that is new to you, I wrote a separate walkthrough on [usi
 
 ## Real cost calculator for 3 dev personas
 
-Cursor's pricing pages show list prices. Real bills look different. These are estimates based on my own usage and audits of five other developers' billing.
+Cursor's pricing pages show list prices. Real bills look different. These are estimates for a new customer buying today, which is a different exercise from the one in earlier versions of this review, because the plan that used to be the obvious answer is no longer on sale.
 
 ### Persona 1: Junior developer learning Next.js at home
 
-Codes 6 to 10 hours per week on side projects. Uses Chat and Tab constantly, rarely triggers Agent mode. Sticks with Auto mode by default.
+Codes 6 to 10 hours per week on side projects. Uses Chat and Tab constantly, rarely triggers Agent mode. Used to lean on Auto mode by default.
 
-Monthly Cursor bill: $20 (Pro flat, third-party pool barely touched because Auto and Cursor's own models cover almost everything at this volume).
+The Auto habit is the problem. Auto is not on Plus, so at this volume the choice is Free, or Plus at $8 for Cursor's own models with the settings fixed.
 
-Best plan: Pro, or Start at ₹649 if you're in India and can live without Bugbot and manual frontier-model picks. No reason to go higher.
+Monthly bill: $8, or $0 if the Free tier's limits hold.
+
+Best plan: Plus at $8, on the condition that you are content learning with Grok and Composer rather than Claude. If you specifically want Claude explaining your code, you are looking at $30, and at 6 to 10 hours a week that is hard to justify against Copilot at $10.
 
 ### Persona 2: Senior engineer on a 200K-LOC Next.js SaaS
 
-Codes 40+ hours per week. Uses Composer daily for refactors, runs 2 to 4 Background Agents per week for larger tasks, switches to Opus 4.7 for tricky debugging maybe 30 times per month.
+Codes 40+ hours per week. Uses Composer daily for refactors, runs 2 to 4 Cloud Agents per week, and reaches for a frontier model for tricky debugging perhaps 30 times a month.
 
-Monthly Cursor bill: Pro $20 + overage credits $40 to $70 = $60 to $90 total, or step up to Pro+ at $60 flat.
+Those 30 debugging sessions decide it. Frontier models are not available below Premium, so Plus is out regardless of volume.
 
-Best plan: Pro+ at $60/mo. The overage math and predictability both favor it.
+Monthly bill: Premium at $30, plus prepaid credit for the frontier calls. Thirty sessions at the providers' list rates is realistically $15 to $40 depending on model and context, so $45 to $70 all in. Super at $100 only makes sense once Cursor's own models stop keeping up, not because of the frontier calls.
+
+Best plan: Premium at $30 with prepaid credit. If you are already on legacy Pro+ at $60 with its $70 pool, run the comparison before you touch anything, because switching is permanent.
 
 ### Persona 3: 5-person agency team
 
-Five developers across two projects, using Cursor daily. Two devs use Background Agents heavily for client work. Sensitive client codebases require Privacy Mode.
+Five developers across two projects, using Cursor daily. Two use Cloud Agents heavily for client work. Sensitive client codebases require Privacy Mode.
 
-Monthly Cursor bill: Teams at $40/user × 5 users = $200/mo total. Occasional overage on the two heavy users adds $30 to $60. Total $230 to $260/mo.
+This is the one case where the change is straightforwardly good news.
 
-Best plan: Teams. SSO, shared rules, Privacy Mode by default, and pooled billing make it cleaner than 5 individual Pro+ accounts.
+Monthly bill: five Premium seats at $30 is $150, against $200 under the old Teams Standard pricing. Prepaid credit for the two heavy users adds perhaps $30 to $60. Total $180 to $210, down from $230 to $260.
+
+Best plan: Teams on Premium seats. Privacy Mode is on by default, admins can lock it for the whole organisation, and you can mix Premium and Super seats rather than paying one rate for everyone. Read the Privacy Mode carve-outs first, particularly the one about Opus models with cyber safeguards off.
 
 ## What Cursor genuinely nails
 
@@ -230,23 +275,33 @@ Windows and Linux polish still lags Mac. Not by much, but Mac users get new feat
 
 Should use Cursor: full-time developers writing production code daily. Engineers who want to spend time on architecture rather than typing. Anyone doing large refactors, migrations, or feature scaffolds. Solo founders who need AI leverage to move faster. Teams that want a shared AI-editor standard.
 
-Shouldn't use Cursor: absolute beginners who need to learn syntax the slow way (use vanilla VS Code with light Copilot at most). Enterprise environments where AI editors aren't approved. Developers whose employer restricts pasting code into external AI services (even with Privacy Mode, some legal teams say no). Casual weekend coders who mostly write scripts (Copilot at $10 is enough).
+Shouldn't use Cursor: absolute beginners who need to learn syntax the slow way (use vanilla VS Code with light Copilot at most). Enterprise environments where AI editors aren't approved. Developers whose employer restricts pasting code into external AI services (even with Privacy Mode, some legal teams say no, and the carve-outs below give them a reason). Anyone whose main requirement is Claude or GPT on a tight budget, because Copilot at $10 now reaches those models for less than Cursor's $30 Premium tier.
 
-## Verdict: is Cursor worth $20/month in 2026?
+## Verdict: what Cursor costs now, and whether to pay it
 
-Yes for anyone coding professionally, and the ROI shows up in the first week. The Tab completion alone justifies $20. Composer, Agent mode, MCPs, and the ability to talk to your codebase are additional wins on top.
+The tool is still the best of its kind for how I work. Tab completion alone earns its keep, and Composer, Agent mode, MCPs and talking to your codebase stack on top of that. None of my criticisms are about the editor.
 
-The credit switch hurt trust in 2025 and the pricing model still confuses new users. Anysphere improved transparency significantly through late 2025 and early 2026, but they're not fully out of the doghouse with heavy users who felt the change was a stealth price hike.
+They are about the price, and the price moved twice in eighteen months. The 2025 credit switch hurt trust and the company spent a year climbing out of it. The late 2026 restructure is a second move in the same direction, and it is cleverer: the number on the pricing page went down while the cost of the plan most developers actually need went up by half.
 
-If you're new to AI-assisted coding, start with the free Hobby tier for a week, then upgrade to Pro. If you find yourself hitting the credit pool by day 20 of the month, jump to Pro+ rather than fighting the overage. Ultra is only for developers who genuinely spend 8+ hours daily inside Agent mode.
+Where that leaves you depends on which side of the change you are on.
 
-I still write this article inside Cursor, using Composer 2.5 for structural edits and Tab for the last 5 percent of prose fixes. After 18 months of daily use and one credit-system tantrum, I haven't found a better tool for how I code. $20 a month for that is fine.
+If you already pay for legacy Pro at $20, stay. You keep the price and the included third-party usage, and moving is a permanent one way switch to $30.
+
+If you are buying today and want frontier models, budget $30 for Premium plus prepaid credit, and compare that honestly against Copilot at $10 before you commit. Cursor has to win on Composer, Agent mode and codebase awareness now, because it no longer wins on price.
+
+If you are buying today and are happy inside Cursor's own models, Plus at $8 is a genuine bargain and the cheapest capable AI editor I know of. Just go in knowing that Claude, GPT and Gemini are not part of it, and that Auto and Cloud Agents are not either.
+
+And if you run a team, this change is in your favour for once: Premium seats at $30 are cheaper than the $40 Teams Standard seats they replace.
+
+I still write this article inside Cursor, using Composer 2.5 for structural edits and Tab for the last 5 percent of prose fixes. After 18 months of daily use, two pricing upheavals and one credit-system tantrum, I have not found a better tool for how I code. I am just no longer able to tell you it is the cheap option.
 
 ## Sources
 
 - [Cursor pricing page](https://cursor.com/pricing)
-- [Cursor pricing and billing docs](https://cursor.com/docs/account/pricing). Plan pools and Auto mode rates, checked July 31, 2026
-- [Cursor model pricing docs](https://cursor.com/docs/models). Per-token rates and the Cursor Models pool
+- [Cursor models and pricing docs](https://cursor.com/docs/models-and-pricing). New plan table, the weekly pool, Plus's fixed settings, and Max Mode being legacy only. Read November 4, 2026
+- [Cursor pricing and plans help page](https://cursor.com/help/account-and-billing/pricing). The legacy plan mapping table, annual prices, and the statement that switching is permanent. Read November 4, 2026
+- [Cursor privacy and data help page](https://cursor.com/help/security-and-privacy/privacy). Privacy Mode defaults and the zero retention carve-outs. Read November 4, 2026
+- [Cursor pricing and billing docs](https://cursor.com/docs/account/pricing). Legacy plan pools and Auto mode rates, checked July 31, 2026
 - [Introducing Cursor Start (India)](https://cursor.com/blog/cursor-start-india). July 27, 2026
 - [CNBC: SpaceX to acquire Cursor for $60 billion](https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html)
 - [Cursor Composer 2.5 announcement](https://cursor.com/blog/composer-2)
