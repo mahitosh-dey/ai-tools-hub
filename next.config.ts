@@ -1,37 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      // Old slug indexed by Google — redirect to current canonical URL
-      {
-        source: "/blog/chatgpt-review-2025",
-        destination: "/blog/chatgpt-plus-review",
-        permanent: true,
-      },
-      // Duplicate Midjourney beginner guide, consolidated 2026-07-27 into the
-      // older/stronger post to stop the two cannibalising the same query.
-      {
-        source: "/blog/midjourney-complete-beginners-guide",
-        destination: "/blog/how-to-use-midjourney-beginners",
-        permanent: true,
-      },
-      // Tag taxonomy consolidated 2026-07-30 (157 tags -> 27). These 7 tag
-      // slugs were indexed by Google before the merge, so they redirect to the
-      // tag that absorbed them. The other 16 indexed tag slugs were preserved
-      // deliberately and need no redirect.
-      { source: "/tag/ai-art", destination: "/tag/ai-image", permanent: true },
-      { source: "/tag/ai-tools-2026", destination: "/tag/ai-tools", permanent: true },
-      { source: "/tag/anthropic", destination: "/tag/claude", permanent: true },
-      { source: "/tag/automation", destination: "/tag/ai-agents", permanent: true },
-      { source: "/tag/openai", destination: "/tag/chatgpt", permanent: true },
-      { source: "/tag/side-income", destination: "/tag/make-money", permanent: true },
-      { source: "/tag/tutorial", destination: "/tag/beginners", permanent: true },
-      // News category retired 2026-08-04. It only ever held 2 posts, below the
-      // 3-post threshold the sitemap uses, so /category/news was live but never
-      // submitted. Both posts moved to Guides.
-      { source: "/category/news", destination: "/category/guides", permanent: true },
-    ];
+  // Static export. Every route in this site is content built from MDX on disk,
+  // so there is nothing to render per request: a rebuild on each commit does
+  // the same job ISR used to. This is also what keeps the site on a free host.
+  // It is deliberate, not a stopgap. See HOSTING.md.
+  output: "export",
+
+  images: {
+    // Static export has no image optimiser. Covers are already encoded to webp
+    // under 120 KB by scripts/optimize-images.mjs, so there is little left for
+    // one to do. Do not drop the optimize step: it is now load bearing.
+    unoptimized: true,
   },
 };
 

@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
 import { getAllPosts, getAllCategories, getAllTags, getPostsByTag, getPostsByCategory } from "@/lib/posts";
+// `output: "export"` requires metadata routes to declare themselves static.
+// This file reads MDX off disk at build time and nothing else, so it is.
+export const dynamic = "force-static";
 
 const baseUrl = "https://www.aivaultblog.com";
 
@@ -7,7 +10,6 @@ const baseUrl = "https://www.aivaultblog.com";
 // Fewer than this = thin content, hurts overall site quality signal.
 const MIN_POSTS_FOR_TAXONOMY = 3;
 
-export const revalidate = 3600;
 
 function mostRecentPostDate(posts: { updatedAt?: string; date: string }[]): Date {
   const timestamps = posts.map((p) => new Date(p.updatedAt ?? p.date).getTime());

@@ -1,5 +1,9 @@
 import { ImageResponse } from "next/og";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
+// `output: "export"` refuses to prerender a metadata image route unless the
+// route says outright that it is static. Nothing here varies per request,
+// so this is a declaration, not a behaviour change.
+export const dynamic = "force-static";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

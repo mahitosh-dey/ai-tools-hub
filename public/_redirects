@@ -1,0 +1,28 @@
+# Cloudflare Pages redirects. These moved here from next.config.ts when the
+# site went to static export, because `redirects()` in Next config only runs
+# on a server and an exported site has none. Every line below is a URL Google
+# has already indexed, so deleting one costs real traffic. Keep the reasons.
+
+# Old slug indexed by Google, redirected to the current canonical URL.
+/blog/chatgpt-review-2025  /blog/chatgpt-plus-review  301
+
+# Duplicate Midjourney beginner guide, consolidated 2026-07-27 into the
+# older/stronger post to stop the two cannibalising the same query.
+/blog/midjourney-complete-beginners-guide  /blog/how-to-use-midjourney-beginners  301
+
+# Tag taxonomy consolidated 2026-07-30 (157 tags -> 27). These 7 tag slugs
+# were indexed by Google before the merge, so they redirect to the tag that
+# absorbed them. The other 16 indexed tag slugs were preserved deliberately
+# and need no redirect.
+/tag/ai-art         /tag/ai-image     301
+/tag/ai-tools-2026  /tag/ai-tools     301
+/tag/anthropic      /tag/claude       301
+/tag/automation     /tag/ai-agents    301
+/tag/openai         /tag/chatgpt      301
+/tag/side-income    /tag/make-money   301
+/tag/tutorial       /tag/beginners    301
+
+# News category retired 2026-08-04. It only ever held 2 posts, below the
+# 3-post threshold the sitemap uses, so /category/news was live but never
+# submitted. Both posts moved to Guides.
+/category/news  /category/guides  301

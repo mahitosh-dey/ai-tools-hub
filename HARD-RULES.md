@@ -126,3 +126,31 @@ Added 2026-09-16 after telling the user Connectively was a dead product. It was 
 - These hard rules must exist in the project (this file) AND in assistant auto-memory.
 - If memory is lost, restore rules from this file.
 - If this file is edited, mirror the change into auto-memory.
+
+## 12. Hosting — static export, and why it has to stay that way
+
+Added 2026-11-04, the day Vercel paused the site. Cause: 4h 51m of Fluid Active
+CPU against a 4 hour Hobby allowance, with the pause set to run to 2026-12-04.
+Full account in `HOSTING.md`.
+
+- **The site is a static export on Cloudflare Pages.** `output: "export"`, built
+  to `out/`. There is no server. Do not add server-rendered routes, ISR,
+  `revalidate`, middleware, or anything that reads `searchParams`, `cookies()`
+  or `headers()` on the server. Any of those breaks the build outright.
+- **Per-request work costs quota and quota is what took the site down.** If
+  something genuinely needs a server it goes in `functions/` as a Cloudflare
+  Pages Function, and only after asking. There is exactly one today, the
+  newsletter signup.
+- **Never block bots in application code.** The deleted middleware blocked
+  scrapers by running a function for every scraper, which is what burned the
+  CPU. Blocking belongs at the Cloudflare edge, where it is free. And never
+  block YandexBot while `scripts/indexnow.mjs` is feeding IndexNow.
+- **Vercel Hobby is not an option to go back to.** Its fair use guidelines
+  restrict Hobby to non-commercial use, and define commercial to include
+  affiliate links, advertisements and paid placement. This site does all three
+  and documents them on `/disclosure`. Do not ask Vercel support to unpause the
+  old account; it invites a review that the account would fail.
+- **Add `Content-Type` checks to the post-deploy verification.** Next emits the
+  102 metadata images with no file extension, so `public/_headers` is the only
+  thing stopping every social card on the site serving as
+  `application/octet-stream`. Nothing fails loudly when that breaks.

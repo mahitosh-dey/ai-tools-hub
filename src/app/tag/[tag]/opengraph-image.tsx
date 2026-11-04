@@ -4,6 +4,10 @@ import { getAllTags } from "@/lib/posts";
 // one that has no image of its own re-exports the site-wide default. A dynamic
 // segment also needs its own params, or the route is not prerendered.
 export { default, size, contentType, alt } from "../../opengraph-image";
+// `output: "export"` refuses to prerender a metadata image route unless the
+// route says outright that it is static. Nothing here varies per request,
+// so this is a declaration, not a behaviour change.
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
   return getAllTags().map((tag) => ({ tag }));
