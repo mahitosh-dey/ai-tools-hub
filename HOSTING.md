@@ -60,9 +60,9 @@ credit card data on a free-tier property. This site collects none.
 | Setting | Value |
 | --- | --- |
 | Framework preset | None |
-| Build command | `npm run build` |
+| Build command | `npx next build` (what the project is configured with; `npm run build` is equivalent) |
 | Build output directory | `out` |
-| Node version | 20 or newer (`NODE_VERSION` env var) |
+| Node version | `NODE_VERSION` = `22`. Cloudflare's build log warns that node 20 "is past its end of life and is now unsupported". 20 still builds this site, but do not leave it there. |
 
 One environment variable has to be set under Settings -> Environment variables,
 for production and preview both:
@@ -87,6 +87,21 @@ One thing to carry over: **do not block YandexBot.** `scripts/indexnow.mjs`
 submits to IndexNow, which feeds Yandex. The old middleware blocked Yandex
 while the script fed it, a contradiction that sat open from 2026-09-21 until
 the file was deleted. Do not recreate it.
+
+## First deploy, verified
+
+The Cloudflare Pages project is `ai-tools-hub`, building `main` on every push.
+Verified live on 2026-11-04 against the pages.dev URL before the domain moved:
+all routes 200, sitemap at 89 URLs, 5 JSON-LD blocks parsing on a post, all 10
+redirects returning 301 to the right targets, and the newsletter Function
+executing (`POST /api/subscribe` rejected a bad address with 400).
+
+One bug surfaced only on the live deploy. `public/_headers` originally carried
+deliberately overlapping patterns, and Cloudflare applies every matching rule
+and **joins the values**, so the images served
+`content-type: image/png, image/png`. The patterns must not overlap. `*` spans
+path separators, so `/opengraph-image` and `/*/opengraph-image` cover all 102
+between them.
 
 ## Verify after any deploy
 

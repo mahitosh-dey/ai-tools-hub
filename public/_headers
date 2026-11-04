@@ -2,26 +2,20 @@
 #
 # Next's metadata image routes emit files with no extension: the cover for a
 # post lands at out/blog/<slug>/opengraph-image and is a PNG only by content,
-# not by name. Vercel knew the route's type from the build manifest. A static
+# not by name. Vercel knew the route's type from its build manifest. A static
 # host has nothing to go on but the filename, so without these rules it serves
 # all 102 of them as application/octet-stream and every Facebook, X and
 # LinkedIn card on the site silently fails to render.
 #
-# The patterns are deliberately overlapping. `*` in a _headers rule spans path
-# separators, so /*/opengraph-image already covers the nested ones, but the
-# explicit forms cost nothing and survive a future change to that behaviour.
+# The patterns must not overlap. Cloudflare applies every rule that matches and
+# joins the values, so listing both /*/opengraph-image and
+# /blog/*/opengraph-image produced "content-type: image/png, image/png" on the
+# first deploy, which is a malformed header a strict crawler can reject.
+# Verified on the live deploy 2026-11-04: `*` spans path separators, so the two
+# rules below cover all 102 images between them and nothing matches twice.
 
 /opengraph-image
   Content-Type: image/png
 
 /*/opengraph-image
-  Content-Type: image/png
-
-/blog/*/opengraph-image
-  Content-Type: image/png
-
-/category/*/opengraph-image
-  Content-Type: image/png
-
-/tag/*/opengraph-image
   Content-Type: image/png
