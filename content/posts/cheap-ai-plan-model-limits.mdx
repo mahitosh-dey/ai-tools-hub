@@ -1,0 +1,165 @@
+---
+title: "I Checked Which Models 9 Cheap AI Plans Actually Run. Five Are Missing One."
+seoTitle: "Cheap AI Plans 2026: Which Models You Cannot Run"
+date: "2026-11-05"
+updatedAt: "2026-11-05"
+excerpt: "The price is on the pricing page. What it buys is often three clicks into the documentation. I checked the cheapest paid plan of nine AI tools for models you cannot reach, and four more tools would not answer the question at all."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "cheap-ai-tools"
+  - "ai-coding"
+  - "github-copilot"
+coverImage: "/images/cheap-ai-plan-model-limits-cover.webp"
+readTime: "7 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "Which AI tools restrict models on their cheapest paid plan?"
+    a: "Five of the nine I could check, as of 5 November 2026. Cursor Plus at $8 cannot run Claude, GPT or Gemini at all. GitHub Copilot Pro at $10 cannot run any Opus model. Replit Core at $20 cannot run the Fast model variants. Claude Pro does not include Fable except through separately bought usage credits. ChatGPT Go cannot reach most of the GPT-6 line. Three tools restricted nothing on their cheapest paid plan: Zed Pro, Devin Pro and Amazon Q Developer Pro."
+  - q: "Does GitHub Copilot Pro include Claude Opus?"
+    a: "No. GitHub's own model table marks Claude Opus 4.8, Opus 5, Opus 5.5 and Fable 5 as not included on Pro. What $10 buys is Sonnet and Haiku, currently Sonnet 4.6 and Sonnet 5 alongside Haiku 4.5 and 5.5, plus the GPT and Gemini line-ups. Opus starts on Copilot Pro+ at $39. This is the one that bothered me most, because GitHub's marketing page prints the same model list for Free, Pro, Pro+ and Max, so the page you read before paying disagrees with the page that governs what you get."
+  - q: "Can Cursor's $8 plan run Claude?"
+    a: "No, and not at any price. Cursor's documentation says third-party models like Claude, GPT and Gemini are not part of the included pool, and that Plus and Free do not include them at all. Plus gives you Cursor's own models, Grok 4.7, 4.6, 4.5 and Composer 2.5, at fixed settings. The first Cursor plan that can reach Claude is Premium at $30, and even then you pay the provider's API list price out of prepaid credit bought separately. Cursor does disclose this, in an asterisked footnote on the pricing page."
+  - q: "Does Claude Pro include every Claude model?"
+    a: "Almost. The pricing table shows Opus, Sonnet and Haiku as included on Pro. Fable is the exception: on Pro it is available through usage credits rather than included in the plan, while Max and Ultra include it with a weekly cap. Anthropic puts this in the models table on the pricing page itself rather than hiding it in a help article, which is the behaviour I would like more of. Pro is $20 billed monthly or $17 a month billed annually."
+  - q: "What is the cheapest paid plan that can run a frontier model?"
+    a: "GitHub Copilot Pro at $10, of the ones I could verify. Cursor Plus is cheaper at $8 but cannot reach Claude, GPT or Gemini at all, so the $8 does not buy you a frontier model. Zed Pro is also $10 and restricts nothing, though it includes only $5 of tokens before usage-based billing starts. If you specifically want Opus, the cheapest route I found is Copilot Pro+ at $39."
+  - q: "Why can I not check these AI pricing pages myself?"
+    a: "You can, in a browser. What you cannot do is check them with a script, and increasingly neither can anything else that is not a human with an account. ChatGPT, Google Gemini, Perplexity and Poe all render their prices in JavaScript, so the dollar figures are simply absent from the page source. Perplexity's pricing URL returns a 404, Microsoft Copilot's returns a 404, and JetBrains AI's returns a page title and nothing else. This is the same wall I hit when I compared 12 pricing pages against their August versions."
+  - q: "Which AI tools do not restrict models on the cheap plan?"
+    a: "Three of the nine. Zed Pro at $10 states that Pro and Business include all models on its list, which runs to roughly 40 entries. Devin Pro at $20 advertises full model availability and frontier models from OpenAI, Claude, Gemini and SpaceXAI. Amazon Q Developer Pro at $19 states no model-level difference from its free tier at all. Worth knowing on that last one: AWS has posted an end-of-support notice for the Amazon Q IDE plugins dated 30 April 2027."
+  - q: "Does ChatGPT Go get the same models as Plus?"
+    a: "No. The comparison table on OpenAI's pricing page marks GPT-6.1 Sol, GPT-6 Astra, GPT-6 Sol, GPT-5.6 Sol, GPT-5.6 Luna and the legacy models as unavailable on Go, all of which Plus gets. Go gets GPT-6 Luna and GPT-5 Thinking Mini, with limited GPT-5.6 Terra access on desktop. There is a restriction one tier up too: GPT-5.6 Sol Pro is marked unavailable on Plus and available on Pro. I could not report the prices because they are not in the page text."
+  - q: "How do I check what my own plan can actually run?"
+    a: "Open the model picker inside the product while signed in, which is the only source that reflects your account rather than a marketing page. Then find the vendor's model documentation, not its pricing page, because that is where the per-tier table lives when the two disagree. Do both before you pay rather than after. If the model you came for is the reason you are buying, confirm it by name, since none of these checkouts will stop you buying a plan that cannot run it."
+---
+
+The price of an AI tool is on its pricing page. What the price buys is often three clicks into the documentation, in a table that the pricing page does not link to and sometimes contradicts.
+
+I found this by accident. While rewriting my [Cursor and GitHub Copilot comparison](/blog/cursor-vs-github-copilot) I noticed that Cursor's $8 plan cannot run Claude, then checked Copilot for symmetry and found that its $10 plan cannot run Opus. Two tools, two holes, neither one on the price card in a way you would notice.
+
+So I went looking at eleven more.
+
+## What I did
+
+For each tool I found the cheapest plan that costs money, ignoring free tiers, and then tried to answer one question: is there a model this plan cannot use that a dearer plan can? I read the pricing page first, the way a buyer would, then the model or billing documentation.
+
+I recorded two things separately: whether a restriction exists, and whether the pricing page tells you about it. Those turn out to be different questions with different answers.
+
+Everything below was read on 5 November 2026. Where a page would not give me an answer I have said so rather than filling the gap from memory, and four of the thirteen tools fall into that category.
+
+## Five of nine cannot run something
+
+| Tool | Cheapest paid plan | Cannot run |
+|---|---|---|
+| Cursor | Plus, $8 | Claude, GPT and Gemini, entirely |
+| GitHub Copilot | Pro, $10 | Opus 4.8, Opus 5, Opus 5.5, Fable 5 |
+| Replit | Core, $20 | The Fast model variants |
+| Claude | Pro, $20 or $17 annual | Fable, except via bought credits |
+| ChatGPT | Go | Most of the GPT-6 line |
+
+Cursor is the widest hole. Its documentation states that third-party models are not part of the included pool and that Plus and Free do not include them at all. You get Grok 4.7, 4.6 and 4.5 plus Composer 2.5, at fixed settings, and the first tier that reaches Claude is Premium at $30. Even there you are buying the right to spend prepaid credit at the provider's list price rather than getting usage included. I went through the whole ladder in my [Cursor review](/blog/cursor-ai-review-2026).
+
+Claude's is the narrowest and the most honestly presented. Opus, Sonnet and Haiku are all included on Pro. Only Fable sits outside, reachable through usage credits, with Max and Ultra including it up to a weekly cap.
+
+ChatGPT Go, the cheapest paid tier, is marked unavailable for GPT-6.1 Sol, GPT-6 Astra, GPT-6 Sol, GPT-5.6 Sol, GPT-5.6 Luna and the legacy models. There is a second restriction further up that almost nobody mentions: GPT-5.6 Sol Pro is marked unavailable on Plus and available only on Pro.
+
+## GitHub's two pages disagree with each other
+
+This is the finding I would act on if I were buying this week.
+
+GitHub's documentation carries a per-model table with a column for each plan. In it, Claude Opus 4.8, Opus 5, Opus 5.5 and Fable 5 are marked as not included on Pro. They begin at Pro+, which is $39. What Pro gets is Sonnet 4.6, Sonnet 5, Haiku 4.5 and Haiku 5.5, plus the GPT and Gemini families.
+
+GitHub's marketing page, the one that appears when you search for Copilot pricing, prints a models table that shows the same list for Free, Pro, Pro+ and Max.
+
+Both pages belong to GitHub. They describe the same product. One of them is the page a buyer reads, and it is the one that is wrong.
+
+I want to be careful about what I am claiming. I am not saying GitHub is hiding this, because the information is published, in public, on GitHub's own site. I am saying the two pages do not match and the mismatch runs in the direction that costs the buyer money. For most work Sonnet is the right model anyway and nobody will ever notice the ceiling. For the specific developer who read a benchmark, decided on Opus and bought the $10 plan, the ceiling is the entire point.
+
+## Three restrict nothing
+
+Worth saying clearly, because an audit that only reports problems is not an audit.
+
+Zed Pro at $10 states that Pro and Business include every model on a list running to roughly forty entries, Fable 5.1 and Opus 5.5 among them. The catch is elsewhere: $5 of tokens are included and then usage-based billing starts, so the model list is open and the meter is the constraint.
+
+Devin Pro at $20, which is what Windsurf became after Cognition absorbed it, advertises full model availability and names frontier models from OpenAI, Claude, Gemini and SpaceXAI. Its only stated model restriction applies to the free tier, which gets SWE-1.6 and nothing else.
+
+Amazon Q Developer Pro at $19 states no model-level difference from its free tier. A separate thing I noticed while reading it: AWS has posted an end-of-support notice for the Amazon Q IDE plugins dated 30 April 2027, pointing users towards Kiro. That is not a pricing problem, but it is the sort of thing worth seeing before you standardise a team on something.
+
+## Where each vendor tells you
+
+Here is the split that surprised me, because I expected it to be worse.
+
+| Tool | Restriction disclosed where |
+|---|---|
+| Claude | Pricing page, in the models table |
+| ChatGPT | Pricing page, in the comparison table |
+| Cursor | Pricing page, asterisked footnote |
+| Replit | Documentation only |
+| GitHub Copilot | Documentation only, and the pricing page contradicts it |
+
+There is a reason this keeps happening, and it is not conspiracy. A pricing page is built once by a marketing team and updated when prices move. A model table is maintained by whoever ships models, which in 2026 is weekly. The two drift because they have different owners and different update rhythms, and the model table wins because it is the one wired to the product. That also predicts where to look when they disagree: trust the page that changes most often.
+
+Three of the five put it where a buyer would see it. Anthropic and OpenAI both use a plain per-model grid on the pricing page, which is exactly right. Cursor discloses it as a footnote, which is weaker but still on the page you are reading when you decide.
+
+Replit says nothing on the plan page. Its Core tier is described as "$20 towards more powerful models", which is a credit amount rather than a model list, and the rule that the Fast variants need Pro or Enterprise appears only in the model-selector documentation. Core does reach Opus and Fable through what Replit calls Max Mode, so this is a narrow restriction on speed variants rather than a wall. It is still a thing you would only discover after paying.
+
+So the problem is real but narrower than the headline version of this story would be. Most vendors tell you. Two do not.
+
+## Four tools would not answer the question
+
+This is where the audit stopped being about model restrictions.
+
+**Perplexity.** The pricing URL returns a 404. The main site returns forty-nine characters of text and an image, with the rest rendered in JavaScript. The help centre lists a billing collection whose own link 404s. I could not establish Perplexity's price, let alone its model list.
+
+**Poe.** The pricing page loads and contains no plans. The navigation item reads "Get more points". The help centre returns a 403. For a product whose entire value proposition is access to many models, I could not determine which models any paid tier includes.
+
+**Microsoft Copilot.** The pricing URL 404s. The main domain redirects to a page stating only that a free tier exists and that more is available through paid plans.
+
+**JetBrains AI.** The pricing page returns a title and no content.
+
+And a fifth problem cutting across the readable ones: no dollar figure appears in the text of ChatGPT's, Gemini's, Perplexity's or Poe's pricing pages. The prices are drawn by JavaScript after the page loads. I can tell you exactly which models ChatGPT Go cannot run, because that table is in the HTML, and I cannot tell you what Go costs.
+
+Google's is the strangest case. A Google support article states that Gemini 4 Argon is available only to Ultra members and paying Pro members, pointedly not naming AI Plus. But that sentence appears in a Vertex AI context rather than one about the Gemini app, so I am not going to tell you AI Plus cannot run Argon. I will tell you I spent an hour trying to find out and could not.
+
+## What this actually tells you
+
+Three things, in the order they would save you money.
+
+**The cheap plan is missing something more often than not.** Five of nine, and the holes are not small ones. Buying the entry tier because the price looks right is how you end up with an editor that cannot run the model you chose the editor for.
+
+**The pricing page is usually right and occasionally is not.** Three of five vendors disclose properly. The exception that matters is GitHub, where two official pages contradict each other and the wrong one is the one with the buy button on it.
+
+**Verify by model name, not by tier name.** "Access to frontier models" is marketing. "Claude Opus 5.5: not included" is a fact. The second one lives in documentation.
+
+The fix costs you five minutes. Before paying, open the vendor's model documentation rather than its pricing page, find the per-tier table, and look for the model you actually came for by name. If you cannot find such a table, that absence is itself information. For a broader look at what the sub-$20 band buys across categories, there is my roundup of [AI tools under $20 a month](/blog/best-ai-tools-under-20-dollars-2026).
+
+## The limits of this method
+
+I checked thirteen tools and could only report on nine, so this is not a survey of the market. The four I could not read are not a random sample either: they are the ones with the most JavaScript, which probably correlates with marketing budget rather than with honesty.
+
+I read pages as an anonymous visitor with no account. A signed-in user sees a model picker that reflects their actual entitlements, and that picker is more authoritative than anything I read. If your product shows you something different from what I report here, believe your product.
+
+I also checked a single moment. Everything here was read on 5 November 2026, and I found in [comparing pricing pages against their August versions](/blog/ai-pricing-page-changes-audit) that most pages sit unchanged for months and then get rebuilt overnight. Treat the date as part of the claim.
+
+Finally, absence of evidence did real work in this piece. When I say Amazon Q Developer restricts nothing, I mean no restriction is stated on the pages I read. It is not the same as a vendor promising there is none.
+
+## Sourcing
+
+Read 5 November 2026, all from vendor pages:
+
+- Cursor: cursor.com/docs/models-and-pricing and cursor.com/pricing
+- GitHub Copilot: github.com/features/copilot/plans and docs.github.com subscription-plans-for-github-copilot
+- Claude: claude.com/pricing and the Anthropic support article on usage and length limits
+- ChatGPT: chatgpt.com/pricing, plus the per-plan pages under chatgpt.com/plans
+- Replit: replit.com/pricing and docs.replit.com model-selector
+- Zed: zed.dev/pricing and zed.dev/docs/ai/models
+- Devin: devin.ai/pricing, devin.ai/desktop and docs.devin.ai desktop models
+- Amazon Q Developer: aws.amazon.com/q/developer/pricing and the AWS user guide
+- Google: one.google.com/about/plans and Google One support articles
+
+Could not be read on the same date: perplexity.ai/pricing (404), microsoft.com/en-us/microsoft-copilot/pricing (404), poe.com/pricing (no plans in page text), jetbrains.com/ai-ides/buy (title only), help.poe.com (403), help.openai.com (403).
+
+A 403 means a server declined an automated request. It is not evidence about a product, and I have not treated it as any.
+
+The price is the easy part. What the price buys is a table somebody decided not to put on the pricing page.

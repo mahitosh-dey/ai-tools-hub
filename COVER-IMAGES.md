@@ -724,6 +724,27 @@ and all tags held within the middle band of the image, nothing important near
 the top or bottom edge, no text, no numbers, no letters, no logos, no faces
 ```
 
+**I Checked Which Models 9 Cheap AI Plans Actually Run** - `cheap-ai-plan-model-limits-cover.webp`
+Style A, sixth in the illustration run. The argument is that you buy a plan and
+something you expected is simply not in it. Three plan cards side by side, each
+holding a stack of small model chips, and the cheapest card has visible empty
+slots where chips should sit. The empty slots carry the argument, so they are
+the amber element and everything else stays charcoal. Keep the cards and the
+gaps inside the central 68 percent of the height, since the top and bottom 16
+percent are cropped away on the post page.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+three tall rounded cards standing side by side across the centre of the frame,
+each card holding a vertical stack of five small rounded chips, the two cards
+on the right filled with solid charcoal chips, the leftmost and shortest card
+missing two of its chips so only empty amber outlined slots remain in those
+positions, the empty outlined slots clearly the focal point, all three cards
+held within the middle band of the image, nothing important near the top or
+bottom edge, no text, no numbers, no letters, no logos, no faces
+```
+
 ---
 
 ## How to add a cover to a post
