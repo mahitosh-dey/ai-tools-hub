@@ -162,10 +162,15 @@ Generating cover images is yours. The prompt is mine, and it goes in
 
 Clear the two queued sweeps and fix the pages that lie about the business.
 
-- **Finish the Cursor sweep.** Six posts left, all small now the hub post is
-  correct: `ai-coding-agent-pricing-2026`, `top-ai-coding-assistants-for-beginners`,
-  `ai-agents-for-freelancers`, `best-ai-tools-under-20-dollars-2026`,
-  `ai-pricing-changes-2026`, `best-ai-tools-for-freelancers`. One session, not six.
+- ~~**Finish the Cursor sweep.**~~ **Done 2026-11-06**, one session as planned.
+  All six corrected: `ai-coding-agent-pricing-2026`,
+  `top-ai-coding-assistants-for-beginners`, `ai-agents-for-freelancers`,
+  `best-ai-tools-under-20-dollars-2026`, `ai-pricing-changes-2026`,
+  `best-ai-tools-for-freelancers`. Note for the next sweep: they were not "all
+  small". The queue counted twelve spots by grepping for Cursor beside a dead price
+  and the real figure was about thirty, because the lines describing the retired
+  pricing *structure* carry no number. Two posts needed an argument reworked rather
+  than a figure swapped. Budget accordingly.
 - **Sweep the Claude context claim.** Nine posts say a flat 200,000-token
   window. Research once, verify against Anthropic's live pricing page, correct
   everywhere. Two of those posts also need the Cursor fix, so do those two once.

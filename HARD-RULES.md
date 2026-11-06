@@ -27,6 +27,12 @@ These are non-negotiable rules for any AI assistant working in this project. The
   tables, the body prose, the summary table, and any recommendation section. Fixing
   the heading is not fixing the post.
 - Re-grep after the fix and verify against the **built HTML**, not just the source.
+- **Grep for the claim, not for the number.** When a vendor changes *how* it charges
+  rather than *what* it charges, grep the vocabulary of the old structure as well as
+  its figures. Expect the real count to be two or three times the first estimate.
+- **Check that the argument still follows before swapping a number.** A correct
+  figure in a paragraph that reasons from the old one is still a wrong post. Check
+  especially whether the post uses the changed fact as *evidence* for a thesis.
 
 **Why this exists.** Six separate times between 2026-09-24 and 2026-10-15, a stale
 figure survived in an FAQ block or a comparison table after the body had been
@@ -37,6 +43,16 @@ The clearest case was 2026-10-15. The play.ht DNS claim was corrected in two pos
 from memory. A grep found a third post that had never been checked, and an FAQ in one
 of the two already-corrected posts still contradicted its own body hours later, on the
 same day a post about checking systematically was published.
+
+The two later clauses were added on 2026-11-06, at the end of the Cursor sweep. That
+sweep was scoped by grepping for Cursor on the same line as a dead dollar figure,
+which counted twelve spots. The real count was about thirty, because sentences like
+"a dollar pool plus a second pool" and "Cursor's on-demand overage" describe the
+retired pricing structure without quoting any price, and a reader acts on them the
+same way. Two of the six posts also needed an argument reworked rather than a number
+swapped: Cursor's new $8 plan fit the "under $20" guide better than $20 ever did but
+cannot run Claude or GPT, which was the capability that guide praised it for, and a
+second post was using Cursor's old pricing as proof that metered pricing can be fair.
 
 Memory found two posts. Grep found three.
 
