@@ -2,7 +2,7 @@
 title: "AI Coding Agent Pricing in 2026: What $20 Actually Buys"
 seoTitle: "AI Coding Agent Pricing 2026 (Verified)"
 date: "2026-08-14"
-updatedAt: "2026-10-05"
+updatedAt: "2026-11-06"
 excerpt: "Anthropic's own docs price a Claude Code developer at $150 to $250 a month. The subscription is $20. Here is what that gap tells you."
 category: "Guides"
 tags:
@@ -11,13 +11,13 @@ tags:
   - "ai-comparison"
   - "cheap-ai-tools"
 coverImage: "/images/ai-coding-agent-pricing-2026-cover.webp"
-readTime: "13 min read"
+readTime: "14 min read"
 author: "Mahitosh Dey"
 faqs:
   - q: "How much does an AI coding agent really cost per developer?"
     a: "Anthropic's own cost documentation for Claude Code gives the clearest published figure: around $13 per developer per active day and $150 to $250 per developer per month, with 90 percent of users staying under $30 per active day. That is at API rates rather than on a subscription. The subscription is $20 a month, so the gap between what a working developer consumes and what a plan costs is roughly tenfold."
   - q: "Why can I not compare AI coding tool prices?"
-    a: "Because no two vendors sell the same unit. GitHub Copilot sells dollars of credits, Cursor sells a dollar pool plus a second pool with no published rate, OpenAI's Codex sells message equivalents expressed as ranges, Claude Code sells rolling time windows that are explicitly not metered in dollars, Gemini CLI sells requests per day, and Zed sells tokens at API list price plus 10 percent. The prices look comparable because they are all near $20. What you get for it is not comparable at all."
+    a: "Because no two vendors sell the same unit. GitHub Copilot sells dollars of credits, Cursor sells one weekly pool for its own models sized as a multiple of a base it does not publish, OpenAI's Codex sells message equivalents expressed as ranges, Claude Code sells rolling time windows that are explicitly not metered in dollars, Gemini CLI sells requests per day, and Zed sells tokens at API list price plus 10 percent. Most of the prices still sit near $20, which makes them look comparable. What you get for the money is not comparable at all, and as of late 2026 Cursor has left that cluster in both directions at once: an $8 plan that cannot run third-party models and a $30 one that can."
   - q: "What does ChatGPT's Codex include on the $20 Plus plan?"
     a: "OpenAI publishes it as a range rather than a number, per five-hour window. On Plus that is 15 to 150 messages of GPT-6 Sol, 15 to 160 of GPT-6.1 Sol, 5 to 45 of GPT-6 Astra, and 350 to 3,000 of the faster GPT-6 Luna. Pro is no longer a multiple of Plus: it comes at $100, $200 or $500, and OpenAI says Pro plans currently have no five-hour limit. A tenfold range is a vendor telling you honestly that it depends on your work, and also telling you that nobody can predict what they are buying. Checked 5 October 2026."
   - q: "How do Claude Code's limits work?"
@@ -59,13 +59,15 @@ Here is the structural problem, and it is the reason every comparison article in
 | Tool | What you are actually buying | Entry price |
 | --- | --- | --- |
 | GitHub Copilot | Dollars of credits, one credit is one cent | $10 |
-| Cursor | A dollar pool, plus a second pool with no published rate | $20 |
+| Cursor | One weekly pool for its own models, sized as a multiple of an unpublished base | $8 |
 | Codex | Message equivalents, published as ranges | $20 |
 | Claude Code | Rolling five-hour and weekly time windows | $20 |
 | Gemini CLI | Requests per minute and per day | Free tier |
 | Zed | Dollars of tokens at API list price plus 10 percent | $10 |
 
-Six products, six incompatible units. Dollars, messages, hours, requests, tokens. The prices cluster around $20 so they look comparable, and what you receive for the money is not comparable in any direction.
+Six products, six incompatible units. Dollars, messages, hours, requests, tokens, and in Cursor's case a multiple of a number it declines to publish. Most of the prices still cluster near $20 so they look comparable, and what you receive for the money is not comparable in any direction.
+
+Cursor broke out of that cluster in late 2026, and it broke out in both directions at once: $8 for a plan that cannot reach Claude, GPT or Gemini, $30 for the first one that can. So read that entry price column carefully. It is the cheapest thing each vendor will sell you, not the cheapest thing that does what the other five do.
 
 You cannot convert between these. There is no exchange rate between a five-hour window and a dollar of credits, and no vendor publishes one, because publishing one would make them comparable.
 
@@ -96,15 +98,23 @@ GitHub sells dollars. One credit is one cent, and each plan includes a credit to
 
 Notice that the allowance exceeds the subscription in every tier. That is deliberate and it is the opposite of Zed, which prices $10 for $5 of tokens. Both are rational. GitHub wants the credit figure to look generous; Zed expects most users to bring their own key and treats the included tokens as a sample.
 
-I priced this properly against Cursor in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot), where the short version is that the $10 against $20 framing everyone repeats is misleading in both directions.
+I priced this properly against Cursor in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot). The short version used to be that the $10 against $20 framing everyone repeats is misleading in both directions. It is now worse than misleading, because neither half of it is on sale any more: Copilot is still $10, and the $20 Cursor plan it was always set against is legacy.
 
-## Cursor runs two pools and publishes one rate
+## Cursor stopped publishing a rate at all
 
-Cursor Pro at $20 includes $20 of third-party model usage, which is legible. It also includes a separate pool for Cursor's own models, Composer and Grok, which the company describes as generous without attaching a published rate to it.
+Cursor rebuilt its plans in late 2026, and the rebuild moved it from the most legible vendor in this table to the least.
 
-So the honest statement about Cursor Pro is that it gives you $20 of usage you can reason about plus an unspecified amount you cannot.
+The old structure, which this post described as current until November, was two pools. Pro at $20 included $20 of third-party model usage, which was legible, plus a separate pool for Cursor's own Composer and Grok models that the company called generous without attaching a published rate to it. One pool you could reason about, one you could not.
 
-An earlier version of this post said Pro+ at $60 includes $70 and Ultra at $200 includes $400. On 5 October 2026 Cursor's pricing page no longer publishes a usage figure for any individual tier. It shows $20 for Individual and points at the docs. So those two numbers are now unverified and I have stopped stating them as fact. The pattern of allowance exceeding subscription may well still hold. I cannot show you where it says so.
+The new structure has one pool, and you cannot reason about any of it. New plans include a single weekly allowance for Cursor's own models, shared across Agent in the editor, the CLI, Cloud Agents and Grok. The tiers are expressed as multiples of the cheapest plan: Plus is the base, Premium is four times it, Super fifteen times, Ultra fifty. Cursor does not publish what the base is in tokens, requests or dollars. Four times an unpublished number is as precise as anyone can be about Premium, including me.
+
+Third-party models left the subscription altogether. Plus at $8 cannot run Claude, GPT or Gemini at all. From Premium at $30 upward you can, at the provider's API list price, paid out of prepaid credit you buy separately. So the dollar-denominated part of Cursor's pricing is now the part that is not included.
+
+Compare like with like and the price went up. Legacy Pro at $20 bundled $20 of third-party usage. The plan that replaces it costs $30 and bundles none. Cursor's own mapping table sets Pro at $20 against Premium at $30, Pro+ at $60 against Super at $100, and Teams Standard at $40 a seat against a Premium seat at $30. Teams customers are the only ones who come out ahead.
+
+If you already pay for Cursor you are on a legacy plan, which keeps working the old way with two monthly pools and on-demand usage. Max Mode, which extended a model's context and billed at its API rate plus 20 percent, now exists only there. Switching to a new plan is permanent.
+
+An earlier version of this post said Pro+ at $60 includes $70 and Ultra at $200 includes $400. Those were true of the legacy system, and I marked them unverified on 5 October when the pricing page stopped publishing per-tier figures. They are now something more specific than unverified: they describe plans no new customer can buy.
 
 I went through the full arithmetic in the [Cursor review](/blog/cursor-ai-review-2026).
 
@@ -172,9 +182,9 @@ Working through all of the above, here is where I would put people.
 
 **If you code a few hours a week**, use a free tier and stop reading comparison articles. Gemini CLI's free allowance, ChatGPT's free tier, or Claude's free tier will cover you, and the money you would spend on a subscription buys nothing you will use.
 
-**If you code most days in a normal-sized repository**, take a $20 subscription and stop optimising. You are the user the bet was priced for and you are getting the better half of it. Which $20 matters less than the fact that you took one. Pick on which editor you want to live in rather than on the allowance.
+**If you code most days in a normal-sized repository**, take a $20 subscription and stop optimising. You are the user the bet was priced for and you are getting the better half of it. Which one matters less than the fact that you took one. Pick on which editor you want to live in rather than on the allowance. One caveat since Cursor's restructure: if the subscription you pick is Cursor, check what you are buying, because its $8 plan cannot run Claude, GPT or Gemini and the tier that can is $30.
 
-**If you code all day across a large codebase**, you will meet the limits, so choose on how the vendor behaves when you do. Copilot gives you a dollar figure and a hard budget you can set to zero. Claude Code gives you a window and tells you when it resets. Cursor gives you a pool plus an unpublished second pool. I would rather have the dollar figure, because it is the only one of the three I can forecast.
+**If you code all day across a large codebase**, you will meet the limits, so choose on how the vendor behaves when you do. Copilot gives you a dollar figure and a hard budget you can set to zero. Claude Code gives you a window and tells you when it resets. Cursor gives you one weekly pool sized as a multiple of a base it does not publish, and bills third-party models separately at list price. I would rather have the dollar figure, because it is the only one of the three I can forecast, and Cursor's restructure widened that gap rather than closing it.
 
 **If you run agents unattended or in CI**, use an API key rather than a subscription. Not because it is cheaper, it usually is not, but because unattended work is exactly what a subscription's fair-use limits are designed to stop, and you will spend your time fighting the allowance instead of doing the work.
 
@@ -206,7 +216,7 @@ That is not a scandal. It is how flat pricing has always worked, in gyms and pho
 
 If you take one thing from this, take the habit rather than the tool. Clear your session between tasks, match the model to the job, and measure your own consumption once rather than trusting a comparison table. Those three things will save you more than switching products will.
 
-Verified on October 5, 2026, against each vendor's own documentation rather than a summary of it.
+Verified on October 5, 2026, against each vendor's own documentation rather than a summary of it, with the Cursor figures re-read on November 6 after the restructure described at the end of this section.
 
 From Anthropic's Claude Code cost documentation, now at code.claude.com/docs/en/costs after moving from docs.claude.com: the $13 per active day and $150 to $250 per month figures, the 90 percent under $30 figure, the rolling five-hour and weekly window structure, the roughly seven-times agent team cost, the cache lifetime drop from one hour to five minutes on usage credits, and the note that in-tool cost figures are estimates that may not match your bill.
 
@@ -215,5 +225,7 @@ From OpenAI's Codex pricing documentation: the four model names, the Plus messag
 From GitHub: the base and flex credit split, and the one credit equals one cent rate. From Zed: $10 for $5 of tokens and API list price plus 10 percent.
 
 What changed since the August check. The Codex section named GPT-5.6 Sol and gave a 10 to 100 range on Plus with Pro at five times that. The current models are the GPT-6 family, the range for GPT-6 Sol is 15 to 150, and Pro no longer works as a multiple of Plus at all. The credit rates quoted for GPT-5.6 Sol were 125 and 750; the card says 100 and 500. Cursor's per-tier usage inclusions have been removed from its pricing page, so two figures that were stated as fact are now marked unverified rather than quietly kept.
+
+What changed since the October check, read 6 November 2026. Cursor replaced its entire plan ladder, and this is the largest correction this post has carried. Pro at $20, Pro+ at $60 and Teams Standard at $40 a seat are legacy plans new customers cannot buy. What is on sale is Hobby free, Plus at $8, Premium at $30, Super at $100 and Ultra at $200, with third-party models unavailable below Premium and billed at provider list price from prepaid credit above it. The Cursor row in the unit table, the Cursor section and the heavy-user recommendation are all rewritten rather than patched. Read from Cursor's models and pricing docs and its pricing and plans help page on 4 November, re-checked 6 November. Nothing moved for the other five vendors in that window.
 
 Model names age faster than anything else in this post. If you are reading it months from now, the structure of the argument will hold and the specific model names almost certainly will not.

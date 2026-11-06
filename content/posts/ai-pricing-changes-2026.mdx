@@ -2,7 +2,7 @@
 title: "What AI Pricing Did in 2026: Every Major Change, Dated and Sourced"
 seoTitle: "AI Tool Pricing Changes 2026: Dated and Verified"
 date: "2026-07-29"
-updatedAt: "2026-10-08"
+updatedAt: "2026-11-06"
 excerpt: "2026 was the year AI tools stopped selling subscriptions and started selling credits. A dated record of every major change, and what I could verify."
 category: "Guides"
 tags:
@@ -13,14 +13,14 @@ tags:
   - "elevenlabs"
   - "perplexity-ai"
 coverImage: "/images/ai-pricing-changes-2026-cover.webp"
-readTime: "13 min read"
+readTime: "18 min read"
 author: "Mahitosh Dey"
 status: "published"
 faqs:
   - q: "Why did so many AI tools switch to credits in 2026?"
     a: "Because agents changed the cost structure underneath the product. A chat message costs a provider a predictable amount. An agent that runs for twenty minutes, reads a hundred documents, and calls six tools costs wildly more, and it varies per run. Flat subscriptions work when usage clusters around an average. They break when a small number of users can each generate a hundred times the cost of a typical one. Credits move that variance from the vendor's margin onto the customer's bill. Whether that is fair depends on whether you are a light user subsidising heavy ones or the reverse."
   - q: "Which AI tools moved to credit-based pricing in 2026?"
-    a: "Notion moved Custom Agents to credits on May 4, 2026 at $10 per 1,000 credits. GitHub Copilot moved chat, agents, code review, and CLI to AI Credits on June 1, 2026, where 1 credit equals $0.01. Perplexity uses credits for its compute-heavy agentic features while leaving normal search uncapped. Cursor already ran a credit pool model, with each tier including a dollar-denominated allowance. The pattern is consistent: the conversational parts stay flat-rate and the agentic parts get metered."
+    a: "Notion moved Custom Agents to credits on May 4, 2026 at $10 per 1,000 credits. GitHub Copilot moved chat, agents, code review, and CLI to AI Credits on June 1, 2026, where 1 credit equals $0.01. Perplexity uses credits for its compute-heavy agentic features while leaving normal search uncapped. Cursor already ran a credit pool model, with each tier including a dollar-denominated allowance, and then abandoned it in November 2026 for a weekly pool with no published unit. The pattern is consistent: the conversational parts stay flat-rate and the agentic parts get metered."
   - q: "Did AI tools get more expensive in 2026?"
     a: "Headline prices mostly held. ChatGPT Plus stayed at $20, Claude Pro stayed at $20 monthly, Copilot Pro stayed at $10. What changed is what those prices include. Copilot's $10 bought unlimited chat before June 1 and buys $15 of credits after it. Notion's AI went from a $10 add-on you could attach to any plan to a $20 per member Business tier plus separate agent credits. So the sticker stayed still while the amount of product behind it moved. That is a price rise that does not show up in a price comparison."
   - q: "How do I check current AI tool pricing myself?"
@@ -28,7 +28,7 @@ faqs:
   - q: "Is AI tool pricing different in India or other countries?"
     a: "Yes, and most pricing articles never mention it. While researching this piece from an Indian connection, Grammarly served me a plan described as exclusive to India, priced in rupees at roughly ₹392 per member per month on annual billing, available only through local payment methods. That is a different product structure, not just a converted price. Several vendors run regional pricing, so the US dollar figure you read in a comparison article may not be the number you are offered at checkout."
   - q: "What is the difference between a credit and a dollar in these systems?"
-    a: "It varies by vendor, which is part of the problem. GitHub states plainly that 1 AI credit equals $0.01, so a $15 allowance is 1,500 credits. Notion sells credits at $10 per 1,000, making each credit worth one cent as well, though consumption per agent run varies with how much data it reads and how many tools it calls. Cursor denominates its pools directly in dollars. When a vendor does not publish a credit-to-currency rate, treat that as a reason for caution rather than an oversight."
+    a: "It varies by vendor, which is part of the problem. GitHub states plainly that 1 AI credit equals $0.01, so a $15 allowance is 1,500 credits. Notion sells credits at $10 per 1,000, making each credit worth one cent as well, though consumption per agent run varies with how much data it reads and how many tools it calls. Cursor used to denominate its pools directly in dollars and has stopped: its new plans size the weekly allowance as a multiple of the cheapest tier, and it does not publish what that tier includes. When a vendor does not publish a credit-to-currency rate, treat that as a reason for caution rather than an oversight. Cursor publishing one and then withdrawing it is the clearest example in this post."
   - q: "Which 2026 pricing change caught the most people out?"
     a: "Notion retiring the standalone AI add-on. It was not announced as a price rise, but its effect was one. Anyone on the $10 Plus plan paying roughly $10 for AI had a path to AI access for about $20 total. Afterwards the only route to full AI was the Business plan at $20 per member per month, and Custom Agents cost extra on top through credits. The published prices technically all still existed. The combination that made the product affordable for solo users did not."
   - q: "Will AI prices keep changing this fast in 2027?"
@@ -131,15 +131,27 @@ Credits arrived here too, but with a distinction other vendors did not make: sta
 
 Leaving the core product uncapped while metering the expensive edges is, in my view, the most honest version of this transition that anyone shipped this year.
 
-### Through 2026: Cursor runs the model everyone else moved to
+### Through 2026: Cursor ran the model everyone else moved to
 
-Cursor deserves a place on this list for getting there first and for showing what the destination looks like once the transition settles.
+Cursor earned a place on this list for getting there first and for showing what the destination looked like once the transition settled. It then moved again in November, after this post had already drawn its conclusion from the first move. Both are recorded below, because the second is the more interesting fact.
 
-Its tiers are denominated in credit pools rather than usage limits. Pro at $20 a month carries a $20 monthly credit pool, Pro+ at $60 carries $60, and Ultra at $200 carries $400, the last of which is better value per dollar because of bundled overage discounts. Auto mode, which routes requests to cheaper models, consumes no credits at all and stays unlimited on every tier. Credits burn only when you manually select a frontier model, at roughly $0.04 to $0.20 per request depending on model and context size. MAX mode adds a 20 percent surcharge.
+**What it ran until November.** Its tiers were denominated in credit pools rather than usage limits. Pro at $20 a month carried a $20 monthly credit pool, Pro+ at $60 carried $60, and Ultra at $200 carried $400, the last being better value per dollar because of bundled overage discounts. Auto mode, which routes requests to cheaper models, consumed no credits at all and stayed unlimited on every tier. Credits burned only when you manually selected a frontier model, at roughly $0.04 to $0.20 per request depending on model and context size. MAX mode added a 20 percent surcharge. All of that still describes legacy subscribers, who keep it.
 
-I have run this daily and the structure works better than it reads. Keeping Auto mode as the default for casual questions and reserving frontier models for genuinely hard problems means the credit pool lasts, and a $20 pool covers something like 300 to 500 frontier requests. Full breakdown in my [Cursor review](/blog/cursor-ai-review-2026).
+I ran this daily and the structure worked better than it read. Keeping Auto mode as the default for casual questions and reserving frontier models for genuinely hard problems meant the credit pool lasted, and a $20 pool covered something like 300 to 500 frontier requests. Full breakdown in my [Cursor review](/blog/cursor-ai-review-2026).
 
-The reason it matters here is that Cursor is the proof that metered pricing is not automatically worse for the customer. It is worse when the vendor meters everything. It is fine, and arguably fairer, when the cheap path stays free and only the expensive path costs.
+The reason it mattered here was that Cursor looked like proof that metered pricing is not automatically worse for the customer. The argument ran: metering is worse when the vendor meters everything, and fine, arguably fairer, when the cheap path stays free and only the expensive path costs. Auto mode was that cheap path and it was unlimited.
+
+### November 2026: Cursor abandons the model it pioneered
+
+Cursor closed Pro, Pro+ and the old Ultra to new customers and replaced them. The ladder is now Hobby free, Plus at $8, Premium at $30, Super at $100 and Ultra at $200. Existing subscribers keep the old plans, and moving off them is permanent.
+
+Two monthly dollar pools became one weekly pool covering only Cursor's own models, sized as a multiple of Plus rather than in dollars or requests, with Plus's own figure not published at all. Third-party models left the subscription: from Premium up you pay the provider's API list price out of prepaid credit bought separately, and below Premium you cannot use them at all. Auto mode and Cloud Agents are not on Plus. MAX mode survives only on legacy plans.
+
+Cursor's own mapping table sets Pro at $20 against Premium at $30, Pro+ at $60 against Super at $100, and Teams Standard at $40 a seat against a Premium seat at $30. Read from Cursor's models and pricing docs and its pricing and plans help page on November 4, 2026, re-checked November 6.
+
+I am keeping the argument above and withdrawing Cursor as its evidence, because the same vendor has since removed the expensive path from the cheap plan rather than metering it. Plus at $8 does not meter Claude, GPT and Gemini. It does not offer them. That is a different and less honest answer to the same problem: instead of pricing the expensive thing, take it out of the cheap plan, move it behind a tier costing 50 percent more than the plan it replaced, and bill it at list price on top.
+
+So the honest version of this section is narrower than the one it replaces. Metered pricing can be fair, and Perplexity is now the clearest example on this list, leaving search and Ask uncapped while metering only the agentic features. Cursor showed that it can work, and then showed something else: that a pricing structure a vendor is praised for is not a commitment, and the restructure can arrive wearing a price cut's clothes. The number on the pricing page fell by 60 percent. The cost of the plan most developers actually need rose by half.
 
 ### Through 2026: ChatGPT's tiers multiply
 
@@ -159,11 +171,13 @@ No dramatic change here, and I include it as a caution rather than an event. If 
 
 Worth stating plainly, because a list of changes creates the impression that everything moved.
 
-The $20 anchor held everywhere. ChatGPT Plus, Claude Pro on monthly billing, Perplexity Pro, and Cursor Pro all sat at $20 through the entire year, as they have since 2023. That number has become a convention rather than a calculation, and vendors appear reluctant to be the first to break it.
+The $20 anchor held almost everywhere, and then one vendor broke it. ChatGPT Plus, Claude Pro on monthly billing and Perplexity Pro all sat at $20 through the entire year, as they have since 2023. That number is a convention rather than a calculation, and vendors have been reluctant to be the first to move off it.
+
+Cursor moved off it in November, and this section said otherwise until then. Its entry price is $8 and its comparable plan is $30, so it broke the anchor in both directions at once, which is worth noticing: the tier that replaced the $20 plan costs more, and the tier advertising the lower price is a smaller product. If the anchor falls across the industry, this is probably the shape it falls in, not a straightforward cut.
 
 Free tiers also survived, and in one case improved. Every major tool on this list still has one. Perplexity's got better when Comet went free in March. The prediction that free AI would disappear once the funding tightened did not happen in 2026.
 
-So the accurate summary is not that AI got more expensive. It is that the $20 stayed still while what sits behind it was quietly renegotiated.
+So the accurate summary is not that AI got more expensive. It is that the $20 stayed still while what sits behind it was quietly renegotiated, and that the first vendor to move the number itself did it by splitting one $20 plan into an $8 one and a $30 one.
 
 ## How to read an AI pricing page without getting caught
 
@@ -171,7 +185,7 @@ Four habits, learned the hard way while assembling this.
 
 **Check which billing cycle the page is showing you.** Pricing pages frequently default to the annual rate because it is the lower number, and comparison articles copy it as though it were monthly. Claude at $17 and Claude at $20 are the same plan. Perplexity Pro at $200 a year and at $20 a month are the same plan. If an article quotes one number with no cycle attached, it does not know either.
 
-**Look for the usage allowance behind the subscription.** This is where the cost now hides. Copilot Pro at $10 sounds identical to what it was in May, and the $15 credit allowance behind it is the entire story. Ask what happens when you exhaust the included usage: does it stop, throttle, queue, or bill you. The answers differ more than you would expect, and I compared Copilot's budget controls against Cursor's on-demand overage in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot).
+**Look for the usage allowance behind the subscription.** This is where the cost now hides. Copilot Pro at $10 sounds identical to what it was in May, and the $15 credit allowance behind it is the entire story. Ask what happens when you exhaust the included usage: does it stop, throttle, queue, or bill you. The answers differ more than you would expect, and I compared Copilot's budget controls against Cursor's on-demand overage in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot). Note that on-demand overage is a legacy-plan feature at Cursor now. On a current plan the equivalent question is how much prepaid credit you have left.
 
 **Find out whether unused allowance rolls over.** Almost universally it does not. Notion credits expire monthly. Perplexity credits do not roll over. ElevenLabs characters never did. This means buying a large buffer to be safe is the wrong instinct, because the buffer evaporates. Buy close to measured usage and top up.
 
