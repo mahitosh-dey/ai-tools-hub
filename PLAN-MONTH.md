@@ -88,11 +88,10 @@ Claude context-window claim between them touch **13 posts**. Each needs one
 research step. Post by post that is thirteen days under the old rule. Fact
 first it is two sessions and a batch of small edits.
 
-**So the rule should change to match.** One *fact* per day, applied
-everywhere it appears, instead of one post per day. This is a proposal, not a
-done deal: `HARD-RULES.md` is canonical and section 3 does not get amended
-without your say-so. Until you approve it, the one-post-a-day rule stands and
-the sweeps below happen one post per day, which makes week 1 take two weeks.
+**So the rule changed to match.** One *fact* per day, applied everywhere it
+appears, instead of one post per day. Approved and amended in `HARD-RULES.md`
+section 3 on 2026-11-06, and mirrored into memory. Asking before editing a
+published post is unchanged.
 
 ---
 
@@ -175,7 +174,8 @@ Clear the two queued sweeps and fix the pages that lie about the business.
 - `NODE_VERSION` to 22 and the apex redirect, both yours, both five minutes.
 
 **Week 1 done means:** both sweeps closed, 13 posts corrected from two research
-sessions, the site honest about its own advertising, cadence held.
+sessions rather than thirteen days, the site honest about its own advertising,
+cadence held.
 
 ---
 
@@ -232,9 +232,9 @@ Finish and measure.
 
 ## Standing rules
 
-- **One fact per day, swept everywhere it appears.** Proposed replacement for
-  one old post per day, pending approval. Not in `HARD-RULES.md` yet. Still ask
-  before editing a published post either way.
+- **One fact per day, swept everywhere it appears.** Replaced one old post per
+  day on 2026-11-06, in `HARD-RULES.md` section 3. Still ask before editing a
+  published post.
 - **Minimum two new posts per week.** Correction work does not count.
 - Never write final content before showing research and getting approval.
 - Re-verify any fact on the day you use it.

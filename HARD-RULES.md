@@ -83,8 +83,14 @@ If a content type is not in this list but is user-facing writing, apply humanize
   work on existing posts does not count towards it and must never be traded against
   it. If a week is ending and fewer than 2 new posts have been published, say so
   before proposing any more drift work.
-- "One old post per day" refresh cadence — always ask before updating an existing
-  published post.
+- **"One fact per day" correction cadence.** Replaced "one old post per day" on
+  2026-11-06. Correct a fact everywhere it appears in one session rather than
+  one post per day, because the research is the expensive part and the editing
+  is not. Still always ask before updating an existing published post.
+  **Why the change:** at 55 posts, holding the archive under 45 days needs about
+  8.6 refreshes a week. One post per day on weekdays gives 5, which sustains an
+  archive of roughly 32. The old rule could not hold the target and the gap grew
+  with every post published. Full arithmetic in `PLAN-MONTH.md`.
 - Humanizer rules auto-apply to new posts without asking.
 
 **Why this exists.** Between 2026-09-14 and 2026-10-08 the site published zero new
