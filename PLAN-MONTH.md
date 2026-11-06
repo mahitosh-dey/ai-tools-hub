@@ -1,102 +1,149 @@
-# One Month Plan: 2026-09-17 to 2026-10-16
+# One Month Plan: 2026-11-06 to 2026-12-04
 
 Working days Monday to Friday. Saturday and Sunday off, properly off.
-Seven hours a day, 22 working days, about 154 hours.
+21 working days.
 
-Review date: **2026-10-16**. Measure against the targets honestly, including
-what missed.
+Review date: **Friday 2026-12-04**. Measure against the targets honestly,
+including what missed.
 
 ---
 
-## Next session: Wednesday 2026-09-30
+## Review of the last plan, 2026-09-17 to 2026-10-16
 
-Written Tuesday 2026-09-29.
+The review date was 2026-10-16 and it did not happen. The plan then sat
+untouched for 21 days. This section is that review, late.
 
-### Where things actually stand
+### What I can measure from the repository
 
-| Target | Baseline | Now | Review 2026-10-16 |
+| Target | Baseline | Goal | Actual 2026-11-06 |
 |---|---|---|---|
-| Dofollow referring domains | 0 | **0** | 3 |
-| Google clicks, 28 days | 2 | not re-measured | 10 |
-| Bing indexed pages | 53 | sitemap re-read 2026-09-22, still not rechecked | 80 |
-| Posts over 30 days since check | 14 | **13** | 0 |
-| Posts over 45 days | 1 | **0** | 0 |
+| New posts | n/a | 2 per week from 2026-10-08 | **10 posts in 50 days. Met** |
+| Posts over 30 days since check | 14 | 0 | **25. Missed, and worse than baseline** |
+| Posts over 45 days | 1 | 0 | **12. Missed badly** |
+| Posts over 60 days | n/a | n/a | **9** |
+| IndexNow running | no | yes | **Yes, first successful run 2026-11-05** |
+| Middleware question | open | decided | **Closed 2026-11-04, by deletion** |
 
-### What moved
+### What only you can measure
 
-`how-to-make-money-with-ai-tools` cleared, and it was the worst one yet. The
-YouTube threshold it quoted is correct today and wrong for every reader who
-acts on it, because the entry bar doubles to 8,000 watch hours on 2027-02-01
-and the post's own 6 to 12 month estimate lands readers past that date. Pictory
-was in a list introduced with "all have free tiers" and has none. CapCut was
-recommended by someone in India, where it has been blocked since 2020. Three
-places contradicted themselves, all dating back to June.
+I have no access to Search Console, Bing Webmaster Tools or Ahrefs, so these
+stay blank until you fill them in. Do not let me guess at them.
 
-Nine of nine drift posts checked at depth have now contained real errors.
+| Target | Baseline | Goal | Actual |
+|---|---|---|---|
+| Dofollow referring domains | 0 | 3 | |
+| Google clicks, 28 days | 2 | 10 | |
+| Google impressions, 28 days | 3,780 | 5,500 | |
+| Bing indexed pages | 53 | 80 | |
 
-Two research notes worth keeping. Google's own help page confirmed a February
-2027 change without giving the numbers, so only the blog announcement was
-usable. And InVideo's pricing page shows no free plan while its help centre
-documents one, so reading the obvious page would have introduced a fresh error
-while fixing an old one.
+The referring domains number is almost certainly still zero. The last plan
+predicted that outcome in writing, for the stated reason: the outreach never
+left the building. `OUTREACH.md` records one Connectively answer still pending
+from 2026-09-24, one correction abandoned before sending, and two inbound
+conversations. No outbound campaign ran.
 
-### What did not move
+### The one that went well
 
-**DR is still zero and nothing has been sent.** Three weeks of the month gone.
-This is now almost certain to miss on 2026-10-16.
+The Higgsfield exchange on 2026-10-08 is worth keeping as the template. They
+asked for three changes, two of which would have made the page wrong, and the
+answer granted the format point and refused the figure with the reading date
+attached. Their reply was "That works for us." Holding an accuracy line turned
+out to cost nothing and the relationship survived.
 
-**Connectively: 1 answer left**, reset period unknown, still held.
+### Still not done, flagged 2026-09-17
 
-**Accounts never created:** SourceBottle, MentionMatch, Reddit, six directories.
-Quora was completed 2026-09-24.
-
-**Two config questions unanswered since 2026-09-21:** whether to run IndexNow,
-and whether to unblock YandexBot and SeznamBot, which the middleware blocks
-while IndexNow submits to both.
-
-### Wednesday, in order
-
-1. **Check Bing Site Explorer.** Still unanswered after a week. Indexed was 53
-   before the 2026-09-22 resubmission. That decides the IndexNow question.
-2. **Create the Reddit account.** It does nothing on the day, which is the
-   point: it needs three weeks of age before a link survives, and the month
-   ends in two and a half.
-3. **Next drift post.** Oldest is `top-ai-coding-assistants-for-beginners`,
-   35 days, and a beginners post naming coding tools is squarely in the
-   category where this month's errors have been.
-4. Journalist queries, one Quora answer.
-
-### The honest position
-
-The content work is doing what it should. The outreach work has not started,
-and no amount of content fixes that, because referring domains only come from
-things leaving the building.
+`src/app/privacy/page.tsx` and `src/app/terms/page.tsx` still say this site runs
+AdSense. It does not. There is also no `public/ads.txt` at all. Fifty days is
+long enough for a page to be wrong about its own business model.
 
 ---
 
-## The three targets
+## The finding that shapes this month
 
-Set 2026-09-14. Baselines are real numbers from GSC and Bing Webmaster Tools.
+Content production went up and maintenance went down. Both at once, and the
+second one is not laziness. It is arithmetic nobody did.
 
-| Target | Baseline | Goal by 2026-10-16 |
+At 55 posts, holding every post to a 45-day maximum needs **8.6 refreshes a
+week**. The one-old-post-a-day rule, on weekdays only, allows **5**. Five a
+week sustains an archive of about **32 posts** at that standard. The site has
+55 and grows by two every week.
+
+So the rule cannot hold the target, the gap widens with every post published,
+and the last month is exactly what that looks like: ten new posts shipped while
+posts over 45 days went from one to twelve.
+
+Three ways out, and only one of them is good.
+
+**Publish less.** Rejected. The cadence is the thing producing the asset.
+
+**Refresh more.** Eight a week is most of the working day, every day, forever.
+
+**Stop refreshing by post and start correcting by fact.** This is the answer.
+A vendor changes one thing, that one thing is wrong in eleven posts, and the
+expensive part is the research, not the editing. Done post by post, that is
+eleven research sessions. Done fact first, it is one.
+
+The two sweeps queued right now prove the point. Cursor's reprice and the
+Claude context-window claim between them touch **13 posts**. Each needs one
+research step. Post by post that is thirteen days under the old rule. Fact
+first it is two sessions and a batch of small edits.
+
+**So the rule should change to match.** One *fact* per day, applied
+everywhere it appears, instead of one post per day. This is a proposal, not a
+done deal: `HARD-RULES.md` is canonical and section 3 does not get amended
+without your say-so. Until you approve it, the one-post-a-day rule stands and
+the sweeps below happen one post per day, which makes week 1 take two weeks.
+
+---
+
+## What changed since the last plan was written
+
+The site moved off Vercel on 2026-11-04 after the Hobby plan paused it for
+exceeding its CPU allowance, and because Vercel's Hobby terms forbid the
+affiliate links and paid placements this site carries. It is now a static
+export on Cloudflare Pages. Full account in `HOSTING.md`.
+
+Three operational consequences for this month:
+
+- There is no server. No ISR, no middleware, no server-rendered routes. A
+  Pages Function costs quota and needs asking about first.
+- IndexNow works for the first time, because the middleware that was blocking
+  its own key file is gone. Run it after every publish and every refresh.
+- Bot blocking belongs at the Cloudflare edge, never in application code.
+
+Two small cleanups outstanding: `NODE_VERSION` is still 20 and Cloudflare warns
+it is past end of life, and the apex domain serves the site rather than
+redirecting to `www`.
+
+---
+
+## The targets
+
+| Target | Now | Goal by 2026-12-04 |
 |---|---|---|
-| **Dofollow referring domains** | 0 | **3** (stretch 5) |
-| **Google clicks, 28 days** | 2 | **10** (Google's own achievement badge) |
-| Google impressions, 28 days | 3,780 | 5,500 |
-| Bing indexed pages | 53 | **80** (all of them) |
-| Posts with stale verification | 8 | **0** |
-| Audit high-severity items | 0 | 0, held |
+| **Dofollow referring domains** | 0 | **2**. Lowered from 3 because 3 was missed from the same standing start |
+| Posts over 60 days | 9 | **0** |
+| Posts over 45 days | 12 | **4** |
+| Posts over 30 days | 25 | no target, it is the wrong metric |
+| New posts | n/a | **2 a week, held** |
+| Facts swept across the archive | 0 | **3** |
+| Privacy, terms and ads.txt honest | no | **yes** |
 
-DR is not the target. **Referring domains** are. DR is a score Ahrefs
-recalculates on its own schedule, so a link earned on October 5 may not show
-until November. Count links, not scores.
+Note what is not a target. "Posts over 30 days" is dropped, because chasing it
+is what produced a month of refreshing while the real work waited. Sixty days
+is the line where a post becomes actively misleading. Forty-five is the line
+worth defending. Thirty is tidiness.
+
+Google clicks and impressions are deliberately absent. Two months of data say
+this site's Google channel does not respond to content, it responds to links,
+and there are no links. Setting a clicks target again would be measuring the
+wrong half of the machine.
 
 ---
 
 ## Who does what
 
-Some of this only you can do. Accounts, emails and posting are yours, because
-they are your identity and your reputation. Nobody should automate those.
+Unchanged, and worth repeating because it is the part that slipped.
 
 | Yours | Mine |
 |---|---|
@@ -105,168 +152,121 @@ they are your identity and your reputation. Nobody should automate those.
 | Post on Reddit and Quora | Draft, fact-check, humanize |
 | Publish on Medium | Prepare the post, check the canonical |
 | Decide what ships | Technical fixes, indexing, audits, builds |
+| Cloudflare and GSC dashboards | Everything in the repository |
 
-When a block below says "with Claude", that means open a session and we work
-it together. When it does not, it is yours alone.
-
----
-
-## The daily template
-
-Same shape every working day. Clock times are an example, shift them to suit.
-
-| Block | Time | Work | With Claude |
-|---|---|---|---|
-| 1 | 09:00 to 09:45 | Check Connectively, the HARO email, Qwoted. Read every query. Shortlist only the ones you can already answer from published research | no |
-| 2 | 09:45 to 10:45 | Write and send **one** journalist answer, if there is a real match. If there is no match, skip and add a second Quora answer instead | yes, for the draft |
-| break | 10:45 to 11:15 | Actually leave the desk | |
-| 3 | 11:15 to 12:45 | Content block one: research, or writing | yes |
-| lunch | 12:45 to 13:45 | | |
-| 4 | 13:45 to 15:15 | Content block two: writing, or refreshing an old post | yes |
-| 5 | 15:15 to 16:00 | One Quora answer, written properly | drafting only |
-| 6 | 16:00 to 16:30 | Reddit: two genuine comments. No links until week 4 | no |
-| 7 | 16:30 to 17:00 | Technical and admin, then log the day in `OUTREACH.md` | yes |
-
-That is seven hours of work plus breaks.
-
-**Block 2 is the one that decides whether DR moves.** Everything else is
-support. If a day goes badly and you drop something, never drop block 2.
-
-**On answering nothing.** Most days there will be no query you can honestly
-answer. Sending nothing is correct on those days. Connectively was shut down
-in 2024 partly because queries drew hundreds of AI-generated replies from
-invented experts and journalists stopped reading. One verified answer a week
-beats twenty fast ones, and the filler is your competition.
+Generating cover images is yours. The prompt is mine, and it goes in
+`COVER-IMAGES.md` before the post ships, not after.
 
 ---
 
-## Week 1: 2026-09-17 to 2026-09-25
+## Week 1: 2026-11-06 to 2026-11-13
 
-Setup and technical debt. Low glamour, and everything later depends on it.
+Clear the two queued sweeps and fix the pages that lie about the business.
 
-**Thursday 17 and Friday 18** (two days this week, then a weekend)
+- **Finish the Cursor sweep.** Six posts left, all small now the hub post is
+  correct: `ai-coding-agent-pricing-2026`, `top-ai-coding-assistants-for-beginners`,
+  `ai-agents-for-freelancers`, `best-ai-tools-under-20-dollars-2026`,
+  `ai-pricing-changes-2026`, `best-ai-tools-for-freelancers`. One session, not six.
+- **Sweep the Claude context claim.** Nine posts say a flat 200,000-token
+  window. Research once, verify against Anthropic's live pricing page, correct
+  everywhere. Two of those posts also need the Cursor fix, so do those two once.
+- **Fix privacy, terms and ads.txt.** Either run AdSense or stop saying so.
+- **Two new posts**, researched and approved as usual.
+- `NODE_VERSION` to 22 and the apex redirect, both yours, both five minutes.
 
-- Create accounts: **Connectively** first, then HARO, Qwoted, SourceBottle,
-  MentionMatch. Real name, the site, one line about dated verification
-  research. No buzzwords.
-- Create Medium, Reddit, Quora. Fill the bios properly.
-- Submit to six directories: There's A Tool For That, Futurepedia, Toolify,
-  Insidr, AI Tool Hunt, TopAI.tools. Skip anything charging money or asking
-  for a reciprocal link.
-- With Claude: full IndexNow submission, all 80 URLs, so Bing stops being
-  blind to a third of the site.
-- With Claude: fix `ads.txt`, which still carries a placeholder publisher ID,
-  and align the privacy and terms pages, which currently claim you run AdSense
-  when you do not.
-- With Claude: decide the middleware question. It blocks YandexBot and
-  SeznamBot while IndexNow pings both.
-
-**Monday 21 to Friday 25**
-
-- Daily template starts properly.
-- With Claude: Perplexity post accuracy fix. It says 108 citations and 31
-  posts; the truth is 1,200 citations and 45 posts. Expect no traffic from
-  this. Do it because leaving your own numbers wrong is not acceptable.
-- With Claude: Bing page-one CTR work. `notion ai review 2026` sits at
-  position 7 with 47 impressions and zero clicks. Find out why and fix the
-  title and description.
-- With Claude: refresh two posts from the drift list.
-- Reddit: comments only, no links. Build toward 100 karma.
-- Friday: five correction emails, maximum. Lead with Replica Studios.
-
-**Week 1 done means:** all accounts live, Bing indexing fixed, ads.txt honest,
-two posts refreshed, first outreach sent.
+**Week 1 done means:** both sweeps closed, 13 posts corrected from two research
+sessions, the site honest about its own advertising, cadence held.
 
 ---
 
-## Week 2: 2026-09-28 to 2026-10-02
+## Week 2: 2026-11-16 to 2026-11-20
 
-Content and rhythm.
+Outreach starts, and nothing displaces it.
 
-- Monday: research the new post. Present findings, no writing yet.
-- Tuesday and Wednesday: write and publish it. Cover image, then IndexNow.
-- Thursday: syndicate an **older** post to Medium using **Import story**,
-  never copy and paste. Confirm the canonical points to aivaultblog.com
-  before publishing.
-- Friday: five more correction emails, different targets.
-- Across the week with Claude: refresh two more posts from the drift list.
-- Daily: journalist queries, one Quora answer, Reddit comments.
+- **Monday: pick two targets and verify them.** Not a list of twenty. Two,
+  checked live, where a specific published finding of ours is useful to them.
+- **Tuesday and Wednesday: send them.** This is the block that moves the only
+  metric that matters. Nothing else goes in this slot.
+- The strongest assets to lead with are the ones nobody else has: the GitHub
+  Copilot marketing page contradicting its own model documentation, and
+  Aider's final commit adding a model five versions out of date.
+- **Two new posts.**
+- Oldest-first drift: `are-ai-detectors-accurate` at 73 days and
+  `best-ai-tools-for-social-media` at 71.
 
-**Week 2 done means:** one new post live, first Medium syndication, four of
-eight drift posts cleared, ten correction emails sent.
-
----
-
-## Week 3: 2026-10-05 to 2026-10-09
-
-Compounding. This is the week the routine either holds or does not.
-
-- Same weekly shape: research Monday, write and publish midweek, syndicate
-  Thursday, outreach Friday.
-- With Claude: refresh two more drift posts. Six of eight done.
-- Reddit: karma should now allow a link. Ratio is nine helpful posts with no
-  link, one with. The test is whether the answer still works with the link
-  deleted.
-- With Claude: first real check on the numbers. Pull GSC and Bing, compare
-  against the baseline table, and say plainly what is moving and what is not.
-
-**Week 3 done means:** two new posts live this month, six drift posts cleared,
-first Reddit link posted without being removed, mid-month numbers known.
+**Week 2 done means:** two outreach emails actually sent, logged in
+`OUTREACH.md` with the date and the ask, cadence held, two posts off the
+over-60 list.
 
 ---
 
-## Week 4: 2026-10-12 to 2026-10-16
+## Week 3: 2026-11-23 to 2026-11-27
+
+Compounding, and the first honest look at whether outreach works.
+
+- Two more outreach sends, different targets, same standard.
+- **Two new posts.**
+- Clear the rest of the over-60 list.
+- **Friday: pull the numbers.** Referring domains, Bing indexed, Google
+  clicks. Compare against this plan's table and say plainly what moved.
+- Medium syndication of an older post, using Import story so the canonical
+  stays here.
+
+**Week 3 done means:** four sends total, over-60 list at zero, mid-month
+numbers known rather than assumed.
+
+---
+
+## Week 4: 2026-11-30 to 2026-12-04
 
 Finish and measure.
 
-- Same weekly shape.
-- With Claude: final two drift posts. Backlog at zero.
-- With Claude: notify the vendors whose figures you quoted accurately. Gamma,
-  Runway, Cognition, Originality.ai, Sapling. This is the highest response
-  rate and lowest effort category and almost everyone skips it.
-- **Friday 16: review against the target table.** Honestly. Anything missed
-  gets written down as missed, not reframed.
-
-**Week 4 done means:** month complete, targets measured, next month planned
-from real data instead of guesses.
+- Two more sends.
+- **Two new posts.**
+- Third fact sweep, chosen from whatever the month turned up.
+- **Friday 4 December: review against the target table.** Honestly. Anything
+  missed gets written down as missed, not reframed. Then write the next month
+  from real numbers, on the day, not three weeks later.
 
 ---
 
-## Standing rules for the month
+## Standing rules
 
-- **Minimum two new posts per week.** Set 2026-10-08 and recorded in
-  `HARD-RULES.md` section 7. Correction work does not count towards it. The
-  earlier "one per week" line is superseded, and in practice even that was
-  missed: zero new posts between 2026-09-14 and 2026-10-08.
+- **One fact per day, swept everywhere it appears.** Proposed replacement for
+  one old post per day, pending approval. Not in `HARD-RULES.md` yet. Still ask
+  before editing a published post either way.
+- **Minimum two new posts per week.** Correction work does not count.
 - Never write final content before showing research and getting approval.
-- Re-verify any fact on the day you use it. A figure true last month is not
-  cleared for a journalist pitch today.
+- Re-verify any fact on the day you use it.
 - Never ask anyone for a link. Offer a fact that stands on its own.
 - Never buy links, exchange links, or pay for guest posts.
-- Log every send in `OUTREACH.md`. If a channel produces nothing after ten
-  attempts, stop using it.
-- Saturday and Sunday are off. Burning out in week 3 costs more than the two
-  days save.
+- Log every send in `OUTREACH.md` on the day it goes.
+- Run IndexNow after every publish and every refresh. It works now.
+- Verify sitemap and JSON-LD after any change. Check that
+  `/blog/<slug>/opengraph-image` still serves `image/png`.
+- Never push or deploy without explicit permission.
+- Saturday and Sunday are off.
 
 ---
 
 ## What will probably go wrong
 
-Written now so it is not a surprise later.
+**Outreach will slip again.** It slipped every week of the last plan, for the
+same reason it will slip in week 2: correction work feels productive and
+outreach feels like asking a stranger for a favour. The difference is that
+corrections cannot produce a referring domain and outreach can. If week 2 ends
+with zero sent, the honest move on 2026-12-04 is to write down that outreach
+failed twice and stop planning for it, rather than planning it a third time.
 
-**Weeks 1 and 2 will feel like nothing is happening.** Because nothing visible
-will be. Accounts, karma, indexing and refreshes produce no traffic on the day
-you do them. Most people quit here. Continuing past this point is the strategy.
+**The fact-sweep method will be slower than it looks on the first run.** The
+research is the expensive part and it does not get cheaper just because the
+edits are batched. Expect the first sweep to take most of a day.
 
-**The DR target is the one most likely to end at zero.** It depends entirely on
-outreach you send. I can prepare every fact and draft every email, and if they
-do not go out, the month ends at zero referring domains.
+**Two posts a week will collide with the sweeps in week 1.** If something has
+to give in that week only, it is the second post, and it gets written down as
+missed.
 
-**Ten clicks may not happen.** If most of your impressions turn out to be AI
-Overviews, where Google answers the question and nobody clicks, the ceiling is
-lower than the table assumes. If that is what the data shows on October 16,
-the honest move is to say so and change the plan, not to move the goalposts.
-
-**None of this reaches AdSense money.** Ten clicks a month is not one dollar.
-It is proof the machine works so that months three and six compound. That is
-the real shape of it, and it is worth knowing now.
+**Nine posts over 60 days is worse than it sounds.** This category of content
+goes wrong quietly. Every single drift post checked at depth so far has
+contained a real error, and that record is now nine for nine. Assume the
+remaining nine contain errors too, because the evidence says they do.
