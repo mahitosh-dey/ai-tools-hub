@@ -73,12 +73,12 @@ export default function PrivacyPage() {
             <li style={{ marginBottom: "0.4rem" }}>To understand which content is useful to our readers (via analytics)</li>
             <li style={{ marginBottom: "0.4rem" }}>To improve the performance and user experience of the website</li>
             <li style={{ marginBottom: "0.4rem" }}>To respond to enquiries sent via our contact form</li>
-            <li style={{ marginBottom: "0.4rem" }}>To serve advertising through third-party ad networks (see Section 5)</li>
+            <li style={{ marginBottom: "0.4rem" }}>To serve advertising through third-party ad networks, if and when this site carries ads. It does not today (see Section 5)</li>
           </ul>
           <p style={{ marginTop: "1rem" }}>
-            We do not sell your personal data to third parties. Some third-party services we use
-            (such as Google AdSense) may use your data to personalise ads. Details are in
-            Section 5.
+            We do not sell your personal data to third parties. This site does not currently
+            serve ads. If that changes, third-party ad networks (such as Google AdSense) may
+            use your data to personalise them. Details are in Section 5.
           </p>
         </Section>
 

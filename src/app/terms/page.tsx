@@ -106,9 +106,10 @@ export default function TermsPage() {
             <Link href="/disclosure" style={{ color: "#a855f7" }}>Affiliate Disclosure</Link>.
           </p>
           <p>
-            The Site may display advertising provided by third-party ad networks including
-            Google AdSense. Ads and affiliate relationships never influence the content of
-            reviews or the ratings we assign.
+            The Site does not currently display advertising. If that changes, it may use
+            third-party ad networks including Google AdSense, and this section will say so.
+            Affiliate links are live today and are covered above. Neither ads nor affiliate
+            relationships ever influence the content of reviews or the ratings we assign.
           </p>
         </Section>
 
