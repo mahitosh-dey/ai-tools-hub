@@ -11,6 +11,15 @@ export interface PostMeta {
   date: string;
   updatedAt?: string;
   excerpt: string;
+  // Optional short description for search engines only. Google truncates the
+  // meta description around 160 characters, but `excerpt` also renders under
+  // each post on the blog index, where a fuller sentence reads better. When
+  // set, this overrides `excerpt` in the page head only: the meta description,
+  // og:description and twitter:description. The blog card and the JSON-LD
+  // still use `excerpt`, because neither is truncated at 160 and the JSON-LD
+  // description is not shown as a search snippet. Same relationship
+  // `seoTitle` has to `title`.
+  metaDescription?: string;
   category: string;
   tags: string[];
   coverImage: string;
@@ -51,6 +60,7 @@ export function getAllPosts(): PostMeta[] {
       seoTitle: data.seoTitle ?? undefined,
       date: data.date ?? todayStr,
       excerpt: data.excerpt ?? "",
+      metaDescription: data.metaDescription ?? undefined,
       category: data.category ?? "General",
       tags: data.tags ?? [],
       coverImage: data.coverImage ?? "/images/default-cover.webp",
@@ -90,6 +100,7 @@ export function getPostBySlug(slug: string): Post | null {
       seoTitle: data.seoTitle ?? undefined,
       date: data.date ?? todayStr,
       excerpt: data.excerpt ?? "",
+      metaDescription: data.metaDescription ?? undefined,
       category: data.category ?? "General",
       tags: data.tags ?? [],
       coverImage: data.coverImage ?? "/images/default-cover.webp",

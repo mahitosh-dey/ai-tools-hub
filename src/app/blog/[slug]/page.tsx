@@ -72,13 +72,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const url = `${baseUrl}/blog/${slug}`;
   const metaTitle = post.seoTitle ?? post.title;
+  const metaDescription = post.metaDescription ?? post.excerpt;
   return {
     title: metaTitle,
-    description: post.excerpt,
+    description: metaDescription,
     alternates: { canonical: url },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription,
       type: "article",
       publishedTime: post.date,
       url,
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription,
     },
   };
 }
