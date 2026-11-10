@@ -171,9 +171,14 @@ Clear the two queued sweeps and fix the pages that lie about the business.
   and the real figure was about thirty, because the lines describing the retired
   pricing *structure* carry no number. Two posts needed an argument reworked rather
   than a figure swapped. Budget accordingly.
-- **Sweep the Claude context claim.** Nine posts say a flat 200,000-token
-  window. Research once, verify against Anthropic's live pricing page, correct
-  everywhere. Two of those posts also need the Cursor fix, so do those two once.
+- ~~**Sweep the Claude context claim.**~~ **Done 2026-11-10.** It was seven
+  posts, not nine. Three of the nine were false positives (200K lines of code,
+  200,000 monthly views, and Haiku 4.5's genuine 200K window) and two had
+  already been corrected on 3 November. Anthropic now says up to 1M tokens,
+  varying by model, identical on every plan including the free one. Two posts
+  carried a retired model name in the same sentence. `gpt5-vs-claude4` is
+  flagged for a full refresh: its whole comparison table describes a model
+  lineup Anthropic has replaced.
 - **Fix privacy, terms and ads.txt.** Either run AdSense or stop saying so.
 - **Two new posts**, researched and approved as usual.
 - `NODE_VERSION` to 22 and the apex redirect, both yours, both five minutes.
@@ -181,6 +186,14 @@ Clear the two queued sweeps and fix the pages that lie about the business.
 **Week 1 done means:** both sweeps closed, 13 posts corrected from two research
 sessions rather than thirteen days, the site honest about its own advertising,
 cadence held.
+
+**Status at 2026-11-10.** Both sweeps are closed: 6 posts for Cursor on the 6th,
+7 for the Claude context window on the 10th. An unplanned emergency took the
+10th as well, after Search Console reported 21 pages as Not found: 94 tag URLs
+were 404ing because tag pages are generated from post frontmatter and nobody
+had redirected the slugs that editing had removed. Fixed, and hard rule 2c now
+prevents a repeat. Still open this week: the three contradictory AdSense lines,
+and **two new posts, with zero written so far**. Three working days left.
 
 ---
 
