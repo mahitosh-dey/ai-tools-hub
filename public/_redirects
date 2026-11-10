@@ -12,8 +12,9 @@
 
 # Tag taxonomy consolidated 2026-07-30 (157 tags -> 27). These 7 tag slugs
 # were indexed by Google before the merge, so they redirect to the tag that
-# absorbed them. The other 16 indexed tag slugs were preserved deliberately
-# and need no redirect.
+# absorbed them. The claim that once stood here, that the other indexed tag
+# slugs were preserved deliberately and needed no redirect, was wrong. See the
+# 2026-11-10 block at the end of this file.
 /tag/ai-art         /tag/ai-image     301
 /tag/ai-tools-2026  /tag/ai-tools     301
 /tag/anthropic      /tag/claude       301
@@ -26,3 +27,106 @@
 # 3-post threshold the sitemap uses, so /category/news was live but never
 # submitted. Both posts moved to Guides.
 /category/news  /category/guides  301
+
+# Dead tag slugs, redirected 2026-11-10 after Search Console reported 21 of
+# them as Not found (404). The real number was 94. Tag pages here are
+# generated from post frontmatter, so a tag stops existing the moment the
+# last post drops it, and every one of these was a URL Google had indexed.
+# The note above claiming the other indexed slugs 'need no redirect' was
+# wrong, and this block is the correction. Each slug goes to the live tag
+# that absorbed its subject.
+
+/tag/affordable-ai                 /tag/cheap-ai-tools  301
+/tag/ai-basics                     /tag/beginners  301
+/tag/ai-citations                  /tag/seo  301
+/tag/ai-ide                        /tag/ai-coding  301
+/tag/ai-pricing                    /tag/cheap-ai-tools  301
+/tag/ai-productivity               /tag/productivity  301
+/tag/ai-search                     /tag/seo  301
+/tag/ai-search-visibility          /tag/seo  301
+/tag/ai-social-media-tools         /tag/content-creation  301
+/tag/ai-subscriptions              /tag/cheap-ai-tools  301
+/tag/ai-tools-for-freelancers      /tag/freelancing  301
+/tag/ai-under-20                   /tag/cheap-ai-tools  301
+/tag/ai-voice                      /tag/ai-music  301
+/tag/ai-youtube                    /tag/youtube  301
+/tag/audio                         /tag/ai-music  301
+/tag/best-ai-productivity-tools    /tag/productivity  301
+/tag/best-ai-tools                 /tag/ai-tools  301
+/tag/bolt                          /tag/ai-coding  301
+/tag/budget-ai                     /tag/cheap-ai-tools  301
+/tag/build-blog-with-ai            /tag/blogging  301
+/tag/canva                         /tag/ai-image  301
+/tag/capcut                        /tag/ai-video  301
+/tag/chatgpt-2026                  /tag/chatgpt  301
+/tag/chatgpt-alternative           /tag/chatgpt  301
+/tag/chatgpt-freelancing           /tag/freelancing  301
+/tag/chatgpt-plus                  /tag/chatgpt  301
+/tag/chatgpt-vs-gemini             /tag/ai-comparison  301
+/tag/claude-4                      /tag/claude  301
+/tag/claude-ai-review              /tag/claude  301
+/tag/claude-coding                 /tag/claude  301
+/tag/claude-vs-chatgpt             /tag/ai-comparison  301
+/tag/coding-assistant              /tag/ai-coding  301
+/tag/coding-tools                  /tag/ai-coding  301
+/tag/comparison                    /tag/ai-comparison  301
+/tag/cursor-2026                   /tag/cursor  301
+/tag/cursor-ai                     /tag/cursor  301
+/tag/cursor-review                 /tag/cursor  301
+/tag/dall-e                        /tag/ai-image  301
+/tag/dalle3                        /tag/ai-image  301
+/tag/design                        /tag/ai-image  301
+/tag/developer-tools               /tag/ai-coding  301
+/tag/education                     /tag/students  301
+/tag/faceless-youtube              /tag/youtube  301
+/tag/fact-checking                 /tag/ai-detector  301
+/tag/fiverr                        /tag/freelancing  301
+/tag/free-ai-image-generator       /tag/ai-image  301
+/tag/future-of-work                /tag/productivity  301
+/tag/geo                           /tag/seo  301
+/tag/google                        /tag/gemini  301
+/tag/google-gemini                 /tag/gemini  301
+/tag/gpt-5                         /tag/chatgpt  301
+/tag/gpt-5-vs-claude-4             /tag/ai-comparison  301
+/tag/grammar                       /tag/grammarly  301
+/tag/grammarly-review              /tag/grammarly  301
+/tag/how-to                        /tag/beginners  301
+/tag/image-generation              /tag/ai-image  301
+/tag/instagram                     /tag/content-creation  301
+/tag/is-ai-replacing-freelancers   /tag/freelancing  301
+/tag/make-money-with-chatgpt       /tag/make-money  301
+/tag/marketing                     /tag/content-creation  301
+/tag/midjourney-tutorial           /tag/midjourney  301
+/tag/no-code                       /tag/beginners  301
+/tag/no-credit-card                /tag/free-ai-tools  301
+/tag/note-taking                   /tag/notion  301
+/tag/notion-2026                   /tag/notion  301
+/tag/notion-ai                     /tag/notion  301
+/tag/notion-review                 /tag/notion  301
+/tag/perplexity-ai-review          /tag/perplexity-ai  301
+/tag/perplexity-seo                /tag/seo  301
+/tag/programming                   /tag/ai-coding  301
+/tag/prompt-writing                /tag/ai-writing  301
+/tag/research-tools                /tag/perplexity-ai  301
+/tag/save-money                    /tag/cheap-ai-tools  301
+/tag/seo-tools                     /tag/seo  301
+/tag/social-media                  /tag/content-creation  301
+/tag/software-alternatives         /tag/ai-tools  301
+/tag/stable-diffusion              /tag/ai-image  301
+/tag/studying                      /tag/students  301
+/tag/subscriptions                 /tag/cheap-ai-tools  301
+/tag/text-to-speech                /tag/elevenlabs  301
+/tag/tiktok                        /tag/content-creation  301
+/tag/time-saving                   /tag/productivity  301
+/tag/tools                         /tag/ai-tools  301
+/tag/upwork                        /tag/freelancing  301
+/tag/voice-cloning                 /tag/elevenlabs  301
+/tag/vscode                        /tag/ai-coding  301
+/tag/wordpress                     /tag/blogging  301
+/tag/work-tools                    /tag/productivity  301
+/tag/workspace-tools               /tag/productivity  301
+/tag/writing                       /tag/ai-writing  301
+/tag/writing-tools                 /tag/ai-writing  301
+/tag/youtube-2026                  /tag/youtube  301
+/tag/youtube-automation            /tag/youtube  301
+/tag/youtube-shorts                /tag/youtube  301
