@@ -18,6 +18,28 @@ These are non-negotiable rules for any AI assistant working in this project. The
   - All JSON-LD schema blocks on affected pages are valid, well-formed, and match the actual content (title, dates, author, images, URLs).
 - Never ship work that leaves sitemap or structured data broken, stale, or malformed.
 
+## 2c. Removing a tag from a post deletes a live URL
+
+- Tag pages are **generated from post frontmatter**. `getAllTags()` reads every
+  post's `tags:` block and `generateStaticParams` builds one page per tag, so a
+  tag page stops existing the instant the last post drops that tag. The URL then
+  returns 404, and Google may already have it indexed.
+- **Before removing or renaming a tag in any post, check whether that tag still
+  appears in another post.** If it does not, add a `301` to `public/_redirects`
+  pointing the dead slug at the live tag that absorbs its subject, in the same
+  commit. The same applies to categories and to any renamed post slug.
+- After any edit that touches a `tags:` block, diff the tag list against the
+  previous commit and confirm every slug that disappeared has a redirect.
+
+**Why this exists.** On 2026-11-10 Search Console reported 21 pages as Not found
+(404), validation failed, and every one was a `/tag/` URL. Diffing every tag ever
+written in post frontmatter across the whole git history against the 35 live
+today gave **94** dead slugs with no redirect. Google had recrawled 21; the rest
+were queued to surface the same way. They accumulated silently over months of
+ordinary post editing, because nothing in the build fails when a tag page
+disappears. A July 2026 consolidation added redirects for 7 slugs and left a note
+in `public/_redirects` asserting the rest needed none, which was wrong.
+
 ## 2b. Correcting a claim means grepping for it, not remembering it
 
 - When a fact turns out to be wrong, **grep the entire `content/` directory for the
