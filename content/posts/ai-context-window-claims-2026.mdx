@@ -1,0 +1,191 @@
+---
+title: "I Checked What 8 AI Vendors Say Their Context Window Is. Anthropic Gives Three Answers."
+seoTitle: "AI Context Window 2026: What 8 Vendors Actually Publish"
+date: "2026-11-10"
+updatedAt: "2026-11-10"
+excerpt: "Context window is the one spec everyone quotes and almost nobody checks. I read eight vendors' own pages in one afternoon. One vendor answers its own question three different ways, one ships newer models with smaller windows than the old ones, and one publishes the figure for other companies' models but not its own."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "claude"
+  - "ai-comparison"
+  - "chatgpt"
+coverImage: "/images/ai-context-window-claims-2026-cover.webp"
+readTime: "8 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "What is Claude's context window in 2026?"
+    a: "It depends which Anthropic page you read and which product you open, which is the finding of this article rather than a dodge. The pricing page gives one ceiling, up to 1M tokens varying by model, identical on every plan including the free one. The per-model support article is more specific: chatting on a paid plan, Fable 5.2 and 5.1, Opus 5.5 and 5, Sonnet 5.5 and 5, and Haiku 5.5 get 1M; Fable 5, Opus 4.8, 4.7 and 4.6, and Sonnet 4.6 get 500K; and outside that list the window is 200K. In Claude Code every model on that list gets 1M. In Cowork, Opus 4.6 and Sonnet 4.6 drop to 200K. Read 10 November 2026."
+  - q: "Is Claude's context window still 200,000 tokens?"
+    a: "Not for the current models. A flat 200,000 figure is what most of the web still repeats and it is what this site said in seven posts until the morning of 10 November 2026. Anthropic's own per-model table now gives 200K only to models outside its listed set. The newest models are 1M and the previous generation is 500K. If you read a 2026 article giving a single 200K number for Claude with no model named, it was written before the ladder existed or copied from one that was."
+  - q: "Does the context window change depending on which Claude product I use?"
+    a: "Yes, and this is the part almost nobody reports. Anthropic's support article publishes three separate tables. Claude Opus 4.6 has a 500K window chatting in the Claude app, 1M in Claude Code, and 200K in Cowork. Same model, same subscription, three different ceilings decided by which product you opened. Haiku 5.5 is 1M in chat and Claude Code but 500K in Cowork. If you are choosing a plan because of context, the surface you work in matters as much as the model you pick."
+  - q: "Which AI vendors publish their context window on the pricing page?"
+    a: "Two of the eight I checked, and one of those buries it. Anthropic shows a Context window row giving up to 1M varying by model. DeepSeek states 1M, helped by its pricing page and its documentation being the same page. Google mentions a 1 million token context window once, inside the answer to What is Google AI Pro on its subscriptions page, with no figure for the free or Ultra tiers. Mistral's pricing page states no figure at all. Microsoft's plans and pricing URL returned a 404 and Perplexity's FAQ returned a 404 on the day I checked."
+  - q: "Does xAI's Grok have a 1M context window?"
+    a: "Some models do and the newest ones do not, which is the opposite of what most people assume. xAI's model documentation gives grok-4.7, grok-4.6 and grok-4.5 a context of 500k, while grok-4.3 and the grok-4.20 family are listed at 1M and grok-build-0.1 at 256k. So the newer flagship has roughly half the context of the older one. The page never uses the words context window, only a column headed Context, and it covers API pricing rather than consumer chat. I could not check the consumer side because x.ai/api returned 403 to an automated request."
+  - q: "What context window does Mistral publish for its own models?"
+    a: "None that I could find on its models overview page. That page gives figures for third-party models Mistral hosts, including Z.ai GLM 5.3 and GLM 5.3 Flash at 1M and DeepSeek V4.1 Flash at 1M, plus Mistral Moderation 2 at 128k. Mistral Large 4, Mistral Small 4, Mistral Medium 3.5 and Ministral 3 carry no window on that page. The pricing page states no figure either. Individual model cards are separate pages and may carry one, but a buyer reading the two obvious pages will not find it."
+  - q: "What is OpenAI's context window for ChatGPT Plus?"
+    a: "I could not verify it, and I would rather say that than guess. Both openai.com/chatgpt/pricing and the Plus help article returned 403 to an automated request on 10 November 2026. The developer documentation lists GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra and GPT-6 Luna at a context window of 1.05M, but that is the API rather than the consumer plan, and the two are not the same thing at any vendor I checked. A 403 is a server declining a request. It is not evidence about a product and I have not treated it as any."
+  - q: "How should I check a context window before I pay?"
+    a: "Find the per-model table rather than the pricing page, because the pricing page gives a ceiling and the table gives the number you will actually get. Then check which product surface that table applies to, since the same model can have three different windows across chat, an agent tool and a desktop product. If a specific model is the reason you are buying, confirm that model by name, because no checkout will stop you buying a plan that cannot give you what you came for. And treat any single number in a third-party article as wrong until a vendor page agrees with it."
+---
+
+Context window is the spec everyone quotes. It is in every comparison table, every tool roundup, every Reddit thread about which assistant to pay for. It is also the spec almost nobody checks against the vendor, because it looks like the kind of number that stays still.
+
+It does not stay still. On the morning of 10 November 2026 I corrected seven posts on this site that said Claude had a flat 200,000 token context window. By that afternoon I had corrected the same seven posts again, because I found a third Anthropic page that disagreed with the two I had used.
+
+That second correction is what this article is about. If a vendor can give you three different answers in one day, the number in your comparison table is decoration.
+
+So I read eight vendors' own pages and wrote down exactly what each one says.
+
+## What I did
+
+For each vendor I read the pricing page first, the way a buyer would, then the model or API documentation. I recorded the exact wording, the model names, and the HTTP status of every page. Where a page refused an automated request I noted that and moved on rather than working around it.
+
+Everything below was read on 10 November 2026. Nothing here comes from a third-party article, including the ones currently ranking for these queries.
+
+## Anthropic answers its own question three times
+
+Three Anthropic pages, three levels of detail.
+
+**The pricing page** has a Context window row. It reads "Up to 1M, varies by model". It reads exactly that for Free, Pro, Max, Ultra, Team and both Enterprise tiers. Every plan, same cell.
+
+**The usage and length limits article** says: "The context window size depends on which model you're using. On paid plans, the newest models support up to a 1M token context window, while others support 500K or 200K tokens."
+
+**The per-model article** gives the actual ladder. Chatting with Claude on a paid plan:
+
+| Window | Models |
+|---|---|
+| 1M | Fable 5.2, Fable 5.1, Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Haiku 5.5 |
+| 500K | Fable 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6 |
+| 200K | Everything outside that list |
+
+None of these three pages is wrong. The pricing page gives a ceiling, the limits article gives a shape, and the per-model article gives the number. But only one of them answers the question a buyer is actually asking, and it is the one furthest from the checkout.
+
+## Then it changes again depending which product you open
+
+This is the part I have not seen reported anywhere, and it is the most useful thing in this article.
+
+The per-model article does not publish one table. It publishes three, one each for chatting in the Claude app, for Claude Code, and for Cowork. The same model gets different windows in each.
+
+| Model | Claude app | Claude Code | Cowork |
+|---|---|---|---|
+| Opus 4.6 | 500K | 1M | 200K |
+| Sonnet 4.6 | 500K | 1M | 200K |
+| Haiku 5.5 | 1M | 1M | 500K |
+| Opus 5.5 | 1M | 1M | 1M |
+
+Read the Opus 4.6 row again. Same model. Same subscription. A five times difference between the best case and the worst, decided by which application you happened to open.
+
+In Claude Code every model on the list is 1M, with a caveat worth knowing: Opus 4.6 and Sonnet 4.6 need you to select a specific variant with the `/model` command, and on Pro you have to enable usage credits to reach it at all.
+
+If you are choosing a plan because of context, the surface you work in matters as much as the model you pick. No comparison table I have ever seen has a column for that.
+
+## The free plan appears in one answer and vanishes from the other
+
+The pricing page shows "Up to 1M, varies by model" in the Free column, identical to every paid column.
+
+The per-model article opens by scoping itself: it explains the window "on paid Claude plans (Pro, Max, Ultra, Team, Enterprise)". The free tier is not in the intro, not in any of the three tables, and not mentioned anywhere else on the page.
+
+So Anthropic publishes a ceiling that includes free users and a detailed breakdown that excludes them. There is no published per-model figure specific to a free account. That is not a contradiction exactly, but if you are on the free plan and want to know what you actually get, the answer is that nobody has told you.
+
+I got this wrong this morning. One of the seven corrections I made said the free tier gets the same figure as paid plans, because the pricing page shows that. It does show that. It is also the only page that does.
+
+## xAI ships newer models with smaller windows
+
+xAI's model documentation has a column headed Context. The page never uses the phrase context window.
+
+| Model | Context |
+|---|---|
+| grok-4.7 | 500k |
+| grok-4.6 | 500k |
+| grok-4.5 | 500k |
+| grok-4.3 | 1M |
+| grok-4.20 family | 1M |
+| grok-build-0.1 | 256k |
+
+The newest flagship has roughly half the context of grok-4.3. Whatever the engineering reason, a user upgrading from 4.3 to 4.7 on the assumption that newer means better would be downgrading on the one spec they probably checked.
+
+I could not compare this against the consumer-facing page. x.ai/api returned 403 to an automated request, so the only context figures I can report for xAI are API ones.
+
+## Mistral publishes other companies' numbers but not its own
+
+Mistral's models overview lists context windows for the third-party models it hosts:
+
+- Z.ai GLM 5.3: 1M
+- Z.ai GLM 5.3 Flash: 1M
+- DeepSeek V4.1 Flash: 1M
+- Mistral Moderation 2: 128k
+
+Mistral Large 4, Mistral Small 4, Mistral Medium 3.5 and Ministral 3 carry no figure on that page. The individual model cards are separate pages and may well have one. But the overview page is where a person comparing models goes, and on that page Mistral tells you the context window of a DeepSeek model and not of its own flagship.
+
+The pricing page does not state a context window anywhere. Its feature rows cover messages and web searches. The only context-adjacent text is a line about Project folders being "context-rich workspaces", which is marketing rather than a measurement.
+
+## What the rest publish
+
+**OpenAI.** Both openai.com/chatgpt/pricing and the ChatGPT Plus help article returned 403. The developer documentation lists GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra and GPT-6 Luna each at "Context window 1.05M". Consumer plans unverified.
+
+**Google.** The subscriptions page states a figure exactly once, inside the answer to "What is Google AI Pro?", which promises "a 1 million token context window". Free, AI Plus and AI Ultra have no figure in the portion of the page I could read. The developer docs give Gemini 4 Argon a 1M context. The subscriptions page never names which model its 1 million belongs to.
+
+**Microsoft.** The plans and pricing URL returned 404. The Copilot hub on learn.microsoft.com loaded and states no context window at all, names no models, and gives no figures.
+
+**Perplexity.** The FAQ hub returned 404. The API model docs state a window for exactly one model, Nemotron 3.5 Super at 1,048,576 tokens. Every other model on that page has none. The page also warns that a "context-length range" in its pricing table is a price threshold rather than a window, which is a distinction worth stealing.
+
+**DeepSeek.** The only vendor in this set where one page answers the question. Pricing and documentation are the same page, and the model table has a row reading CONTEXT LENGTH with the value 1M for deepseek-flash and deepseek-v4-pro.
+
+## The scoreboard
+
+| Vendor | Figure on the pricing page? | Figure in the docs? | Consumer plan answered? |
+|---|---|---|---|
+| Anthropic | Yes, a ceiling | Yes, full per-model ladder | Paid yes, free no |
+| DeepSeek | Yes | Same page | No consumer plan |
+| Google | Once, inside an FAQ | Yes, one model | Pro only |
+| OpenAI | Page returned 403 | Yes, 1.05M | No |
+| xAI | Page returned 403 | Yes, by model | No |
+| Perplexity | Page returned 404 | One model only | No |
+| Mistral | No figure at all | Third-party models only | No |
+| Microsoft | Page returned 404 | No figure | No |
+
+Four of the eight pages a buyer would naturally open returned 403 or 404 to an ordinary request. I am not claiming those pages are broken for humans in browsers. I am saying that the public, checkable record of what these products offer is thinner than the confidence of the articles summarising it.
+
+## Why this happened
+
+Context window used to be a clean headline number because a model had one. Now it varies by model, by product surface, by whether you have enabled usage credits, and sometimes by whether you remember to pick a specific model variant from a slash command.
+
+A single number on a pricing page would now be wrong. So vendors print a ceiling, or a range, or nothing, and push the real answer into documentation that the pricing page does not link to. That is a rational response to a messy reality, and it still leaves the buyer holding a number that is not theirs.
+
+Meanwhile the articles that rank for these queries keep printing one clean figure, because one clean figure is what people search for. Including, until this morning, mine.
+
+## What to do before you pay
+
+1. **Find the per-model table, not the pricing page.** The pricing page gives a ceiling. The table gives your number.
+2. **Check which surface that table covers.** Chat, agent tool and desktop app can differ by five times on the same model.
+3. **Confirm the specific model by name** if that model is the reason you are buying. No checkout will stop you.
+4. **Treat any single number in a third-party article as wrong** until a vendor page agrees with it. That includes this one, after enough time has passed.
+
+## What I could not verify
+
+Read on 10 November 2026 and refused: openai.com/chatgpt/pricing (403), help.openai.com Plus article (403), x.ai/api (403), microsoft.com plans and pricing (404), perplexity.ai/hub/faq (404), support.anthropic.com Max plan usage article (404 after redirect).
+
+A 403 means a server declined an automated request. A 404 means a URL did not resolve on the day I asked. Neither is evidence about a product, and I have not treated them as any. Where I could not read a page, the row says so rather than borrowing a number from somewhere else.
+
+For OpenAI and Microsoft in particular, that means the consumer context window is simply unreported here. If you need it, open the page in a browser while signed in, which is the only source that reflects your account rather than a marketing page.
+
+## Sourcing
+
+Read 10 November 2026, all vendor pages:
+
+- Anthropic: claude.com/pricing, support.claude.com article 8606394 on context window size by model, support.claude.com article 11647753 on usage and length limits, platform.claude.com model overview
+- OpenAI: developers.openai.com API model docs
+- Google: gemini.google/subscriptions and aistudio.google.com model docs
+- xAI: docs.x.ai model and pricing table
+- Mistral: mistral.ai/pricing and docs.mistral.ai models overview
+- DeepSeek: api-docs.deepseek.com pricing, and deepseek.com
+- Perplexity: docs.perplexity.ai model list
+- Microsoft: learn.microsoft.com Copilot hub
+
+If you want the same treatment applied to prices rather than specs, I did that in [which models cheap AI plans actually run](/blog/cheap-ai-plan-model-limits) and in [the pricing page audit](/blog/ai-pricing-page-changes-audit). The method is the same: read the vendor's own page, write down the date, and say so when you could not.
+
+The context window is the one number in AI marketing that sounds like a fact. It turns out to be a ceiling, a product decision, and a footnote, and which of the three you get depends on how far you were willing to click.

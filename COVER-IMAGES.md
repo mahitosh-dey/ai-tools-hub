@@ -779,3 +779,28 @@ step is what caused the gap being repaired here.
 | `chatgpt-vs-google-gemini-cover.webp` | Light background, visible garbled UI text, off-theme. Still outstanding as of 2026-08-13, checked again when the post was rewritten. File size is fine at 35 KB; the problem is the image content, so it needs regenerating through Gemini rather than re-encoding. | Regenerate with the prompt above |
 | `income-claims-audit-cover.webp` | Not a defect in the file. Covers render at 780x300 and 360x140, both about 2.6:1, so a 1672x941 cover is scaled to width and the top and bottom 16 percent are cropped away. The soil mound at the base of the planted sign falls outside that band and is not visible on the post page. The argument still reads, because the planted stem runs past the bottom edge while the floating stems visibly stop in mid-air. | None for this cover. For future Style A covers, keep the detail that carries the argument inside the central 68 percent of the height. |
 | `rise-of-ai-agents-cover.webp` | RESOLVED 2026-08-04. Was 204 KB; the optimiser fix brought it to 117 KB, under the 120 KB ceiling. No cover on the site now exceeds 120 KB. | None |
+
+---
+
+**I Checked What 8 AI Vendors Say Their Context Window Is** - `ai-context-window-claims-2026-cover.webp`
+Style A, seventh in the illustration run. The argument is that one vendor gives
+three different answers to the same question, so the composition is one object
+measured three ways with three different results. A single document shape at the
+top, and below it three measuring bars that all start at the same left edge and
+stop at visibly different points. The three different endpoints carry the
+argument, so they are the amber element and everything else stays charcoal.
+Keep the document and all three bars inside the central 68 percent of the
+height, since the top and bottom 16 percent are cropped away on the post page.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+one wide rounded rectangle representing a document centred in the upper middle
+of the frame, below it three long horizontal measuring bars stacked with even
+spacing, every bar beginning at the same left edge directly under the left edge
+of the document, the three bars ending at three clearly different points so one
+is long, one is medium and one is short, each bar ending in a small amber
+vertical cap and the three mismatched caps clearly the focal point, the bars and
+the document held within the middle band of the image, nothing important near
+the top or bottom edge, no text, no numbers, no letters, no logos, no faces
+```
