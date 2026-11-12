@@ -1,0 +1,200 @@
+---
+title: "GitHub Copilot's Pricing Page Lists 37 Models on Every Plan. Its Own Docs Say Pro Cannot Run 14 of Them."
+seoTitle: "GitHub Copilot Plans 2026: What Pro Actually Runs"
+date: "2026-11-12"
+updatedAt: "2026-11-12"
+excerpt: "I read seven AI vendors' pricing pages, then read their own documentation, and compared the two. One vendor prints the same model list under four different plans. Two came out completely clean. And three cite help pages that do not say what they are cited for, or do not exist at all."
+metaDescription: "I compared seven AI vendors' pricing pages with their own docs. Copilot lists 37 models on every plan while its docs say Pro cannot run 14 of them."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "github-copilot"
+  - "ai-coding"
+  - "cursor"
+coverImage: "/images/ai-pricing-page-vs-docs-audit-cover.webp"
+readTime: "8 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "Does GitHub Copilot Pro include Claude Opus?"
+    a: "No, according to GitHub's own documentation. The per-plan model table at docs.github.com marks Claude Opus 4.8, Opus 4.8 fast mode, Opus 5 and Opus 5.5 as not included for Copilot Pro, and included for Pro+ and Max. GitHub's marketing plans page lists all four of those models under the heading Pro plan. Opus access starts at Copilot Pro+, which is $39 a month against Pro's $10. Read 12 November 2026."
+  - q: "Which models can GitHub Copilot Pro actually run?"
+    a: "Of the 30 models in GitHub's documentation table, Pro is marked not included for 14: Opus 4.8, Opus 4.8 fast mode, Opus 5, Opus 5.5, Fable 5, Fable 5.1, Fable 5.2, Gemini 4 Argon, Gemini 4 Carbon, GPT-5.4 nano, GPT-5.6 Sol, GPT-6 Astra, GPT-6 Sol and GPT-6.1 Sol. What Pro does get is the Haiku and Sonnet line, Gemini 3.8 Flash, the Luna and Terra GPT variants, GPT-5.3-Codex, the Grok models, Kimi K3 and MAI-Code-1.1-Flash. The marketing page lists 37 models under Pro plan with no exclusions marked."
+  - q: "Is Copilot Max worth $100 a month?"
+    a: "That is your call, but check one row before you decide. GitHub's documentation marks Claude Sonnet 4.6 as included for Copilot Pro at $10 and for Pro+ at $39, and not included for Copilot Max at $100. It is the only model in that table where Max is missing something the cheaper plans have. Every other row where Pro is excluded shows Pro+ and Max both included, so Max is otherwise a superset. If Sonnet 4.6 is part of your workflow, the most expensive plan is the one that drops it."
+  - q: "Why do Copilot's pricing page and documentation disagree?"
+    a: "I do not know and I am not going to guess at intent. What I can report is the shape of it. The marketing plans page at github.com/features/copilot/plans prints four bulleted model lists headed Free plan, Pro plan, Pro+ plan and Max plan, and all four contain the same 37 entries. The documentation at docs.github.com prints one table with separate Pro, Pro+ and Max columns and marks 14 rows as not included for Pro, plus prose saying Copilot Free gets auto model selection only. Both pages are live, both are GitHub's, and they describe different products."
+  - q: "Does Cursor's $8 Plus plan only run Grok models?"
+    a: "Cursor's pricing page says so, and Cursor's documentation says otherwise, in Cursor's favour. The pricing page footnote reads that only Grok models are available on that plan, and its FAQ repeats that Plus includes Grok models only. The documentation says Plus gives you Agent with Cursor's own models, naming Grok 4.7, Grok 4.6, Grok 4.5 and Composer 2.5 at fixed settings. Composer 2.5 is not a Grok model. This is the one case in this audit where a pricing page undersells the product rather than overselling it."
+  - q: "Are Notion Workers free or do they cost credits?"
+    a: "Free right now, despite what the pricing page says. Notion's pricing page lists Workers under Business and Enterprise with the words requires Notion credits. Notion's own help centre says that during the beta, Workers are free to try on Business and Enterprise plans, and that Worker usage does not count against your credit balance during beta. The help page adds that they will eventually require credits. The pricing page states the future cost in the present tense."
+  - q: "Which AI vendors' pricing pages matched their documentation?"
+    a: "Replit and Zed, of the seven I checked. Neither had a single contradiction between the pricing page and the docs. Both omit things: Replit's pricing page does not show its Starter plan, and Zed's does not mention a Student plan whose model access is restricted. But an omission is not a contradiction, and on every figure the two pages both state, they agree. Zed's 14-day trial terms and its API list price plus 10 percent rate are identical on both pages."
+  - q: "How do I check what an AI plan actually includes before paying?"
+    a: "Find the per-model table in the documentation, not the pricing page, because that is where the exclusions live when the two disagree. Confirm the specific model you are buying for by name, since checkout will not stop you buying a plan that cannot run it. If a pricing page footnotes a help article, open the article and check it says what it is cited for, because in this audit one did not and two returned 404. And do not assume the dearer plan is a superset of the cheaper one, because in one case it is not."
+---
+
+The price of an AI tool is on its pricing page. Which models that price actually gives you is somewhere else, and the two pages do not always agree.
+
+I read seven vendors' pricing pages the way a buyer does, then read each vendor's own documentation, and compared them. Most of what I found was vagueness rather than conflict, and two vendors came out completely clean.
+
+One did not. GitHub's marketing site lists the same 37 AI models under four different Copilot plans. GitHub's documentation says one of those plans cannot run 14 of them, and that the free plan does not get a model list at all.
+
+And buried in the same table is a row I made myself check twice: **Claude Sonnet 4.6 is included on Copilot Pro at $10 and not included on Copilot Max at $100.**
+
+## What I did
+
+For each vendor I opened the pricing page first, because that is the page a buyer reads, and wrote down what it promised. Then I opened the vendor's own documentation or help centre and wrote down what that said about the same thing. Everything below was read on 12 November 2026, from vendor pages only.
+
+I was strict about what counts. A pricing page being less detailed than documentation is not a contradiction, and most of what I found was that. The findings below are places where the two pages state different things, or where one page points at another that does not back it up.
+
+## GitHub Copilot prints one model list four times
+
+The plans page at `github.com/features/copilot/plans` has a section headed "Available models". Under it sit four bulleted lists, headed Free plan, Pro plan, Pro+ plan and Max plan.
+
+All four lists are identical. The same 37 entries appear under each: the Claude Fable, Haiku, Sonnet and Opus families, fourteen GPT variants, Microsoft's MAI-Code-1.1-Flash, four Gemini models, three Grok models and Kimi K3.
+
+The prices on that page are $0 for Free, $10 for Pro, $39 for Pro+ and $100 for Max.
+
+So the page a buyer reads before paying says the $0 plan and the $100 plan run the same models.
+
+## The documentation disagrees four ways
+
+### One: Free does not get a model list
+
+The documentation states it in prose, not a table: "On Copilot Free and Copilot Student plans, access to models is available through auto model selection only."
+
+Auto model selection means you do not choose. The plan overview table on the same page gives Copilot Free's Models cell as "Auto model selection only". The marketing page lists 37 models under Free plan.
+
+### Two: Pro cannot run 14 of them
+
+The documentation has its own model table, with separate columns for Copilot Pro, Pro+ and Max. It covers 30 models. Fourteen are marked not included for Pro:
+
+| Not included on Copilot Pro |
+|---|
+| Claude Opus 4.8 |
+| Claude Opus 4.8 (fast mode) |
+| Claude Opus 5 |
+| Claude Opus 5.5 |
+| Claude Fable 5, 5.1 and 5.2 |
+| Gemini 4 Argon |
+| Gemini 4 Carbon |
+| GPT-5.4 nano |
+| GPT-5.6 Sol |
+| GPT-6 Astra |
+| GPT-6 Sol |
+| GPT-6.1 Sol |
+
+Every Opus. Every Fable. Both Gemini 4 models. Four of the GPT-6 generation. All of them appear under "Pro plan" on the marketing page.
+
+What Pro does get is real and useful: the Haiku and Sonnet line, Gemini 3.8 Flash, GPT-5.3-Codex, the Luna and Terra GPT variants, all three Grok models, Kimi K3 and MAI-Code-1.1-Flash. Sixteen of thirty is not nothing. It is just not thirty-seven.
+
+### Three: the $100 plan is missing something the $10 plan has
+
+This is the row I did not believe until I had it checked a second time against the raw markup.
+
+| Model | Pro, $10 | Pro+, $39 | Max, $100 |
+|---|---|---|---|
+| Claude Sonnet 4.6 | Included | Included | **Not included** |
+
+Every other exclusion in that table runs the way you would expect: not included on Pro, included on Pro+ and Max. Sonnet 4.6 is the only row where the most expensive plan drops something the cheapest paid plan has.
+
+I have no explanation and I am not going to invent one. Model lineups churn and tiers get rebuilt. But if Sonnet 4.6 is in your workflow, upgrading from Pro to Max costs you ninety dollars a month and takes it away.
+
+### Four: GitHub's marketing disagrees with GitHub's marketing
+
+On the Copilot homepage, the Pro+ card reads "Everything in Pro and: Access to premium models, including Opus". That sentence only makes sense if Opus is what Pro+ adds, which matches the documentation.
+
+The plans page, on the same domain, lists Opus 4.8, Opus 5 and Opus 5.5 under "Pro plan".
+
+The two marketing pages contradict each other, and the one that happens to be right is the one with less detail.
+
+## Where the truth is kept, which is the strangest part
+
+The documentation never writes the words "not included" in prose.
+
+The table renders as green check marks and grey crosses, inline SVG icons with no visible text. The only place the phrase exists is in the accessibility label attached to each icon: `aria-label="Not included"`.
+
+So the most precise statement GitHub makes anywhere about which models its plans can run is addressed to screen readers. A sighted buyer gets a grid of symbols. A crawler reading the markup gets the sentence.
+
+I am stating that plainly rather than quietly treating the icons as prose, because it is the kind of detail a vendor can use to say they were misquoted. They are not being misquoted. The label is the accessible name of the cell, which is what that cell means. It is simply not written anywhere a person reads.
+
+## The two pages do not even agree on which models exist
+
+Separately from the plan question, the marketing list and the documentation reference list different products.
+
+The marketing plans page includes GPT-5 mini, GPT-5.2, GPT-5.2-Codex, GPT-5.4, GPT-5.4 mini, GPT-5.5, Claude Sonnet 4 and Gemini 3.7 Flash. The documentation's supported-models reference does not list those.
+
+The documentation lists GPT-5.4 nano. The marketing page does not.
+
+One of the two is out of date. There is no way to tell which from the outside, because neither page carries a date.
+
+## Three vendors cite pages that do not back them up
+
+This was the unexpected pattern of the audit.
+
+**Google Gemini.** The subscriptions page carries a footnote saying your limit refreshes every five hours until you hit a weekly cap, and that "You can extend your limits by purchasing AI credits." It points to a specific help article for how AI credits work. I read that article. It explains compute-based limits, the five-hour refresh, the per-plan multipliers and the October 2026 model changes. It does not mention AI credits anywhere. The citation is live, the article exists, and it does not support the sentence that cites it.
+
+**Notion.** The pricing page links to a help article at `notion.com/help/notion-ai`. That URL returns **404**.
+
+**Zed.** The models documentation says "See Plans & Pricing for details on Zed's plans and limits." That page returns **404**. It is the page that would confirm Zed's "$5 of tokens included", which appears on the pricing page and nowhere in the documentation.
+
+None of these is a lie. All three are a buyer following a vendor's own signposting and arriving nowhere.
+
+## Cursor undersells itself, then puts a surcharge in the docs
+
+Two findings, in opposite directions.
+
+**The pricing page is harder on Cursor than Cursor's docs are.** Its footnote reads that only Grok models are available on Plus, and its FAQ repeats that Plus includes Grok models only. The documentation says Plus gives you "Agent with Cursor's own models (Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5) at fixed settings". Composer 2.5 is Cursor's own model and it is not a Grok model. The $8 plan does more than the page selling it admits.
+
+**The other direction is the one that costs money.** The pricing page's comparison table shows third-party models "at API list price" with a check under Teams and Enterprise. The documentation's plan table says third-party models on Teams and Enterprise are billed at "API list price plus the Cursor Token Rate on eligible models". The surcharge exists only in the documentation. I am not quoting a figure for that rate because I could not read it in the verbatim page text.
+
+## Notion charges for something that is currently free
+
+Notion's pricing page lists Workers under Business and Enterprise with the words "Requires Notion credits".
+
+Notion's help centre says: "During the beta, Workers are free to try on Business and Enterprise plans (including Business trials). Eventually, they'll require Notion credits." It adds that "Worker usage does not count against your credit balance during beta."
+
+The pricing page states a future cost in the present tense. There is a second thing the pricing page does not mention at all: AI Meeting Notes, listed as a Business feature, will begin consuming your monthly Standard credit allowance from December, at roughly ten credits per hour of meeting.
+
+## Two vendors came out clean
+
+This matters more than it looks, because an audit that finds everyone guilty is usually measuring the auditor.
+
+**Replit.** No contradiction between its pricing page and its documentation. Its pricing page does not show the Starter plan at all, which a buyer looking for a free tier would want, and credit rollover on Pro appears only in the docs. Omissions, not conflicts.
+
+**Zed.** No contradiction either, beyond the 404 above. Its 14-day trial terms match on both pages, including that GPT-6 Luna is the only hosted model during the trial. Its "API list price plus 10 percent" appears on the pricing page and is borne out by the docs price table: Claude Opus 5.5 at a $4.00 provider input price is listed at $4.40. The docs also volunteer two things no pricing page would: that Anthropic retains prompts sent to Fable 5 and 5.1 for at least 30 days, and that Zed caps hosted Gemini 3.1 Pro at 200k tokens.
+
+Zed's documentation tells you things that make Zed look worse. That is what a page written to inform rather than convert looks like.
+
+## What to do before you pay
+
+1. **Find the per-model table in the documentation.** When the pricing page and the docs disagree, the exclusions live in the docs.
+2. **Confirm your specific model by name.** No checkout will stop you buying a plan that cannot run the thing you are buying it for.
+3. **Open any help article a pricing page footnotes.** In this audit, one did not say what it was cited for and two returned 404.
+4. **Do not assume the dearer plan is a superset.** In one case it is not.
+
+## What I could not check
+
+Perplexity's consumer pricing page returned eighty characters of content to an automated request, with no plan names, prices or limits in it, and its documentation covers the API only. So Perplexity is absent from this audit rather than cleared by it.
+
+OpenAI's consumer pricing page and its ChatGPT Plus help article both returned 403 when I checked them for a related piece two days ago, which is why ChatGPT is not here either.
+
+A 403 means a server declined an automated request and a 404 means a URL did not resolve on the day I asked. Neither is evidence about a product, and I have not treated them as any.
+
+## Sourcing
+
+Read 12 November 2026, vendor pages only:
+
+- GitHub: github.com/features/copilot, github.com/features/copilot/plans, docs.github.com plans-for-github-copilot, docs.github.com supported-models reference
+- Cursor: cursor.com/pricing and cursor.com/docs/models-and-pricing
+- Notion: notion.com/pricing, notion.com/help/category/notion-credits, notion.com/help/understand-pricing-for-workers
+- Google: gemini.google/us/subscriptions and the Gemini help article on model access and limits
+- Zed: zed.dev/pricing and zed.dev/docs/ai/models
+- Replit: replit.com/pricing, docs.replit.com billing and model-selector pages
+- Perplexity: perplexity.ai/pro and docs.perplexity.ai
+
+Returned 404 on the day: notion.com/help/notion-ai, zed.dev/docs/ai/plans-and-pricing.
+
+If you want the same method applied to specs rather than plans, I did that in [what eight vendors say their context window is](/blog/ai-context-window-claims-2026), and to prices in [the pricing page audit](/blog/ai-pricing-page-changes-audit) and [which models cheap plans actually run](/blog/cheap-ai-plan-model-limits).
+
+The pricing page is written to be read. The documentation is written to be correct. Nobody tells you they are different pages, and the gap between them is where the thing you were buying quietly stops being included.

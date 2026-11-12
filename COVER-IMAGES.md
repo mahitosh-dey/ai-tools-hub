@@ -804,3 +804,28 @@ vertical cap and the three mismatched caps clearly the focal point, the bars and
 the document held within the middle band of the image, nothing important near
 the top or bottom edge, no text, no numbers, no letters, no logos, no faces
 ```
+
+---
+
+**GitHub Copilot's Pricing Page Lists 37 Models on Every Plan** - `ai-pricing-page-vs-docs-audit-cover.webp`
+Style A, eighth in the illustration run. The argument is that two pages from the
+same company describe the same list and disagree, so the composition is two
+documents side by side holding the same rows with different marks against them.
+The left document has a tick beside every row. The right document has the same
+rows, but several carry a cross instead. The crosses carry the argument, so they
+are the amber element and everything else stays charcoal. Keep both documents
+inside the central 68 percent of the height, since the top and bottom 16 percent
+are cropped away on the post page.
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+two tall rounded document outlines standing side by side across the centre of
+the frame with a clear gap between them, each document holding the same vertical
+list of six short horizontal charcoal rows, every row in the left document
+followed by a small charcoal tick, the right document identical except that
+three of its six rows are followed by a bold amber cross instead of a tick, the
+three amber crosses clearly the focal point, both documents held within the
+middle band of the image, nothing important near the top or bottom edge, no
+text, no numbers, no letters, no logos, no faces
+```
