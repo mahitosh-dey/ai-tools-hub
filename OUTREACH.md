@@ -10,17 +10,26 @@ linkedin.com/in/mahitosh-dey-b70575147
 **Rule for everything below:** never ask for a link. Offer a fact that is useful on its own.
 If the fact is good the link follows, and if it does not, the fact was still worth sending.
 
-**Qualify the target before writing a word.** Both checks take a minute and both were
-skipped on the first batch, which is why it was abandoned.
+**Qualify the target before writing a word.** All three checks take a minute and the first
+batch skipped them, which is why it was abandoned.
 
+0. **Does the article actually say the thing?** Open the page and find the sentence. Never
+   qualify a target off a search result summary. On 2026-11-12 the search said Content
+   Mavericks ranked Tome first and listed Replica Studios. Both pages were clean and had
+   been updated that same week. Drafting from that summary would have meant writing to a
+   twelve-year-old domain to correct an error it never made, which is the fastest way to
+   burn a good contact.
 1. **Is there a real email address?** If the only route is a contact form, skip it. A form
    leaves no sent record, no thread to reference and no evidence it was read. You cannot
-   follow a channel you cannot measure.
-2. **How old is the domain?** `whois <domain> | grep -i 'creation date'`. Under about two
-   years and a link is worth close to nothing. technoparkai.com turned out to be one day
-   older than this site.
+   follow a channel you cannot measure. Cloudflare email obfuscation is not a form: the
+   address is real and decodes in any normal browser, it just cannot be fetched.
+2. **How old is the domain?** Query the registry, not the registrar:
+   `whois -h whois.verisign-grs.com "domain <name>.com" | grep -i 'Creation Date:'`. A plain
+   `whois | grep -i 'creation date'` returns `1985-01-01` for every .com, because that is
+   when the TLD itself was created. Under about two years and a link is worth close to
+   nothing. technoparkai.com turned out to be one day older than this site.
 
-Qualify first, verify the error second, draft third. Drafting before qualifying wastes the
+Verify the error first, qualify second, draft third. Drafting before either wastes the
 research.
 
 ---
@@ -151,6 +160,110 @@ One action per week, sustained, beats a burst then nothing. Suggested order:
 3. Week 3: community participation, no links for the first few posts
 4. Week 4: notify cited vendors
 5. Then repeat 2 to 4
+
+## Prepared for week 2, not yet sent
+
+Researched 2026-11-12. Both targets qualified against all three checks above. Nothing has
+been sent: sending is yours, and the facts need re-checking on the morning they go, because
+a dead domain can be bought by somebody else overnight and a pitch built on a stale reading
+would be the exact failure this site exists to point out in other people.
+
+### Facts re-verified 2026-11-12, by direct check rather than by search
+
+| Domain | Observed |
+|---|---|
+| `tome.com` | no DNS record at all |
+| `tome.app` | 404 |
+| `lightfield.ai` | 200, the Tome team's sales product |
+| `play.ht` | no DNS record |
+| `playht.com` | parked, resolves to `anycast.parklogic.com` |
+| `lovo.ai` | HTTP 402, header `x-vercel-error: DEPLOYMENT_DISABLED` |
+| `replicastudios.com` | no DNS record |
+| `podcastle.ai` | 200, redirects to `async.com` |
+
+The LOVO reading is better than the one in the table above and should replace it on the next
+pass. The site is not merely offline. It returns `Payment required` with Vercel's
+deployment-disabled header, which is a hosting account switched off for non-payment, from a
+company that filed Chapter 7 liquidation in the Southern District of New York on 2026-05-27,
+case 26-11249. Note the limit of that evidence: a 402 describes a hosting bill, not a
+company. The docket is what carries the claim, and the 402 is the detail that makes it
+readable.
+
+### Target 1: ToolJunction
+
+`https://www.tooljunction.io/best/best-ai-presentation-tools`, reached at
+**contact@tooljunction.io**, published in the footer. Reviewed by Deepak Kumar, Founder.
+Domain created 2024-04-28, so 2.5 years old: it clears the two-year bar and not by much, and
+the link would be worth little. The pitch is sound and the target is mediocre.
+
+The page ranks Tome at number 2, calls it "the best free option", lists "$16/user/month" and
+says "Last updated November 2026". A current price for a product whose domain does not
+resolve.
+
+> Subject: Small heads-up on your AI presentation tools page
+>
+> Hi Deepak,
+>
+> Your best AI presentation tools page has Tome at number 2 and calls it the best free
+> option, at $16 a user a month.
+>
+> I went to check it while updating something similar, and tome.com no longer resolves at
+> all while tome.app returns a 404. The team moved to sales software under the Lightfield
+> name, which is live at lightfield.ai. Checked today, [DATE].
+>
+> No agenda here. The page says it was updated in November 2026, so I thought you would want
+> to know before a reader clicks through. Dates and details are on my tracker if useful:
+> aivaultblog.com/blog/what-happened-to-ai-tools
+>
+> Mahitosh
+
+### Target 2: Kripesh Adwani
+
+`https://kripeshadwani.com/best-ai-voice-generators/`. Domain created 2018-01-08, so 8.8
+years old, which is the better of the two by a wide margin. Written in the first person by a
+named individual, so a real person opens the mail. Last updated 2026-01-03.
+
+The guide ranks Genny by Lovo AI at number 2 and PlayHT at number 3. Both companies are
+gone, and both entries carry affiliate links, so the error costs him money rather than only
+accuracy. That is the strongest form this pitch takes: it is worth something to the
+recipient before it is worth anything to us.
+
+His address sits behind Cloudflare email obfuscation, the same feature switched off on this
+site on 2026-11-11. It cannot be fetched. Open the contact page in a browser and it decodes
+on sight.
+
+> Subject: Two of the tools in your AI voice guide have gone
+>
+> Hi Kripesh,
+>
+> Your best AI voice generators guide ranks Genny by Lovo AI at number 2 and PlayHT at
+> number 3.
+>
+> Both are gone. Lovo filed Chapter 7 liquidation in the Southern District of New York on 27
+> May 2026, case 26-11249, and lovo.ai now returns an HTTP 402 with a Vercel
+> DEPLOYMENT_DISABLED header, which is a site switched off for non-payment. play.ht does not
+> resolve and playht.com is parked. All checked today, [DATE].
+>
+> I mention it because both entries carry affiliate links, so it is costing you clicks as
+> well as accuracy.
+>
+> No agenda. Details and dates on my tracker if useful:
+> aivaultblog.com/blog/what-happened-to-ai-tools
+>
+> Mahitosh
+
+Neither draft asks for a link.
+
+### Why these two and not the Copilot findings
+
+The month plan nominated the GitHub Copilot contradictions and the Aider commit as the
+assets to lead with. They are not used here, deliberately. Those are arguments, and
+correcting somebody's argument reads as picking a fight. A domain that does not resolve is a
+fact the recipient can check in four seconds, and checking it helps them. The Copilot
+material is better aimed at the journalist services, where a reporter wants a sourced figure,
+than at a blogger who would have to rewrite a section to act on it.
+
+---
 
 ## Tracking
 

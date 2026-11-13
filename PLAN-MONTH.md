@@ -174,8 +174,15 @@ Clear the two queued sweeps and fix the pages that lie about the business.
 - ~~**Sweep the Claude context claim.**~~ **Done 2026-11-10.** It was seven
   posts, not nine. Three of the nine were false positives (200K lines of code,
   200,000 monthly views, and Haiku 4.5's genuine 200K window) and two had
-  already been corrected on 3 November. Anthropic now says up to 1M tokens,
-  varying by model, identical on every plan including the free one. Two posts
+  already been corrected on 3 November. The answer took two passes and the
+  first one was wrong, which is the lesson worth keeping. Reading the pricing
+  page alone gives "up to 1M, varying by model, every plan including the free
+  one", and all seven posts were edited to say that in the morning. Anthropic's
+  support article 8606394, found that afternoon, gives a per-model ladder
+  instead: 1M on the newest models, 500K on the previous generation, 200K
+  outside that list, varying again by product surface, and it never mentions
+  the free plan at all. All seven were corrected a second time. One vendor
+  page is not a source when the vendor publishes two. Two posts
   carried a retired model name in the same sentence. `gpt5-vs-claude4` is
   flagged for a full refresh: its whole comparison table describes a model
   lineup Anthropic has replaced.
@@ -192,8 +199,19 @@ cadence held.
 10th as well, after Search Console reported 21 pages as Not found: 94 tag URLs
 were 404ing because tag pages are generated from post frontmatter and nobody
 had redirected the slugs that editing had removed. Fixed, and hard rule 2c now
-prevents a repeat. Still open this week: the three contradictory AdSense lines,
-and **two new posts, with zero written so far**. Three working days left.
+prevents a repeat.
+
+**Status at 2026-11-12. Week 1 is done, with a day to spare.** The three
+contradictory AdSense lines are gone, and `ads.txt` was deliberately not added:
+no ad network runs here, so there is no authorised seller to declare and an
+empty file would be its own small lie. Both posts shipped, post 56 on the 10th
+and post 57 on the 12th, so cadence held in the week the plan expected it to
+break. Two unplanned fixes landed as well: two orphan pages given inbound
+links, and an Ahrefs Health Score drop from 100 to 75 traced to Cloudflare's
+Email Address Obfuscation injecting a link to a 404 endpoint on all 91 pages,
+now switched off and verified clean. Still yours: `NODE_VERSION` to 22, the
+apex redirect, a fresh Ahrefs crawl, and Validate Fix in Search Console on
+Not found (404) and Blocked due to other 4xx.
 
 ---
 
