@@ -130,3 +130,45 @@
 /tag/youtube-2026                  /tag/youtube  301
 /tag/youtube-automation            /tag/youtube  301
 /tag/youtube-shorts                /tag/youtube  301
+
+# A third batch, found 2026-11-16 while reading Search Console. The earlier
+# sweeps that produced the blocks above missed these because they only
+# matched one of the three frontmatter tag formats this repo has used:
+# inline arrays, multi-line arrays and block lists. Parsing the frontmatter
+# properly instead of grepping for a pattern turned 6 known 404s into 33.
+# Every source below returned 404 on a live check, and every target was
+# verified to be a built page, indexable (3+ posts), and not itself a
+# redirect source, so none of these creates a chain or lands on a noindex.
+/tag/ai-agents-2026                /tag/ai-agents    301
+/tag/ai-blog-2026                  /tag/blogging     301
+/tag/ai-business                   /tag/make-money   301
+/tag/ai-image-generator            /tag/ai-image     301
+/tag/ai-image-generator-2026       /tag/ai-image     301
+/tag/ai-jobs-2026                  /tag/make-money   301
+/tag/ai-search-engine              /tag/perplexity-ai 301
+/tag/ai-side-hustle-2026           /tag/make-money   301
+/tag/ai-tools-for-students         /tag/free-ai-tools 301
+/tag/ai-writing-workflow           /tag/ai-writing   301
+/tag/best-ai-2026                  /tag/ai-tools     301
+/tag/best-ai-model-2026            /tag/ai-comparison 301
+/tag/best-free-ai-tools-2026       /tag/free-ai-tools 301
+/tag/chatgpt-guide-2026            /tag/chatgpt      301
+/tag/chatgpt-plus-review           /tag/chatgpt      301
+/tag/chatgpt-side-hustle-2026      /tag/make-money   301
+/tag/computer-use                  /tag/ai-agents    301
+/tag/dalle                         /tag/ai-image     301
+/tag/free-ai-tools-2026            /tag/free-ai-tools 301
+/tag/freelancer-tools-2026         /tag/freelancing  301
+/tag/future-of-ai                  /tag/ai-agents    301
+/tag/gemini-2026                   /tag/ai-comparison 301
+/tag/grammarlygo                   /tag/ai-writing   301
+/tag/learn-to-code-with-ai         /tag/ai-coding    301
+/tag/make-money-with-ai            /tag/make-money   301
+/tag/midjourney-2026               /tag/midjourney   301
+/tag/midjourney-vs-dalle3          /tag/midjourney   301
+/tag/operator                      /tag/ai-agents    301
+/tag/passive-income                /tag/make-money   301
+/tag/social-media-ai-2026          /tag/content-creation 301
+/tag/student-ai-2026               /tag/free-ai-tools 301
+/tag/what-is-chatgpt               /tag/chatgpt      301
+/tag/write-blog-with-ai            /tag/blogging     301
