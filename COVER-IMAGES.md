@@ -829,3 +829,33 @@ three amber crosses clearly the focal point, both documents held within the
 middle band of the image, nothing important near the top or bottom edge, no
 text, no numbers, no letters, no logos, no faces
 ```
+
+### Guides (added November 2026)
+
+**Your AI Bill Is Going Up** — `ai-api-price-increases-december-2026-cover.webp`
+
+Style A. The post's most original finding is that Anthropic cut the price per
+token and changed the tokenizer so the same text produces about 30 percent more
+tokens, which means a published cut became a real increase. So the composition
+is one document measured twice. Two identical stacks of pages stand side by
+side, the same height as each other, and beside each stands a measuring column.
+The left column is divided into a few wide bands, the right into many narrow
+ones. Nothing has grown except the count. The narrow bands are the amber
+element because they are the argument. Keep both stacks inside the central 68
+percent of the height, since the top and bottom 16 percent are cropped away on
+the post page.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+two identical stacks of flat rectangular pages standing side by side across the
+centre of the frame with a clear gap between them, both stacks exactly the same
+height and width, a tall narrow vertical measuring column standing immediately
+beside each stack and matching its height, the left measuring column divided
+into four wide charcoal bands, the right measuring column divided into twelve
+narrow amber bands, the many narrow amber bands clearly the focal point, both
+stacks and both columns held within the middle band of the image, nothing
+important near the top or bottom edge, no text, no numbers, no letters,
+no logos, no faces
+```
