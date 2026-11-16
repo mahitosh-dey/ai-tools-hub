@@ -168,18 +168,35 @@ been sent: sending is yours, and the facts need re-checking on the morning they 
 a dead domain can be bought by somebody else overnight and a pitch built on a stale reading
 would be the exact failure this site exists to point out in other people.
 
-### Facts re-verified 2026-11-12, by direct check rather than by search
+### Facts re-verified 2026-11-16, by direct check rather than by search
 
-| Domain | Observed |
+Re-checked on the morning of the send block, as the note above requires. Seven of the eight
+readings held. One did not, and it was the one that would have embarrassed us.
+
+| Domain | Observed 2026-11-16 |
 |---|---|
 | `tome.com` | no DNS record at all |
-| `tome.app` | 404 |
-| `lightfield.ai` | 200, the Tome team's sales product |
+| `tome.app` | 404, header `x-vercel-error: DEPLOYMENT_NOT_FOUND` |
+| `lightfield.com` | 200, "Lightfield, AI-native CRM". Also `getlightfield.com` and `trylightfield.com` |
+| `lightfield.ai` | parked. Port 80 serves a 101domain holding page titled "Future home of lightfield.ai", port 443 refused, no MX |
 | `play.ht` | no DNS record |
-| `playht.com` | parked, resolves to `anycast.parklogic.com` |
+| `playht.com` | parked. Nameservers `ns1/ns2.kefuhw.parklogic.com`, reverse DNS `anycast.parklogic.com` |
 | `lovo.ai` | HTTP 402, header `x-vercel-error: DEPLOYMENT_DISABLED` |
 | `replicastudios.com` | no DNS record |
-| `podcastle.ai` | 200, redirects to `async.com` |
+| `podcastle.ai` | 308, redirects to `async.com` |
+
+**The error this re-check caught.** On 2026-11-12 this table recorded `lightfield.ai` as "200,
+the Tome team's sales product", and the Target 1 draft told the recipient the Lightfield
+product was live there. It is not and was probably never there. The company is at
+`lightfield.com`. What answers on `lightfield.ai` is a registrar parking page, and a parking
+page returns 200 on port 80, which is how it got written down as alive.
+
+That is this project's own rule 10 failing in our own notes: a status code describes a
+server, not a business. Had the draft gone as written, we would have pointed somebody at a
+domain-for-sale page in the course of telling them their page was out of date. The re-check
+requirement in this file exists for precisely this and it earned its keep on the first use.
+
+Reading a status code is not the same as reading the page. Record the title, not the number.
 
 The LOVO reading is better than the one in the table above and should replace it on the next
 pass. The site is not merely offline. It returns `Payment required` with Vercel's
@@ -208,8 +225,9 @@ resolve.
 > option, at $16 a user a month.
 >
 > I went to check it while updating something similar, and tome.com no longer resolves at
-> all while tome.app returns a 404. The team moved to sales software under the Lightfield
-> name, which is live at lightfield.ai. Checked today, [DATE].
+> all while tome.app returns a Vercel deployment-not-found error. The team moved to sales
+> software under the Lightfield name, which is live at lightfield.com. All checked
+> 16 November 2026.
 >
 > No agenda here. The page says it was updated in November 2026, so I thought you would want
 > to know before a reader clicks through. Dates and details are on my tracker if useful:
@@ -242,7 +260,7 @@ on sight.
 > Both are gone. Lovo filed Chapter 7 liquidation in the Southern District of New York on 27
 > May 2026, case 26-11249, and lovo.ai now returns an HTTP 402 with a Vercel
 > DEPLOYMENT_DISABLED header, which is a site switched off for non-payment. play.ht does not
-> resolve and playht.com is parked. All checked today, [DATE].
+> resolve and playht.com is parked on ParkLogic nameservers. All checked 16 November 2026.
 >
 > I mention it because both entries carry affiliate links, so it is costing you clicks as
 > well as accuracy.
