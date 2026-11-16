@@ -217,39 +217,69 @@ Not found (404) and Blocked due to other 4xx.
 
 ## Week 2: 2026-11-16 to 2026-11-20
 
-Outreach starts, and nothing displaces it.
+**Rewritten 2026-11-16. The outreach half of this week is cancelled, not
+slipped.** The user asked what the benefit of the two prepared emails actually
+was, and the honest answer was almost none: this email converts to a link
+about one time in ten, so at the two or three sends a week this site can
+sustain the expected return is zero. All cold outreach is now closed, vendors
+and bloggers alike, as rule 13 in `HARD-RULES.md`. The two drafts stay in
+`OUTREACH.md` as a record and are not to be revived.
 
-- **Monday: pick two targets and verify them.** Not a list of twenty. Two,
-  checked live, where a specific published finding of ours is useful to them.
-- **Tuesday and Wednesday: send them.** This is the block that moves the only
-  metric that matters. Nothing else goes in this slot.
-- The strongest assets to lead with are the ones nobody else has: the GitHub
-  Copilot marketing page contradicting its own model documentation, and
-  Aider's final commit adding a model five versions out of date.
-- **Two new posts.**
-- Oldest-first drift: `are-ai-detectors-accurate` at 73 days and
-  `best-ai-tools-for-social-media` at 71.
+That leaves this plan without its growth lever, which is a real problem and
+not one to paper over. See the note at the end of this section.
 
-**Week 2 done means:** two outreach emails actually sent, logged in
-`OUTREACH.md` with the date and the ask, cadence held, two posts off the
-over-60 list.
+- ~~Monday: pick two targets and verify them.~~ Done on 13 November, re-checked
+  on 16 November, then cancelled. The re-check was still worth it: it caught
+  that `lightfield.ai` is a registrar parking page rather than the company,
+  which would have sent a stranger to a domain-for-sale page.
+- ~~Tuesday and Wednesday: send them.~~ Cancelled.
+- **Two new posts.** One done: `ai-api-price-increases-december-2026`,
+  published 16 November. One still due.
+- Drift, corrected 2026-11-16: `are-ai-detectors-accurate` and
+  `best-ai-tools-for-social-media` were both already refreshed before this week
+  began, and this line named them anyway for three days. The current oldest are
+  `chatgpt-vs-google-gemini`, `how-to-use-midjourney-beginners`,
+  `midjourney-vs-dalle3` and `midjourney-vs-stable-diffusion` at 77 days, then
+  `gpt5-vs-claude4` and `perplexity-ai-review` at 76. Re-count before trusting
+  this line again, because it has now been wrong once.
+- `gpt5-vs-claude4` is the one to take first when a refresh slot opens. It is
+  a generation behind on both vendors and now contradicts three newer posts on
+  this site, which is worse than being merely stale.
+
+**Week 2 done means:** two new posts published, cadence held. The outreach
+criterion is removed rather than failed.
+
+**The open question this leaves.** This plan opened by saying backlinks are the
+only lever on Google position and this site has zero. Outreach was the answer
+to that and the answer is now gone. What has not changed is that Bing already
+ranks this content at about 5.7 without links, so the content is not the
+problem. Do not quietly replace outreach with more correction work, which is
+what will happen by default, because corrections cannot produce a referring
+domain either. Decide on 2026-12-04 what the honest growth plan is, or write
+down that there is not one and that cadence plus Bing is the strategy.
 
 ---
 
 ## Week 3: 2026-11-23 to 2026-11-27
 
-Compounding, and the first honest look at whether outreach works.
+Compounding, and the first honest look at what is left now that outreach is
+closed.
 
-- Two more outreach sends, different targets, same standard.
+- ~~Two more outreach sends, different targets, same standard.~~ Cancelled
+  2026-11-16 along with the rest of the channel. See week 2.
 - **Two new posts.**
-- Clear the rest of the over-60 list.
+- Clear the rest of the over-60 list, `gpt5-vs-claude4` first.
 - **Friday: pull the numbers.** Referring domains, Bing indexed, Google
   clicks. Compare against this plan's table and say plainly what moved.
+  Referring domains will be flat, since nothing was sent and nothing will be.
+  Report it as flat rather than as a miss.
 - Medium syndication of an older post, using Import story so the canonical
-  stays here.
+  stays here. This is now the only item in the month that could plausibly
+  produce a referring domain, which makes it more important than it looked
+  when it was written as an afterthought.
 
-**Week 3 done means:** four sends total, over-60 list at zero, mid-month
-numbers known rather than assumed.
+**Week 3 done means:** over-60 list at zero, mid-month numbers known rather
+than assumed, and a decision recorded about what replaces outreach.
 
 ---
 
