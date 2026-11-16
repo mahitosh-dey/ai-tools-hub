@@ -859,3 +859,32 @@ stacks and both columns held within the middle band of the image, nothing
 important near the top or bottom edge, no text, no numbers, no letters,
 no logos, no faces
 ```
+
+**The Free Tier Does Not Tell You Which Model You Get** — `which-model-free-tier-gives-you-cover.webp`
+
+Style A. The finding is that Google's free plan card and its paid plan card
+name the same model, the free one in a line at the bottom of the card and the
+paid one as its first selling point. So the composition is three plan cards in
+a row where one shape appears twice: at the foot of the first card and at the
+head of the second. Everything else on the cards is neutral charcoal, and only
+the repeated shape is amber, so the eye finds the duplicate before it finds
+anything else. Three cards rather than two, because the repetition is a pattern
+across the ladder rather than a single slip. Keep the cards inside the central
+68 percent of the height, since the top and bottom 16 percent are cropped away
+on the post page.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+three tall rounded rectangular cards standing side by side across the centre of
+the frame with clear even gaps between them, each card holding a short vertical
+list of four plain horizontal charcoal bars near its top and one small rounded
+badge shape alone at its foot, the badge at the foot of the left card and the
+topmost bar of the middle card both drawn as the same distinctive rounded
+hexagon filled solid amber, every other bar and badge left as plain charcoal
+outlines, the two amber hexagons clearly the focal point and visibly identical
+to each other, all three cards held within the middle band of the image,
+nothing important near the top or bottom edge, no text, no numbers, no letters,
+no logos, no faces
+```

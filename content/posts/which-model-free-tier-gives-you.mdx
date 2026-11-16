@@ -1,0 +1,157 @@
+---
+title: "Google's Free Plan and Its Paid Plan Both Say They Include Gemini 4 Hydrogen"
+seoTitle: "Which AI Model Does the Free Tier Give You in 2026?"
+date: "2026-11-16"
+updatedAt: "2026-11-16"
+excerpt: "Every free AI tier names a model. Almost none names a version. I read five vendors' own pages to find out what you are actually talking to, and found one page selling a model its free card already claims to include."
+metaDescription: "Google's free Gemini card says it includes Gemini 4 Hydrogen. Its paid plan sells access to Gemini 4 Hydrogen. Five free tiers, read from vendor pages."
+category: "Guides"
+tags:
+  - "free-ai-tools"
+  - "ai-tools"
+  - "claude"
+  - "ai-comparison"
+coverImage: "/images/which-model-free-tier-gives-you-cover.webp"
+readTime: "7 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "Which model does the free Gemini plan give you?"
+    a: "Google's subscriptions page says two different things on the same card. The Free card's feature bullet reads access to our Flash-Lite model, with no version number. A plain line at the bottom of the same card reads Includes Gemini 4 Hydrogen. Google's separate developer pricing page lists Gemini 4 Hydrogen as Free of charge, which supports the second reading, and says plainly that Gemini 4 Carbon is not available on the Free tier. So the best available answer is Flash-Lite for the bullets and Hydrogen for the footer, and the page never reconciles them. Read 16 November 2026 from India on desktop."
+  - q: "Does Google's paid plan sell a model the free plan already has?"
+    a: "On the page as written, yes, and I cannot tell you whether that is the intent. Google AI Plus at 399 rupees a month lists Access to Gemini 4 Hydrogen as the first feature bullet under Gemini app. The Free card's footer line says Includes Gemini 4 Hydrogen. Both refer to the same model by the same name. There is a pattern across the cards: each one's footer names the model that the next tier up lists as a bullet, so Free's footer says Hydrogen and Plus's bullet says Hydrogen, Plus's footer says Argon and Pro's bullet says Argon. The page does not explain what the footer line means, so I am describing the pattern rather than guessing at intent."
+  - q: "Which Claude model does the free plan use?"
+    a: "Anthropic's pricing page says Sonnet and Haiku, and does not say which version of either. The plan table marks Sonnet Yes and Haiku Yes for Free, and Opus No and Fable No. That matters more than it sounds, because Anthropic currently sells Sonnet 5.5 and Sonnet 5 at 2 dollars per million input tokens, Sonnet 4.6 and Sonnet 4.5 at 3 dollars, and those models do not share a context window: Sonnet 5.5 carries 1 million tokens and Sonnet 4.5 carries 200,000. A free user is told the family, not the member. Read 16 November 2026."
+  - q: "Can a free Claude account use Opus?"
+    a: "No. Anthropic's pricing page prints Opus No and Fable No in the Free column, which is the clearest statement any vendor in this piece makes about its free tier. Opus becomes available on Pro at 17 dollars a month billed annually or 20 monthly. Fable is the odd one even on paid plans: on Pro it runs on pay as you go usage credits rather than your plan allowance, and on Max and Ultra it is included up to half your weekly limit. I covered how that works in my Claude review."
+  - q: "What model does Microsoft Copilot's free tier use?"
+    a: "Microsoft does not say, as far as I could establish on 16 November 2026. The copilot.com page is a sign-in screen and names no model anywhere on it. Its only statement about the free tier is that a free tier is available with a Microsoft account, and that some capabilities are subject to usage limits with more available through paid plans. The plans and pricing page at microsoft.com returned a 404 on the day. I am reporting that as unknown rather than filling it in from somewhere else."
+  - q: "Why does the version number of a free model matter?"
+    a: "Because the versions are different products at different prices with different limits, and the gap between them is wide. Within Anthropic's current Sonnet line the context window ranges from 200,000 tokens to 1 million, and the API price ranges from 2 to 3 dollars per million input tokens. Within Google's Gemini 4 line, the developer pricing page prices Hydrogen at 1.50 dollars input and Carbon at 2 dollars rising to 4 dollars on 1 December 2026. If you are deciding whether the free tier is good enough for your work, the family name does not answer the question and the version number would."
+  - q: "Is the API free tier the same as the app free tier?"
+    a: "No, and conflating them is the most common mistake I see in articles about free AI. Google's developer pricing page and Google's consumer subscriptions page are different products with different model lists. The developer page marks Gemini 4 Hydrogen, Gemini 3.8 Flash, Gemini 3.6 Flash and Gemini 3.5 Flash-Lite as Free of charge, and marks Gemini 4 Carbon and Gemini 4 Argon as not available on the Free tier. The consumer page sells plans in rupees with storage allowances attached. A sentence about one tells you nothing reliable about the other."
+  - q: "How do I find out which model I am actually using?"
+    a: "Ask the product rather than the marketing page, and then check the answer. In an app with a model picker, open it and read the exact string, including the version. Where there is no picker, the vendor's developer documentation is usually more precise than its pricing page, which is the pattern I found across seven vendors in my pricing page versus documentation audit. Treat anything a chatbot says about its own identity as unreliable, because models are frequently wrong about which version they are. The picker and the docs are evidence, the model's self description is not."
+---
+
+Every article about free AI tools tells you which tools are free. Almost none tells you which model you get when you use them, and that is now the question that decides whether the free tier is any good.
+
+So I read five vendors' own pages on 16 November 2026 and tried to answer it. Three gave me something. Two publish nothing at all. And one page contradicts itself in a way I had to read four times.
+
+## Google's free card and its paid card name the same model
+
+Start with the one that stopped me.
+
+Google's subscriptions page lays out its plans as cards. Here is what each card says, in the order the page prints it.
+
+| Card | First model bullet | Line at the bottom of the card |
+|---|---|---|
+| Free, 0 rupees | "Access to our Flash-Lite model" | "Includes Gemini 4 Hydrogen" |
+| Google AI Plus, 399 rupees | "Access to Gemini 4 Hydrogen" | "Includes Gemini 4 Argon" |
+| Google AI Pro | "Access to Gemini 4 Argon" | "Includes Gemini 4 Carbon" |
+
+Read the Plus card's first selling point. Now read the last line of the Free card. Both of them say Gemini 4 Hydrogen.
+
+The Plus card opens with the words "Everything in free and:" before listing what you get for 399 rupees a month, and the first thing on that list is access to a model the free card has already named.
+
+### What I can and cannot tell you about it
+
+There is a pattern here, and it is worth describing precisely rather than dramatically. Each card's footer line names the model that the next tier up lists as a bullet. Free's footer says Hydrogen and Plus's bullet says Hydrogen. Plus's footer says Argon and Pro's bullet says Argon. Pro's footer says Carbon.
+
+The page never explains what that footer line means. It is not a bullet, not a comparison row, and carries no asterisk or note. So I can tell you the two cards use the same model name for different things, and I cannot tell you which one describes what you actually get, because Google does not say.
+
+What I can add is a second source that points one way. Google's developer pricing page, a different page for a different product, lists **Gemini 4 Hydrogen as "Free of charge"** on its free tier. It also says, in its own words, that **"Gemini 4 Carbon is not available on the Free tier"** and the same for Argon.
+
+So on the developer side, free does get Hydrogen and definitely does not get Carbon or Argon. If the consumer side works the same way, the Free card's footer is accurate and the Plus card is selling its headline feature to people who already have it.
+
+I would like to be able to resolve this for you properly. I cannot, because resolving it requires Google to say what its own footer line means.
+
+## Nobody tells you the version
+
+The Google card's actual feature bullet says "our Flash-Lite model." Not Flash-Lite 3.5, which is what the developer page prices. Just the family.
+
+Anthropic does the same thing, and in their case I can show you exactly what it costs you to not know.
+
+Their pricing page marks the Free plan like this: **Sonnet Yes, Haiku Yes, Opus No, Fable No.** That is clearer than most. It is also unversioned, and Anthropic currently sells four Sonnets.
+
+| Model | Input price per million | Context window |
+|---|---|---|
+| Claude Sonnet 5.5 | $2 | 1M |
+| Claude Sonnet 5 | $2 | 1M |
+| Claude Sonnet 4.6 | $3 | 1M |
+| Claude Sonnet 4.5 | $3 | 200K |
+
+The gap between the top and bottom of that list is a 50 percent price difference and a five-fold difference in how much you can put into one conversation. "Sonnet" does not tell a free user which of those they are talking to, and the context window is the single thing most likely to decide whether a free tier can do your job.
+
+The same applies to Haiku, where the free user is choosing between a 1 million token model and a 200,000 token one, both called Haiku.
+
+I am not claiming anyone is hiding this. Unversioned names are probably just how marketing pages get written. But it means the honest answer to "which model does free Claude use" is that the vendor does not publish it.
+
+## What Anthropic does say clearly, to its credit
+
+Two things on that page are more honest than the industry norm and should be said.
+
+**"Opus | No" and "Fable | No"** against the free column is unambiguous. There is no footnote, no asterisk, no "limited access to." You do not get them.
+
+The usage footnote is also better than most: **"How fast you reach a limit depends on the model you use, how long your chats are, and how large your files are."** No number, which is frustrating, but it explains the shape of the limit rather than pretending there is a fixed message count. Most vendors give you neither.
+
+Opus starts at Pro, which is $17 a month billed annually or $20 monthly. Fable is stranger even on paid plans, running on pay as you go credits on Pro and only becoming included on Max and above, which I worked through in my [Claude review](/blog/claude-ai-review).
+
+## What the free tier does give you, which is a lot
+
+I have spent several sections on what free tiers will not tell you, so here is the other side, because a post that only finds fault is not reporting.
+
+Google's free card is generous and the model question is the only thing wrong with it. Alongside the Flash-Lite bullet it lists image generation and editing, Deep Research, Gemini Live, Canvas and Skills. It gives you 15 GB of storage across Gmail, Drive and Photos. It even includes what the page calls "limited access to Nano Banana Pro" inside their creative studio.
+
+That is a serious free product. Five years ago most of those were paid features at every vendor, and several of them did not exist.
+
+Anthropic's free tier is narrower by design and honest about it. You get Sonnet and Haiku with limited usage, and the page tells you plainly that Opus and Fable are not included rather than burying it. Narrow and clear beats broad and vague, and if I had to choose which of these two free tiers I trust more to describe itself, it is that one.
+
+So the complaint in this post is specific. It is not that free tiers are stingy, because they are not. It is that the one fact that decides whether a free tier can do your particular job, which model is behind it, is the fact most likely to be missing or stated twice in two different ways.
+
+## Two vendors publish nothing
+
+This part is the finding, not a gap in my research.
+
+**Microsoft Copilot.** The copilot.com page is a sign-in screen. It names no model anywhere. Its one sentence about the free tier reads: "A free tier is available with a Microsoft account. Copilot AI helps you research, create, and get answers, with some capabilities subject to usage limits and more available through paid plans." The plans and pricing page on microsoft.com returned **404** on the day I checked.
+
+**Perplexity.** Three different help URLs returned either 404 or the help centre index rather than an article. I could not reach a page stating which model the free tier uses.
+
+**OpenAI** belongs in the same column for a different reason. Their consumer pricing pages returned **403** to an automated request on 16 November, the same as on 10 November. A 403 is a server declining to talk to a robot. It is not evidence about the product and I have not treated it as any.
+
+So of five major free tiers, two do not publish the model, one cannot be read automatically, one publishes the family but not the version, and one publishes two different answers on the same page.
+
+## The API free tier is not the app free tier
+
+One correction worth making to the way this subject is usually written, including by me in earlier posts.
+
+Google's developer pricing page and Google's consumer subscriptions page are different products. The developer page marks Gemini 4 Hydrogen, Gemini 3.8 Flash, Gemini 3.6 Flash and Gemini 3.5 Flash-Lite as free of charge, and marks Carbon, Argon and Omni 1.2 Flash as not available on free. The consumer page sells plans in rupees with cloud storage attached and a different vocabulary entirely.
+
+A sentence about one tells you nothing reliable about the other. When an article says "Gemini is free," ask which Gemini, on which product.
+
+## How to find out what you are actually on
+
+Three things that work, in order of reliability.
+
+**Open the model picker and read the exact string.** Including the version. If the product has a picker, that is the most direct evidence available to you and it takes five seconds.
+
+**Read the developer documentation rather than the pricing page.** This is consistently the better source. When I compared seven vendors' pricing pages against their own docs in [the pricing page versus documentation audit](/blog/ai-pricing-page-vs-docs-audit), the docs were more precise nearly every time, because a pricing page is written to be read and documentation is written to be correct.
+
+**Do not ask the model which model it is.** Models are frequently wrong about their own version. The picker and the docs are evidence. A chatbot's description of itself is not.
+
+## Why this is getting harder, not easier
+
+Both vendors in this piece shipped a new model generation in the last ten weeks. Anthropic moved to a 5.5 generation, Google moved through its Gemini 4 line, and the free tiers moved underneath without an announcement that most users would see.
+
+That is the actual mechanism. Nobody downgrades a free tier in public. The lineup rotates, the marketing page keeps saying "Sonnet" or "Flash-Lite," and what sits behind the name changes. I tracked the same effect on paid model access in [the 2026 model retirements](/blog/ai-model-retirements-2026), and on what the vendors are about to charge in [the price rises three vendors have already published](/blog/ai-api-price-increases-december-2026).
+
+If you want the practical version of which free tools are worth using rather than which model sits behind them, [the twelve best free AI tools](/blog/best-free-ai-tools) and [what free actually means](/blog/what-free-means-ai-tools) answer that question instead.
+
+## Sourcing
+
+Every figure and quotation above was read on **16 November 2026**, from India, on desktop. That last detail matters and I have started stating it, because at least one vendor serves different plan sets by country and I have found an India-only plan that does not appear when the same page is fetched from elsewhere. The Google subscriptions page I read rendered in rupees and offers a region selector, and it gives no indication whether model names differ by region. I cannot tell you what a United States view shows, so I am not going to imply that I can.
+
+Pages read: claude.com/pricing and Anthropic's models overview at platform.claude.com for the Claude plans and the Sonnet lineup; aistudio.google.com for the developer free tier; gemini.google/subscriptions for the consumer cards; copilot.com for Microsoft.
+
+Pages that did not answer: microsoft.com's plans and pricing page, 404. Three Perplexity help URLs, 404 or an index. OpenAI's consumer pricing pages, 403.
+
+Where a vendor states something I have quoted it. Where a vendor is silent I have said so rather than reaching for a secondary source, because on this particular question the secondary sources are mostly copying each other and none of them can see inside the product either.
