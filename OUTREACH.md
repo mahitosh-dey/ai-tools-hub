@@ -161,7 +161,18 @@ One action per week, sustained, beats a burst then nothing. Suggested order:
 4. Week 4: notify cited vendors
 5. Then repeat 2 to 4
 
-## Prepared for week 2, not yet sent
+## Dropped 2026-11-16, kept as a record
+
+**Neither of the two drafts below was sent, and this channel is closed.** The user asked what
+the benefit actually was, and the honest answer is almost none: this email converts to a link
+about one time in ten, so at two or three sends a week the expected return is zero. Same
+reason the Jasper and Copy.ai vendor drafts were declined on 2026-10-28. Filing that earlier
+decline as applying only to companies was my error; the odds are identical for bloggers.
+
+Everything below stays as a record of what was researched and what the re-check caught. Do
+not revive the drafts, and do not add new targets. See rule 13 in `HARD-RULES.md`.
+
+### What was prepared for week 2, never sent
 
 Researched 2026-11-12. Both targets qualified against all three checks above. Nothing has
 been sent: sending is yours, and the facts need re-checking on the morning they go, because

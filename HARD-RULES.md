@@ -198,3 +198,31 @@ Full account in `HOSTING.md`.
   102 metadata images with no file extension, so `public/_headers` is the only
   thing stopping every social card on the site serving as
   `application/octet-stream`. Nothing fails loudly when that breaks.
+
+## 13. No cold outreach emails
+
+Added 2026-11-16, after the user asked what the benefit was and the honest
+answer was "almost none".
+
+- **Do not send, and do not draft, correction or outreach emails to anyone.**
+  Not vendors whose own page contradicts itself, not bloggers whose page has
+  gone stale. The user declined the vendor version on 2026-10-28 and the
+  blogger version on 2026-11-16, for the same reason both times.
+- **The reason is arithmetic, not distaste.** This kind of email converts to a
+  link maybe one time in ten. At the two or three sends a week this site can
+  actually sustain, the expected return is zero. The channel only pays at a
+  volume the user has no intention of working at, and an hour spent on a post
+  compounds instead.
+- **The split between "vendor emails" and "backlink outreach" was the
+  assistant's invention, not the user's.** The 2026-10-28 decline was filed as
+  applying only to companies, which is why two blogger drafts were prepared on
+  2026-11-13 and had to be dropped. The cost and the odds are identical for
+  both, so no such distinction exists. Treat all unsolicited outreach as one
+  declined channel.
+- **What to do instead when research turns up someone else's error.** Publish
+  the finding with the date it was read, the way `/blog/what-happened-to-ai-tools`
+  already does, and tell the user. Do not offer to notify anyone. See rule 7:
+  the two posts a week are the growth plan.
+- **`OUTREACH.md` stays as a record, not as a queue.** Do not delete it, do not
+  add targets to it, and do not revive the drafts sitting in it. Inbound
+  contacts that arrive on their own are a different thing and still get logged.
