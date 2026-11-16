@@ -1,0 +1,178 @@
+---
+title: "Your AI Bill Is Going Up. Three Vendors Have Already Published the Dates."
+seoTitle: "AI API Price Increases: Dates for December 2026"
+date: "2026-11-16"
+updatedAt: "2026-11-16"
+excerpt: "Google prints the new price next to the old one. OpenAI gives you a deadline and no number. Anthropic cut its rates and changed how it counts tokens, so the same document now costs more. All of it is on their own pages."
+metaDescription: "Google doubles Gemini 4 prices on 1 December. OpenAI's cheap rate ends 30 November. And Anthropic's price cut is not one. Dates from vendor pages."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "cheap-ai-tools"
+  - "claude"
+  - "chatgpt"
+coverImage: "/images/ai-api-price-increases-december-2026-cover.webp"
+readTime: "8 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "Which AI API prices are going up, and when?"
+    a: "Three vendors, four dated changes, all read from their own pages on 16 November 2026. Google doubles Gemini 4 Carbon and Gemini 4 Argon on 1 December 2026: input goes from $2 to $4 per million tokens and output from $10 to $20. Google doubles Gemini 3.8 Flash and 3.6 Flash on 1 January 2027, from $0.75 and $3.75 to $1.50 and $7.50. OpenAI says GPT-5.6 Sol's promotional pricing is available until 30 November 2026, without saying what it becomes afterwards. And Anthropic has already raised the effective price on text-heavy work by changing its tokenizer, which is the one nobody announced."
+  - q: "Is Anthropic's price cut real or not?"
+    a: "Both, depending on where you are coming from. Claude Opus went from $5 to $4 per million input tokens, which is a genuine 20 percent cut. But Anthropic's pricing page also says the tokenizer used from Claude 4.7 onwards produces approximately 30 percent more tokens for the same text. If you were on Opus 4.6 or older, you now pay 20 percent less per token for about 30 percent more tokens, which works out to roughly 4 percent more for the same document. If you were already on Opus 4.7 or newer, you were already on the new tokenizer and your 20 percent cut is real. Same headline, opposite outcomes."
+  - q: "Why is Claude Haiku listed as 10 cents when my bill says more?"
+    a: "Because Haiku 5.5 is priced by prompt length and most summaries leave that out. Anthropic's pricing page lists two separate rows: prompts up to 100,000 tokens cost $0.10 per million input and $0.50 output, and prompts over 100,000 tokens cost $0.50 input and $2.50 output. That is five times more on both sides of the same model. The page adds that prompt length counts all input tokens including cache reads and cache writes, and that each request is priced on its own. Cross the line on one request and that request is billed at the higher rate."
+  - q: "What happens to GPT-5.6 Sol after 30 November 2026?"
+    a: "OpenAI does not say, and that is the finding rather than a gap in my research. Their pricing page carries one sentence: GPT-5.6 Sol's promotional pricing is available until November 30, 2026. It does not state the rate afterwards, and it does not label which of its published figures was the promotional one. The standard table currently lists gpt-5.6-sol at $4 input and $20 output. Whether that figure is the promotion or the destination is not stated anywhere on the page I read on 16 November 2026."
+  - q: "Did AI get cheaper in 2026 or more expensive?"
+    a: "Cheaper over the year, more expensive over the next six weeks. Anthropic's own model list still shows Claude Opus 4 at $15 and $75 per million tokens, against Opus 5.5 at $4 and $20 today. Even after allowing for the tokenizer producing about 30 percent more tokens, that is roughly 65 percent less for the same text. The cheap tier fell further still. But the direction has turned: Google has published increases for 1 December and 1 January, OpenAI has published an expiry date, and the vendors are no longer competing by cutting."
+  - q: "Is Google's price increase confirmed or a rumour?"
+    a: "Confirmed, by Google, on Google's page. The Gemini pricing page prints both numbers in the same cell: $2.00 through November 30, 2026, then $4.00 starting December 1, 2026. Output reads $10.00 through November 30, 2026, then $20.00 starting December 1, 2026. Context caching goes from $0.10 to $0.20 the same day. I have no inside information and I do not need any, because the future price is published next to the current one. Read 16 November 2026."
+  - q: "What should I do before 30 November?"
+    a: "Work out which models you actually call, which is not always the one you think. Then check three specific things: whether any of your requests cross 100,000 tokens on Claude Haiku, whether any cross 272,000 tokens on an OpenAI model, since that triggers OpenAI's long context rate, and whether you are on Gemini 4 Carbon or Argon, which double on 1 December. Screenshot the pricing pages now, because the current figures stop being retrievable the day they change. If you are on an older Claude model, run your real prompts through a token count before you migrate rather than assuming the rate card tells you the cost."
+  - q: "Does any of this affect ChatGPT Plus or Claude Pro subscribers?"
+    a: "Not directly. Everything here is API pricing, which is what you pay per token when you build on these models rather than what you pay monthly to chat with them. Consumer plans move on their own schedule and mostly got more complicated rather than more expensive this year, which I tracked separately in my post on what AI pricing did in 2026. I could not re-verify OpenAI's consumer prices for this post because their pricing pages returned 403 to an automated request on 16 November 2026, the same as on 10 November."
+---
+
+If you build on an AI API, you have until 30 November before the first of four published price increases lands. That is two weeks from the day this goes up.
+
+Not a rumour, not a leak, not an analyst note. Google prints the new price in the same table cell as the current one. OpenAI prints the expiry date. Anthropic already made its change and nobody wrote it down as a price rise, because on paper it was a cut.
+
+I read all three vendors' own pricing pages on 16 November 2026. Here is what is coming and when.
+
+## The four dates
+
+| Date | Vendor | What changes |
+|---|---|---|
+| 30 November 2026 | OpenAI | GPT-5.6 Sol's promotional pricing ends. New rate not published. |
+| 1 December 2026 | Google | Gemini 4 Carbon and Argon double. $2 to $4 in, $10 to $20 out. |
+| 1 January 2027 | Google | Gemini 3.8 and 3.6 Flash double. $0.75 to $1.50 in, $3.75 to $7.50 out. |
+| Already happened | Anthropic | New tokenizer counts about 30 percent more tokens for the same text. |
+
+Three of those four are straightforward. The fourth is the one worth your attention, and I will get to it.
+
+## Google tells you exactly what is coming
+
+I want to start with the vendor doing this well, because it is rare enough to be worth saying.
+
+Google's Gemini pricing page does not footnote the increase or bury it in a changelog. It prints both numbers in the same cell. Gemini 4 Carbon's input price reads "$2.00 through November 30, 2026." directly above "$4.00 starting December 1, 2026." Output says $10.00 and then $20.00 on the same dates. Context caching goes from $0.10 to $0.20.
+
+Gemini 4 Argon carries the identical schedule. Then Gemini 3.8 Flash and 3.6 Flash double a month later, on 1 January 2027, from $0.75 and $3.75 to $1.50 and $7.50.
+
+You can budget against that. You know the number, you know the day, and you have time to test whether a cheaper model does your job. Gemini 4 Hydrogen sits at $1.50 and $7.50 with no scheduled change on the page, and it is free on the free tier, which Carbon and Argon are not.
+
+Doubling a price is not generous. Publishing it six weeks out, with the figure attached, is the minimum a vendor owes someone who built a product on their rate card. Google cleared it.
+
+## OpenAI gives you the deadline and keeps the number
+
+Now the one that bothers me.
+
+OpenAI's developer pricing page carries this sentence: "GPT-5.6 Sol's promotional pricing is available until November 30, 2026."
+
+That is the whole disclosure. The page does not say what the price becomes on 1 December. It does not even mark which of its published figures is the promotional one. The standard table lists gpt-5.6-sol at $4 input and $20 output per million tokens, and whether that is the promotion or the destination is not stated anywhere I could find.
+
+So you are told to prepare, and not told what for.
+
+The same page does it again with a legal-specialised model, whose promotional pricing is "available at least through December 31, 2026." At least through. No end date, no end price, two pieces of information missing from one sentence.
+
+I am not accusing anyone of anything. Promotional pricing is a normal commercial decision and a vendor is entitled to reprice. But there is a real difference between Google's version of this disclosure and OpenAI's, and the difference costs you the ability to plan.
+
+There is a second thing on that page worth knowing even though it is not a dated change. OpenAI charges a separate long context rate above 272,000 input tokens, and it roughly doubles what you pay. GPT-6 Astra goes from $10 and $50 to $20 and $75. GPT-6.1 Sol goes from $2 and $10 to $4 and $15. If your requests sometimes cross that line and sometimes do not, your effective price is not the number you quoted in your budget.
+
+## The price cut that costs you more
+
+Here is the part I think matters most, and the part I have not seen written up anywhere alongside the rest.
+
+Anthropic cut its API prices. These are today's rates, read from their pricing page on 16 November 2026:
+
+| Model | Now | Was |
+|---|---|---|
+| Claude Fable 5.2 | $8 / $40 | Fable 5.1 at $10 / $50 |
+| Claude Opus 5.5 | $4 / $20 | Opus 5 at $5 / $25 |
+| Claude Sonnet 5.5 | $2 / $10 | Sonnet 5 at $2 / $10 |
+| Claude Haiku 5.5 | from $0.10 / $0.50 | Haiku 4.5 at $1 / $5 |
+
+Every arrow points down. Opus is 20 percent cheaper. Fable is 20 percent cheaper. Haiku looks like a tenfold cut.
+
+And then there is this, on the same page: "Claude 4.7 and later models and Claude Mythos Preview use a newer tokenizer ... This tokenizer produces approximately 30 percent more tokens for the same text."
+
+Tokens are the unit you are billed in. Anthropic cut the price per unit and made the unit smaller.
+
+Run the arithmetic on Opus. You pay 20 percent less per token, so multiply by 0.8. The same document now produces about 30 percent more tokens, so multiply by 1.3. That lands at 1.04. The same work costs roughly **4 percent more** than it did on Opus 4.6.
+
+Nobody announced a price increase. Every figure on the page went down. The bill went up.
+
+### The caveat, because this cuts both ways
+
+I would be doing exactly what I am complaining about if I left it there, so here is the other half.
+
+This only bites if you are migrating from a model older than Claude 4.7. Opus 4.7, 4.8 and 5 were all already on the new tokenizer at $5 per million input tokens. Moving from any of those to Opus 5.5 at $4 is a clean 20 percent cut with no catch at all.
+
+And one migration gets better rather than worse. Sonnet 4.6 was $3 and $15 on the old tokenizer. Sonnet 5.5 is $2 and $10 on the new one. That is 0.667 multiplied by 1.3, which comes to about 0.87, so roughly 13 percent cheaper for the same text even after the token inflation.
+
+The lesson is not that Anthropic is being sneaky. It is that a rate card stopped being enough information to compare two models, and you now have to know which tokenizer each one uses before the numbers mean anything.
+
+You can see the same change from the other direction in Anthropic's own wording about context windows. A million tokens used to be described as roughly 750,000 words. On the current tokenizer their page puts it at about 555,000. Same window, a third less text in it. I wrote about how much the context numbers vary between a vendor's own pages in [what the 1M context claims actually mean](/blog/ai-context-window-claims-2026), and this is the billing version of the same problem.
+
+## The 10 cent model that costs 50 cents
+
+Haiku deserves its own section, because the tenfold cut is real and the headline is still misleading.
+
+Anthropic's pricing page lists Haiku 5.5 twice. Prompts up to 100,000 tokens cost $0.10 per million input and $0.50 output. Prompts over 100,000 tokens cost $0.50 input and $2.50 output.
+
+Five times more, same model, same page.
+
+The page is specific about how the line is drawn: prompt length counts all input tokens including cache reads and cache writes, and each request is priced on its own. So one oversized request is billed at the higher rate, and a workload that mostly sits under the line but occasionally goes over does not average out the way you would hope.
+
+Below 100,000 tokens, Haiku really is about 87 percent cheaper than Haiku 4.5 for the same text, even after the tokenizer adjustment. Above it, the saving drops to roughly 35 percent. Still a cut. Not the one on the front of the page.
+
+This is not the first time I have found a vendor's real price sitting one click below its headline price. I went through seven vendors looking for exactly this in my [pricing page versus documentation audit](/blog/ai-pricing-page-vs-docs-audit), and the pattern has not changed since.
+
+## What genuinely did get cheaper
+
+I have spent most of this post on increases, so let me be straight about the direction of the last two years, because it is strongly downward and the post would be dishonest without it.
+
+Anthropic's own model list still shows Claude Opus 4 and Opus 4.1 at $15 and $75 per million tokens. Today's Opus 5.5 is $4 and $20. That is about 73 percent off per token, and even after allowing for 30 percent more tokens per document it comes to roughly 65 percent less for the same work.
+
+On OpenAI's side, GPT-4o was $2.50 and $10. GPT-6 Luna today is $0.10 and $0.50, with a 1.05 million token context window that GPT-4o never had.
+
+Anthropic also cancelled a planned increase rather than quietly applying it. Their page carries a footnote saying Sonnet 5's $2 and $10 pricing, announced as introductory through 31 August 2026, is now the standard price, and that the scheduled rise to $3 and $15 on 1 September "will not occur." That is the good version of this behaviour: a promotional rate that ended by becoming permanent, with the outcome published.
+
+So intelligence per dollar collapsed through 2026. What changed this autumn is the direction. Three vendors are no longer competing by cutting, and two of them have put dates on it.
+
+## What to do before 30 November
+
+Short list, and none of it takes long.
+
+**Find out what you actually call.** Not what you think you call. Check your logs. I have watched people budget against a model they stopped using in March.
+
+**Check whether you cross either cliff.** Over 100,000 tokens on Claude Haiku costs five times as much. Over 272,000 tokens on an OpenAI model roughly doubles the rate. Both are per request, so an average will not tell you.
+
+**If you are on Gemini 4 Carbon or Argon, your bill doubles on 1 December.** Gemini 4 Hydrogen is $1.50 and $7.50 with nothing scheduled, and it is available on the free tier, which the other two are not. Worth testing this week rather than next month.
+
+**Screenshot the pricing pages today.** Once a price changes, the old figure stops being retrievable, and you will want it when you are reconciling a bill in February. This is tedious advice and I have regretted not taking it.
+
+**Count tokens on your real prompts before migrating Claude models.** The tokenizer difference depends on what your text looks like. Anthropic's own guidance is to measure rather than assume, and that is the right instinct whatever the vendor.
+
+## What I could not check
+
+OpenAI's consumer pricing pages, at openai.com/api/pricing and openai.com/chatgpt/pricing, both returned **403** to an automated request on 16 November 2026. That is the same result I got on 10 November.
+
+A 403 is a server declining to talk to a robot. It says nothing about the product, the company, or the prices, and I have not treated it as evidence of anything. Everything about OpenAI in this post comes from their developer documentation, which is readable. For consumer plan prices I would point you at my [ChatGPT Plus review](/blog/chatgpt-plus-review), which I refreshed on 13 November, and I would still check at the checkout screen before paying.
+
+I also did not verify Google's figures beyond the first portion of their pricing page, which is where every number quoted here appears. A later section of that page covers models I have not reproduced.
+
+## How I checked this
+
+Every figure in this post came from a vendor's own page, read on 16 November 2026.
+
+Anthropic: the models overview and pricing pages at platform.claude.com. These carry the model lineup, the per-model rates, the Haiku prompt-length split, the tokenizer note and the Sonnet 5 footnote.
+
+OpenAI: the pricing and models pages at developers.openai.com, reached by following a permanent redirect from platform.openai.com. These carry the GPT-6 lineup, the long context threshold of 272,000 tokens and the two promotional notes.
+
+Google: the Gemini pricing page, reached by following a permanent redirect from ai.google.dev to aistudio.google.com. This carries both the current and future prices with their dates.
+
+Where a vendor states something, I have quoted it. Where a vendor is silent, as OpenAI is on what its price becomes in December, I have said so rather than filling the gap from a secondary source. The arithmetic in this post is mine and I have shown it so you can check it.
+
+For the subscription side of the same story, where the pattern through 2026 was flat plans quietly acquiring metered credits, see [what AI pricing did in 2026](/blog/ai-pricing-changes-2026). For what the model names changed to and which ones retired underneath you, see [the 2026 model retirements](/blog/ai-model-retirements-2026).
+
+One more thing, and it is the only prediction in this post. Price rises published six weeks ahead with the number attached are the best version of this. If the December round passes without much complaint, expect the next round to be announced with less notice, not more.
