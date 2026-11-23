@@ -888,3 +888,29 @@ to each other, all three cards held within the middle band of the image,
 nothing important near the top or bottom edge, no text, no numbers, no letters,
 no logos, no faces
 ```
+
+**Six of Seven Ranking Articles Name a Dead Model** — `ai-model-articles-stale-audit-cover.webp`
+
+Style A. The post counts seven articles and finds that six recommend a model
+that has been superseded while one is current, so the composition is seven
+arrows where six point backwards and one points forwards. The ratio is the
+argument and it reads before any caption does. Only the single forward arrow
+is amber; the six are plain charcoal outlines, which also makes the stale
+majority feel inert rather than villainous, matching a post that blames the
+refresh cycle rather than the writers. Keep the row inside the central 68
+percent of the height, since the top and bottom 16 percent are cropped away on
+the post page.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, side view, generous negative space,
+seven large identical arrow shapes arranged in one evenly spaced horizontal row
+across the centre of the frame, all seven sitting on the same invisible
+baseline at the same size, the six arrows on the left drawn as plain charcoal
+outlines pointing left, the single arrow on the right filled solid amber and
+pointing right, the lone amber right-pointing arrow clearly the focal point
+against the six charcoal left-pointing ones, the whole row held within the
+middle band of the image, nothing important near the top or bottom edge,
+no text, no numbers, no letters, no logos, no faces
+```
