@@ -1,9 +1,10 @@
 ---
-title: "GPT-5.6 vs Claude 5: What Actually Changed in 2026"
-seoTitle: "GPT-5.6 vs Claude 5: The 2026 Comparison"
+title: "GPT-6.2 vs Claude 5.5: Both Flagships Now Cost Exactly the Same"
+seoTitle: "GPT-6.2 vs Claude 5.5: The November 2026 Comparison"
 date: "2026-06-10"
-updatedAt: "2026-09-01"
-excerpt: "Both vendors stopped shipping one flagship and started shipping families. The question is no longer which brand but which tier. Verified prices and dates."
+updatedAt: "2026-11-23"
+excerpt: "OpenAI's top model and Anthropic's top model are both $8 and $40 per million tokens, to the cent. The names Sol, Terra and Luna have now survived three GPT generations, which is how a stale article passes a spot check."
+metaDescription: "GPT-6.2 Astra and Claude Fable 5.2 both cost $8 in and $40 out per million tokens. Current lineups, prices and context windows, read 23 November 2026."
 category: "Comparisons"
 tags:
   - "chatgpt"
@@ -11,164 +12,173 @@ tags:
   - "ai-comparison"
   - "ai-tools"
 coverImage: "/images/gpt5-vs-claude4-cover.webp"
-readTime: "13 min read"
+readTime: "9 min read"
 author: "Mahitosh Dey"
 faqs:
-  - q: "Is GPT-5.6 better than Claude 5?"
-    a: "Neither of those is a single model, which is why the question has stopped producing a useful answer. GPT-5.6 is a family: Sol is the frontier tier, Terra is the balanced everyday tier, Luna is the cost-efficient one. Claude 5 is also a family: Fable 5 for the most demanding reasoning and long-horizon agentic work, Opus 5 for complex agentic coding, Sonnet 5 for the speed and intelligence balance, Haiku 4.5 for fast cheap tasks. A frontier tier from either vendor will beat a cheap tier from the other, so comparing brands tells you less than comparing the specific tier you would actually pay for."
+  - q: "Is GPT-6.2 better than Claude 5.5?"
+    a: "Neither is a single model, which is why the question stopped producing a useful answer. OpenAI's current line runs GPT-6.2 Astra as the flagship, GPT-6.2 Sol below it, GPT-6.1 Terra as the balanced tier and GPT-6 Luna as the cheap one. Anthropic's runs Fable 5.2 at the top, Opus 5.5 for agentic coding, Sonnet 5.5 for balance and Haiku 5.5 for fast cheap work. A frontier tier from either vendor beats a budget tier from the other, so the tier you buy matters more than the brand. Read 23 November 2026 from the vendors' own pages."
+  - q: "What do the top models from each vendor cost?"
+    a: "The same, to the cent. GPT-6.2 Astra is $8 per million input tokens and $40 per million output. Claude Fable 5.2 is $8 and $40. That convergence is new: as recently as last week OpenAI's flagship was GPT-6 Astra at $10 and $50, which is what Fable 5.1 also cost before Anthropic cut it. Both vendors landed on the same number within weeks of each other, and neither announced it as a response to the other."
   - q: "What happened to GPT-5 and Claude 4?"
-    a: "Both were superseded. OpenAI's current flagship line is the GPT-5.6 family, and GPT-5.5 came and went between them. On Anthropic's side, Claude 4 gave way to Opus 4.6, then 4.7, then 4.8 across the first half of 2026, and then the Claude 5 family: Claude Opus 5 arrived on July 24, 2026, alongside Sonnet 5 and Fable 5. If an article is still comparing GPT-5 against Claude 4, it is describing roughly two generations back on each side."
-  - q: "What does the Claude 5 family cost on the API?"
-    a: "Read against Anthropic's model reference on August 4, 2026, per million tokens input and output: Claude Fable 5 is $10 and $50, Claude Opus 5 is $5 and $25, Claude Sonnet 5 is $2 and $10, and Claude Haiku 4.5 is $1 and $5. One correction there: this page previously said Sonnet 5 was $3 and $15 with an introductory rate expiring on August 31, 2026. I re-checked on September 1 and Anthropic still lists $2 and $10 with no introductory label anywhere on the page, so the $3 figure has been removed rather than promoted. Context windows are 1 million tokens on everything except Haiku 4.5, which is 200,000."
+    a: "Both are several generations back now, and so is everything that replaced them first. OpenAI went GPT-5, GPT-5.5, GPT-5.6, GPT-6, GPT-6.1 and GPT-6.2, with GPT-6.2 appearing in the developer documentation within the past week. Anthropic went Claude 4, then Opus 4.5 through 4.8, then the Claude 5 family in July 2026, then the 5.5 generation. An article still comparing GPT-5 against Claude 4 is describing products that have each been superseded five or six times."
+  - q: "What does the Claude lineup cost on the API?"
+    a: "Read from Anthropic's models overview on 23 November 2026, per million tokens input and output: Claude Fable 5.2 is $8 and $40, Claude Opus 5.5 is $4 and $20, Claude Sonnet 5.5 is $2 and $10, and Claude Haiku 5.5 starts at $0.10 and $0.50. All four carry a 1 million token context window and 128,000 tokens of maximum output. Every one of those figures was identical when I checked a week earlier, so Anthropic's side has been stable while OpenAI's moved."
+  - q: "Why does Claude Haiku say From $0.10 rather than $0.10?"
+    a: "Because it is priced by prompt length. Anthropic's pricing page lists Haiku 5.5 twice: prompts up to 100,000 tokens cost $0.10 input and $0.50 output, and prompts over 100,000 tokens cost $0.50 input and $2.50 output. That is five times more on both sides of the same model. The page says prompt length counts all input tokens including cache reads and writes, and that each request is priced on its own, so one oversized request is billed at the higher rate rather than averaged out."
   - q: "Which model should I use for coding in 2026?"
-    a: "Claude Opus 5 is positioned specifically for complex agentic coding, and Fable 5 sits above it for the most demanding long-horizon work. On the OpenAI side, Sol is the frontier tier. What I would not do is pick based on the head-to-head coding percentages circulating right now, because I could not trace any of them to a published benchmark run. Pick the tier that matches your task size, then test both on your own code, which is the only benchmark that reflects your codebase."
-  - q: "Why won't you give me a benchmark comparison table?"
-    a: "Because I could not verify the numbers. Every head-to-head figure I found for Opus 5 against GPT-5.6 Sol traced back to aggregator blogs rather than a published run, and several of those pages quote each other. I applied the same rule four days ago when I refused to repeat unsourced SWE-Bench figures in a coding-tool comparison, and applying it inconsistently just because it would make this article punchier would make the whole site less trustworthy. Prices, dates, context windows and model lineups are all checkable, so those are what this post is built on."
+    a: "Anthropic points Opus 5.5 at complex agentic coding and Fable 5.2 at the most demanding long-horizon work. OpenAI points at GPT-6.2 Astra, in those words, for complex reasoning and coding. What I would not do is pick from the head-to-head coding percentages circulating online, because I still cannot trace any of them to a published benchmark run. Pick the tier that matches your task size, then run your own code through both, which is the only benchmark that reflects your codebase."
+  - q: "Why is there no benchmark comparison table in this post?"
+    a: "Because I could not verify the numbers, and that has not changed across three refreshes of this article. Every head-to-head figure I found traced back to aggregator blogs rather than a published run, and several of those pages quote each other, which is how a number acquires the appearance of consensus without anyone measuring anything. The figures also move faster than the pages quoting them: the ones circulating in September were for Opus 5 against GPT-5.6 Sol, and both of those models have since been superseded. Prices, dates, context windows and lineups are checkable, so that is what this post is built on."
   - q: "How much do the consumer plans cost?"
-    a: "Both headline consumer plans are still $20 a month: ChatGPT Plus and Claude Pro. Above them, ChatGPT Pro is $200 a month and Claude Max is $100. Team plans on both sit in the $25 to $30 per user range. Those are sticker prices though, and the thing worth checking in 2026 is the usage allowance behind the number rather than the number itself, because metered credits are where the real cost moved this year."
+    a: "Claude Pro is $17 a month billed annually, which Anthropic bills as $200 upfront, or $20 monthly. Above it, Max is $100 and Ultra is $200, and the old Max 20x plan was renamed Ultra. On OpenAI's side ChatGPT Plus is $20, Go is around $8, and Pro is sold at $100, $200 and $500 rather than as a single tier. I could not re-verify OpenAI's consumer prices directly because their pricing pages returned 403 to an automated request again on 23 November, so those come from my own reading on 13 November and should be checked at the checkout screen."
   - q: "Does Claude generate images yet?"
-    a: "Not as far as I can establish. Claude reads images and PDFs perfectly well, and Anthropic's own model documentation lists image input as a capability without a corresponding image output. If you need generation, that is either ChatGPT or a dedicated tool. I am stating this as what the documentation shows on August 4, 2026 rather than as a permanent fact, because it is exactly the sort of thing that changes without a comparison article noticing."
-  - q: "Should I pay for both?"
-    a: "If you use AI daily for work, $40 a month against what your time is worth is not really a decision, and the two are good at different things. If you can only justify one, pick on your dominant task rather than on a benchmark: text and code volume points to Claude Pro, while images, voice and general everyday range points to ChatGPT Plus. Then use the other one's free tier for whatever the first cannot do."
+    a: "Not according to Anthropic's own capability statement, which on 23 November 2026 reads that all current models support text and image input, text output, multilingual capabilities, vision, and tool use. There is no image output entry. Claude reads images and PDFs perfectly well. If you need generation, that is ChatGPT or a dedicated tool. I state this as what the documentation shows today rather than as a permanent fact, because it is exactly the sort of thing that changes without a comparison article noticing."
   - q: "How do I keep track when models change this fast?"
-    a: "Stop trusting model names in article titles, including this one, and go to the vendor's own model or pricing page before you commit money. Both vendors shipped multiple model generations in the first seven months of 2026, and a comparison written in June was describing obsolete products by August. The durable skill is checking the primary source, not memorising which model is currently ahead."
+    a: "Stop trusting model names in article titles, including this one, and open the vendor's own model or pricing page before you commit money. There is a specific trap worth knowing: OpenAI has kept the names Sol, Terra and Luna across three GPT generations, so an article naming Sol looks current and may be two generations out. Check the number in front of the name, not the name."
 ---
 
-I need to open with a correction rather than a hook, because this post used to be called "GPT-5 vs Claude 4" and both halves of that title are now obsolete.
+OpenAI's top model and Anthropic's top model now cost exactly the same. Eight dollars per million input tokens, forty per million output, on both sides.
 
-That is not a small edit. When I went to refresh it I found the site was describing GPT-5 and Claude 4 as current across roughly 220 references, while OpenAI had moved to the GPT-5.6 family and Anthropic had shipped the Claude 5 family. Two generations of drift on each side, in a post about the models themselves.
+That is new, it is checkable on two vendor pages, and I have not seen anyone write it down. It also arrived while I was not looking: a week ago OpenAI's flagship was GPT-6 Astra at $10 and $50, which is what Anthropic's Fable 5.1 cost before they cut it to $8.
 
-So this is a rewrite, and it is built differently from the version it replaces. Fewer verdicts, more checkable facts, and one section explaining why I am not giving you the benchmark table you probably came here for.
+This post has been rewritten three times now, and each rewrite has found the same thing: the comparison moves faster than the article. So this version leads with what is true today, says when I read it, and spends its last section on how to check me.
 
-## The quick version if you are in a hurry
+## The quick version
 
-The single most useful thing I can tell you is that the question changed shape. Both vendors stopped shipping one flagship and started shipping a family of tiers, so "which is better" now depends far more on which tier you buy than on which company you buy from.
+Both vendors sell a family, not a flagship. The tier you buy matters more than the brand you buy it from, because a frontier tier from either beats a budget tier from the other.
 
-A frontier tier from either vendor beats a budget tier from the other. That makes brand loyalty an expensive way to choose.
+**Anthropic** runs Haiku 5.5 for cheap fast work, Sonnet 5.5 for balance, Opus 5.5 for complex agentic coding, and Fable 5.2 above that for the hardest long-horizon reasoning.
 
-If you want one sentence each: Anthropic's line runs Haiku 4.5 for cheap fast work, Sonnet 5 for the balance, Opus 5 for complex agentic coding, and Fable 5 above that for the hardest long-horizon reasoning. OpenAI's runs Luna for cost efficiency, Terra for balanced everyday work, and Sol at the frontier.
+**OpenAI** runs GPT-6 Luna for cost efficiency, GPT-6.1 Terra as the balanced everyday model, GPT-6.2 Sol above that, and GPT-6.2 Astra at the frontier. Their models page says it plainly: "If you're not sure where to start, use GPT-6.2 Astra, our flagship model for complex reasoning and coding."
 
-## What each family actually is now
+## What each family costs
 
-Verified against Anthropic's model reference and OpenAI's own announcement on August 4, 2026.
+Read from Anthropic's models overview and OpenAI's developer pricing page on **23 November 2026**. Prices are per million tokens, input and output, at standard rates.
 
-**Anthropic, the Claude 5 family.** Claude Opus 5 arrived on July 24, 2026. Claude Sonnet 5 sits below it, Claude Fable 5 above it as the most capable widely released model, aimed at the most demanding reasoning and long-horizon agentic work. Claude Haiku 4.5 remains the fast, cheap option. There is also a restricted-access model, Claude Mythos 5, which you cannot simply sign up for.
-
-Getting there was not one jump. Opus 4.6, then 4.7, then 4.8 all shipped across the first half of 2026 before the 5 family arrived, which is four Opus-tier releases inside roughly six months. I am describing that sequence rather than dating each release, because the precise dates I found for the 4.x releases came from a single aggregator and I have not confirmed them against Anthropic's own announcements. The Opus 5 date I am confident in.
-
-**OpenAI, the GPT-5.6 family.** Three named tiers rather than one flagship: Sol at the frontier, Terra as the balanced everyday model, Luna as the most cost-efficient. GPT-5.5 existed in between GPT-5 and this, which is worth knowing if you are reading anything written earlier in the year.
-
-The shared pattern is the interesting part. Both vendors independently concluded that one model cannot serve a coding agent, a customer-support bot and a summarisation job at sensible cost, so both split the lineup. Comparison articles have not caught up with that, and still write as though there are two products.
-
-## What they cost
-
-API pricing per million tokens, input and output, read off Anthropic's model reference on August 4, 2026 and re-checked on September 1, 2026:
-
-| Model | Input | Output | Context |
+| Anthropic | In | Out | Context |
 |---|---|---|---|
-| Claude Fable 5 | $10 | $50 | 1M |
-| Claude Opus 5 | $5 | $25 | 1M |
-| Claude Sonnet 5 | $2 | $10 | 1M |
-| Claude Haiku 4.5 | $1 | $5 | 200K |
+| Claude Fable 5.2 | $8 | $40 | 1M |
+| Claude Opus 5.5 | $4 | $20 | 1M |
+| Claude Sonnet 5.5 | $2 | $10 | 1M |
+| Claude Haiku 5.5 | from $0.10 | from $0.50 | 1M |
 
-A correction on that Sonnet 5 row. This page used to show $3 and $15 as the standard rate with $2 and $10 as an introductory price expiring on August 31, 2026, and told you to budget with the higher pair after that date. I went back to Anthropic on September 1, the day after it supposedly expired, and the page lists Sonnet 5 at $2 and $10 with the word introductory appearing nowhere on it. Budget with $2 and $10.
+| OpenAI | In | Out | Context |
+|---|---|---|---|
+| GPT-6.2 Astra | $8 | $40 | 1.05M |
+| GPT-6.2 Sol | $2 | $10 | 1.05M |
+| GPT-6.1 Terra | $1 | $5 | 1.05M |
+| GPT-6 Luna | $0.10 | $0.50 | 1.05M |
 
-Worth knowing where $3 and $15 comes from, because it is a real Anthropic price: it is what Sonnet 4.6 costs. Whether this page originally conflated the two models or Anthropic restructured the tier, I cannot tell from the outside, and I am not going to invent a reason.
+Look at those two tables side by side. The top rows match exactly. So do the $2 and $10 rows. So do the $0.10 and $0.50 rows.
 
-On the OpenAI side I can report a dated movement rather than a full table: on July 30, 2026, GPT-5.6 Luna dropped 80% in price and Terra dropped 20%. An 80% cut on the cheap tier is a real signal about where that vendor expects volume to go.
+I cannot tell you why, and I am not going to invent a reason. Neither vendor announced its pricing as a response to the other. What I can say is that the days of a meaningful price gap between equivalent tiers appear to be over, which removes one of the three or four reasons people used to pick a side.
 
-Consumer plans have barely moved. ChatGPT Plus and Claude Pro are both still $20 a month, ChatGPT Pro is $200, Claude Max is $100, and Team plans on both land in the $25 to $30 per-user range. Full breakdowns in my [ChatGPT Plus review](/blog/chatgpt-plus-review) and [Claude AI review](/blog/claude-ai-review).
+One figure that has not moved: every Anthropic number above was identical when I checked seven days earlier. OpenAI's side gained a whole generation in that time.
 
-What matters more than those numbers is what sits behind them. The story of AI pricing this year was flat subscriptions quietly acquiring metered usage allowances, which I documented change by change in [what AI pricing did in 2026](/blog/ai-pricing-changes-2026). A $20 plan is not the same product it was in January.
+## Two cliffs the tables do not show
 
-## What a million tokens is actually for
+Both vendors now charge more for long prompts, and they do it differently.
 
-The context number is the specification people quote most and understand least, so it is worth grounding.
+**OpenAI charges by context length across the lineup.** Their page states it as "Short context: ≤272K input tokens. Long context: >272K input tokens." Above that line GPT-6.2 Astra goes from $8 and $40 to $16 and $60. GPT-6.2 Sol goes from $2 and $10 to $4 and $15.
 
-A million tokens is roughly 700,000 words, depending on the text. That is a long novel, or a mid-sized codebase, or a few hundred pages of contracts and their appendices. Whether you need it has nothing to do with how sophisticated your work is and everything to do with its shape.
+**Anthropic charges by prompt length on the cheap tier only.** Haiku 5.5 is $0.10 and $0.50 up to a 100,000 token prompt, and $0.50 and $2.50 above it. Five times more, same model. Every other current Claude model carries the full 1 million token window at standard pricing.
 
-You need it when the task requires the model to hold a whole thing at once and reason across all of it: find every place a function is called before renaming it, check whether clause 14 contradicts anything in the appendices, trace one character's dialogue for consistency across a manuscript. Chunking those into pieces does not merely slow them down, it changes the answer, because the contradiction you are looking for lives between the chunks.
+That is what the word "from" is doing in the Haiku row, and it is the single most misquoted figure in this comparison right now. Haiku is a ten cent model for short work and a fifty cent model for long work.
 
-You do not need it for the majority of what people actually do. Drafting, summarising a single document, answering a question, writing a function. Those fit comfortably in a fraction of the window, and paying for capacity you never fill is just paying more.
+## A million tokens is not what it was
 
-Two caveats that comparison tables leave out. Large context is not free: you are billed on tokens read, so a 900,000-token conversation costs roughly what 900,000 tokens costs, every turn, and that adds up faster than people expect. And a big window is not the same as good recall across it, which is a genuine engineering problem rather than a marketing number, and one you should test on your own material rather than trust.
+The context number is the specification people quote most and understand least.
 
-Haiku 4.5's 200,000-token window is the odd one out in the Claude lineup, and that is a deliberate tier decision rather than an oversight. The cheap fast model is for tasks where you were never going to send a novel.
+Anthropic's own page now puts 1 million tokens at **roughly 555,000 words**. It used to say about 750,000, and the page explains why: a newer tokenizer arrived with Claude Opus 4.7 and it produces more tokens for the same text.
+
+Earlier versions of this post said 700,000 words. That was wrong by about a quarter, and it was wrong in the direction that makes the window sound more useful than it is. Same window, less text inside it.
+
+The practical shape of the question has not changed. You need a very large window when the task requires holding one whole thing and reasoning across all of it: find every call site before renaming a function, check whether clause 14 contradicts anything in the appendices, trace one character's dialogue across a manuscript. Chunking those does not merely slow them down, it changes the answer, because the contradiction you are looking for lives between the chunks.
+
+You do not need it for most of what people actually do. Drafting, summarising one document, answering a question, writing a function. Those fit in a fraction of the window, and paying for capacity you never fill is just paying more.
+
+Two caveats comparison tables leave out. Large context is not free, because you are billed on tokens read, so a 900,000 token conversation costs roughly what 900,000 tokens costs on every turn. And a big window is not the same as good recall across it, which is an engineering problem rather than a marketing number, and one to test on your own material.
 
 ## How to pick a tier
 
-Once you accept that the choice is a tier rather than a brand, picking gets easier, because tiers map onto properties of the task rather than onto vibes.
+Four questions, and none of them is "which model is smarter."
 
-Four questions get you there.
+**How much must the model hold at once?** If the answer is a whole repository or a whole case file, every current model from both vendors now clears 1 million tokens, so this question no longer settles the tier the way it did a year ago. What it does settle is whether you are about to cross a pricing cliff.
 
-**How much does the model need to hold at once?** If the answer is a whole repository or a whole case file, you want a 1 million token window and the tier question is settled by that alone. If it is one document, you have the full range available.
+**Is the work agentic or single-shot?** A single request that returns an answer behaves predictably and a cheaper tier usually handles it. An agent that runs twenty minutes, reads a hundred files, calls six tools and self-corrects is a different workload, which is why both vendors position specific tiers at it.
 
-**Is the work agentic or single-shot?** A single request that returns an answer behaves predictably, and a cheaper tier usually handles it. An agent that runs for twenty minutes, reads a hundred files, calls six tools and self-corrects is a different workload, which is why both vendors position specific tiers for it. Anthropic points Opus 5 at complex agentic coding and Fable 5 at long-horizon work; OpenAI points Sol at the frontier.
+**How many times will you call it?** At a hundred calls a month the price difference is rounding. At ten million it is the whole business model, and the gap between $0.10 and $8 per million input tokens decides whether the product works at all. That gap is eighty-fold now, wider than it has ever been, because the cheap tier fell further than the frontier did.
 
-**How many times will you call it?** This is the one people get wrong. At a hundred calls a month the price difference between tiers is rounding. At ten million calls it is the entire business model, and the gap between $1 and $10 per million input tokens decides whether the product works. If you are building rather than chatting, start from the cheapest tier that passes your evaluation and move up only where it fails.
+**Is anyone waiting?** Frontier tiers think before answering, sometimes for a long time. That is right for an overnight refactor and wrong for a chat widget where someone watches a spinner. If latency binds, drop a tier rather than switching vendor.
 
-**Is anyone waiting?** Frontier tiers now think before answering, sometimes for a long time on hard problems. That is the right trade for an overnight refactor and the wrong one for a chat widget where someone is watching a spinner. If latency is the binding constraint, drop a tier rather than switching vendor.
+## Why there is still no benchmark table here
 
-Notice that none of those questions is "which model is smarter." That is because for most real work the tier decision dominates, and the frontier-versus-frontier question, the one every comparison article is built around, is the one that matters least to the largest number of readers.
+You came for a scoreboard. I am not giving you one, and the reason is worth more than the scoreboard would be.
 
-## Why there is no benchmark table in this post
+Specific head-to-head numbers circulate for these models, quoted to one decimal place, appearing across a dozen pages. I cannot trace a single one to a published benchmark run. Every page carrying them is an aggregator and several quote each other, which is how a number acquires the look of consensus without anyone having measured anything.
 
-You came here for a scoreboard. I am not going to give you one, and the reason is worth more than the scoreboard would be.
+There is a second reason now, and this refresh supplied it. The figures circulating in September were for Claude Opus 5 against GPT-5.6 Sol. Both models have since been superseded, OpenAI's twice over. The numbers were unsourced and they are now unsourced and obsolete, still being quoted as current.
 
-There are specific head-to-head numbers circulating for Claude Opus 5 against GPT-5.6 Sol. SWE-bench Pro at 79.2% against 64.6%. Frontier-Bench agentic coding at 43.3% against 34.4%. ARC-AGI-3 at 30.2% against 7.8%. They look authoritative, they are quoted to one decimal place, and they appear across a dozen pages.
+If you want a number you can trust, run the same real task through both. That takes an afternoon and beats every table on the internet, including any I might write.
 
-I could not trace a single one to a published benchmark run. Every page carrying them is an aggregator, and several of them quote each other, which is how a number acquires the appearance of consensus without anyone having measured anything.
+## Where each family still differs
 
-Four days ago I wrote a comparison of two coding tools and refused to repeat SWE-Bench figures I could not source. Repeating a different set of unsourced figures today, because they would make this article more satisfying, would mean the earlier refusal was a pose rather than a standard. So: prices, dates, context windows and lineups are verifiable, and this post is built on those. Capability rankings between current frontier tiers are not something I can honestly hand you.
+Some differences are structural rather than a matter of degree.
 
-If you want a number you can trust, the one that matters is how each model does on your work. Run the same real task through both. That takes an afternoon and beats every table on the internet, including any I might have written.
+**Image generation.** Claude reads images and PDFs but does not generate them. Anthropic's capability line on 23 November reads that all current models support text and image input, text output, multilingual capabilities, vision and tool use, with no image output counterpart. If generation is part of your workflow, that is ChatGPT or a specialist tool.
 
-## Where each family has a structural edge
+**Tier granularity at the bottom.** Both vendors now have a genuinely cheap tier at ten cents per million input tokens, which was not true six months ago. Anthropic's comes with a prompt-length cliff and OpenAI's does not, so for high-volume work on long inputs the shapes differ even though the headline matches.
 
-Some differences are architectural rather than a matter of degree, which makes them safe to state.
-
-**Context.** Every current Claude model except Haiku 4.5 carries a 1 million token window. If your work involves dropping an entire codebase, a deposition, or a year of documentation into a single conversation, that capacity is the feature, and it is not something prompting works around.
-
-**Image generation.** Claude reads images and PDFs but does not appear to generate them: Anthropic's capability documentation lists image input with no image output counterpart. If generation is part of your workflow, that is ChatGPT or a specialist tool. My [Midjourney vs DALL-E 3 comparison, updated for the August 30, 2026 DALL-E retirement](/blog/midjourney-vs-dalle3) covers the dedicated options and what ChatGPT's image generation runs on now.
-
-**Tier granularity.** Anthropic ships four openly available tiers plus a restricted one; OpenAI ships three. If you are building something where per-token cost compounds across millions of calls, having a genuinely cheap tier from the same family, with the same API shape, matters more than the frontier model's ceiling.
-
-**Ecosystem shape.** ChatGPT bundles more into the consumer product: voice, image generation, browsing, code interpreter, custom GPTs. Claude's consumer product is narrower and deeper on text and code. Neither is better in the abstract; they are different products at the same price.
+**Ecosystem.** ChatGPT bundles more into the consumer product: voice, image generation, browsing, code interpreter, custom GPTs. Claude's consumer product is narrower and deeper on text and code. Different products at a similar price, not better and worse.
 
 For the everyday version of this comparison rather than the model-generation version, [Claude vs ChatGPT](/blog/claude-vs-chatgpt) is the more practical read, and [ChatGPT vs Google Gemini](/blog/chatgpt-vs-google-gemini) covers the third option most of these articles skip.
 
-## Speed and reliability
+## What the consumer plans cost
 
-Both are fast enough that the model is rarely what you are waiting for, and both have had incidents this year. What has genuinely changed is that the frontier tiers now think for longer before answering on hard problems, which reads as slowness if you expect a chatbot and as thoroughness if you expect a colleague.
+Claude Pro is **$17 a month billed annually**, which Anthropic bills as $200 upfront, or **$20 monthly**. Above it sits Max at $100 and Ultra at $200. If you read about a Max 20x plan anywhere, that is now Ultra.
 
-If latency is the constraint, the answer is a cheaper tier, not a different vendor. Haiku 4.5 and Luna exist for exactly that.
+ChatGPT Plus is $20, Go is around $8, and Pro is sold at $100, $200 and $500 rather than as one tier.
+
+I have to flag the sourcing difference. The Claude figures come from Anthropic's own pricing page today. The ChatGPT figures do not, because openai.com returned **403** to an automated request on 23 November, the same as on the 16th and the 10th. A 403 is a server declining to talk to a robot and says nothing about the product, so I am using my own reading from 13 November and telling you it is a week older than the rest of this page. Full detail in my [ChatGPT Plus review](/blog/chatgpt-plus-review) and [Claude review](/blog/claude-ai-review).
+
+What matters more than the sticker is what sits behind it, and the story of 2026 was flat subscriptions quietly acquiring metered allowances, which I documented change by change in [what AI pricing did in 2026](/blog/ai-pricing-changes-2026).
 
 ## Which one should you get
 
 | You are | Pick | Why |
 |---|---|---|
-| Writing or coding all day | Claude Pro | Text and code depth, 1M context, tiering up to Opus 5 when needed |
+| Writing or coding all day | Claude Pro | Text and code depth, 1M context, tiering up to Opus 5.5 when needed |
 | Doing a bit of everything | ChatGPT Plus | Images, voice, browsing and code in one product |
-| Building on an API at volume | Whichever cheap tier fits | Haiku 4.5 or Luna; the frontier tier is rarely the right default |
-| Running long agentic tasks | Claude Opus 5 or Fable 5 | Positioned for exactly this, with 1M context |
-| Unsure, and it is for work | Both, $40 total | Genuinely good at different things; not a real decision against a salary |
+| Building on an API at volume | Haiku 5.5 or GPT-6 Luna | Both ten cents per million in; watch Haiku's 100K prompt cliff |
+| Running long agentic tasks | Opus 5.5, Fable 5.2 or GPT-6.2 Astra | All positioned for it, all at 1M context |
+| Unsure, and it is for work | Both, about $40 total | Good at different things; not a real decision against a salary |
 
-Pick on your dominant task, not on a leaderboard. And if a single subscription has to cover everything, use the other one's free tier for the gaps, which costs nothing and covers most of them.
+Pick on your dominant task rather than a leaderboard. If one subscription has to cover everything, use the other's free tier for the gaps. Which model that free tier actually gives you is its own question, and I went through five vendors' answers in [what the free tier does not tell you](/blog/which-model-free-tier-gives-you).
 
 ## My setup
 
-Claude Pro as the daily driver, because most of my day is writing and code and the long context earns its keep on both. ChatGPT free alongside it for image generation and the occasional voice conversation. For coding specifically I work through an editor rather than a chat window, which is a separate decision I worked through in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot), and my walkthrough of [using Claude for coding](/blog/how-to-use-claude-ai-for-coding) covers the terminal-first approach.
+Claude Pro as the daily driver, because most of my day is writing and code and the long context earns its keep on both. ChatGPT free alongside for image generation and the occasional voice conversation. For coding I work through an editor rather than a chat window, a separate decision I worked through in [Cursor vs GitHub Copilot](/blog/cursor-vs-github-copilot).
 
 I have changed this setup twice in a year and expect to again. That is the actual lesson: nobody's stack should be load-bearing on a specific model being ahead.
 
 ## How to check this yourself
 
-This post will go stale, faster than most. Four Opus releases and two GPT generations landed in seven months, so treat any dated comparison as a snapshot.
+This post will go stale, and I can now tell you roughly how fast.
 
-Go to the vendor's own model or pricing page rather than an article, including this one. Both publish current lineups and rates, and both keep older announcement posts online, which is how obsolete figures stay in circulation: the announcement is a snapshot of launch day while the pricing page is current.
+**GPT-6.2 appeared in OpenAI's developer documentation within seven days of my last check.** I read that page on 16 November and again on 23 November, and a new flagship had arrived in between. That is the honest clock on any comparison article, including this one.
 
-Check whether what you are reading names a model that still exists. The fastest credibility test on any AI comparison in 2026 is whether the models in its title are current. If it says GPT-5 or Claude 4, it was not checked this month.
+**Watch for the name trap.** OpenAI has kept Sol, Terra and Luna across three GPT generations. Someone who checks "does this article still say Sol?" gets a yes and concludes it is current, when the article may be two generations out. Check the number in front of the name, not the name.
 
-And be suspicious of precise benchmark numbers without a link to the run. One decimal place is not evidence.
+**Go to the vendor's own model or pricing page, not an article.** Both publish current lineups and rates. Both also keep old announcement posts online, which is how obsolete figures stay in circulation: the announcement is a snapshot of launch day while the pricing page is current.
 
-Verified August 4, 2026 against Anthropic's published model reference and OpenAI's GPT-5.6 announcement, with the Anthropic prices re-checked on September 1, 2026, which is when the Sonnet 5 row was corrected. Model lineups, release dates, API prices and context windows are from those sources. Consumer plan prices are sticker rates and worth confirming at checkout, since regional pricing is now common. Head-to-head capability claims are deliberately absent, as explained above.
+**Be suspicious of precise benchmark numbers with no link to the run.** One decimal place is not evidence.
+
+**The URL of this page is historical.** It says gpt5-vs-claude4 because that is what the comparison was when it was written in June. I have left it alone deliberately rather than renaming it every few weeks, and the title tells you what it actually covers.
+
+## Sourcing
+
+Everything above was read on **23 November 2026**. Anthropic's lineup, prices, context windows and the tokens-to-words figure come from the models overview at platform.claude.com. The Haiku prompt-length split comes from Anthropic's pricing page. OpenAI's lineup, prices and the 272,000 token context threshold come from the pricing and models pages at developers.openai.com, reached by following a permanent redirect from platform.openai.com.
+
+OpenAI's consumer pricing pages returned 403 and the plan prices here are from my own reading on 13 November, labelled as such above rather than blended in.
+
+Head-to-head capability claims are deliberately absent, for the reasons given. Where a vendor states something I have quoted it. Where a vendor is silent, including on what GPT-5.6 Sol's price becomes when its promotional rate ends on 30 November, I have said so rather than filling it in. That deadline and three others are in [the price rises three vendors have already published](/blog/ai-api-price-increases-december-2026).
