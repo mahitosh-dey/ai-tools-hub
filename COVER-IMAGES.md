@@ -914,3 +914,31 @@ against the six charcoal left-pointing ones, the whole row held within the
 middle band of the image, nothing important near the top or bottom edge,
 no text, no numbers, no letters, no logos, no faces
 ```
+
+**Google Has Five Image Models and They Are All Called Nano Banana** — `ai-image-model-names-2026-cover.webp`
+
+Style A. The post's finding is that five different models share one name while
+the names give no clue to the ordering, so the composition is five identical
+label tags hanging in a row, indistinguishable from each other except that one
+carries a small amber mark. Identical is the whole point: if the shapes varied,
+the picture would be arguing that you can tell them apart, which is the
+opposite of the article. The single amber mark stands for the one model Google
+actually recommends, findable only because it is marked, not because it looks
+different. No fruit, since a banana would read as a joke about Google rather
+than a point about naming. Keep the row inside the central 68 percent of the
+height, since the top and bottom 16 percent are cropped away on the post page.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+five identical rounded rectangular label tags hanging in one evenly spaced
+horizontal row across the centre of the frame, each tag the same size and shape
+as the others with a small hole at its top and a short straight hanging line
+above it, all five drawn as plain charcoal outlines and completely identical to
+each other, a single small solid amber dot centred on the second tag from the
+right and on no other tag, the lone amber dot the only point of difference and
+the clear focal point, all five tags held within the middle band of the image,
+nothing important near the top or bottom edge, no text, no numbers, no letters,
+no logos, no faces, no fruit
+```

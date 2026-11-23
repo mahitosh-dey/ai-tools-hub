@@ -1,0 +1,172 @@
+---
+title: "Google Has Five Image Models and They Are All Called Nano Banana"
+seoTitle: "AI Image Models in 2026: Names, Prices and What Changed"
+date: "2026-11-23"
+updatedAt: "2026-11-23"
+excerpt: "Nano Banana, Nano Banana Pro, Nano Banana 2, Nano Banana 2 Lite and Nano Banana 2.1, and the names do not tell you which is newest. Meanwhile OpenAI has stopped publishing what a single image costs."
+metaDescription: "Google's five image models all share one name. OpenAI prices images per million tokens and publishes no per-image cost. Read from vendor docs, 23 Nov 2026."
+category: "Comparisons"
+tags:
+  - "ai-image"
+  - "ai-tools"
+  - "ai-comparison"
+  - "midjourney"
+coverImage: "/images/ai-image-model-names-2026-cover.webp"
+readTime: "7 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "What are Google's image models actually called?"
+    a: "There are five, and every one of them carries two names. Google's own documentation pairs them like this: Nano Banana 2.1 is gemini-nano-banana-2.1, Nano Banana 2 is gemini-3.1-flash-image, Nano Banana 2 Lite is gemini-3.1-flash-lite-image, Nano Banana Pro is gemini-3-pro-image, and plain Nano Banana is gemini-2.5-flash-image. The marketing name is what people write about and the model ID is what you actually call, and only one of those two appears in most articles. Read 23 November 2026."
+  - q: "Which Nano Banana should I use?"
+    a: "Google answers this directly, which is to its credit. Its image generation documentation says: Recommended for all new projects to use Nano Banana 2.1. That is the one carrying the New badge on the models page, while Nano Banana 2, Nano Banana 2 Lite and Nano Banana Pro are all marked Stable. If you are on the original Nano Banana, the documentation points you to Nano Banana 2 Lite, saying the recommended migration path is Nano Banana 2 Lite for higher quality, faster speeds, and lower pricing."
+  - q: "Is Nano Banana Pro better than Nano Banana 2?"
+    a: "The documentation does not say, and I went looking specifically for an answer. Pro sounds like the premium tier and the number 2 sounds like a newer generation, but Google's pages never rank them against each other or state which came first. What they do say is that neither is the recommendation: that is Nano Banana 2.1. The models page lists all four under a Gemini 3 heading with no ordering explained, so anyone choosing between Pro and 2 on the strength of the names alone is guessing."
+  - q: "What does one AI image cost now?"
+    a: "At OpenAI you cannot find out from the pricing page. Its image section is headed Prices per 1M tokens unless noted, and every image model is priced in tokens rather than pictures. There is no per-image figure anywhere on the page. Instead it points you to a calculator in the image generation guide. Image generation used to be sold by the picture, which made comparison shopping trivial. It is now billed like text, which means the cost of one image depends on its size and your prompt and cannot be quoted in advance."
+  - q: "What happened to DALL-E?"
+    a: "It is gone from OpenAI's developer pages entirely. I searched the full text of both the pricing page and the models page on 23 November 2026 and the string DALL does not appear on either. It is not listed as deprecated or retiring, it is simply absent, replaced by a line of models named gpt-image. Google's Imagen has gone the same way: its models page lists Imagen 4 with the words Shut down beside it."
+  - q: "How many image models does OpenAI sell?"
+    a: "That depends which of its pages you read, which is the problem. The pricing page lists eight: gpt-image-2.6-sunburst, gpt-image-2.6-flare, gpt-image-2.5-sunburst, gpt-image-2.5-flare, gpt-image-2, gpt-image-1.5, gpt-image-1-mini and chatgpt-image-latest. The models page shows four, the 2.6 and 2.5 pairs only. So four models you can be billed for do not appear on the page that explains what the models are."
+  - q: "Why can't you verify Midjourney?"
+    a: "Both midjourney.com/pricing and their documentation returned 403 to an automated request on 23 November 2026. A 403 is a server declining to talk to a robot. It says nothing about Midjourney as a product, and I have not treated it as evidence of anything. It does mean that the most written-about image tool in the world is the one I can check least, so anything you read about its current pricing, including on this site, rests on someone having opened it in a browser rather than on a verifiable read."
+  - q: "Why does the naming matter if the images are good?"
+    a: "Because you are choosing and paying per model, and the names are the only thing most articles give you. An article recommending Nano Banana Pro and an article recommending Nano Banana 2 look like they disagree about quality, when they may simply have been written at different times about models Google has never ranked against each other. And on the billing side the model ID is what appears on your invoice, not the fruit."
+---
+
+Google currently offers five image generation models. They are called Nano Banana, Nano Banana Pro, Nano Banana 2, Nano Banana 2 Lite and Nano Banana 2.1.
+
+I am not being flippant. Those are the names in Google's own documentation, and each one sits beside a completely different formal model ID that is what you actually type into an API call.
+
+I went looking for the current state of AI image generation because three posts on this site were written in August and the field has turned over since. What I found was less about which tool makes better pictures and more about the fact that the basic questions, what is this model called and what does one image cost, have both stopped having straightforward answers.
+
+## The five Nano Bananas
+
+Here is exactly how Google's image generation documentation pairs them, read on **23 November 2026**.
+
+| What Google calls it | What you actually call | Status |
+|---|---|---|
+| Nano Banana 2.1 | `gemini-nano-banana-2.1` | New |
+| Nano Banana 2 | `gemini-3.1-flash-image` | Stable |
+| Nano Banana 2 Lite | `gemini-3.1-flash-lite-image` | Stable |
+| Nano Banana Pro | `gemini-3-pro-image` | Stable |
+| Nano Banana | `gemini-2.5-flash-image` | Older |
+
+Look at the middle column. Only one of the five has "nano banana" in its actual model ID. The rest are Gemini models with a fruit name attached for the public.
+
+That is not a scandal, it is just branding. But it means the name people write about and the name on your invoice are different strings, and an article can be entirely correct about one while telling you nothing about the other.
+
+## The names do not tell you the order
+
+This is the part that actually costs you something.
+
+Ranked by the names alone, you would guess Pro is the best one. You would probably guess 2 is newer than Pro, since 2 sounds like a generation and Pro sounds like a tier. You cannot both be right, and the documentation does not settle it.
+
+I went looking specifically for this. Google's pages never rank Nano Banana Pro against Nano Banana 2, never say which arrived first, and list all four under a single Gemini 3 heading with no ordering explained.
+
+What Google does say, plainly and to its credit, is which one to pick: **"Recommended for all new projects to use Nano Banana 2.1."**
+
+So the answer to "Pro or 2" is neither. The one you want is the one whose name suggests the smallest increment.
+
+There is a second instruction worth having if you are on the original. For anyone still calling plain Nano Banana, the documentation says **"Recommended migration path is Nano Banana 2 Lite for higher quality, faster speeds, and lower pricing."** A model called Lite, offered as an upgrade on quality. The naming is doing nobody any favours.
+
+## OpenAI will not tell you what one image costs
+
+Now the finding that has a practical consequence.
+
+Image generation used to be priced per picture. You looked up a number, multiplied it by how many images you needed, and had your answer. That is how most people still think about it, and it is how most articles still describe it.
+
+OpenAI's image pricing section is headed **"Prices per 1M tokens unless noted."**
+
+Every image model is billed in tokens. Here is the current table, read the same day:
+
+| Model | Image input | Image output | Cached |
+|---|---|---|---|
+| `gpt-image-2.6-sunburst` | $8.00 | $30.00 | $2.00 |
+| `gpt-image-2.6-flare` | $8.00 | $30.00 | $2.00 |
+| `gpt-image-2.5-sunburst` | $8.00 | $30.00 | $2.00 |
+| `gpt-image-2.5-flare` | $8.00 | $30.00 | $2.00 |
+| `gpt-image-2` | $8.00 | $30.00 | $2.00 |
+| `gpt-image-1.5` | $8.00 | $32.00 | $2.00 |
+| `gpt-image-1-mini` | $2.50 | $8.00 | $0.25 |
+| `chatgpt-image-latest` | $8.00 | $32.00 | $2.00 |
+
+All per million tokens. **There is no per-image price anywhere on the page.** Where one would be, the page says to use "the calculator in the image generation guide" instead.
+
+I want to be fair about why this happened. These models take images as input, edit them, and return them at different sizes, so a single flat price per picture genuinely does not describe the product any more. Token pricing is more honest about that.
+
+But the consequence is real. You can no longer answer "what will a thousand images cost me" by reading a page. You have to model it. And every article that quotes a per-image figure for an OpenAI model is quoting something the vendor no longer publishes.
+
+## Eight models on one page, four on the other
+
+While I was there I counted.
+
+OpenAI's **pricing** page lists eight image models. Its **models** page lists four: the 2.6 and 2.5 pairs only. The other four, including `gpt-image-2` and `chatgpt-image-latest`, can be billed to you but do not appear on the page that explains what the models are.
+
+There is a smaller oddity in the four that do appear. The models page describes GPT-Image-2.5 Sunburst as **"Our most capable model for image generation and editing"**, on the same page that lists GPT-Image-2.6 Sunburst above it. Either the label did not move when 2.6 shipped, or 2.6 is not more capable, and the page does not say which.
+
+I found the same shape of gap at GitHub when I [compared seven vendors' pricing pages against their own documentation](/blog/ai-pricing-page-vs-docs-audit). The page that takes your money and the page that explains the product are maintained by different people on different schedules, and the gap between them is where your assumptions go wrong.
+
+## OpenAI's names are stranger, and better explained
+
+It would be easy to make this a piece about Google, so here is the comparison that stopped me doing that.
+
+OpenAI's image models are called Sunburst and Flare. As names those are, if anything, more opaque than a fruit: nothing about either word suggests what it does or which is bigger.
+
+But the models page says what they are for, in one line each:
+
+| Model | What OpenAI says it is for |
+|---|---|
+| GPT-Image-2.6 Sunburst | "Image generation and editing for detailed visual work" |
+| GPT-Image-2.6 Flare | "Image generation and editing for fast iteration" |
+| GPT-Image-2.5 Sunburst | "Our most capable model for image generation and editing" |
+| GPT-Image-2.5 Flare | "Fast, high-quality everyday image generation" |
+
+Read those and the system is obvious within seconds. **Sunburst is the careful one, Flare is the fast one**, and the number in front is the generation. Two opaque words, immediately decoded, because the documentation does the one job documentation exists to do.
+
+That is exactly what Google's pages do not do for Pro against 2. Google's names are friendlier and its documentation leaves you guessing about the ordering. OpenAI's names mean nothing on sight and its documentation tells you what you need in a sentence.
+
+The lesson is not that one vendor is better at naming. It is that the name is never the information. The sentence next to the name is.
+
+## DALL-E is not deprecated, it is absent
+
+I searched the full text of both OpenAI pages for the string "DALL". It does not appear on either.
+
+Not listed as retiring, not marked legacy, not given a sunset date. Simply gone, replaced by the `gpt-image` line.
+
+When I wrote about [Midjourney against DALL-E 3](/blog/midjourney-vs-dalle3) the story was that DALL-E was on its way out. It has arrived. Anything still comparing those two as live options is comparing one product against a name.
+
+Google has done the same thing to its old line. Its models page lists **"Imagen 4 (Shut down)"**, describing it as a "Text-to-image model featuring fast and ultra-fast generation (shut down)". At least that one says so on the page.
+
+## The tool I could not check
+
+Midjourney returned **403** on both its pricing page and its documentation.
+
+A 403 is a server declining to talk to an automated request. It is not evidence about the product, the company or the prices, and I have not treated it as any.
+
+It does leave an odd situation. The most written-about image generator in the world is the one I can verify least. Every current figure you read about Midjourney pricing, on this site included, rests on a person having opened it in a browser rather than on a check anyone can repeat. That is worth knowing about the sourcing of the whole category, not just mine.
+
+## What I would actually do
+
+**On Google, use Nano Banana 2.1.** Not because I have tested it against the others, but because Google says so in its own documentation and that is better evidence than a ranking in an article.
+
+**On OpenAI, do not budget from a per-image figure you read somewhere.** It is not a number the vendor publishes any more. Run a small batch, read the actual billing, and extrapolate from that.
+
+**Write down the model ID, not the nickname.** `gemini-3-pro-image` means one thing. "Nano Banana Pro" means that today and may mean something adjacent in three months.
+
+**Check the date on anything you read about this category, including this.** Both of these vendors turned over their entire image lineup since August. When I audited articles ranking for the best coding model, [six of the seven I could read recommended a model that had already been replaced](/blog/ai-model-articles-stale-audit), and image models are moving at least as fast.
+
+## Sourcing, and what I could not confirm
+
+Google's model names, model IDs, status badges and recommendation text come from the image generation and models pages at aistudio.google.com, read on **23 November 2026** and quoted from the page text.
+
+OpenAI's image prices, the "Prices per 1M tokens" heading, the eight-against-four count and the absence of DALL-E come from the pricing and models pages at developers.openai.com, read the same day.
+
+Three things I could not stand up, stated rather than quietly dropped:
+
+**Google's image prices are not in this post.** Their pricing page runs to over 100,000 characters and I could only read the first portion as actual page text. Figures exist for the rest, but they reached me through a machine summary rather than the page, and that is not good enough to publish as a price.
+
+**A shutdown date for the original Nano Banana.** I saw one in that same summary and could not confirm it on any page I read properly, so it is not here.
+
+**Midjourney, at all.** Both URLs returned 403.
+
+If you want the free end of this category rather than the model map, [the free image generators post](/blog/best-free-ai-image-generators) ranks what you can use without paying, and [the Midjourney beginners guide](/blog/how-to-use-midjourney-beginners) covers getting started with the one tool I could not verify here.
