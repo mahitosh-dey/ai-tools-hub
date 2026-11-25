@@ -16,7 +16,7 @@ faqs:
   - q: "How can I tell if an AI tool has shut down?"
     a: "Resolve the domain and read the full DNS status, then follow the redirects. A domain returning NXDOMAIN across several independent resolvers is dead. SERVFAIL with no nameservers usually means the registration has lapsed or broken. A 403, 429, 451 or a timeout tell you about a server or a network, not about a business. The single most common mistake is treating a page you cannot load as a company that no longer exists."
   - q: "Does a 403 error mean a website is down?"
-    a: "No. A 403 means a server refused your specific request, which is usually a bot wall. Gamma, Canva, OpenAI and Perplexity all return 403 to an automated request today and all four are running normally. If you see a 403, open the page in a browser before concluding anything."
+    a: "No. A 403 means a server refused your specific request, which is usually a bot wall. Gamma and Canva both returned 403 to an automated request on 25 November 2026, and both are running normally. OpenAI is the clearest case I have: its own help centre returned 403 for weeks, then answered normally on 25 November. Nothing about the company changed in between, which is the whole point. If you see a 403, open the page in a browser before concluding anything."
   - q: "What does a 451 status code mean?"
     a: "Unavailable For Legal Reasons. It usually means a geographic or regulatory block rather than a closure. capcut.com returns 451 from an Indian connection because India banned ByteDance apps in June 2020. CapCut is running perfectly well in other countries. A 451 tells you where you are, not whether the product exists."
   - q: "Why does dig +short give the wrong answer?"
