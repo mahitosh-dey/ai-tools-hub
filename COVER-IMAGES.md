@@ -942,3 +942,35 @@ the clear focal point, all five tags held within the middle band of the image,
 nothing important near the top or bottom edge, no text, no numbers, no letters,
 no logos, no faces, no fruit
 ```
+
+**Does OpenAI Train on Your API Data? The Answer Changed Last Week.** — `openai-api-training-carveout-cover.webp`
+
+Style A. The post's finding is that OpenAI publishes two versions of the same
+promise, one whole and one with a piece removed, so the composition is two
+identical sheets side by side where the only difference is that a wedge has
+been cut out of the second one. Identical matters: if the two sheets looked
+different, the picture would be saying these are two different documents, when
+the whole point is that they answer the same question for the same company. The
+amber wedge is the carve-out, and it is amber rather than charcoal because the
+missing piece is the subject of the article, not an absence to be overlooked.
+No padlocks, no shields and no eyes, since this is not a story about security
+or surveillance, it is a story about two sentences that do not match. Keep the
+pair inside the central 68 percent of the height, since the top and bottom 16
+percent are cropped away on the post page.
+
+```
+Flat editorial vector illustration, 16:9, muted warm grey or cream background,
+charcoal linework with amber and soft teal accents, no gradients, clean
+confident shapes, simple props only, front view, generous negative space,
+two identical upright rectangular sheets of paper side by side in the centre
+of the frame, evenly spaced with a clear gap between them, both sheets the same
+size and proportion and both drawn as plain charcoal outlines with three short
+charcoal horizontal lines inside standing for text, the left sheet complete and
+unbroken, the right sheet identical except that a single solid amber wedge
+shape has been cut out of its right edge with the removed wedge sitting just
+outside the sheet in the negative space beside it, the lone amber wedge the
+clear focal point and the only colour in the frame, both sheets held within the
+middle band of the image, nothing important near the top or bottom edge,
+no text, no numbers, no letters, no logos, no faces, no padlocks, no shields,
+no eyes
+```

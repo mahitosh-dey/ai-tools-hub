@@ -1,0 +1,191 @@
+---
+title: "Does OpenAI Train on Your API Data? The Answer Changed Last Week."
+seoTitle: "Does OpenAI Train on Your API Data? What Changed"
+date: "2026-11-26"
+excerpt: "OpenAI's developer page says your API data never trains its models. Its help centre now says it never trains its foundation models, and that some customers' API content may be used to train safety classifiers without an opt-in. Both pages are live."
+metaDescription: "OpenAI's developer page and help centre now give different answers on API training. One promises no training, the other carves out safety classifiers."
+category: "Guides"
+tags:
+  - "ai-tools"
+  - "privacy"
+  - "chatgpt"
+coverImage: "/images/openai-api-training-carveout-cover.webp"
+readTime: "10 min read"
+author: "Mahitosh Dey"
+faqs:
+  - q: "Does OpenAI train on API data?"
+    a: "Not its foundation models, and that is now the exact wording. OpenAI's developer guide, read on 26 November 2026, still says data sent to the API is not used to train or improve OpenAI models unless you explicitly opt in. Three of its help centre pages now say something narrower: by default API inputs and outputs are not used to train our foundation models, followed by a carve-out stating that API content from a limited subset of API customers may be used for safety-classifier training and safety evaluations. Both versions are published at the same time. The second one is the more precise description of what happens."
+  - q: "Can I opt out of OpenAI training safety classifiers on my API content?"
+    a: "Nothing on OpenAI's pages says you can, and one sentence says your permission is not needed. The help centre states that this use is separate from foundation model training and does not require an opt-in to model training. The carve-out is scoped to customers who do not have modified retention enabled and are not managed by our sales team, which implies that Zero Data Retention or Modified Abuse Monitoring takes you out of it. OpenAI does not say that in those words, and both of those controls are subject to prior approval by OpenAI, so they are not a setting you can switch on yourself."
+  - q: "Am I in the limited subset of API customers OpenAI means?"
+    a: "If you signed up with a card, have no enterprise agreement and never applied for modified retention, you match the description. The carve-out names customers who do not have modified retention enabled and are not managed by our sales team. That is the default state of almost every independent developer and small team using the API. OpenAI does not publish how large the subset is, how customers are chosen, or whether anyone is told, so the honest answer is that you cannot confirm your own status from the pages. Read the clause and assume it describes you until OpenAI says otherwise."
+  - q: "When did OpenAI change the wording?"
+    a: "Between 17 and 25 November 2026, according to an automated policy tracker. The arcships/zdr-monitor project snapshots OpenAI's policy pages, and its recorded diff deletes the sentence by default, OpenAI also does not use inputs and outputs provided through the API Platform to train its models and replaces it with the foundation-models version plus the carve-out. Its previous snapshot of 17 November has no carve-out and its 25 November snapshot does, and it files the change under the direction weakened. That is a third-party machine reading, not OpenAI's own date. OpenAI publishes no effective date for the change on any of the pages."
+  - q: "Do Anthropic and Google have the same safety-classifier carve-out?"
+    a: "Not on their business and API terms. Anthropic's commercial terms, effective 17 June 2025, say Anthropic may not train models on Customer Content from Services, with no safety exception and nothing to opt out of. Its business help article, dated 18 August 2026, says by default we will not use your inputs or outputs from our commercial products. Google's Gemini API terms, effective 23 March 2026, bar using paid-tier prompts to improve its products and limit abuse logging to solely detecting and preventing violations. Anthropic does have a safety-training carve-out, but only on its consumer plans, where conversations flagged for safety review may be used to train models for its Safeguards team."
+  - q: "Does Google train on the free Gemini API tier?"
+    a: "Yes, and human reviewers can read what you send. Google's Gemini API additional terms, effective 23 March 2026, say that on the unpaid tier Google uses the content you submit to the Services to provide, improve, and develop Google products and services and machine learning technologies, and that human reviewers may read, annotate, and process your API input and output. There is no opt-out. The paid tier is the opposite and says Google doesn't use your prompts to improve our products. If you are prototyping on a free Gemini key with client data in the prompts, that is the sharpest exposure on this page, and it is worse than the OpenAI carve-out."
+  - q: "How long does OpenAI keep API data?"
+    a: "Thirty days by default for abuse monitoring, and it can contain your prompts. The developer guide says abuse monitoring logs are generated for all API feature usage and retained for up to 30 days, and that those logs may contain certain customer content, such as prompts and responses. The Responses API adds a separate 30 day Application State retention period by default, or when the store parameter is set to true. Several endpoints keep application state until deleted instead, including conversations, files and fine-tuning jobs. Retention and training are different questions, and a no on training is not a no on storage."
+  - q: "What is Zero Data Retention and can I just turn it on?"
+    a: "It is the control that stops API content being retained for application state, and no, you cannot turn it on yourself. OpenAI's developer guide says Zero Data Retention eligible endpoints do not retain any customer content for application state, subject to the limitations below, and that these controls are subject to prior approval by OpenAI and acceptance of additional requirements. It also reserves the right to make models ineligible for Zero Data Retention or Modified Abuse Monitoring for specific customers. There is one documented exception that overrides all of it: if a classifier detects potential CSAM content, the image is retained for manual review even with ZDR enabled."
+  - q: "What is Private Safety Processing?"
+    a: "It is OpenAI's attempt to run safety checks on content it cannot read. The announcement is dated 19 August 2026 and describes a system designed to identify patterns across related interactions without giving OpenAI personnel access to the underlying content, so that abuse detection stays compatible with Zero Data Retention. An update dated 22 September 2026 says it is rolling out to API customers, with access expanding in phases, and the same page says it is currently being tested with early customers. Note the sentence worth reading twice: Private Safety Processing utilizes customer content regardless of where it is stored."
+  - q: "Should I stop using the OpenAI API because of this?"
+    a: "No, and treating it that way would be the wrong lesson. A safety classifier is not GPT, the distinction OpenAI draws is real, and classifier training on abuse signals is a defensible thing for an API provider to do. The problem is narrower and fixable: the promise developers read on the developer page is broader than the promise the help centre makes, and the page that got narrower is not the page anyone opens. If you are under an NDA, the question to answer is not whether OpenAI is trustworthy but which of its two sentences your client's lawyer would consider binding."
+---
+
+Two pages on OpenAI's own site, both live this morning, answering the same question.
+
+The developer guide: "As of March 1, 2023, data sent to the OpenAI API is not used to train or improve OpenAI models (unless you explicitly opt in to share data with us)."
+
+The help centre: "By default, API inputs and outputs are not used to train our foundation models. Separately, we may use API content from a limited subset of API customers for safety-classifier training and safety evaluations."
+
+Same company. Same question. One answer with no conditions and one with a carve-out. I read both on 26 November 2026, within a few minutes of each other.
+
+## The short answer, if that is all you came for
+
+OpenAI does not train GPT on your API calls. It never has, since March 2023, and nothing last week changed that.
+
+What changed is the size of the promise. It used to cover OpenAI's models. It now covers OpenAI's foundation models, and a new sentence says some customers' API content may be used to train safety classifiers, without asking them first.
+
+If you sign up with a card, have no enterprise contract and never applied for special retention terms, you are described by that new sentence.
+
+## What the help centre actually says
+
+Three OpenAI help pages now carry a version of this. The fullest one is on the page titled "How your data is used to improve model performance":
+
+> "For a limited subset of API customers who do not have modified retention enabled and are not managed by our sales team, we may use API content to train safety classifiers and conduct safety evaluations that help detect and prevent abuse. This use is separate from foundation model training and does not require an opt-in to model training."
+
+Read that final clause again. Not "you can turn this off." Not "we will tell you." It does not require an opt-in.
+
+I looked for an opt-out on all three pages and on the developer guide. There is none. The only toggle OpenAI documents is the one for sharing data to improve its models, which organisation owners control, and which is a different thing entirely.
+
+## Who is in the subset
+
+The clause describes customers by two properties: no modified retention, and not managed by sales.
+
+That is the default state of nearly every independent developer using the API. You get an API key, you pay with a card, nobody from OpenAI has ever emailed you. You are not managed by sales. You did not apply for modified retention, because applying for it means a conversation with OpenAI that most people have never had a reason to start.
+
+So the "limited subset" is defined by the absence of two things most API customers do not have.
+
+I want to be careful here, because that is an inference and not a quote. OpenAI does not publish how many customers are in the subset, how they are picked, or whether anyone is notified. What the sentence does is describe a category, and the category fits the ordinary case. Until OpenAI says otherwise, read it as describing you.
+
+## When this changed, and how I know
+
+I could not check this against an archived copy. The environment I research from cannot reach the Wayback Machine, so I have no snapshot of my own to compare against, and I am not going to pretend otherwise.
+
+What I do have is an automated tracker. The project `arcships/zdr-monitor` on GitHub takes periodic snapshots of AI vendors' data policies and opens a pull request when the wording moves. I read its raw diff rather than its summary, which matters, because the summary is a machine's description and the diff is the recorded text.
+
+The diff deletes this line:
+
+> "By default, OpenAI also does not use inputs and outputs provided through the API Platform to train its models"
+
+And replaces it with the foundation-models sentence plus the carve-out. Its field `observed_at` reads 2026-11-25. Its notes refer to the previous snapshot as 2026-11-17, which did not contain the carve-out. It files the change under `direction = "weakened"`.
+
+So: somewhere between 17 and 25 November 2026, according to a third party reading OpenAI's pages on a schedule. That is the best dating available and I am labelling it as what it is.
+
+OpenAI's own pages are no help on timing. They show relative stamps, which all landed inside the last three days when I read them, and those stamps move on any edit including a typo fix. They tell you the pages are being worked on. They do not tell you when a sentence changed.
+
+OpenAI published nothing about this that I could find. No changelog entry, no blog post, no effective date on any of the three pages. That is becoming the house style rather than an oversight: of the [ten dated API changes landing in December](/blog/ai-api-price-increases-december-2026), three are reroutes that happen without the caller being told.
+
+## Is this actually a problem
+
+Half of it is, and I want to separate the halves, because the version of this story where OpenAI is caught lying is not the true one.
+
+**The distinction is real.** A safety classifier is a small model that decides whether a request is abusive. It is not GPT. Training one on examples of abuse is a normal, defensible thing for an API provider to do, and a provider that refused to do it would ship a worse product with more abuse on it. OpenAI is not sneaking your prompts into the next frontier model. The new sentence is a more accurate description of reality than the old one, which is the uncomfortable part.
+
+**The placement is the problem.** The page that got narrower is a help centre article. The page developers read is the developer guide, and the developer guide still says "not used to train or improve OpenAI models" with no carve-out at all. One of those two sentences is now wrong, and the one still being served to developers is the broad one.
+
+That matters in exactly one practical situation, and it is a common one. You are a freelancer or a small agency, a client asks whether their data trains anything, and you answer by quoting the page you were looking at. If you quote the developer guide, you have told your client something OpenAI's own help centre contradicts. You were not careless. You read the official documentation.
+
+This is the same failure I keep finding across this industry while [reading the privacy policies of twenty AI tools](/blog/ai-tools-training-on-your-work): the answer exists, it is just not on the page where the question gets asked.
+
+## Nobody else has this clause
+
+This is the part I did not expect. I went looking for the industry pattern and did not find one.
+
+| Vendor | Business or API default | Safety-classifier training carve-out |
+|---|---|---|
+| **OpenAI** | not used to train foundation models | yes, no opt-in required |
+| **Anthropic** | "Anthropic may not train models on Customer Content from Services" | none on the pages read |
+| **Google (paid Gemini API)** | "Google doesn't use your prompts" to improve products | none on the pages read |
+
+Anthropic's commercial terms, effective 17 June 2025, are a flat prohibition with no safety exception and nothing to opt out of. Its business help article, dated 18 August 2026, says "By default, we will not use your inputs or outputs from our commercial products." The only training exceptions it names are ones you cause yourself, by submitting feedback or choosing to share.
+
+Worth noting for completeness: Anthropic does have a safety-training carve-out, and it is close in spirit to OpenAI's. It is just on the consumer side. Its consumer article, dated 16 March 2026, says conversations "flagged for safety review" may be used "to improve our ability to detect and enforce our Usage Policy, including training models for use by our Safeguards team." Consumer plans, not commercial ones. OpenAI put its version on the API.
+
+Google's paid Gemini API terms, effective 23 March 2026, bar using your prompts to improve its products and restrict logging to "solely for detecting and preventing violations" of the prohibited use policy. There is a separate paid-tier carve-out for grounding data, which "can be used for debugging and testing of systems that support Grounding with Google Search," but that is debugging, not classifier training.
+
+One caveat I will not hide: I read these vendors' policy pages, not their full policy stacks. Google's terms incorporate its privacy policy and a cloud data processing addendum by reference, and Anthropic has a trust centre I did not read. "No carve-out" means no carve-out on the pages a customer would actually open.
+
+## The thing that is genuinely worse than any of this
+
+While checking Google for comparison, I found something sharper than the story I came for.
+
+Google's Gemini API additional terms, effective 23 March 2026, split hard by tier. On the **paid** tier, the language above applies and your prompts are not used to improve Google's products.
+
+On the **free** tier:
+
+> "Google uses the content you submit to the Services"
+
+to "provide, improve, and develop Google products and services and machine learning technologies". And human reviewers may "read, annotate, and process your API input and output".
+
+No opt-out. Not a default you can change. The free tier is the deal.
+
+Every tutorial that starts with "grab a free Gemini API key" is pointing at that clause, and almost none of them mention it. If you are prototyping with real client text in your prompts on a free key, that is a bigger exposure than anything in OpenAI's carve-out, and unlike the carve-out it is unambiguous and documented.
+
+There is one regional exception worth knowing. For the EEA, Switzerland and the UK, Google says the paid-tier data terms "apply to all Services, including Google AI Studio and unpaid quota." If you are in those regions, the free tier is covered by the paid terms. If you are not, it is not.
+
+This is the same pattern I found across [the free tiers of the major models](/blog/which-model-free-tier-gives-you): the free tier is not a smaller version of the paid product, it is a different agreement.
+
+## What you can actually do
+
+Not much, and I would rather say that than invent a checklist.
+
+**Zero Data Retention and Modified Abuse Monitoring** are the two controls that plausibly take you out of the subset, because the carve-out excludes customers with "modified retention enabled". OpenAI does not confirm that reading in those words, so treat it as the likely lever rather than a documented escape.
+
+Neither is a switch you can flip. The developer guide says these controls are "subject to prior approval by OpenAI and acceptance of additional requirements", and OpenAI "reserve[s] the right to make models ineligible for Zero Data Retention or Modified Abuse Monitoring for specific customers". It is an application, and the answer can be no, and the answer can change per model.
+
+**Know what retention you have by default.** Separate question from training, and people conflate them constantly. Abuse monitoring logs run for "all API feature usage" and are "retained for up to 30 days", and they "may contain certain customer content, such as prompts and responses". The Responses API adds its own 30 day application state window by default. Some endpoints keep application state "until deleted", including conversations, files and fine-tuning jobs. So even a clean no on training leaves a month of your prompts sitting somewhere.
+
+**One exception overrides everything**, and it is the right exception to have: if a classifier flags potential CSAM, "the image will be retained for manual review, even if Zero Data Retention, Modified Abuse Monitoring, or Private Retention with PSP is enabled." Nobody should want that one removed.
+
+**Watch Private Safety Processing**, because it is the actual fix for this tension. OpenAI announced it on 19 August 2026 as a system "designed to identify patterns across related interactions without giving OpenAI personnel access to the underlying content", with an update dated 22 September 2026 saying it is "rolling out to API customers, with access expanding in phases". The same page calls it "currently being tested with early customers", so it is not a thing you can rely on yet. And read this sentence from the announcement slowly: "Private Safety Processing utilizes customer content regardless of where it is stored."
+
+## What everyone else writing about this is missing
+
+I read the four guides that rank for this question before writing. All four are competent and all four are out of date through no fault of their own.
+
+| Guide | Dated | Mentions the carve-out |
+|---|---|---|
+| deai.org | 24 August 2026 | no |
+| humla.team | 28 July 2026 | no |
+| meetily.ai | verified 26 September 2026 | no |
+| privedge.io | 20 July 2026 | no |
+
+Not one. Two of them get close by describing OpenAI's safety processing, but neither presents it as an exception to the no-training promise, because when they were written it was not one.
+
+Two of the four name explicit opt-in as the only exception. A reader finishes either one believing that if they never ticked a box, nothing happens to their prompts. That was correct in August. It is not correct now.
+
+I am not scoring points off them. In three months this post will be in the same position, which is the actual lesson: a privacy answer has a shelf life, and the shelf life is shorter than the ranking. The fix is not writing a better evergreen guide. It is putting the reading date on the claim so a reader can tell how old your answer is, which is why there is a date beside every quote above and why [the dead tools post](/blog/what-happened-to-ai-tools) records when each page was last seen alive rather than asserting a state.
+
+## What I could not check
+
+- **No archived copy of the old page from me.** The 17 to 25 November window rests entirely on the tracker's snapshots. If that tracker is wrong, the date is wrong, though the current wording is first-hand and is not in doubt.
+- **No effective date from OpenAI.** None of the three help pages carries one, so I cannot say when the carve-out began applying, only when the text appeared.
+- **No way to confirm my own status.** There is no page that tells a given customer whether they are in the limited subset.
+- **I did not read the private safety processing developer guide.** The announcement points at `developers.openai.com/api/docs/guides/private-safety-processing` and I stopped at the announcement.
+- **Partial policy stacks for Anthropic and Google.** As noted above.
+
+## My honest take
+
+I went in expecting to find a company quietly weakening a promise, and what I found was more ordinary and more annoying than that.
+
+OpenAI made its wording more accurate. The old sentence was too broad and the new one is true. That is the correct direction for a policy page to move.
+
+Then it updated one half of its documentation and left the other half saying the old thing. So there are now two official answers, the narrower and more honest one is buried in the help centre, and the broader one is still being handed to every developer who reads the guide. Nobody lied. The right hand got more precise and the left hand did not get the memo.
+
+If you need an answer for a client today, quote the help centre, because it is the one that describes what happens. And put the date on it, because by the time they read it, it may have moved again.
+
+Everything above was read on 26 November 2026.
