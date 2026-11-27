@@ -273,10 +273,31 @@ closed.
   clicks. Compare against this plan's table and say plainly what moved.
   Referring domains will be flat, since nothing was sent and nothing will be.
   Report it as flat rather than as a miss.
-- Medium syndication of an older post, using Import story so the canonical
-  stays here. This is now the only item in the month that could plausibly
-  produce a referring domain, which makes it more important than it looked
-  when it was written as an afterthought.
+- ~~Medium syndication of an older post, using Import story so the canonical
+  stays here.~~ **Done 2026-11-27.** `are-ai-detectors-accurate` published at
+  https://medium.com/@mahitosh/are-ai-detectors-accurate-in-2026-the-arithmetic-nobody-does-079307616764
+
+  Chosen on one criterion above all others: it contains **no dollar figures**.
+  A syndicated copy never gets maintained, so anything with prices in it rots
+  in public under your name. It also carries four internal links home, no
+  external links at all, and an argument rather than a list.
+
+  The post was re-verified the same morning before it went out, under rule 10,
+  and that caught a real problem. GPTZero had replaced its 1 percent false
+  positive ceiling with below 0.03 percent at some point in the previous
+  fortnight, with no announcement, which broke the sentence the post's central
+  argument rested on. Nine surfaces were corrected first (commit `3ffaf2e`).
+  A post arguing that detector numbers drift silently was itself quoting a
+  number that had drifted silently. Re-verify before outward-facing use is not
+  a formality, and this is the evidence.
+
+  **Open question that decides whether this counts.** Medium's outbound links
+  are widely reported to carry `nofollow` or `ugc`. This could not be checked
+  from here, because Medium returns 403 to automated requests, which is a bot
+  wall and not a verdict. If the links are nofollow, this produces a referring
+  domain but **not a dofollow one**, and the month's headline target is missed
+  rather than met. Settle it in devtools before the review and write down
+  whichever answer is true.
 
 **Week 3 done means:** over-60 list at zero, mid-month numbers known rather
 than assumed, and a decision recorded about what replaces outreach.
