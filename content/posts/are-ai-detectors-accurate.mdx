@@ -2,9 +2,9 @@
 title: "Are AI Detectors Accurate in 2026? The Arithmetic Nobody Does"
 seoTitle: "Are AI Detectors Accurate? 2026 Verified Numbers"
 date: "2026-08-18"
-updatedAt: "2026-11-13"
-excerpt: "I read seven detector pages in August and again in November. Almost every number had moved. Three vendors now publish a false positive rate near 1%, and that is the figure that matters."
-metaDescription: "I read seven AI detector pages in August and again in November. Four of six numbers moved. Three vendors now publish a false positive rate near 1%."
+updatedAt: "2026-11-27"
+excerpt: "I read seven detector pages in August, again in November, then again a fortnight later. The numbers moved all three times. GPTZero now advertises a false positive rate about thirty times better than the one it published two weeks earlier, and announced none of it."
+metaDescription: "I read seven AI detector pages three times in four months. The numbers moved every time, including a thirty-fold drop in two weeks."
 category: "Guides"
 tags:
   - "ai-detector"
@@ -12,15 +12,15 @@ tags:
   - "students"
   - "ai-tools"
 coverImage: "/images/are-ai-detectors-accurate-cover.webp"
-readTime: "13 min read"
+readTime: "18 min read"
 author: "Mahitosh Dey"
 faqs:
   - q: "Are AI detectors accurate in 2026?"
-    a: "They are accurate in the sense vendors mean and misleading in the sense that matters. Read on 13 November 2026, GPTZero claims 99.9 percent accuracy, Winston AI claims 99.87 percent and ZeroGPT claims 98.4 percent. More usefully, three of them now publish a false positive rate near 1 percent. That is an impressive percentage until you multiply it by the number of essays a school actually processes, at which point a rate that reads as rounding error becomes a list of real students with their names on it. A university scanning 50,000 submissions a year produces about 500 false flags at 1 percent."
+    a: "They are accurate in the sense vendors mean and misleading in the sense that matters. Read on 27 November 2026, GPTZero claims 99.9 percent accuracy, Winston AI claims 99.87 percent and ZeroGPT claims 98.4 percent. The false positive rates are where it gets strange. ZeroGPT publishes under 1 percent and Winston's best third party result is measured at a 1 percent condition, while GPTZero now advertises below 0.03 percent, down from the 1 percent ceiling it published a fortnight earlier. Multiply either one by real volume and it stops reading as a rounding error. A university scanning 50,000 submissions a year produces about 500 false flags at 1 percent and about 15 at 0.03 percent. Fifteen is better. Fifteen is still fifteen people, and the rate moved thirty-fold in two weeks without an announcement, which is the part that should worry you more than either number."
   - q: "Is Turnitin's AI detection accurate?"
     a: "Turnitin publishes more specific numbers than most of its competitors, which is worth something. It reports a 0.013 false positive rate for native English writers and 0.014 for English Language Learners, tested on nearly 2,000 ELL samples, and says there is no statistically significant bias between the two groups. Two caveats. This is a vendor publishing research about its own product and citing a study it performs well in. And I read those figures on 18 August 2026 and could not re-read them on 13 November, because Turnitin now returns a 403 to automated requests on its main site and its guides and help subdomains. Treat them as a dated reading."
   - q: "Are AI detectors biased against non-native English speakers?"
-    a: "This is the claim I expected to confirm and could not. It became widely repeated after early research on older detectors, and it is still repeated constantly. Turnitin's own published evaluation of roughly 2,000 English Language Learner samples reports 0.014 for ELL writers against 0.013 for native speakers, which is not a meaningful gap, though that is an August 2026 reading I could not refresh because the site now blocks automated requests. Against that, GPTZero still says it retrains specifically to push the ESL false positive rate down to 1 percent and calls itself the only detector de-biased for ESL writers, which concedes the problem was real. I would treat the bias claim as unproven on current tools rather than established, while noting that all the evidence on both sides comes from vendors testing themselves."
+    a: "This is the claim I expected to confirm and could not. It became widely repeated after early research on older detectors, and it is still repeated constantly. Turnitin's own published evaluation of roughly 2,000 English Language Learner samples reports 0.014 for ELL writers against 0.013 for native speakers, which is not a meaningful gap, though that is an August 2026 reading I could not refresh because the site now blocks automated requests. Against that, GPTZero now reports zero false positives across all 10,402 PERSUADE 2.0 student essays, including 914 written by English language learners and 1,172 by students with disabilities. That is a much stronger claim than the 1 percent ESL ceiling it advertised a fortnight earlier, and it comes from the same company testing itself on a corpus it chose. I would treat the bias claim as unproven on current tools rather than established, while noting that all the evidence on both sides comes from vendors testing themselves."
   - q: "Are AI detectors more accurate with more text?"
     a: "Yes, and this is the single most useful thing to know. Turnitin's published false positive figures apply to documents meeting a 300 word minimum, which tells you the numbers do not hold below that length. Sapling states directly that the more essay-like a piece of writing is, the more likely a false positive becomes. Short answers, discussion posts and paragraph responses are the worst case for these tools, and they are exactly the kind of work that gets scanned in bulk."
   - q: "What is a false positive in AI detection?"
@@ -37,7 +37,7 @@ faqs:
     a: "No, deliberately. A large share of the search demand around this topic is people looking for ways to defeat Turnitin, and I am not writing that. It helps the people least harmed by getting caught and most harmed if the tool is wrong, and it makes the detection problem worse for the honest students who then get scanned harder. Everything here is about whether these tools work and what to do when they misfire."
 ---
 
-Every AI detector sells you a percentage. Winston AI says 99.87 percent accuracy. GPTZero says 99.9 percent. Originality.ai says 99 percent and up. More usefully, three of them now publish a false positive rate, and all three land near 1 percent.
+Every AI detector sells you a percentage. Winston AI says 99.87 percent accuracy. GPTZero says 99.9 percent. Originality.ai says 99 percent and up. More usefully, three of them now publish a false positive rate. A fortnight ago all three landed near 1 percent, which is what this post was built on. Today one of them says 0.03 percent, and I have had to rewrite the section that followed.
 
 Those numbers all sound like the problem is solved. Then you multiply one of them by a class size, and it stops sounding that way.
 
@@ -57,37 +57,47 @@ So when a detector advertises a single accuracy number, it is blending the error
 
 ## What the vendors actually claim
 
-Here is what each one publishes on its own site, read on 13 November 2026.
+Here is what each one publishes on its own site, read on 27 November 2026. Turnitin is the exception and gets its own note below.
 
 | Tool | Claimed accuracy | Publishes a false positive rate |
 |---|---|---|
-| GPTZero | 99.9 percent, 96.5 percent on mixed documents | Yes. No more than 1 percent, and 1 percent for ESL writing |
+| GPTZero | 99.9 percent | Yes. Below 0.03 percent, and 0.002 percent for text over 300 words |
 | Winston AI | 99.87 percent | Yes. Zero across 27,743 human documents, and a 1 percent condition in a third party test |
 | ZeroGPT | 98.4 percent | Yes. Under 1 percent |
 | Originality.ai | 99 percent and up on its current models | No number on any page I could read |
 | Sapling | No figure published | No number, but says plainly that false positives will occur |
-| Turnitin | Could not be read today, see below | 1.3 percent as read in August |
+| Turnitin | Not re-read, see below | 1.3 percent as read in August |
 
 The accuracy column has quietly converged. Five of these six sit between 98.4 and 99.9 percent, which should make you more suspicious rather than less, because they are not testing the same thing.
 
-The false positive column is where they still disagree, and it is the column that matters. Winston says zero false positives across 27,743 human documents. GPTZero says it keeps its rate at no more than 1 percent and makes no claim of zero. Those are the same task. One of those companies is describing a test it passed perfectly and the other is describing a ceiling it refuses to go above.
+The false positive column is where they still disagree, and it is the column that matters. Winston says zero false positives across 27,743 human documents. GPTZero now also says zero, across 10,402 student essays, and below 0.03 percent in general. ZeroGPT says under 1 percent.
+
+Two of those three are claiming a perfect score on a test set they picked themselves, which is not the same thing as a rate you can expect on your own documents. There is a detail that makes the point better than I could. Winston and GPTZero both cite the PERSUADE 2.0 essay corpus, and they report different document counts for it, 25,996 against 10,402. Same named dataset, two different tests. If the two companies most willing to publish a false positive figure cannot be compared to each other, the column is not a league table.
 
 There is no shared test set behind any of this, so each company is measuring its own thing and calling it accuracy. Treat the percentages as marketing until somebody shows you the test.
 
-## What changed in eighty-seven days
+## What changed in eighty-seven days, then in fourteen more
 
 I read all of these pages on 18 August 2026 and again on 13 November. I was expecting to confirm a set of figures and change a word here and there. Almost nothing held.
 
-| Tool | 18 August 2026 | 13 November 2026 |
-|---|---|---|
-| Winston AI | 99.98 percent, no false positive figure | 99.87 percent, and now publishes false positive data |
-| GPTZero | 99 percent | 99.9 percent |
-| ZeroGPT | No accuracy figure published at all | 98.4 percent, and an under 1 percent false positive rate |
-| Originality.ai | 97.8 percent for its multilingual model | That model was sunset in October 2026 |
-| Sapling | No figure, warns false positives will occur | Unchanged, word for word |
-| Turnitin | Figures readable on the site | Returns 403 to automated requests |
+Then I read them a third time on 27 November, because this post was about to be republished elsewhere, and a post whose whole argument is that these numbers drift has no business being syndicated on a fortnight-old reading. Two more had moved in fourteen days.
 
-Four of the six moved. Winston's headline accuracy went down, which is not the direction marketing numbers usually travel and is to their credit. GPTZero's went up. ZeroGPT went from publishing nothing to publishing two figures, including a false positive rate better than the one GPTZero commits to. And the Originality.ai number this post quoted in August belongs to a model the company has since switched off.
+| Tool | 18 August 2026 | 13 November 2026 | 27 November 2026 |
+|---|---|---|---|
+| Winston AI | 99.98 percent, no false positive figure | 99.87 percent, and now publishes false positive data | Unchanged |
+| GPTZero | 99 percent | 99.9 percent, false positives capped at 1 percent | 99.9 percent, false positives below 0.03 percent |
+| ZeroGPT | No accuracy figure published at all | 98.4 percent, and an under 1 percent false positive rate | Unchanged |
+| Originality.ai | 97.8 percent for its multilingual model | That model was sunset in October 2026 | No accuracy percentage I could find on the page |
+| Sapling | No figure, warns false positives will occur | Unchanged, word for word | Unchanged again, plus a changelog note |
+| Turnitin | Figures readable on the site | Returns 403 to automated requests | Not re-read |
+
+Four of the six moved between August and November. Winston's headline accuracy went down, which is not the direction marketing numbers usually travel and is to their credit. GPTZero's went up. ZeroGPT went from publishing nothing to publishing two figures. And the Originality.ai number this post quoted in August belongs to a model the company has since switched off.
+
+The fortnight to 27 November is the one that should bother you. GPTZero's headline accuracy held at 99.9 percent, so a glance at the front page would tell you nothing had happened. Underneath it, the false positive claim went from no more than 1 percent to below 0.03 percent, with 0.002 percent for text over 300 words, and a report of zero false positives across 10,402 student essays. That is roughly a thirtyfold improvement in the number that actually matters, arriving in two weeks.
+
+It may well be real. GPTZero names a version, 5.0, and a public corpus, so this is not nothing. But there was no announcement, no changelog entry I could find, and no note saying the previous figure had been superseded. The 96.5 percent mixed-document figure and the 1 percent ESL figure that this post quoted on 13 November are simply not on the pages any more. They were not corrected. They were replaced.
+
+Originality.ai is the other mover, and I am being careful with it. That page read only partially, so the honest statement is that I could not find its 99 percent claim today, not that the company withdrew it.
 
 None of these companies announced a change in how they measure. There was no new benchmark, no methodology note, no correction. The numbers simply read differently on a Thursday in November than they did on a Monday in August.
 
@@ -97,7 +107,7 @@ It also sets the shelf life on everything above. Any article quoting a detector'
 
 ## Now do the multiplication
 
-Use 1 percent. Not because it is the worst case, but because it is the number the vendors themselves have settled on. GPTZero caps its false positive rate at 1 percent. ZeroGPT publishes under 1 percent. Winston's best third party result is measured at a 1 percent false positive condition. Three companies, three pages, one figure, and I can quote all three today.
+Use 1 percent. ZeroGPT publishes under 1 percent. Winston's best third party result is measured at a 1 percent false positive condition. GPTZero published the same figure a fortnight ago and has since replaced it with something far lower. So two companies still stand behind it today and a third did until very recently, which makes it the industry's own number rather than one I picked to make a point.
 
 A single essay at 1 percent feels like nothing. You would take that bet.
 
@@ -122,6 +132,12 @@ None of those students did anything wrong. The rate did not change. Only the den
 The bottom row is the one to sit with. At a mid-sized university, on a rate the vendors advertise as a selling point, roughly 500 honest students a year are flagged. That is not a scandal or a bug report. It is the advertised performance of the product working exactly as specified.
 
 The earlier version of this post ran the same table at Turnitin's 1.3 percent and got 650. Dropping to the industry's own preferred 1 percent takes 150 students off that list and leaves 500 on it. If the argument survives a third off the rate, the rate was never the weak part of it.
+
+So let me test that properly, with the number GPTZero started advertising this month. At 0.03 percent, the same 50,000 submissions produce about 15 false flags instead of 500. At the 0.002 percent it claims for text over 300 words, one.
+
+I am not going to pretend that is the same problem. Fifteen is thirty-three times better than 500, and if GPTZero's figure holds up it is a genuine engineering achievement rather than a marketing trick. Anyone arguing the sky is falling at 0.03 percent is arguing from a number they did not check.
+
+But notice what just happened to this post. The conclusion moved from 500 students to 15 because one vendor edited one page, and I only caught it because I happened to re-read on the day I wanted to republish. A school setting policy on the 1 percent figure in October was working from the best number available and is now out by a factor of thirty. The arithmetic is still the right thing to do. What you cannot do is treat its answer as stable, because the input is a marketing figure that changes without notice and takes your conclusion with it.
 
 This is the same shape as every other number I have taken apart on this site. Runway's free tier is a real offer until you convert credits into seconds. Gamma's free plan is generous until you notice the meter runs per slide. A 1 percent error rate is negligible until you multiply it by how many times you run the test.
 
@@ -153,7 +169,9 @@ I want to be careful about how much weight that carries. This is a vendor publis
 
 But it is specific, it names a sample size, and it is checkable. That puts it ahead of a bare accuracy percentage with no methodology attached. So my honest position is that the bias claim is unproven on current tools rather than established, and that anyone stating it flatly in 2026 is repeating something they have not checked.
 
-GPTZero, for what it is worth, implicitly concedes the concern exists. Its own site still says it repeatedly retrains the model to reduce the false positive rate for ESL writing to 1 percent, and a separate page claims it is the only detector specifically de-biased for ESL writers. That is both an admission that the problem was real and a rate roughly seven times higher than the Turnitin figure above.
+GPTZero, for what it is worth, implicitly concedes the concern exists. On 13 November its site said it repeatedly retrains the model to reduce the false positive rate for ESL writing to 1 percent, and claimed to be the only detector specifically de-biased for ESL writers. That wording is gone. What it publishes on 27 November is a result instead of an intention: zero false positives across all 10,402 PERSUADE 2.0 student essays, including 914 written by English language learners and 1,172 by students with disabilities.
+
+That is a better kind of claim, because it names a corpus and a count rather than a target. It is still the company grading its own homework, and it is still the only ESL-specific evidence any of these vendors publish. The shape of the problem has not changed: every number on both sides of the bias question comes from a vendor testing itself.
 
 Read those two together and the honest summary is narrow. One vendor says it measured no gap. Another vendor says it had to engineer the gap away and will tell you the rate it settled at. Neither is independent replication.
 
@@ -162,6 +180,8 @@ Read those two together and the honest summary is narrow. One vendor says it mea
 This is the most practically useful thing I found, and it is buried.
 
 Turnitin's published false positive figures apply to documents that meet a 300 word minimum. That is not a footnote. It means the reliability numbers simply do not describe shorter work. This also comes from the August reading, for the reason given above.
+
+As of 27 November, GPTZero backs this up from the other direction, and it is the single most useful number it publishes. It claims a false positive rate below 0.03 percent in general, falling to 0.002 percent for text over 300 words. Read that as what it is: by the vendor's own arithmetic, short text is about fifteen times more likely to be falsely flagged than long text. Two companies, measuring separately, both draw the line at 300 words.
 
 Sapling goes further, and this one I did re-read today. Its page still says the more essay-like a piece of writing is, the more likely it is to result in a false positive.
 
@@ -235,10 +255,14 @@ If you are a student, keep your drafts. If you are a teacher, set a word floor a
 
 ## Sourcing
 
-Re-verified on November 13, 2026 by reading vendor pages directly: GPTZero's 99.9 percent headline, its 96.5 percent figure for mixed documents, its statement that it retrains to reduce the ESL false positive rate to 1 percent and its separate statement that it keeps the overall false positive rate at no more than 1 percent. Winston AI's 99.87 percent accuracy claim, its report of zero false positives across 27,743 human documents, and the 99.89 percent third party result measured at a 1 percent false positive condition. ZeroGPT's 98.4 percent detection accuracy and under 1 percent false positive rate, both newly published since August. Originality.ai's 99 percent and up claim for its 5.0 models, its statement that Multi Language and AI Allowance were sunset in October 2026, its wording that an AI detection score shows the percentage of AI involvement in text, and its note that tools which use AI to rewrite or edit copy can cause false positives. Sapling's statement that false positives and false negatives will occur and its note on essay-like writing, both unchanged from August. The Writer.com redirect was checked the same day and still stands.
+Re-verified on November 27, 2026 by reading five vendor pages directly, ahead of republishing this post elsewhere. GPTZero: the 99.9 percent headline on its home page and in its FAQ, a false positive rate stated as below 0.03 percent, about 1 in 4,000 human texts, falling to 0.002 percent, about 1 in 50,000, for texts over 300 words, zero false positives across all 10,402 PERSUADE 2.0 student essays including 914 by English language learners and 1,172 by students with disabilities, and a 97.34 percent average F1 score on DetectRL. The figures it published on 13 November, 96.5 percent on mixed documents and a 1 percent ESL false positive rate, are no longer on either page. Winston AI: unchanged, and its page additionally cites 99.89 percent detection at a 1 percent false positive condition on RAID, zero false positives across 8,697 Chicago Booth documents, and all 25,996 authentic PERSUADE 2.0 essays recognised as human. ZeroGPT: unchanged at 98.4 percent detection accuracy and under 1 percent false positives. Originality.ai: the page read only partially and I could not find an accuracy percentage on the portion I could read, so its 99 percent claim is recorded here as unconfirmed on this date rather than withdrawn. Sapling: unchanged, plus a changelog entry dated September 17, 2026 reporting that its false positive rate fell by 60 percent relative to the previous model on internal held-out evaluations, which is a relative figure and not an absolute rate. Turnitin was not re-read on this date.
+
+Read on November 13, 2026: GPTZero's 99.9 percent headline, its 96.5 percent figure for mixed documents, its statement that it retrains to reduce the ESL false positive rate to 1 percent and its separate statement that it keeps the overall false positive rate at no more than 1 percent, all four superseded by the reading above. Winston AI's 99.87 percent accuracy claim, its report of zero false positives across 27,743 human documents, and the 99.89 percent third party result measured at a 1 percent false positive condition. ZeroGPT's 98.4 percent detection accuracy and under 1 percent false positive rate, both newly published since August. Originality.ai's 99 percent and up claim for its 5.0 models, its statement that Multi Language and AI Allowance were sunset in October 2026, its wording that an AI detection score shows the percentage of AI involvement in text, and its note that tools which use AI to rewrite or edit copy can cause false positives. Sapling's statement that false positives and false negatives will occur and its note on essay-like writing, both unchanged from August. The Writer.com redirect was checked the same day and still stands.
 
 Read on August 18, 2026 and not re-readable today: Turnitin's 0.013 and 0.014 false positive rates, the roughly 2,000 sample ELL evaluation and the 300 word threshold. Turnitin now returns a 403 to automated requests on its main site and on its guides and help subdomains. That is a server policy and says nothing about the company or the figures, but it does mean those numbers are a dated reading and are labelled as such in the text above.
 
-Corrected in this revision: the August version credited Originality.ai with describing a mixed score as uncertainty about the document rather than a measure of how much of it is machine written. Their pages say the opposite and I have not found the claim I attributed to them. It is removed. The same version described their editing-tools note as applying to "other detectors", which the source does not say, and that is removed too.
+Corrected on 27 November: the GPTZero false positive figures throughout this post, which had been quoted at 1 percent and are now below 0.03 percent. The sentence arguing that three vendors had converged on 1 percent is now two, and the section doing the multiplication has been extended to run the same arithmetic at GPTZero's new rate, which gives 15 flagged students a year rather than 500. The conclusion that the multiplication is worth doing is unchanged. The conclusion that you can rely on the answer is weaker than it was, and the post now says so.
+
+Corrected in the previous revision: the August version credited Originality.ai with describing a mixed score as uncertainty about the document rather than a measure of how much of it is machine written. Their pages say the opposite and I have not found the claim I attributed to them. It is removed. The same version described their editing-tools note as applying to "other detectors", which the source does not say, and that is removed too.
 
 Not verified: Copyleaks, Quillbot and Scribbr all return errors to automated requests, and Grammarly's detector page publishes no accuracy figure I could read. Where I could not read a number, I have not given you one. Every accuracy claim in this post is the vendor's own claim about itself, and none of these companies test against a shared benchmark.
